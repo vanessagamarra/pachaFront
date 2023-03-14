@@ -17,3 +17,7 @@ He tenido experiencia en las siguientes empresas:
 |**Hobbies**|Running, gimnasio, lectura, tecnologia            |
 |**Paginas personales**          |[Mi Linkedin](https://www.linkedin.com/in/fernandohuarez/) , [Mi Github](https://github.com/jfernando-huarezr)            |
 |**Metas**         |Convertirme en un buen programador|
+
+Gracias por su tiempo,
+
+Jose Fernando Huarez Reyes
