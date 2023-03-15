@@ -11,16 +11,16 @@ Presento algunos proyectos personales que realizado durante mi tiempo de aprendi
  - [Los Pollitos](https://pollitosbrasas.pe)
  - [Bassika](https://bassika.pe)
 
-### Conocimientos
+ ### Conocimientos
 
-    |Tecnología     |Porentaje de Conocimientos |
-    |----------------|-------------------------------|- c----------------------------|
-    | HTML5      |  70%   |
-    |   CSS3     |65%      |
-    |`SQL Server`|40% |
-    |ASP.NET|50% |
+|Tecnología      |Porcentaje de Conocimientos |
+|----------------|-------------------------------|-----------------------------|
+| HTML5      |  70%   |
+|   CSS3     |65%      |
+|`SQL Server`|40% |
+|ASP.NET|50% |
 
-    Gracias por su tiempo
-    Saludos.
+Gracias por su tiempo
+Saludos.
 
-    **Enrique Maldonado**
+**Enrique Maldonado**
