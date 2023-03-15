@@ -1,5 +1,5 @@
 
-la soy Enrique Maldonado
+Hola soy Enrique Maldonado
 
 Soy egresado de la carrera de Tecnologías de la Información y Comunicación. Actualmente me encuentro realizando un curso de especialización en Programación relacionada a Front-End.
 
