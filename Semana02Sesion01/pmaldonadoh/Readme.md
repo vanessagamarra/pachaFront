@@ -8,12 +8,10 @@ Soy egresado de la carrera de Tecnologías de la Información y Comunicación. A
 Presento algunos proyectos personales que realizado durante mi tiempo de aprendizaje sobre lo relacionado a la programación.
 
  - [DJTechTools](https://djtechtools.com)
-  - [Los Pollitos](https://pollitosbrasas.pe)
-   - [Bassika](https://bassika.pe)
+ - [Los Pollitos](https://pollitosbrasas.pe)
+ - [Bassika](https://bassika.pe)
 
-
-
-    ### Conocimientos
+### Conocimientos
 
     |Tecnología     |Porentaje de Conocimientos |
     |----------------|-------------------------------|- c----------------------------|
