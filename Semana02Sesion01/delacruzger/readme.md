@@ -6,9 +6,9 @@ Soy programador de  sistemas  especializado en *Backend* y *frontend*
 He trabajado en las siguientes empresas:
 
 - Mi Banco
-	> Desarrollo en *backend*
-	>Desarrollo en *base de Datos*
-	>Desarrollo en *Azure Functions*
+	> Desarrollo en **backend**
+	>Desarrollo en **base de Datos**
+	>Desarrollo en **Azure Functions**
 	
 	Mi Pagina web en github es:[GitHub](delacruzger.github.io)
 	
