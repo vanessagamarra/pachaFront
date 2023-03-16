@@ -14,11 +14,11 @@ Presento algunos proyectos personales que realizado durante mi tiempo de aprendi
  ### Conocimientos
 
 |Tecnología      |Porcentaje de Conocimientos |
-|----------------|-------------------------------|-----------------------------|
-| HTML5      |  70%   |
-|   CSS3     |65%      |
-|`SQL Server`|40% |
-|ASP.NET|50% |
+|----------------|----------------------------|
+| HTML5          |  70%                       |
+|   CSS3         | 65%                        |
+|`SQL Server`    |      40%                   |
+|ASP.NET         |       50%                  |
 
 Gracias por su tiempo
 Saludos.
