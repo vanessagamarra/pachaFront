@@ -11,7 +11,7 @@ Demostrarás todo lo aprendido en este reto que se basará en las clases dictada
 1. **Insumos para resolver el Reto:**
 
 - Materiales de clase de la semana 1 y 2.
-- [ELEMENTOS](https://developer.mozilla.org/es/docs/HTML/HTML5/HTML5_lista_elementos)
+- [ELEMENTOS](https://developer.mozilla.org/es/docs/Web/HTML/Element)
 - [MODELO](https://www.figma.com/file/DmxA6mUgZJts6T8pJ01qww/Project-basic?node-id=0%3A1)
 
 1. **Descripción del reto**
@@ -82,7 +82,7 @@ Si usted es un desarrollador que nunca ha utilizado el control de versiones, es 
 **Tercer Reto:**
 
 - Leer la lista de etiquetas HTML5 e implementarlas para verificar su funcionalidad
-- Ingresar al siguiente enlace - [ELEMENTOS](https://developer.mozilla.org/es/docs/HTML/HTML5/HTML5_lista_elementos)
+- Ingresar al siguiente enlace - [ELEMENTOS](https://developer.mozilla.org/es/docs/Web/HTML/Element)
 - Crear rama **feature-tags-html** a partir de master
 - Crear archivo **tags.html**
 - Escribir etiquetas de la lista de elementos html5
