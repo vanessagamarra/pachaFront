@@ -45,3 +45,23 @@ No utilizar un sistema de control de versiones puede llevar a una serie de probl
 - **Mejora de la calidad del software:** Al rastrear y controlar los cambios realizados en el código fuente, el control de versiones puede ayudar a mejorar la calidad del software al identificar y corregir errores y evitar la introducción de nuevos errores.
 
 ![Beneficios de usar un control de versiones](https://www.nettix.com.pe/wp-content/uploads/2020/02/img-1024x511.png)
+
+
+
+## 4. ¿Qué tipos de control de versiones existen?
+
+Existen varios tipos de sistemas de control de versiones, algunos de los cuales son:
+
+>    **Sistemas de control de versiones locales:** estos sistemas almacenan los cambios en un archivo en un repositorio local en el disco duro del usuario, y son adecuados para proyectos pequeños y de una sola persona. Ejemplos de sistemas de control de versiones locales son `RCS` y `SCCS`.
+
+>    **Sistemas de control de versiones centralizados:** en estos sistemas, un servidor central almacena todos los cambios en un proyecto, y los usuarios deben conectarse a ese servidor para realizar cambios y actualizaciones. Ejemplos de sistemas de control de versiones centralizados son `CVS` y `Subversion`.
+
+>    **Sistemas de control de versiones distribuidos:** estos sistemas permiten que cada usuario tenga una copia completa del repositorio en su propio disco duro, y pueden trabajar de forma independiente sin necesidad de una conexión constante con un servidor central. Ejemplos de sistemas de control de versiones distribuidos son `Git` y `Mercurial`.
+
+Cada tipo de sistema de control de versiones tiene sus propias ventajas y desventajas, y la elección del sistema adecuado depende del tamaño y la complejidad del proyecto, así como de las preferencias del equipo de desarrollo.
+
+![Sistemas de control de versiones locales](https://osvaldogalvan.com/wp-content/uploads/sistema-local-control-de-versiones-600x600.png)
+
+![Sistemas de control de versiones centralizados](https://osvaldogalvan.com/wp-content/uploads/sistema-centralizado-control-de-versiones-600x600.png)
+
+![Sistemas de control de versiones distribuidos](https://osvaldogalvan.com/wp-content/uploads/sistema-distribuido-control-de-versiones-600x600.png)
