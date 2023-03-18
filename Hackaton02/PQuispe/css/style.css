@@ -137,3 +137,34 @@ header h2 {
     max-width: 400px;
     padding: 0 20px;
 }
+
+/* ------------------------ Portafolio Section --------------------------- */
+
+.main__portfolio {
+    background-color: #ffd233;
+    width: 100%;
+    padding: 40px 45px 90px;
+}
+
+.main__portfolio h2 {
+    color: #00ad84;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.main__portfolio ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.main__portfolio li {
+    list-style: none;
+}
+
+.main__portfolio img {
+    width: 140px;
+}
