@@ -3,6 +3,7 @@
     border: 0;
     padding: 0;
 }
+
 .sectionBackground{
     background-image: url(./img/fondo.png);
     height: 800px;
@@ -41,12 +42,12 @@
     border-radius: 0.3em;
 }
 
-.sectionForMy{
+.section-normal{
     background-color: #7299FE;
     height: 410px;
     padding-top:2em;
 }
-.sectionForMyTitle{
+.section-normalTitle{
     color: #1D06A7;
     font-family: 'Arial';
     font-style: normal;
@@ -55,7 +56,7 @@
     text-align: center;
 }
 
-.sectionMyInformation{
+.section-normalInformation{
     margin-inline: 8em;
     margin-top: 2em;
     font-family: 'Arial';
@@ -65,7 +66,7 @@
     color: #fff;
 }
 
-.sectionForMy button{
+.section-normal button{
     margin-inline-start: 8em;
     margin-block-start: 1em;
 
@@ -82,3 +83,56 @@
     line-height: 25px;
     color: #fff;
 }
+.sct-2{
+    background-color: #9022FF;
+
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #ffffff;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #57EFF9;
+}
+
+.sectionProgress{
+    display: flex;
+}
+
+.sectionProgress div{
+    display: grid;
+}
+
+.sectionProgress div label{
+    margin: 0;
+    margin-block-end: 0.8em;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 21px;
+    color: #fff;
+}
+
+.sectionProgress progress{
+    
+    margin-block-end: 0.5em;
+    width: 19em;
+    border: 1px solid #428bca;
+    border-radius: 10px;
+    background: #eee;
+    height: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+
+}
+
+progress:hover{
+    width: 17em;
+    transition: all 2s;
+}
+
+
+
+
