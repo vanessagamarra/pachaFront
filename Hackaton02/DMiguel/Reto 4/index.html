@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="section_Background"">
+        <h1>Codigo</h1>
+        <div>
+            Hola, mi nombre
+            es Sebastian Yabiku 
+        </div>
+    </section>
+    <section>
+        <h2>Sobre mi</h2>
+        <div>
+            
+        </div>
+        <button type="button">Sobre mi</button>
+    </section>
+    <section>
+        <h2>Mis Skills</h2>
+        <div>
+            <div>
+                <label for="html">HTML</label>
+                <progress id="html" value="85" max="100"> 32% </progress>
+                <label for="js">Javascript</label>
+                <progress id="js" value="56" max="100"> 32% </progress>
+                <label for="flexbox">Flexbox</label>
+                <progress id="flexbox" value="80" max="100"> 32% </progress>
+            </div>
+            <div>
+                <label for="css">CSS</label>
+                <progress id="css" value="34" max="100"> 32% </progress>
+                <label for="vue">Vue</label>
+                <progress id="vue" value="89" max="100"> 32% </progress>
+                <label for="css_grid">CSS Grid</label>
+                <progress id="css_grid" value="55" max="100"> 32% </progress>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>
+            Portafolio
+        </h2>
+        <div>
+            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+        </div>
+        <div>
+            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+        </div>
+    </section>
+    <section>
+        <h2>
+            Clientes
+        </h2>
+        <div>
+            <img src="./img/empresa.jpeg" alt="ejemplo de empresa">
+            <img src="./img/empresa.jpeg" alt="ejemplo de empresa">
+            <img src="./img/empresa.jpeg" alt="ejemplo de empresa">
+            <img src="./img/empresa.jpeg" alt="ejemplo de empresa">
+        </div>
+    </section>
+    <section>
+        <h2>
+            Contactos
+        </h2>
+        <form>
+            <!--
+                el atrivuto required se usa para decir que esta informacion es nesesaria
+            -->
+            <label for="nombre">Ingrese su Nombre :</label>
+            <input type="text" id="nombre" required><br>
+            <label for="apellido">Ingrese su apellido :</label>
+            <input type="text" id="apellido" required><br>
+            <label for="correo">Ingrese su correo :</label>
+            <input type="email" id="correo" required><br>
+            <label for="cell">Escriba su numero de cell : </label>
+            <!-- 
+                el atrivuto value es para mostrar algo en el input
+            -->
+            <input type="number" id="cell" required value=""><br>
+            <label for="mensaje1">Escriba aqui su peticion : </label>
+            <!-- cols y rows son para dar medidas al textarea -->
+            <textarea cols="30" rows="7" required id="mensaje1">Escriba aqui su texto . . . </textarea><br>
+            <input type="submit" value="Mandar formulario">
+        </form>
+    </section>
+</body>
+</html>

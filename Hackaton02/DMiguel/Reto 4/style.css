@@ -1,0 +1,12 @@
+*{
+    margin: auto;
+    border: auto;
+}
+.section_Background{
+    background-image: url(./img/fondo.jpeg);
+
+    height: 300px;
+    /* left: 0px;
+    top: 0px; */
+    background-attachment: fixed;
+}
