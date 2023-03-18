@@ -1,0 +1,63 @@
+main{
+    
+    margin-left: 470px;
+    margin-right: 470px;
+    
+    background-color: red;
+    
+}
+#persona{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    
+    
+}
+.container {
+    position: relative; /* Establece el contenedor como posición relativa */
+    background-color: aqua;
+    margin-bottom: 0px;
+  }
+
+  .texto-superpuesto {
+    position: absolute; /* Establece el texto superpuesto como posición absoluta */
+    top: 10%; /* Coloca el texto en el centro vertical */
+    left: 50%; /* Coloca el texto en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra el texto */
+    z-index: 1; /* Hace que el texto se muestre sobre la imagen */
+    color: white; /* Establece el color de la letra */
+    text-align: center; /* Centra el texto horizontalmente */
+    text-shadow: 1px 1px 1px black; /* Agrega sombra al texto para mejor legibilidad */
+    font-size: 46px;
+    
+  }
+
+  .texto-superpuesto2 {
+    position: absolute; /* Establece el texto superpuesto como posición absoluta */
+    top: 60%; /* Coloca el texto en el centro vertical */
+    left: 25%; /* Coloca el texto en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra el texto */
+    z-index: 1; /* Hace que el texto se muestre sobre la imagen */
+    color: white; /* Establece el color de la letra */
+    text-align: left; /* Centra el texto horizontalmente */
+    text-shadow: 1px 1px 1px black; /* Agrega sombra al texto para mejor legibilidad */
+    font-size: 25px;
+    width: 320px;
+    font-family: Arial;
+    
+  }
+
+  .container2{
+    position: relative;
+    background: #7299FE;
+    margin-top: 0px;
+    
+    
+  }
+  .texto-superpuesto3 {
+    
+    
+    
+  }
+
+
