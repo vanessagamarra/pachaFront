@@ -59,10 +59,7 @@ Si usted es un desarrollador que nunca ha utilizado el control de versiones, es 
 
 **PREGUNTAS:**
 
-1. ¿Qué es un control de versiones?
-2. ¿Cuáles son los problemas al no usar un control de versiones?
-3. ¿Cuáles son los beneficios?
-4. ¿Qué tipos de control de versiones existen?
+
 
 **REFERENCIAS**
 
