@@ -55,7 +55,7 @@ button {
 .header-background {
   background-position: center center;
   background-size: 100% 100%;
-  background-image: url(../img/header/header-background-2.jpg);
+  background-image: url(../img/header/header-background.jpg);
   height: 500px;
   position: relative !important;
 }
