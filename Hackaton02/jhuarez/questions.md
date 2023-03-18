@@ -1,6 +1,6 @@
-#RETO 1:
+# RETO 1:
 
-##PREGUNTAS:
+## PREGUNTAS:
 
 **¿QUE ES UN CONTROL DE VERSIONES?**
 
@@ -30,11 +30,11 @@ Algunos de los beneficios son:
 
 Existen tres tipos de control de versiones disponibbles
 
-Local: Cambios se guardan localmente y no se comparten con nadie. 
+**Local**: Cambios se guardan localmente y no se comparten con nadie. 
 
-Centralizado: Con un repositorio centralizado de todo el codigo con un usuario o grupo de usuarios responsable. No son tan flexibles dado que para hacer algunos cambios se requiere el permiso de los administradores (ejemplos CVS y Subversion)
+**Centralizado**: Con un repositorio centralizado de todo el codigo con un usuario o grupo de usuarios responsable. No son tan flexibles dado que para hacer algunos cambios se requiere el permiso de los administradores (ejemplos CVS y Subversion)
 
-Distribuido: Cada usuario tiene su propio repositorio. Se pueden intercambiar y mezclar revisiones entre diferentes repositorios de usuarios. 
+**Distribuido**: Cada usuario tiene su propio repositorio. Se pueden intercambiar y mezclar revisiones entre diferentes repositorios de usuarios. 
 
 
 **Jose Fernando Huarez Reyes**
