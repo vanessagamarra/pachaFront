@@ -168,3 +168,29 @@ header h2 {
 .main__portfolio img {
     width: 140px;
 }
+
+/* ----------------------- Clients Section ---------------------------- */
+
+.main__client {
+    background-color: #3f4e62;
+    width: 100%;
+    padding: 40px 45px 90px;
+}
+
+.main__client h2 {
+    color: #adff28;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main__client ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main__client li {
+    list-style: none;
+}
