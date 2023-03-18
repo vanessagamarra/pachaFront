@@ -227,3 +227,80 @@ main{
     line-height: 41.4px;
     padding-bottom: 15px;
 }
+
+/*Seccion 5 Formulario*/
+
+.seccion5{
+    width: 100%;
+    min-width: 320px;
+    height: 578px;
+    background-color: #1687A0;
+    padding: 31px 101px 93px 100px;
+}
+
+.seccion5 h1{
+    text-align: center;
+    color: #FF1B1B;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 41.4px;
+    padding-bottom: 30px;
+}
+
+.seccion5 form{
+    display: grid;
+    grid-template-columns: repeat(2, 363px);
+    grid-template-rows: repeat(5, 59px);
+    grid-template-areas: 
+    "nombre ape"
+    "email telef"
+    "desc desc"
+    "desc desc"
+    "boton boton";
+    row-gap: 33px;
+    column-gap: 33px;
+}
+
+.item1{
+    grid-area: nombre;
+}
+.item2{
+    grid-area: ape;
+}
+.item3{
+    grid-area: email;
+}
+.item4{
+    grid-area: telef;
+}
+.item5{
+    grid-area: desc;
+    padding-bottom: 110px;
+}
+.item6{
+    grid-area: boton;
+    background-color: #233451;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700; 
+    color: white;
+    width: 167px;
+    height: 56px;
+    place-self: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 0;
+}
+
+.item1, .item2, .item3, .item4, .item5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400; 
+    border-radius: 10px;
+    border: 0;
+}
+
+.item{
+    padding-left: 9px;
+}
