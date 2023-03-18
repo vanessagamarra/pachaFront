@@ -172,3 +172,32 @@ main{
     grid-area: puntaje6;
 }
 
+/*Seccion 3 Portafolio*/
+
+.seccion3{
+    width: 100%;
+    min-width: 320px;
+    height: 424px;
+    background-color: #FFD233    ;
+    padding: 42px 159px 87px 162px;
+}
+
+.seccion3 figure{
+    width: 100%;
+}
+.seccion3 figure img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.seccion3 h1{
+    text-align: center;
+    color: #00AD84;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 41.4px;
+    padding-bottom: 42px;
+}
+
+
