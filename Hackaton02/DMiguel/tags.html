@@ -105,36 +105,36 @@
                     <!--
                         el atrivuto required se usa para decir que esta informacion es nesesaria
                     -->
-                    <P>Ingrese su Nombre :</P>
-                    <input type="text" required><br>
-                    <p>Ingrese su apellido :</p>
-                    <input type="text" required><br>
-                    <p>Ingrese su correo :</p>
-                    <input type="email" required><br>
-                    <p>Ingrese su contraseña : </p>
-                    <input type="password" required><br>
-                    <p>Escriba su numero de cell : </p>
+                    <label for="nombre">Ingrese su Nombre :</label>
+                    <input type="text" id="nombre" required><br>
+                    <label for="apellido">Ingrese su apellido :</label>
+                    <input type="text" id="apellido" required><br>
+                    <label for="correo>Ingrese su correo :</label>
+                    <input type="email" id="correo" required><br>
+                    <label for="contraseña">Ingrese su contraseña : </label>
+                    <input type="password" id="contraseña" required><br>
+                    <label for="cell">Escriba su numero de cell : </label>
                     <!-- 
                         el atrivuto value es para mostrar algo en el input
                     -->
-                    <input type="number" required value="892922"><br>
-                    <p>Ecoja su color favorito : </p>
-                    <input type="color"><br>
-                    <p>eliga una numero de :</p>
-                    <p>
-                        1 <input type="range" min="1" max="20"> 20
-                    </p>
-                    <p>Eliga un dia :</p>
-                    <input type="date"><br>
-                    <p>Eliga la hora :</p>
-                    <input type="time"><br>
-                    <p>Escriba la fecha y hora : </p>
-                    <input type="datetime-local"><br>
-                    <p>Escriba aqui su peticion : </p>
+                    <input type="number" id="cell" required value="892922"><br>
+                    <label for="color">Ecoja su color favorito : </label>
+                    <input type="color" id="color" ><br>
+                    <label for="rango_numero">eliga una numero de :
+                        1 <input type="range" min="1" max="20" id="rango_numero"> 20
+                    </label>
+                    <br>
+                    <label for="dia">Eliga un dia :</label>
+                    <input type="date" id="dia"><br>
+                    <label for="hora">Eliga la hora :</label>
+                    <input type="time" id="hora"><br>
+                    <label for="fecha">Escriba la fecha y hora : </label>
+                    <input type="datetime-local" id="fecha"><br>
+                    <label for="mensaje1">Escriba aqui su peticion : </label>
                     <!-- cols y rows son para dar medidas al textarea -->
-                    <textarea cols="30" rows="7" required>Escriba aqui su texto . . . </textarea><br>
-                    <p>Comunicado para ustd :</p>
-                    <textarea readonly cols="30" rows="7">Esto es un textarea no modificable </textarea><br>
+                    <textarea cols="30" rows="7" required id="mensaje1">Escriba aqui su texto . . . </textarea><br>
+                    <label for="mensaje2">Comunicado para ustd :</label>
+                    <textarea readonly cols="30" rows="7"id="mensaje2">Esto es un textarea no modificable </textarea><br>
                     <!-- a continuacion se ve un boton : -->
                     <input type="button" value="Esto es un boton">
                     <br><br>
