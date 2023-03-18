@@ -200,4 +200,30 @@ main{
     padding-bottom: 42px;
 }
 
+/*Seccion 4 Clientes*/
 
+.seccion4{
+    width: 100%;
+    min-width: 320px;
+    height: 258px;
+    background-color: #3F4E62 ;
+    padding: 26px 65px 98px 70px;
+}
+
+.seccion4 figure{
+    width: 100%;
+}
+.seccion4 figure img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.seccion4 h1{
+    text-align: center;
+    color: #ADFF28;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 41.4px;
+    padding-bottom: 15px;
+}
