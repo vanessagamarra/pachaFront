@@ -1,3 +1,4 @@
+/*Generales*/
 
 *{
     margin: 0;
@@ -9,6 +10,8 @@ main{
     height: auto;
     margin: 0 auto;
 }
+
+/*Seccion 1 Presentación*/
 
 .seccion1{
     width: 100%;
@@ -84,4 +87,88 @@ main{
     box-shadow: 0px 4px 4px 0px rgb(0 0 0  / 0.25);
 }
 
+/*Seccion 2 Skills*/
+
+.seccion2{
+    width: 100%;
+    min-width: 320px;
+    height: 424px;
+    background-color: #9022FF;
+    padding: 31px 57px 90px 64px;
+}
+
+.seccion2 h1{
+    margin-bottom: 22px;
+    color: #26CC4B;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 41.4px;
+    text-align: center;
+}
+.seccion2__skills{
+    display: grid;
+    grid-template-columns: repeat(2, 403px);
+    grid-template-rows: repeat(6, 21px);
+    grid-template-areas: 
+    "html css"
+    "puntaje1 puntaje2"
+    "javascript vue"
+    "puntaje3 puntaje4"
+    "flexbox cssgrid"
+    "puntaje5 puntaje6"
+    ;
+    row-gap: 26px;
+    column-gap: 31px;
+}
+
+.seccion2__skills label{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20.7px;
+}
+
+.seccion2__skills progress{
+    width: 403px;
+    height: 31px;
+}
+
+.skill1{
+    grid-area: html;
+}
+#html{
+    grid-area: puntaje1;
+}
+.skill2{
+    grid-area: css;
+}
+#css{
+    grid-area: puntaje2;
+}
+.skill3{
+    grid-area: javascript;
+}
+#javascript{
+    grid-area: puntaje3;
+}
+.skill4{
+    grid-area: vue;
+}
+#vue{
+    grid-area: puntaje4;
+}
+.skill5{
+    grid-area: flexbox;
+}
+#flexbox{
+    grid-area: puntaje5;
+}
+.skill6{
+    grid-area: cssgrid;
+}
+#cssgrid{
+    grid-area: puntaje6;
+}
 
