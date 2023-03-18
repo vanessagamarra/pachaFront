@@ -194,3 +194,68 @@ header h2 {
 .main__client li {
     list-style: none;
 }
+
+/* ------------------------ Contact Section --------------------------- */
+
+.main__contact {
+    background-color: #1687a0;
+    padding: 35px 45px 90px;
+}
+
+.main__contact h2 {
+    color: #ff1b1b;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.main__contact form {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__contact form input {
+    color: #7A7A7A;
+    padding: 21px 10px;
+    border: 1px solid #BFBFBF;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+
+.main__contact form textarea {
+    color: #7A7A7A;
+    width: 100%;
+    padding: 21px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    border: 1px solid #BFBFBF;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.form-group input {
+    width: 50%;
+}
+
+.main__contact form button {
+    background-color: #233451;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.1rem;
+    border: none;
+    padding: 17px 49px;
+    align-self: center;
+    margin-top: 20px;
+}
