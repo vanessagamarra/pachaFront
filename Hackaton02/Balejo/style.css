@@ -1,0 +1,17 @@
+.man {
+    background-image: url("imagen1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    width: 1900px;
+    height: 1000px;
+    text-align: center;
+    color:aliceblue
+    
+  }
+  .banner{
+    
+    height: 117px;
+    width: 377px;
+    background-position: 10%;
+  }
