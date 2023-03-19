@@ -24,4 +24,4 @@ Existen tres tipos de control de versiones:
     > Se almacen los cambios y las versiones en un servidor permitiendo así la colaboración de múltiples usuarios.
 
  - Distribuidos 
-    > Es una fusión entre los tipos de control de versiones locales y centralizados, permitiendo que cada usuario tenga una copia completamente del repositorio permitiendo así mejor protección de los archivos y una mejor restauración de las versiones por si alguna de estas esta dañada. 
+    > Es una fusión entre los tipos de control de versiones locales y centralizados, permitiendo que cada usuario tenga una copia completamente del repositorio permitiendo así mejor protección de los archivos y una mejor restauración de las versiones por si alguna de estas esta dañada.
