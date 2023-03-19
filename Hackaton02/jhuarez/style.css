@@ -89,9 +89,23 @@ h2 {
 }
 
 progress {
-  -webkit-appearance: none;
+
+	background:none;
+
 }
 
-::-webkit-progress-bar {
-  background-color: #57EFF9;
+progress::-webkit-progress-bar {
+
+    
+		background-color:white;
+}
+
+progress::-webkit-progress-value {
+	display:inline-block;
+	float:left;
+	height:40px;
+	margin:0px -10px 0 0;
+  padding-left:50px; /* Rounded corners requires a padding */
+	background:#57EFF9;
+	border-radius:100px;
 }
