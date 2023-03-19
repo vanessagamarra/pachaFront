@@ -87,3 +87,11 @@ h2 {
   margin: 0;
   padding: 0.5em;
 }
+
+progress {
+  -webkit-appearance: none;
+}
+
+::-webkit-progress-bar {
+  background-color: #57EFF9;
+}
