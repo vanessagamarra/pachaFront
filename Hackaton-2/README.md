@@ -2,10 +2,10 @@
 
 Soy programador de sistemas especializado en **BackEnd** y **FrontEnd**
 
-## Experiencia
+## Hackaton 2
 
-Hackaton 2 - Reto 1
- 1. ROCA SAC.
+
+ 1. Reto 1
      > ¿Qué es un control de versiones?
      Es un sistema que permite tener varias versiones guardadas de nuestro proyecto en caso sea necesario volver a cargar alguna antigua.
      > ¿Cuáles son los problemas al no usar un control de versiones?
