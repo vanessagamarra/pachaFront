@@ -14,6 +14,6 @@ Soy programador de sistemas especializado en **BackEnd** y **FrontEnd**
      Si tomamos dos versiones distintas y una es la versión beta, esta podría ser modificada sin inconveniente o temores de perder la versión original
      > ¿Qué tipos de control de versiones existen?
      hay tres tipos
-     SCV Locales: Almacenados en nuestro ordenador
-     SCV Centralizados: Almacenados en un servidor
+     SCV Locales: Almacenados en nuestro ordenador.
+     SCV Centralizados: Almacenados en un servidor.
      SCV Distribuidos: Es un mixto de locales y centralizados.
