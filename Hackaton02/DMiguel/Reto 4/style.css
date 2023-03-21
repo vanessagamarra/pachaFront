@@ -65,6 +65,17 @@
     line-height: 30px;
     color: #fff;
 }
+.section-normalInformation img {
+    margin: 0.3em 0.3em;
+    width: 12em;
+    height: 7.7em;
+    transition: all 1.5s;
+}
+
+.section-normalInformation img:hover {
+    transform: scale(0.9);
+}
+
 
 .section-normal button{
     margin-inline-start: 8em;
@@ -87,7 +98,39 @@
     background-color: #9022FF;
 
 }
+.sct_3{
+    padding-block-end: 3em;
+    background-color: #FFD233;
+}
+.sct_inf_3{
+    display: grid;
+}
+.sct_4{
+    background-color: #3F4E62;
+    height: 17em;
+}
+.sct_inf_4{
+    display: flex;
+    justify-content: center;
 
+}
+.sct_5{
+    background-color: #1687A0;
+}
+.title_2{
+    color: #26CC4B;
+}
+
+.title_3{
+    color: #00AD84;
+}
+
+.title_4{
+    color: #ADFF28;
+}
+.title_5{
+    color: #FF1B1B;
+}
 progress[value]::-webkit-progress-bar {
     background-color: #ffffff;
 }
@@ -116,7 +159,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .sectionProgress progress{
-    
+    transition: all 2s;
     margin-block-end: 0.5em;
     width: 19em;
     border: 1px solid #428bca;
@@ -129,8 +172,7 @@ progress[value]::-webkit-progress-value {
 }
 
 progress:hover{
-    width: 17em;
-    transition: all 2s;
+    transform: scale(1.2)
 }
 
 

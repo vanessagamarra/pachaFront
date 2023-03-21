@@ -24,7 +24,7 @@
         </div>
         <button type="button" onclick="alert('Hello world!')">Ver CV</button>    </section>
     <section class="section-normal sct-2">
-        <h2 class="section-normalTitle">Mis Skills</h2>
+        <h2 class="section-normalTitle title_2">Mis Skills</h2>
         <div class="section-normalInformation sectionProgress">
             <div>
                 <label for="html">HTML</label>
@@ -44,55 +44,45 @@
             </div>
         </div>
     </section>
-    <section>
-        <h2>
+    <section class="section-normal sct_3">
+        <h2 class="section-normalTitle title_3">
             Portafolio
         </h2>
-        <div>
-            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
-            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
-            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
-            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
-        </div>
-        <div>
-            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
-            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
-            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
-            <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+        <divc class="section-normalInformation sct_inf_3">
+            <div>
+                <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+                <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+                <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+                <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+            </div>
+            <div>
+                <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+                <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+                <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+                <img src="./img/pagina_ejemplo.jpg" alt="ejemplo de pagina web">
+            </div>
         </div>
     </section>
-    <section>
-        <h2>
+    <section class="section-normal sct_4">
+        <h2 class="section-normalTitle title_4">
             Clientes
         </h2>
-        <div>
+        <div class="section-normalInformation sct_inf_4">
             <img src="./img/empresa.jpeg" alt="ejemplo de empresa">
             <img src="./img/empresa.jpeg" alt="ejemplo de empresa">
             <img src="./img/empresa.jpeg" alt="ejemplo de empresa">
             <img src="./img/empresa.jpeg" alt="ejemplo de empresa">
         </div>
     </section>
-    <section>
-        <h2>
+    <section class="section-normal sct_5">
+        <h2 class="section-normalTitle title_5">
             Contactos
         </h2>
-        <form>
-            <!--
-                el atrivuto required se usa para decir que esta informacion es nesesaria
-            -->
-            <label for="nombre">Ingrese su Nombre :</label>
-            <input type="text" id="nombre" required><br>
-            <label for="apellido">Ingrese su apellido :</label>
+        <form class="section-normalInformation sct_form">
+            <input type="text" id="nombre" required>
             <input type="text" id="apellido" required><br>
-            <label for="correo">Ingrese su correo :</label>
-            <input type="email" id="correo" required><br>
-            <label for="cell">Escriba su numero de cell : </label>
-            <!-- 
-                el atrivuto value es para mostrar algo en el input
-            -->
+            <input type="email" id="correo" required>
             <input type="number" id="cell" required value=""><br>
-            <label for="mensaje1">Escriba aqui su peticion : </label>
-            <!-- cols y rows son para dar medidas al textarea -->
             <textarea cols="30" rows="7" required id="mensaje1">Escriba aqui su texto . . . </textarea><br>
             <input type="submit" value="Mandar formulario">
         </form>
