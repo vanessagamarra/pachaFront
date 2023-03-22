@@ -6,61 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
+        body {
+            margin: 0%;
+            font-family: Arial, sans-serif;
+        }
+        div{
             margin: 0;
+            
+            border: 0;
         }
         p{
             margin: 0;
         }
+        
+        div .titulo{
+            text-align: center;
+        }
+        
+        #contenedor-clientes{
+            text-align: center;
+        }
+        div .contenedor-portafolio{
+            text-align: center;
+        }
+        
+        div .contenedor-clientes{
+            text-align: center;
+        
+        }
+        div .contenedor-clientes img{
+            margin: 35px;
+        }
     </style>
 </head>
 <body>
-    <section style="height: 515px; background-image: url(./img/image_1.png); margin: 0; ">
-        <h1 style="color: white; text-align: center; margin: 0; padding: 0.5em 0;">codiGO</h1>
+    <section>
+        <img src="./img/image 1.png" alt="" style="background-size: contain;">
+        <p class="titulo" style="position: relative;">codiGO</p>
+        
+        
         <div style="background: rgba(114, 153, 254, 0.5);
-        border-radius: 10px; width: 150px; color: #FFF; position: relative;
-  top: 200px;
-  left: 100px; width: 300px;
-height: 117px; font-size: 36px;">Hola, mi nombre<br> 
-            es Sebastian Yabiku</div>
+        ">
+        <p>Hola, mi nombre<br> 
+        es Sebastian Yabiku</p>
+        
+        </div>    
     </section>
-    <section style="background: #7299FE; width: auto; height: 300px;">
-        <p class="titulo" style="
-        font-family: 'Arial';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 41px;
-        
-        color: #1D06A7; text-align: center;">Sobre mi</p>
-        <p style="
-        height: 166px;
-        left: 41px;
-        top: 622px;
-        
-        font-family: 'Arial';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-        /* or 171% */
-        text-align: center;
-        
-        color: #F8F8F8;">
+    <div style="background: #7299FE;">
+        <p class="titulo" style="color: #1D06A7; ">Sobre mi</p>
+        <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis diam commodo, arcu gravida erat quam donec convallis. Gravida arcu, suspendisse semper mauris tristique tortor. Eu, malesuada elit feugiat laoreet malesuada vitae. zz enim habitasse malesuada lacus, euismod pharetra habitasse. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis diam commodo, arcu gravida erat quam donec convallis. Gravida arcu, suspendisse semper mauris tristique tortor. Eu, malesuada elit feugiat laoreet malesuada vitae. zz enim habitasse malesuada lacus, euismod pharetra habitasse. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis diam commodo, arcu gravida erat quam donec convallis. Gravida arcu, suspendisse semper mauris tristique tortor. Eu, malesuada elit feugiat laoreet malesuada vitae. zz enim habitasse malesuada lacus, euismod pharetra habitasse.
         </p>
-        
-        <button style="background: #D16FFF; color: #FFF; width: 187px;
-        height: 52px;
-        
-        border-radius: 20px; 
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Ver CV</button>
-    </section>
-
+        <button>Ver CV</button>
+    </div>
     <div style="    background:#9122FF;">
-        <p class="titulo" style="color:#26CC4B; font-weight: 700;
-        font-size: 36px; text-align: center;">Mis Skills</p>
+        <p class="titulo" style="color:#26CC4B; font-weight: bolder; size: 36px;">Mis Skills</p>
         <div class="skills" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); grid-gap: 10px; justify-items: center;">
         <div>
         <label for="">HTML</label>
@@ -92,15 +92,9 @@ height: 117px; font-size: 36px;">Hola, mi nombre<br>
         <div style="width: 200px; height: 10px; border: none; border-radius: 100px; background-color: #57EFF9;"></div>
         </div>
     </div>
-    </div>
-    <section style="    background:#FFD233; height: 275px;">
-        <p class="titulo" style="font-family: 'Arial';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 41px;
-        text-align: center;
-        color: #00AD84;">Portafolio</p>
+    </div> 
+    <div style="    background:#FFD233;">
+        <p class="titulo" style="color:#00AD84; font-weight: bolder; size: 36px;">Portafolio</p>
         <div class="contenedor-portafolio" style="display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -113,52 +107,25 @@ height: 117px; font-size: 36px;">Hola, mi nombre<br>
         <img src="./img/image-5.png" alt="">
         <img src="./img/image-6.png" alt="">
         <img src="./img/image-7.png" alt="">
-    </section>
-    <section style="background: #3F4E62;">
-        <p class="titulo" style="font-family: 'Arial';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 41px;
-        text-align: center;
-        color: #ADFF28;">Clientes</p>
-        <div class="contenedor-clientes" style="text-align: center; height: 100px;">
+        </div>
+    </div>
+    <div class="clientes" style="    background:#3F4E62 ;">
+        <p class="titulo" style="color:#ADFF28; font-weight: bolder; size: 36px;">Clientes</p>
+        <div class="contenedor-clientes">
         <img src="./img/image-9.png" class="imagen-clientes">
         <img src="./img/image-10.png" class="imagen-clientes">
         <img src="./img/image-9.png" class="imagen-clientes">
         <img src="./img/image-8.png" class="imagen-clientes">
-        </div> 
-    </section>
-    <section style="background: #1687A0;;">
-        <p class="titulo" style="font-family: 'Arial';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 41px;
-        text-align: center;
-        color: #FF1B1B;
-        ">Contacto</p>
-        <div style="display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 10px;">
-        <input type="text" placeholder="Nombre" style="border: 1px solid #BFBFBF;">
-        <input type="text" placeholder="Apellido" style="border: 1px solid #BFBFBF;">
-        <input type="text" placeholder="Email" style="border: 1px solid #BFBFBF;">
-        <input type="text" placeholder="Teléfono"style="border: 1px solid #BFBFBF;">
-        <input type="text" placeholder="Descripción"style="border: 1px solid #BFBFBF;width: 500px;
-        height: 30px;">
-        
-        </div>
-        <button style="font-family: 'Arial';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 21px;
-        /* identical to box height */
-       
-        background: #233451;
-        color: #FFFFFF;">Enviar</button>    
-    </section>
+        </div>    
+    </div>
+    <div id="">
+        <p class="titulo" style="color: #FF1B1B; font-weight: bolder; size: 36px;">Contacto</p>
+        <input type="text" placeholder="Nombre">
+        <input type="text" placeholder="Apellido">
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Teléfono">
+        <input type="text" placeholder="Descripción">
+        <button>Enviar</button>
+    </div>
 </body>
 </html>
