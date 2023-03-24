@@ -10,22 +10,26 @@ Sin la validación en línea, un usuario puede abrirse camino a través de un fo
 
 ## ¿Cuáles son los beneficios?
 
-**Los beneficios de la validacion en HTML  son :**
-Dado que las páginas web se procesan mediante HTML (Lenguaje de marcado de hipertexto), aquí hay algunos beneficios importantes de la validación HTML de la página web:
-- **Mejorar la accesibilidad del sitio web**
-La validación de códigos HTML ayuda a identificar áreas de posible bloqueo que pueden impedir que sus visitantes y las arañas de los motores de búsqueda accedan a sus sitios web. Cuando uno ejecuta los sitios web a través del validador de código HTML, resalta los errores que deben corregirse para una representación óptima de la página web.
+Beneficios de la validación de entrada son :
 
-- **Ayuda a cargar más rápido**
-Es una teoría conocida que una vez que la página web contiene códigos que tienen errores de HTML, tarda más tiempo en cargarse. La validación de HTML borra los errores ocultos en la página web, lo que hace que se cargue más rápido y, por lo tanto, los motores de búsqueda tardan mucho menos en rastrearla en línea. Es mejor recordar bajo este contexto, que si su página no se carga en 10 a 15 segundos, es evidente que su visitante puede considerar hacer clic en los sitios web de su competidor.
+**1.  Experiencia de usuario mejorada**:
 
-- **Pone menos carga en el servidor**
-Las tablas anidadas y los códigos complicados a menudo gravan al servidor mucho más que los códigos HTML limpios y simples. CSS u Hojas de estilo en cascada, reduce la cantidad de códigos necesarios para crear su página web. Por lo tanto, en otras palabras, la validación de HTML no solo reduce su espacio web, sino que también reduce el ancho de banda, lo que a su vez ahorra mucho dinero al alojar los sitios web.
+Una fuente importante de frustración para los usuarios es recibir un error de entrada al intentar realizar una solicitud en una plataforma digital. Estos pueden evitarse validando las entradas para que los usuarios envíen entradas en un formato aceptable y sean debidamente advertidos cuando sus entradas violen las pautas.
 
-- **Facilidad de mantenimiento y actualización del sitio web**
-Cuando no hay errores en los códigos HTML del sitio web, lo que se puede hacer mediante la validación de HTML, se vuelve más fácil y rápido realizar cambios en esos sitios web. Entonces, mientras que para el diseñador web ahorra mucho tiempo, para el cliente se convierte en un ahorro en su billetera.
+Cuando se realiza correctamente, la validación de entrada mejora la experiencia del usuario en una plataforma digital. Es la diferencia entre las plataformas que los usuarios disfrutan usando y las plataformas que los usuarios evitan.
 
-- **Ayudas en la compatibilidad del navegador**
-La validación de los códigos HTML de la página web asegura tanto al cliente como al diseñador web que el sitio es compatible con todos los navegadores actuales y también para los futuros navegadores que vendrán en su momento. Como todos los navegadores actuales, los que son más populares en línea, continúan actualizando sus reglas y todos los navegadores futuros también se asegurarán de que las páginas web sean compatibles con HTML, por lo tanto, siempre es una sabia decisión validar HTML de las páginas web antes de mostrarlas en línea.
+**2. Mayor seguridad**:
 
-Además del hecho mencionado anteriormente, una vez que las páginas web aparecen correctamente en todos los principales navegadores con la ayuda de la validación HTML de los códigos, ayuda a las páginas web a llegar a una audiencia más amplia, lo que a cambio aumenta el potencial de ventas de su sitio web.
+Al administrar los recursos de Internet que recopilan datos de los usuarios, la seguridad es una preocupación primordial. Puede ayudar a evitar demandas y proteger la integridad de la organización propietaria de la plataforma.
 
+Los usuarios que acceden a una plataforma lo hacen con la confianza implícita de que las organizaciones protegerán sus datos y los utilizarán de forma ética.
+
+**3. Prevención de errores mejorada**:
+
+La validación de entrada hace mucho para evitar que ocurran errores. Reduce las formas en que un usuario puede hacer algo mal en una plataforma digital, lo que garantiza que el software funcione mucho más rápido.
+
+Con una validación de entrada adecuada, la cantidad de códigos de manejo de errores y pruebas unitarias necesarias se reduce significativamente. Muchos errores comunes se evitan al restringir el tipo de entradas de usuario posibles a lo que se espera.
+
+**4. Mayor rendimiento**:
+
+Con posibilidades reducidas de error, una solución de software de mayor rendimiento está más o menos garantizada. Debido a que la programación de software es una ciencia exacta, es vital asegurarse de que la solución de software obtenga el tipo de datos que espera realizar en la forma en que está diseñada para funcionar.
