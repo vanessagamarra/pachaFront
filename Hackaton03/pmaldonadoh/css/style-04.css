@@ -209,6 +209,7 @@
         font-size: 14px;
         transition: 0.4s;
         color: #BFBFBF;
+        outline: transparent;
     }
     
     #enviar {
@@ -224,6 +225,13 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 270px;
     margin-top: 25px;
+    cursor: pointer;
+    }
+
+    #enviar:hover {
+        box-shadow: 3px 3px 3px black;
+        background-color: #839D9A;
+        
     }
 
     #dptn { 
