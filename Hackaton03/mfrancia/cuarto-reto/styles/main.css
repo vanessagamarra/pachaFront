@@ -342,7 +342,7 @@ header .header-content-wrapper .header-content-inner::before{
 
 
 
-.footer-form .input input:not([type=button]),
+.footer-form .input input:not([type=submit]),
 .footer-form .input textarea{
     width: 100%!important;
     padding: 20px;
