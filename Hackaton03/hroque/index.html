@@ -6,5 +6,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Reto 04</title>
 	</head>
-	<body></body>
+	<body>
+		<section class="contacto">
+			<div>
+				<h2 class="title">Contacto</h2>
+				<form onsubmit="preventSubmit(event)">
+					<div>
+						<input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern="[A-Za-z ]+" />
+						<input type="text" name="apellido" id="apellido" placeholder="Apellido" pattern="[A-Za-z ]+" />
+						<input type="text" name="email" id="email" placeholder="Email" required />
+						<input type="text" name="telefono" id="telefono" placeholder="Telefono" pattern="\+51[0-9]{9}" />
+					</div>
+					<textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripcion"></textarea>
+					<button type="submit">Enviar</button>
+				</form>
+			</div>
+		</section>
+	</body>
+	<script>
+		const preventSubmit = (e) => {
+			e.preventDefault();
+			alert('Formulario enviado.');
+		};
+	</script>
 </html>
