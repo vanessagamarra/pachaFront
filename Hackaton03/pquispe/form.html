@@ -6,11 +6,46 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Validación de Formularios</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
     </head>
 
     <body>
         
         <h1>Reto 03 Hackaton 03</h1>
+
+        <form action="#" method="post">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre"> <br><br>
+
+            <label for="apellido">Apellido: </label>
+            <input type="text" name="apellido" id="apellido"> <br><br>
+
+            <label for="edad">Edad: </label>
+            <input type="number" name="edad" id="edad"> <br><br>
+
+            <label for="sexo">Sexo: </label>
+            <select name="sexo" id="sexo">
+                <option></option>
+                <option value="">Femenino</option>
+                <option value="">Masculino</option>
+                <option value="">Intersexual</option>
+                <option value="">Intersexual con características femeninas</option>
+                <option value="">Intersexual con características masculinas</option>
+            </select> <br><br>
+
+            <label for="dni">DNI: </label>
+            <input type="text" name="dni" id="dni"> <br><br>
+
+            <label for="correo">Email: </label>
+            <input type="email" name="correo" id="correo"> <br><br>
+
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+        </form>
 
     </body>
 
