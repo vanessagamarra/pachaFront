@@ -46,6 +46,7 @@ Segundo reto:
 ●	Agregar cambios al stage
 ●	Crear versión y definir mensaje corto
 ●	Subir cambios a repositorio remoto
+
 Tercer Reto:
 
 ●	Crear archivo form.html en la rama feature-tags-form
