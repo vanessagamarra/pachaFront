@@ -1,0 +1,76 @@
+#contacto{
+    position: absolute;
+width: 157px;
+height: 41px;
+left: 406px;
+top: 2085px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 41px;
+
+color: red;
+
+}
+
+.Nombre{
+    position: absolute;
+    width: 363px;
+    height: 59px;
+    left: 100px;
+    top: 2156px;
+    
+    background: #FFFFFF;
+    border: 1px solid #BFBFBF; 
+}
+.Apelldo{
+    position: absolute;
+    width: 363px;
+    height: 59px;
+    left: 496px;
+    top: 2156px;
+
+    background: #FFFFFF;
+    border: 1px solid #BFBFBF;
+}
+.Email{
+    position: absolute;
+width: 363px;
+height: 59px;
+left: 100px;
+top: 2248px;
+
+background: #FFFFFF;
+border: 1px solid #BFBFBF;
+}
+.Telefono{
+    position: absolute;
+width: 363px;
+height: 59px;
+left: 496px;
+top: 2248px;
+
+background: #FFFFFF;
+border: 1px solid #BFBFBF;
+}
+.Descripcion{
+    position: absolute;
+width: 759px;
+height: 112px;
+left: 100px;
+top: 2343px;
+
+background: #FFFFFF;
+border: 1px solid #BFBFBF;
+}
+.Enviar{
+    position: absolute;
+width: 167px;
+height: 56px;
+left: 396px;
+top: 2500px;
+
+background: #233451;
+}
