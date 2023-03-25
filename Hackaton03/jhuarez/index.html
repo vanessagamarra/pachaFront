@@ -18,24 +18,24 @@
             <tr>
                 <td>
                     <label for="Nombre">Nombre:</label><br>
-                    <input type="text" id="Nombre" name="Nombre" placeholder="Nombre">
+                    <input type="text" id="Nombre" name="Nombre" placeholder="Nombre" pattern="[a-zA-Z]+{30}" required>
                 </td>
 
                 <td> 
                     <label for="Apellido">Apellido:</label><br>
-                    <input type="text" id="Apellido" name="Apellido" placeholder="Apellido">
+                    <input type="text" id="Apellido" name="Apellido" placeholder="Apellido" pattern="[a-zA-Z]+{30}" required>
                 </td>
             </tr>
 
             <tr>
                 <td>
                     <label for="email">Email:</label><br>
-                    <input type="text" id="email" name="email" placeholder="Email">
+                    <input type="email" id="email" name="email" placeholder="Email" maxlength="50">
                 </td>
 
                 <td> 
                     <label for="Telefono">Telefono:</label><br>
-                    <input type="text" id="Telefono" name="Telefono" placeholder="Telefono">
+                    <input type="tel" id="Telefono" name="Telefono" placeholder="Telefono" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
                 </td>
             </tr>
          
@@ -43,7 +43,7 @@
 
         <p>
         <label for="Descripcion">Descripcion:</label><br>
-        <input type="text" id="Descripcion" name="Descripcion" placeholder="Descripcion"> <br><br>
+        <input type="text" id="Descripcion" name="Descripcion" placeholder="Max 100 caracteres" maxlength="100""> <br><br>
               
         <input type="submit" value="ENVIAR">
         
