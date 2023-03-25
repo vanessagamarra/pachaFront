@@ -1,0 +1,2 @@
+# 1· ¿Para qué sirve la validación de formularios?
+La validación de formularios es un aspecto muy importante cuando se crea una página web que capturará información, y más aún si esta información será almacenada en una base de datos. Además nos permiten enviar información del usuario al sistema. Pudiéndose enviar, por ejemplo, un nombre, un apellido, una fecha de nacimiento, un número de cuenta, etc.
