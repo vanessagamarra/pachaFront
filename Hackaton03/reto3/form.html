@@ -5,40 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <style>
+        h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+        .focus{border: 2px solid blue  ;
+
+        }
+    </style>
 </head>
 <body>
-    <header>Formulario de datos personales</header>
+    <header>
+        <h1>Formulario de datos personales</h1></header>
     <form action="">
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre"> <br>
+        <input class="focus" type="text" name="nombre" id="nombre"> <br>
         <label for="apellido">Apellido</label>
-        <input type="text" name="apellido" id="apellido"><br>
+        <input class="focus" type="text" name="apellido" id="apellido"><br>
         <label for="edad">Edad</label>
-        <input type="number" name="edad" id="edad" min=18 max=80><br>
+        <input class="focus" type="number" name="edad" id="edad" min=18 max=80><br>
         <label for="sexo">Sexo</label>
-        <input type="text" name="sexo" id="sexo"><br>
+        <input class="focus" type="text" name="sexo" id="sexo"><br>
         <label for="dni">Dni</label>
-        <input type="text" name="dni" id="dni" minlength="8"><br>
+        <input class="focus" type="text" name="dni" id="dni" minlength="8"><br>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email"><br>
+        <input class="focus" type="email" name="email" id="email"><br>
 
-
-
-
-
-
-
-
-
-
-    </form>
+     </form>
 </body>
 </html>
 
-●	El campo Dni solo aceptara textos y números y como minimo tiene q tener 8 números
-●	El campo Email solo soportara correo
-●	Agregar padding, border y también la pseudo clase focus
-●	Agregar cambios al stage
-●	Crear versión y definir mensaje corto
-●	Subir cambios a repositorio remoto
-●	Cambiarse a rama master, bajar, cambiar y combinar cambios
+
+
