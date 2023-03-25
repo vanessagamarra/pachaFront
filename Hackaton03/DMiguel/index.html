@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Formulario de Figma</title>
 </head>
 <body>
-    <form action="/get.php">
-        
-    </form>
+    <section class="">
+        <h2 class="">
+            Contactos
+        </h2>
+        <form action="/get.php" class="">
+            <input type="text" id="nombre" required placeholder="Nombre">
+            <input type="text" id="apellido" required placeholder="Apellido"><br>
+            <input type="email" id="correo" required placeholder="" Email>
+            <input type="number" id="cell" required placeholder="Telefono"><br>
+            <textarea cols="30" rows="7" required id="mensaje" placeholder="Descripcion"></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
 </body>
 </html>
