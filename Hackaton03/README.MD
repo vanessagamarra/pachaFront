@@ -39,13 +39,14 @@ PREGUNTAS:
 
 Segundo reto: 
 
-●	Ingresar al siguiente enlace - https://developer.mozilla.org/es/docs/HTML/HTML5/HTML5_lista_elementos#Formularios
+●	Ingresar al siguiente enlace https://developer.mozilla.org/es/docs/Learn/Forms
 ●	Crear rama feature-tags-form a partir de master
 ●	Crear archivo tags-form.html
 ●	Escribir etiquetas de la lista de elementos html5 
 ●	Agregar cambios al stage
 ●	Crear versión y definir mensaje corto
 ●	Subir cambios a repositorio remoto
+
 Tercer Reto:
 
 ●	Crear archivo form.html en la rama feature-tags-form
