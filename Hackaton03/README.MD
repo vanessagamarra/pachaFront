@@ -55,7 +55,7 @@ Tercer Reto:
 ●	El campo Edad solo soportara el rango de 18 a 80
 ●	El campo Dni solo aceptara textos y números y como minimo tiene q tener 8 números
 ●	El campo Email solo soportara correo
-●	Agregar padding, border y también la pseudo clase focus
+●	Agregar padding, border y también la pseudo clase git 
 ●	Agregar cambios al stage
 ●	Crear versión y definir mensaje corto
 ●	Subir cambios a repositorio remoto
