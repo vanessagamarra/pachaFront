@@ -13,10 +13,10 @@
             Contactos
         </h2>
         <form action="/get.php" class="">
-            <input type="text" id="nombre" required placeholder="Nombre">
-            <input type="text" id="apellido" required placeholder="Apellido"><br>
-            <input type="email" id="correo" required placeholder="" Email>
-            <input type="number" id="cell" required placeholder="Telefono"><br>
+            <input type="text" id="nombre" required placeholder="Nombre" pattern="[a-zA-Z]+">
+            <input type="text" id="apellido" required placeholder="Apellido" pattern="[a-zA-Z]+"><br>
+            <input type="email" id="correo" required placeholder="Email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" >
+            <input type="number" id="cell" required placeholder="Telefono" min="100000000" max="999999999"><br>
             <textarea cols="30" rows="7" required id="mensaje" placeholder="Descripcion"></textarea><br>
             <input type="submit" value="Enviar">
         </form>
