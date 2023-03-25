@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Reto03</title>
 </head>
 <body>
-    
+    <h1>Formulario</h1>
+    <form action="misegundapagina.html" method="post">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" placeholder="Aquí tu nombre" pattern="[a-zA-Z ]{2,25}" title="Solo texto" required/>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Aquí tu apellido" pattern="[a-zA-Z ]{2,25}" title="Solo texto" required/>
+        <br>
+        <label for="edad">Edad: </label>
+        <input type="number"  min="18" max="80" pattern="^[0-9]+">
+
+        <label for="dni">DNI: </label>
+        <input type="text" placeholder="Aquí tu DNI" pattern="[0-9]{8}" title="Mínimo 8 caracteres"><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="">
+
+        <input type="submit" value="Enviar">
+    </form>
+
 </body>
 </html>
