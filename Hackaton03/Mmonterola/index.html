@@ -11,20 +11,20 @@
 
         <h2>Contacto</h2>
         <br>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" pattern="[A-Za-z]+" required>
         
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" pattern="[A-Za-z]+" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-z]+" required placeholder="Nombre">
         
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" pattern="^\(\d{3}\) \d{3}-\d{4}$">
+        
+        <input type="text" id="apellido" name="apellido" pattern="[A-Za-z]+" required placeholder="Apellidos">
         <br>
-        <label for="comentario">Comentario:</label>
-        <textarea id="comentario" name="comentario"></textarea>
+        
+        <input type="email" id="email" name="email" required placeholder="Email">
+        
+        
+        <input type="tel" id="telefono" name="telefono" pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="Telefono">
+        <br>
+        
+        <textarea id="comentario" name="comentario" placeholder="Descripcion"></textarea>
         <br>
         <input type="submit" value="Enviar">
       </form>
