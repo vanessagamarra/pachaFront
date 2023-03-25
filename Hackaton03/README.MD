@@ -33,6 +33,9 @@ Los formularios son Interfaces (capa de comunicación entre el usuario y la comp
 Cuando se envían los datos, el sistema que los recibe espera los formatos correspondientes por cada tipo de dato. Si enviamos un nombre esperará un string, si enviamos una fecha esperará un formato de fecha, si enviamos un número esperará un número. El error se genera cuando enviemos información incorrecta en los campos, o sea, si en un campo que tienes que enviar un dato tipo string envías un número. También evitaremos las inyecciones SQL (SQL Injection es una falla en la codificación de una aplicación cualquiera (web o local) que posibilita por medio de un input cualquiera, la manipulación de una consulta SQL.).
 PREGUNTAS:
 •	¿Para qué sirve la validación de formularios?
+
+
+
 •	¿Cuáles son los problemas al no validar un formulario?
 •	¿Cuáles son los beneficios?
 
