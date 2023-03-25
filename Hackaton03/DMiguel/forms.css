@@ -12,7 +12,8 @@ input:focus{
 
 fieldset{
     border-radius: 1em;
-    background-color: rgb(212, 234, 255)
+    background-color: rgb(212, 234, 255);
+    padding: 1.5em 1.5em;
 }
 
 fieldset:hover{
