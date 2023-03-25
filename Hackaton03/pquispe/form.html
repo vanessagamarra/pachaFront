@@ -19,29 +19,29 @@
 
         <form action="#" method="post">
             <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" id="nombre"> <br><br>
+            <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]{1,30}" title="Solo se aceptan letras mayúsculas y minúsculas en un máximo de 30 caracteres." required> <br><br>
 
             <label for="apellido">Apellido: </label>
-            <input type="text" name="apellido" id="apellido"> <br><br>
+            <input type="text" name="apellido" id="apellido" pattern="[A-Za-z]{1,50}" title="Solo se aceptan letras mayúsculas y minúsculas en un máximo de 50 caracteres." required> <br><br>
 
             <label for="edad">Edad: </label>
-            <input type="number" name="edad" id="edad"> <br><br>
+            <input type="number" name="edad" id="edad" min="18" max="80" title="Solo se aceptan números entre 18 y 80." required> <br><br>
 
             <label for="sexo">Sexo: </label>
-            <select name="sexo" id="sexo">
+            <select name="sexo" id="sexo" required>
                 <option></option>
-                <option value="">Femenino</option>
-                <option value="">Masculino</option>
-                <option value="">Intersexual</option>
-                <option value="">Intersexual con características femeninas</option>
-                <option value="">Intersexual con características masculinas</option>
+                <option value="femenino">Femenino</option>
+                <option value="masculino">Masculino</option>
+                <option value="intersexual">Intersexual</option>
+                <option value="intersexualFem">Intersexual con características femeninas</option>
+                <option value="intersexualMas">Intersexual con características masculinas</option>
             </select> <br><br>
 
             <label for="dni">DNI: </label>
-            <input type="text" name="dni" id="dni"> <br><br>
+            <input type="text" name="dni" id="dni" pattern="^[a-zA-Z0-9]{8,}$" title="Solo se aceptan letras mayúsculas, minúsculas y número, pero se reuqiere de un mínimo de 8 números." required> <br><br>
 
             <label for="correo">Email: </label>
-            <input type="email" name="correo" id="correo"> <br><br>
+            <input type="email" name="correo" id="correo" required> <br><br>
 
             <input type="reset" value="Borrar">
             <input type="submit" value="Enviar">
