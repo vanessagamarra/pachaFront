@@ -88,6 +88,7 @@ color: #FFFFFF;
 color: #26CC4B;
 }
 
+
 .texto1{
     font-weight: 400;
 font-size: 18px;
@@ -105,6 +106,16 @@ top: 1090px;
 
 background: #FFFFFF;
 border-radius: 10px;
+}
+
+.relleno1{
+    width: 319px;
+height: 20px;
+left: 64px;
+top: 1090px;
+
+background: #57EFF9;
+border-radius: 20px;
 }
 
 
@@ -126,6 +137,18 @@ background: #FFFFFF;
 border-radius: 10px;
 }
 
+.relleno2{
+    width: 64px;
+height: 21px;
+left: 499px;
+top: 1089px;
+
+background: #57EFF9;
+border-radius: 20px;
+
+}
+
+
 .texto3{
     font-weight: 400;
     font-size: 18px;
@@ -142,6 +165,17 @@ top: 1090px;
 background: #FFFFFF;
 border-radius: 10px;
 }
+
+.relleno3{
+    width: 215px;
+    height: 21px;
+    left: 65px;
+    top: 1170px;
+    
+    background: #57EFF9;
+    border-radius: 20px;
+}
+
 
 .texto4{
     font-weight: 400;
@@ -160,6 +194,17 @@ background: #FFFFFF;
 border-radius: 10px;
 }
 
+.relleno4{
+    width: 339px;
+height: 21px;
+left: 500px;
+top: 1170px;
+
+background: #57EFF9;
+border-radius: 20px;
+}
+
+
 .texto5{
     font-weight: 400;
     font-size: 18px;
@@ -177,6 +222,17 @@ background: #FFFFFF;
 border-radius: 10px;
 }
 
+.relleno5{
+    width: 363px;
+height: 21px;
+left: 66px;
+top: 1262px;
+
+background: #57EFF9;
+border-radius: 20px;
+}
+
+
 .texto6{
     font-weight: 400;
     font-size: 18px;
@@ -192,4 +248,80 @@ top: 1090px;
 
 background: #FFFFFF;
 border-radius: 10px;
+}
+
+.relleno6{
+    width: 185px;
+height: 21px;
+left: 501px;
+top: 1262px;
+
+background: #57EFF9;
+border-radius: 20px;
+}
+
+.rectangul{
+   
+height: 424px;
+left: 0px;
+top: 1373px;
+
+background: #FFD233;
+}
+
+.tit{
+   
+
+font-size: 36px;
+line-height: 41px;
+
+color: #00AD84;
+text-align: center;
+}
+
+.contenedor{
+    display: inline-flex;
+    
+    
+    margin: 0% 20px;
+
+}
+
+
+.img1{
+    width: 250px;
+   background: url("foto1.png");
+}
+
+.img2{
+    width: 140px;
+   background: url("foto2.png");
+}
+
+.img3{
+    background: url("foto3.png");
+}
+
+.img4{
+    background: url("foto4.png");
+}
+
+.img5{
+   background: url("foto5.png");
+}
+
+.img6{
+ 
+    background: url("foto6.png");
+}
+
+.img7{
+    width: 142px;
+   
+    background: url("foto7.png" );
+}
+
+.img8{
+
+    background: url("foto8.png");
 }
