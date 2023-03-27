@@ -62,9 +62,9 @@ Tercer Reto:
 ●	El campo Dni solo aceptara textos y números y como minimo tiene q tener 8 números
 ●	El campo Email solo soportara correo
 ●	Agregar padding, border y también la pseudo clase focus
-●	Agregar cambios al stage (git add)
-●	Crear versión y definir mensaje corto (git commit)
-●	Subir cambios a repositorio remoto (git push)
+●	Agregar cambios al stage
+●	Crear versión y definir mensaje corto
+●	Subir cambios a repositorio remoto
 ●	Cambiarse a rama master, bajar, cambiar y combinar cambios
 
 
