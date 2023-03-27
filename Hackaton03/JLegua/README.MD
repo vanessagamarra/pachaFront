@@ -33,26 +33,19 @@ Los formularios son Interfaces (capa de comunicación entre el usuario y la comp
 Cuando se envían los datos, el sistema que los recibe espera los formatos correspondientes por cada tipo de dato. Si enviamos un nombre esperará un string, si enviamos una fecha esperará un formato de fecha, si enviamos un número esperará un número. El error se genera cuando enviemos información incorrecta en los campos, o sea, si en un campo que tienes que enviar un dato tipo string envías un número. También evitaremos las inyecciones SQL (SQL Injection es una falla en la codificación de una aplicación cualquiera (web o local) que posibilita por medio de un input cualquiera, la manipulación de una consulta SQL.).
 PREGUNTAS:
 •	¿Para qué sirve la validación de formularios?
-
-
-
-
-
-
 •	¿Cuáles son los problemas al no validar un formulario?
 •	¿Cuáles son los beneficios?
 
 
 Segundo reto: 
 
-●	Ingresar al siguiente enlace https://developer.mozilla.org/es/docs/Learn/Forms
+●	Ingresar al siguiente enlace - https://developer.mozilla.org/es/docs/HTML/HTML5/HTML5_lista_elementos#Formularios
 ●	Crear rama feature-tags-form a partir de master
 ●	Crear archivo tags-form.html
 ●	Escribir etiquetas de la lista de elementos html5 
 ●	Agregar cambios al stage
 ●	Crear versión y definir mensaje corto
 ●	Subir cambios a repositorio remoto
-
 Tercer Reto:
 
 ●	Crear archivo form.html en la rama feature-tags-form
@@ -62,9 +55,9 @@ Tercer Reto:
 ●	El campo Dni solo aceptara textos y números y como minimo tiene q tener 8 números
 ●	El campo Email solo soportara correo
 ●	Agregar padding, border y también la pseudo clase focus
-●	Agregar cambios al stage (git add)
-●	Crear versión y definir mensaje corto (git commit)
-●	Subir cambios a repositorio remoto (git push)
+●	Agregar cambios al stage
+●	Crear versión y definir mensaje corto
+●	Subir cambios a repositorio remoto
 ●	Cambiarse a rama master, bajar, cambiar y combinar cambios
 
 
