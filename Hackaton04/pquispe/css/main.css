@@ -1,4 +1,5 @@
 
+/* ----------------- COLORES PARA LOS ELEMENTOS ----------------- */
 .color-MAlcalicos {background-color: #f54439;}
 
 .color-Alcalinoterreos {background-color: #f99a46;}
@@ -18,6 +19,8 @@
 .color-GasesNobles {background-color: #0ce9d5;}
 
 .color-Actinidos {background-color: #6a8f74;}
+/* ----------------- /COLORES PARA LOS ELEMENTOS ----------------- */
+
 
 
 body {
@@ -40,6 +43,9 @@ body {
     overflow-x: auto;
 }
 
+
+
+/* ----------------- ESTILOS PARA LOS ELEMENTOS ----------------- */
 .element {
     display: flex;
     flex-direction: column;
@@ -66,8 +72,11 @@ body {
 .element .element__name {
     font-size: 1.2rem;
 }
+/* ----------------- /ESTILOS PARA LOS ELEMENTOS ----------------- */
 
 
+
+/* -------------- ESTILOS PARA ESPACIOS EN BLANCO -------------- */
 .space-1 {
     grid-column: 2 / 18;
 }
@@ -80,3 +89,4 @@ body {
 .space-2 h2 {
     font-size: 3.5rem;
 }
+/* -------------- /ESTILOS PARA ESPACIOS EN BLANCO -------------- */
