@@ -25,20 +25,21 @@
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    padding: 60px 30px 100px;
+    padding: 60px 0px 100px;
 }
 
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+
     color: #2863d1;
     font-size: 5.7rem;
     text-align: center;
     margin-bottom: 60px;
-    flex-wrap: wrap;
-    column-gap: 20px;
-    row-gap: 10px;
 }
 
 .title::before,
@@ -48,6 +49,10 @@ body {
     width: 30px;
     height:30px;
     animation: rotate 5s linear infinite;
+}
+
+.title::after {
+    animation: rotate 5s linear -2.5s infinite;
 }
 
 @keyframes rotate {
@@ -66,6 +71,7 @@ body {
     grid-template-columns: repeat(18, 10rem);
     grid-template-rows: repeat(9, 10rem) 6rem;
     overflow-x: auto;
+    padding: 30px;
 }
 
 
@@ -76,9 +82,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
     padding: 2px;
     border: 1px solid #000;
-    transition: box-shadow 0.8s;
+    transition: box-shadow 0.8s, transform 0.8s;
 }
 
 .element .element__numbers {
@@ -101,7 +108,8 @@ body {
 
 .element:hover {
     box-shadow: 0 0 10px 4px #000;
-    transition: box-shadow 0.5s;
+    transform: scale(1.2);
+    transition: box-shadow 0.5s, transform 0.5s;
     z-index: 1;
 }
 /* ----------------- /ESTILOS PARA LOS ELEMENTOS ----------------- */
@@ -157,7 +165,6 @@ body {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 100%;
-    transition: box-shadow 0.8s;
 }
 
 .typeElements .typeElements__name {
@@ -165,6 +172,7 @@ body {
     justify-content: center;
     align-items: center;
     border: 1px solid #000;
+    transition: box-shadow 0.8s, transform 0.8s;
 }
 
 .typeElements .typeElements__name h4 {
@@ -174,7 +182,8 @@ body {
 
 .typeElements__name:hover {
     box-shadow: 0 0 10px 4px #000;
-    transition: box-shadow 0.5s;
+    transform: scale(1.2);
+    transition: box-shadow 0.5s, transform 0.5s;
     z-index: 1;
 }
 /* -------------- /ESTILOS PARA LOS TIPOS DE ELEMENTOS -------------- */

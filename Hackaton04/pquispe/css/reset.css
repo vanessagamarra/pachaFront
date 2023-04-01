@@ -9,3 +9,10 @@
 html {
     font-size: 62.5%;
 }
+
+hr {
+    border-style: inset;
+    border-width: 1px;
+    margin: 0 auto 40px;
+    width: 90%;
+}
