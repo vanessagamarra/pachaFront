@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Using table  */
+  .table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  
+  .table td {
+    border: 1px solid black;
+    height: 30px;
+  }
+  
