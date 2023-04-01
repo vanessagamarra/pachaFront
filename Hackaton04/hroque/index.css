@@ -1,9 +1,10 @@
+:root {
+	font-size: 16px;
+}
 html {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 	box-sizing: border-box;
 }
@@ -83,7 +84,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	border: 1px solid #000;
-	width: 61px;
+	width: 3.875rem;
 }
 .top {
 	display: flex;
@@ -125,8 +126,9 @@ body {
 	padding: 0.6rem;
 	align-items: center;
 	justify-content: space-between;
-	border: 1px solid #000;
-	width: calc(56px * 4);
+	border: 0.06rem solid #000;
+	/* width: 14.251rem; */
+	width: 1425.1%;
 }
 .top-big {
 	display: flex;
@@ -147,7 +149,7 @@ body {
 	width: 100%;
 }
 .type {
-	border: 1px solid #000;
+	border: 0.06rem solid #000;
 	flex-grow: 1;
 	text-align: center;
 }
