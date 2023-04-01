@@ -1,16 +1,58 @@
-* {
-    box-sizing: border-box;
-  }
-  
+ 
   /* Using table  */
+
   .table {
-    width: 100%;
-    table-layout: fixed;
     border-collapse: collapse;
+    
   }
   
-  .table td {
+  td {
+    width: 5vw;
     border: 1px solid black;
     height: 30px;
   }
-  
+
+  .invisible {
+    border: none;
+  }
+
+  .alcalicos {
+    background-color: red;
+  }
+
+  .alcalinoterreos {
+    background-color: orangered;
+  }
+
+  .metales {
+    background-color: yellow;
+  }
+
+  .transicion {
+    background-color: greenyellow;
+  }
+
+  .lantanidos {
+    background-color: aquamarine;
+  }
+
+  .metaloides {
+    background-color: lime;
+  }
+
+  .nometales {
+    background-color: #0000FF;
+  }
+
+  .halogenos{
+    background-color: purple;
+  }
+
+  .nobles{
+    background-color: aqua;
+  }
+
+  .actinidos{
+    background-color: grey;
+  }
+
