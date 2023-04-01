@@ -90,3 +90,29 @@ body {
     font-size: 3.5rem;
 }
 /* -------------- /ESTILOS PARA ESPACIOS EN BLANCO -------------- */
+
+
+
+/* -------------- ESTILOS PARA ELEMENTO BORO GRANDE -------------- */
+#largeBoro {
+    grid-column: 1 / 4;
+    grid-row: 8 / 11;
+    padding: 10px;
+}
+
+#largeBoro .element__numbers {
+    justify-content: space-between;
+}
+
+#largeBoro .element__numbers p {
+    font-size: 3.0rem;
+}
+
+#largeBoro .element__symbol {
+    font-size: 10.0rem;
+}
+
+#largeBoro .element__name {
+    font-size: 3.0rem;
+}
+/* -------------- /ESTILOS PARA ELEMENTO BORO GRANDE -------------- */
