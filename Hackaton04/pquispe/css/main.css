@@ -116,3 +116,26 @@ body {
     font-size: 3.0rem;
 }
 /* -------------- /ESTILOS PARA ELEMENTO BORO GRANDE -------------- */
+
+
+
+/* -------------- /ESTILOS PARA LOS TIPOS DE ELEMENTOS -------------- */
+.typeElements {
+    grid-column: 4 / 19;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 100%;
+}
+
+.typeElements .typeElements__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+}
+
+.typeElements .typeElements__name h4 {
+    font-size: 2.0rem;
+    font-weight: 400;
+}
+/* -------------- /ESTILOS PARA LOS TIPOS DE ELEMENTOS -------------- */
