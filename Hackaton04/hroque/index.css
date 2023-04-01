@@ -37,11 +37,7 @@ html {
 .actinidos {
 	background-color: #6a8f74;
 }
-.title {
-	position: absolute;
-	top: 100px;
-	left: 400px;
-}
+
 body {
 	display: grid;
 	place-content: center;
@@ -51,6 +47,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 90vw;
+	width: 100%;
+	position: relative;
+}
+.title {
+	position: absolute;
+	top: 5rem;
+	left: 22rem;
 }
 .row-1,
 .row-2,
@@ -80,7 +83,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	border: 1px solid #000;
-	width: 56px;
+	width: 61px;
 }
 .top {
 	display: flex;
@@ -141,6 +144,7 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
 }
 .type {
 	border: 1px solid #000;
