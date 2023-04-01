@@ -7,7 +7,8 @@
     box-shadow: none;
     transform: none;
   }
-
+ 
+  
   body {
     font-family: Arial;
     -webkit-transform: translateZ(0);
@@ -346,25 +347,9 @@
       color: #000000;
       text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
     }
-    .legend {
-      position: absolute;
-      top: 1%;
-      left: 34%;
-      padding: 0px;
-      font-size: 8px;
-      width: 230px;
-  }
-  .legend .list-2 {
-      margin-left: 10px;
-      width: 106px;
-      padding-left: 0px;
-  }
-  .legend .list-3 {
-      margin-left: 0px;
-      width: 107px;
-      padding-left: 0;
-  }
-  }
+   
+}
+  
   @media (min-width: 800px) {
     .periodic {
       height: 540px;
@@ -410,68 +395,9 @@
     .symbol {
       font-size: 30px;
     }
-  .legend {
-      position: absolute;
-      top: 3%;
-      left: 36%;
-      padding: 0px;
-      font-size: 13px;
-          width: 470px;
-  }
-  
-  .legend:after {
-    content: "";
-    display: table;
-    clear: table;
-  }
-  li{
-     list-style: none;
-  }
-  .legend ul {
-    float: left;
-  }
-  
-  .legend .list-2 {
-    margin-left: 10px;
-    width: 200px;
-  }
-  .legend .list-3 {
-    margin-left: 0px;
-    width: 200px;
-    padding-left: 0;
-  }
-  
-  .legend .list-1 li {
-    margin: 7px 0;
-  }
-  
-  .legend .list-1 li:first-of-type {
-    margin-top: 2px;
-  }
-  
-  .legend .list-1 span {
-    border: 1px solid black;
-    display: inline-block;
-    padding: 3px;
-    width: 20px;
-    text-align: center;
-    height: 20px;
-    margin-right: 5px;
-  }
-  
-  .legend .list-2 li {
-    margin: 2px;
-    padding: 3px;
-    float: left;
-    width: 70%;
-    cursor: pointer;
-  }
-  .legend .list-3 li {
-    margin: 2px;
-    padding: 3px;
-    float: left;
-    width: 70%;
-    cursor: pointer;
-  }
+}
+  .detalle{
+    background-color: #048704;
+    
   }
   
