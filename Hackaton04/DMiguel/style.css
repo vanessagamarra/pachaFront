@@ -6,3 +6,53 @@
 .tabla-periodica{
     display: flex;
 }
+
+.tp_grupo{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grup_1{
+    /*  */
+}
+
+.grup_2_13-17{
+    margin-block-start: 6.5em;
+}
+
+.grup_3-12{
+    margin-block-start: 19.5em;
+}
+
+.grup_4{
+    margin-block-start: 19.5em;
+}
+
+.tp_grupo1_elemn{
+    background-color: rgba(255, 255, 255, 0.536);
+    width: 6.5em;
+    height: 6.5em;
+    text-align: center;
+}
+
+.elemn_invsible{
+    background-color: #fff;
+    display: none;
+}
+
+.tp_grupo1_elemn .elemn_simbolo{
+    font-weight: bold;
+    font-size:3em
+}
+
+.tp_grupo1_elemn .elemn_name{
+    font-weight: bold;
+}
+
+.tp_grupo1_elemn .elemn_info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.elemn_info span{
+    margin-inline: 0.5em;
+}
