@@ -29,10 +29,34 @@ body {
 }
 
 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #2863d1;
     font-size: 5.7rem;
     text-align: center;
     margin-bottom: 60px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.title::before,
+.title::after {
+    background-color: #2863d1;
+    content: "";
+    width: 30px;
+    height:30px;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 
 
