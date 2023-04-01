@@ -101,7 +101,7 @@ body {
 }
 
 .noMetales:hover{
-    transition: 2s all;
+    transition: 3s all;
     background-color: #8ced8c;
 }
 
