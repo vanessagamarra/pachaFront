@@ -100,6 +100,11 @@ body {
     background: radial-gradient(#8ced8c 10%,#ffffff00 50%);
 }
 
+.noMetales:hover{
+    transition: 2s all;
+    background-color: #8ced8c;
+}
+
 .gasesNobles{
     background: radial-gradient(#e5bde5 10%,#ffffff00 50%);
 }
