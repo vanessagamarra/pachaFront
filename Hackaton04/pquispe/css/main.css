@@ -18,3 +18,56 @@
 .color-GasesNobles {background-color: #0ce9d5;}
 
 .color-Actinidos {background-color: #6a8f74;}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 40px 20px;
+}
+
+.title {
+    color: #2863d1;
+    font-size: 5.7rem;
+    text-align: center;
+}
+
+
+.tablaPeriodica-Container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(18, 10rem);
+    grid-template-rows: repeat(9, 10rem) 6rem;
+    overflow-x: auto;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    border: 1px solid #000;
+}
+
+.element .element__numbers {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.element .element__numbers p {
+    font-size: 1.8rem;
+}
+
+.element .element__symbol {
+    font-size: 3.2rem;
+}
+
+.element .element__name {
+    font-size: 1.2rem;
+}
+
+
+.space-1 {
+    grid-column: 2 / 18;
+}
