@@ -25,13 +25,14 @@
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    padding: 40px 20px;
+    padding: 60px 30px 100px;
 }
 
 .title {
     color: #2863d1;
     font-size: 5.7rem;
     text-align: center;
+    margin-bottom: 60px;
 }
 
 
@@ -53,6 +54,7 @@ body {
     align-items: center;
     padding: 2px;
     border: 1px solid #000;
+    transition: box-shadow 0.8s;
 }
 
 .element .element__numbers {
@@ -71,6 +73,12 @@ body {
 
 .element .element__name {
     font-size: 1.2rem;
+}
+
+.element:hover {
+    box-shadow: 0 0 10px 4px #000;
+    transition: box-shadow 0.5s;
+    z-index: 1;
 }
 /* ----------------- /ESTILOS PARA LOS ELEMENTOS ----------------- */
 
@@ -125,6 +133,7 @@ body {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 100%;
+    transition: box-shadow 0.8s;
 }
 
 .typeElements .typeElements__name {
@@ -137,5 +146,11 @@ body {
 .typeElements .typeElements__name h4 {
     font-size: 2.0rem;
     font-weight: 400;
+}
+
+.typeElements__name:hover {
+    box-shadow: 0 0 10px 4px #000;
+    transition: box-shadow 0.5s;
+    z-index: 1;
 }
 /* -------------- /ESTILOS PARA LOS TIPOS DE ELEMENTOS -------------- */
