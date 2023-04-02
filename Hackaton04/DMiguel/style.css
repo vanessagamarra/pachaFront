@@ -87,6 +87,9 @@ body {
     background: radial-gradient(#fac5b7 10%,#ffffff00 50%); 
 }
 
+.sinClasificar{
+    background: radial-gradient(#eee 10%,#ffffff00 50%);
+}
 
 .metalDelBloqueP{
     background: radial-gradient(#acdfec 10%,#ffffff00 50%); 
@@ -108,3 +111,4 @@ body {
 .gasesNobles{
     background: radial-gradient(#e5bde5 10%,#ffffff00 50%);
 }
+
