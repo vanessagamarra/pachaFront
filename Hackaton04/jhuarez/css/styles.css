@@ -16,6 +16,7 @@
     height: 5vw;
     text-align: center;
     font-size: x-small;
+    position: relative;
   }
 
   .altRow table {
@@ -74,9 +75,26 @@
   }
 
   .right {
-    float: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
   }
 
   .left {
-    float: left;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+  }
+
+  .elemento {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    
+  }
+
+  .invisible.titulo {
+    font-size: x-large;
   }
