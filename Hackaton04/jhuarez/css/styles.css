@@ -5,12 +5,24 @@
     border-collapse: collapse;
     
   }
+
+  .table tr:last-child td {
+    height: 2vw;
+  }
   
   td {
     width: 5vw;
     border: 1px solid black;
-    height: 30px;
+    height: 5vw;
+    text-align: center;
+    font-size: x-small;
   }
+
+  .altRow table {
+    width: 100%;
+  }
+
+
 
   .invisible {
     border: none;
@@ -21,7 +33,7 @@
   }
 
   .alcalinoterreos {
-    background-color: orangered;
+    background-color: #ffa500;
   }
 
   .metales {
@@ -29,7 +41,7 @@
   }
 
   .transicion {
-    background-color: greenyellow;
+    background-color: #D0DB61;
   }
 
   .lantanidos {
@@ -41,11 +53,11 @@
   }
 
   .nometales {
-    background-color: #0000FF;
+    background-color: #1167b1;
   }
 
   .halogenos{
-    background-color: purple;
+    background-color: #BB29BB;
   }
 
   .nobles{
@@ -56,3 +68,15 @@
     background-color: grey;
   }
 
+  .symbol {
+    font-weight: bold;
+    font-size: xx-large;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .left {
+    float: left;
+  }
