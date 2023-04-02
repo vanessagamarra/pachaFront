@@ -480,7 +480,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: #02710fde;
-    
+
 }
 
 .cambio2 {
@@ -495,33 +495,34 @@ body {
     color: #000;
 }
 
-.masas{
+.masas {
     font-size: 20px;
 }
 
 .estilo2 {
     height: 100%;
-   width: 82.9%;
-   display: inline-block;
+    width: 82.9%;
+    display: inline-block;
 }
-.swap.periodic-row{
-   
+
+.swap.periodic-row {
+
     width: 100%;
     height: 35%;
 
 
 }
-.tamañocell{
+
+.tamañocell {
     float: left;
     position: relative;
     width: 6.66%;
     height: 100%;
-    
+
 }
 
 
-.tabla
- {
+.tabla {
     border: 1px solid white;
     border-collapse: collapse;
     padding: 1px;
@@ -532,42 +533,43 @@ body {
 
 .uno {
     background-color: #f40808;
-    
+
     padding: 1%;
 
 }
 
-.dos{
+.dos {
     background-color: coral;
 }
 
-.tres{
+.tres {
     background-color: #ede611;
 }
 
-.cuatro{
+.cuatro {
     background-color: darkgreen;
 }
 
-.cinco{
-    background-color:dodgerblue;
+.cinco {
+    background-color: dodgerblue;
 }
 
-.seis{
+.seis {
     background-color: #04fa1d;
 }
 
-.siete{
+.siete {
     background-color: #156eea;
 }
 
-.ocho{
+.ocho {
     background-color: #5520f3;
 }
-.nueve{
+
+.nueve {
     background-color: cyan;
 }
 
-.dies{
+.dies {
     background-color: dimgrey;
 }
