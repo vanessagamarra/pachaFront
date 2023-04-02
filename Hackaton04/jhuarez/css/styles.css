@@ -27,6 +27,8 @@
 
   .invisible {
     border: none;
+    font-size: x-large;
+    font-weight: bolder;
   }
 
   .alcalicos {
@@ -74,6 +76,11 @@
     font-size: large;
   }
 
+  .bigsymbol{
+    font-weight: bold;
+    font-size: xx-large;
+  }
+
   .right {
     position: absolute;
     top: 0px;
@@ -95,6 +102,4 @@
     
   }
 
-  .invisible.titulo {
-    font-size: x-large;
-  }
+
