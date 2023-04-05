@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+.vanessa{
+    border: 1px dotted red
+}
+.wendy{
+    border: 1px dotted yellow
+}
+.emmy{
+    border: 1px dotted pink
+}
+.stward{
+    border: 1px dotted blue
+}
+.casa{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:300px 1fr ;
+}
+div{
+    
+}
+.matris4x5{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr ;
+    width: 400px;
+    height: 500px;
+    gap: 10px;
+
+}
+.cuadrado{
+    height: 100px;
+    width: 100px;
+    border: 1px dotted blue !important
+}
+
+.ejercicio{
+    border: 1px dotted blue !important;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas: 
+                "header header header"
+                "sidebar maincontent maincontent"
+                "foter foter foter"
+    ;
+
+}
+
+.header{
+    text-align: center;
+    border: 1px dotted green;
+    grid-area: header;
+}
+.sidebar{
+    text-align: center;
+    grid-area: sidebar;
+    border: 1px dotted green
+
+    
+}
+.main{
+    grid-area: maincontent;
+}
+.footer{
+    grid-area:foter;
+    border: 1px dotted green;
+    text-align: center;
+    
+}
+
