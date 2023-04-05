@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 .vanessa{
@@ -67,7 +67,60 @@ div{
 .footer{
     grid-area:foter;
     border: 1px dotted green;
-    text-align: center;
-    
+    text-align: center;   
+} */
+
+.ejercicio2 {
+    border: 2px dotted blue !important;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 4fr 4fr 50px;
+    grid-template-areas:
+        "header      header   header   header   header   header "
+        "navigation content1 content2 content3 content4 content0"
+        "navigation content5 content6 content7 content8 content0"
+        "footer      footer   footer  footer  footer   footer"
+    ;
 }
 
+.headertitulo {
+    grid-area: header;
+    border: 2px dotted violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigationcostado {
+    grid-area: navigation;
+    text-align: center;
+    border: 2px dotted violet;
+}
+
+.content0 {
+    grid-area: content0;
+    text-align: center;
+
+}
+
+.footerabajo {
+    grid-area: footer;
+    text-align: center;
+    border: 2px dotted violet;
+}
+
+.marco-content {
+    border: 1px solid black;
+    text-align: center;
+
+}
+.centertexto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.negrita{
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+}
