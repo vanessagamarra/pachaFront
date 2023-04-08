@@ -1,0 +1,117 @@
+
+body{
+    display: grid;
+    place-items: center;
+ }
+
+nav {
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+   
+    background: white;
+    width: 50%;
+  }
+
+
+  .navHome {
+    grid-column: 1;
+  }
+  
+  .navAbout {
+    grid-column: 2;
+  }
+
+  .navTime {
+    grid-column: 3;
+  }
+  
+  .logo {
+    grid-column: 4;
+    text-align: center;
+  }
+  
+  .navTest {
+    grid-column: 5;
+  }
+  
+  .navBook {
+    grid-column: 6;
+  }
+
+  .navContact {
+    grid-column: 7;
+  }
+  
+  .navLinks {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: grey;
+  }
+  
+  .navLinks:hover {
+    color: black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 1em 1em;
+  }
+
+  .logo .navlogo1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: dodgerblue;
+    text-decoration: none;
+
+  }
+
+  .navlogo1 .navlogo2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: small;
+    color: grey;
+    text-decoration: none;
+  }
+
+
+  section {
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(7, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+   
+    background: white;
+
+  }
+
+  .bienvenida {
+    grid-row: 1;
+  }
+
+  .about {
+    grid-row: 2;
+  }
+
+  .timeline {
+    grid-row: 3;
+  }
+
+  .testimonials {
+    grid-row: 4;
+  }
+
+  .booking {
+    grid-row: 5;
+  }
+
+  .contact {
+    grid-row: 6;
+  }
+
