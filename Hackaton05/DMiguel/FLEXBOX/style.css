@@ -95,6 +95,8 @@ main{
     padding-top: 10%;
     border-inline-start: 1.4em solid #fff;
     border-block-end: 1.4em solid #fff;
+    padding-inline: 2em;   
+    padding-block: 2em;
 }
 
 .home-info{
@@ -129,8 +131,8 @@ main{
 button{
     color: #fff;
     font-weight: bolder;
-    font-size:1.4em;
-    padding: 0.5em 1.6em
+    font-size:1em;
+    padding: 0.8em 2.3em
 }
 
 .home-info-text span{
@@ -149,6 +151,7 @@ button{
 
 .carrusel_btn button i{
     color: #000;
+    transform: scale(1.5);
 }
 
 .carrusel_btn button{
@@ -184,4 +187,66 @@ button{
 
 .about-info p{
     padding-block-end: 2em;
+}
+
+.service{
+    background-color: #1f1c45;
+    border-inline-start: 1.4em solid #fff;
+    border-block-end: 1.4em solid #fff;
+    padding: 2em 2em;
+}
+
+.service-info{
+    text-align: center;
+}
+
+.service-info h2{
+    font-weight: bold;
+    font-size:3em;
+}
+
+.service-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-block: 2em;
+}
+
+.product{
+    text-align: center;
+}
+
+.product h3{
+    font-weight: bold;
+    font-size:1.2em;
+}
+
+.product p{
+    font-size:0.8em
+}
+
+.product img{
+    background-color: #fff;
+    border-radius:0.5em;
+    padding:2em;
+    width: 23em;
+}
+
+._2 img{
+    width: 30em;
+    background-color: #db341e;
+}
+
+._2 h3{
+    font-size:1.6em;
+}
+
+._2 p{
+    font-size: 1em;
+}
+
+.btn-service{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
