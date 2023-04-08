@@ -63,11 +63,42 @@ body {
 }
 
 .main-container .portal {
-    border: 1px dotted red;
+
     background-image: url(https://www.x-codec.net/op2/images/slider/portrait-successful-mid-adult-doctor-with-crossed-arms.jpg);
     background-size: cover;
     background-position: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 400px 400px;
+    grid-template-areas:
+        "upper upper"
+        "lower description"
+    ;
+}
+
+.main-container .portal .description {
+
+    grid-area: description;
+    background-color: white;
+    padding: 40px 20px 40px 40px;    
+}
+
+.main-container .portal .description .tittle {    
+    font-size: 48px;
+    font-weight: 700;    
+    margin-bottom: 20px;
+}
+
+.main-container .portal .description .tittle .blue {
+    
+    color: #247cff;
+}
+
+.main-container .portal .description .detail {
+    border: 1px dotted red;
+    margin-bottom: 20px;
+    color: #717275;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
