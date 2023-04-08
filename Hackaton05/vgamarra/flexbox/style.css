@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {}
+
+.main-content .home-menu {
+
+    background-image: linear-gradient(to right, #1f1c45 67%, #db341e 33%)
+}
+
+.main-content .home-menu .zone-coffe-detail {}
+
+.main-content {}
+
+.main-content .home-menu .menu {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content .home-menu .menu .zone-menu {
+    border: 1px dotted red;
+    width: 67%;
+}
