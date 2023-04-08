@@ -80,25 +80,55 @@ body {
 
     grid-area: description;
     background-color: white;
-    padding: 40px 20px 40px 40px;    
+    padding: 40px 20px 40px 40px;
 }
 
-.main-container .portal .description .tittle {    
+.main-container .portal .description .tittle {
     font-size: 48px;
-    font-weight: 700;    
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 .main-container .portal .description .tittle .blue {
-    
+
     color: #247cff;
 }
 
 .main-container .portal .description .detail {
-    border: 1px dotted red;
     margin-bottom: 20px;
     color: #717275;
     font-size: 18px;
     font-weight: 300;
     letter-spacing: 0.5px;
+}
+
+.main-container .portal .description .contact {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.main-container .portal .description .contact .learn {
+    text-align: center;
+
+}
+
+.main-container .portal .description .contact .learn .learn-more {
+    text-transform: uppercase;
+    border: 1px solid #eaeaea;
+    color: #247cff;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: white;
+    line-height: 40px;
+    padding: 0 30px;
+}
+
+.main-container .portal .description .contact .phone {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    color: #717275;
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 18px;
 }
