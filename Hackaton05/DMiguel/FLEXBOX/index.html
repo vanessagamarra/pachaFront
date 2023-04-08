@@ -11,14 +11,16 @@
 <body>
     <header>
         <!-- logo and nav -->
-        <span>
-            <div>
+        <span class="header-logo-nav">
+            <div class="header-logo">
                 <a href="">ZON</a>
             </div>
-            <nav>
-                
+            <nav class="header-nav">
                 <div>
                     <a href="">HOME</a>
+                </div>
+                <div>
+                    <a href="">ABOUT</a>
                 </div>
                 <div>
                     <a href="">SERVICE</a>
@@ -40,9 +42,9 @@
             </nav>
         </span>
         <!-- contactos -->
-        <span>
+        <span class="header-contact">
             <div>
-                <i class="gg-phone"></i>
+                <i class="gg-smartphone"></i>
                 <p>+01 1234567890</p>
             </div>
             <div>
@@ -52,9 +54,9 @@
         </span>
     </header>
     <main>
-        <section>
-            <div>
-                <div>
+        <section class="home">
+            <div class="home-info">
+                <div class="home-info-text">
                     <h1>
                         ZON COFFEE
                     </h1>
@@ -62,31 +64,32 @@
                         There are many variations of passages of Loremalteration in some form, by injected humour, or randomised
                     </p>
                     <span>
-                        <button>Read More</button>
-                        <button>Get A Quote</button>
+                        <button class="btn-orange">Read More</button>
+                        <button class="btn-orange">Get A Quote</button>
                     </span>
                 </div>
                 <img src="./img/coff_img.png" alt="taza de cafe con granos de cafe de fondo">
             </div>
-            <div>
-                <i class="gg-arrow-left"></i>
-            </div>
-            <div>
-                <i class="gg-arrow-right"></i>
+            <!-- button carrusel -->
+            <div class="carrusel_btn">
+                <button type="button">
+                    <i class="gg-arrow-left"></i>
+                </button>
+                <button type="button">
+                    <i class="gg-arrow-right"></i>
+                </button>
             </div>
         </section>
-        <section>
-            <div>
-                <img src="./img/about.png" alt="taza de cafe salpicado">
-                <div>
-                    <h2>
-                        ABOUT ZON COFFEE
-                    </h2>
-                    <p>
-                        sing 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
-                    </p>
-                    <button>READ MORE</button>
-                </div>
+        <section class="about">
+            <img src="./img/about.png" alt="taza de cafe salpicado">
+            <div class="about-info">
+                <h2>
+                    ABOUT ZON COFFEE
+                </h2>
+                <p>
+                    sing 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
+                </p>
+                <button class="btn-orange">READ MORE</button>
             </div>
         </section>
         <section>
@@ -130,7 +133,124 @@
                     <button>BOOK NOW TABLE</button>
                 </div>
             </span>
+            <!-- button carrusel -->
+            <div>
+                <button type="button">
+                    <i class="gg-arrow-left"></i>
+                </button>
+                <button type="button">
+                    <i class="gg-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h4>
+                    GET IN TOUCH
+                </h4>
+                <form action="../php/formulario.php" method="get">
+                    <input type="text" name="" id="">
+                    <input type="number" name="" id="">
+                    <input type="email" name="" id="">
+                    <textarea name="" id=""></textarea>
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+            <div>
+                <h4>
+                    TESTIMONIAL
+                </h4>
+                <div>
+                    <p>
+                        uffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going touffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going touffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to
+                    </p>
+                    <span>
+                        <img src="" alt="">
+                        <p>
+                            MARK JONSON
+                        </p>
+                        <p>
+                            Customre
+                        </p>
+                    </span>
+                </div>
+                <img src="" alt="">
+            </div>
         </section>
     </main>
+    <footer>
+        <section>
+            <h2>
+                ZON 
+            </h2>
+            <span>
+                <form action="" method="get">
+                    <input type="email" name="" id="">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </span>
+            <div>
+                <div>
+                    <p>
+                        Menu
+                    </p>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Coffee Serviec</li>
+                        <li>Testimonial</li>
+                        <li>Blog</li>
+                        <li>Contact us</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>
+                        Coffee
+                    </p>
+                    <ul>
+                        <li>Black Coffee</li>
+                        <li>Read Coffee</li>
+                        <li>Coffee Serviec</li>
+                        <li>Green Tea</li>
+                        <li>Choclate Coffee</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>
+                        Follow Us
+                    </p>
+                    <span>
+                        <i class="gg-facebook"></i>
+                        <i class="gg-facebook"></i>
+                        <i class="gg-instagram"></i>
+                        <i class="gg-youtube"></i>
+                    </span>
+                    <ul>
+                        <li>
+                            <i class="gg-pin"></i>
+                            <p>
+                                Locations
+                            </p>
+                        </li>
+                        <li>
+                            <i class="gg-phone"></i>
+                            <p>
+                                Call +01 1234567890
+                            </p>
+                        </li>
+                        <li>
+                            <i class="gg-mail"></i>
+                            <p>
+                                demo@gmail.com
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                © 2020 All Rights Reserved. Free html Templates
+            </p>
+        </section>
+    </footer>
 </body>
 </html>

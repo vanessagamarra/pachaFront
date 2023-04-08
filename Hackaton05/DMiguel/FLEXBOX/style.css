@@ -11,8 +11,177 @@
 	vertical-align: baseline;
 }
 
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
 body {
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
+    background-color: #000;
+}
+
+header{
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-inline:0.4em;
+    position: absolute;
+}
+
+.header-logo-nav {
+    align-items:flex-end;
+}
+
+.header-logo-nav, .header-logo-nav nav{
+    display: inline-flex;
+    font-weight: 800;
+}
+
+.header-logo{
+    font-size: 1.6em;
+    padding-inline: 1.5em 4em;
+}
+
+.header-nav{
+    font-size: 0.9em;
+}
+
+.header-nav div{
+    display: contents;
+}
+
+.header-nav div a{
+    padding-block: 4em 0.3em;
+    padding-inline: 2em;
+}
+
+.header-nav div a:hover{
+    background-color: #db341e;
+}
+
+.header-contact{
+    padding-inline-start: 28em;
+}
+
+.header-contact, .header-contact div{
+    display: inline-flex;
+}
+
+.header-contact div{
+    font-size: 1.2em;
+    align-items:flex-end;
+}
+
+.header-contact div i {
+    transform: scale(1);
+}
+
+.header-contact div p{
+    padding-inline: 0.6em;
+}
+
+main{
+    border-top: inherit;
+    border-right: inherit;
+    padding-bottom: 140px;
+}
+
+.home{
+    background-image: linear-gradient(to right, #1f1c45 67%, #db341e 33%);
+    padding-top: 10%;
+    border-inline-start: 1.4em solid #fff;
+    border-block-end: 1.4em solid #fff;
+}
+
+.home-info{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.home-info img{
+    height: 40em;
+}
+
+.home-info-text{
+    width: 28em;
+    margin-inline-end: 15em;
+}
+
+.home-info-text h1{
+    font-weight: bolder;
+    font-size: 7em;
+    line-height: 1em;
+}
+
+.home-info-text p{
+    padding: 1.4em 0;
+}
+
+.home-info img{
+    filter: drop-shadow(0px 0px 41px #ffffff4b);
+}
+
+button{
+    color: #fff;
+    font-weight: bolder;
+    font-size:1.4em;
+    padding: 0.5em 1.6em
+}
+
+.home-info-text span{
+    display: flex;
+}
+
+.btn-orange{
+    background-color: #db341e;
+    margin-inline: 0.2em;
+}
+
+.carrusel_btn{
+    display: flex;
+    flex-direction: column;
+}
+
+.carrusel_btn button i{
+    color: #000;
+}
+
+.carrusel_btn button{
+    width: 4em;
+    height: 4em;
+    margin-block: 0.4em;
+}
+
+.about{
+    background-color: #1f1c45;
+    padding-block-end: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-inline-end: 1.4em solid #fff;
+    border-block-end: 1.4em solid #fff;
+}
+
+.about img{
+    width: 30em;
+}
+
+.about-info{
+    width: 30em;
+    padding-inline: 3em;
+}
+
+.about-info h2{
+    font-size:3em;
+    font-weight: bold;
+    padding-block-end: 0.5em;
+}
+
+.about-info p{
+    padding-block-end: 2em;
 }
