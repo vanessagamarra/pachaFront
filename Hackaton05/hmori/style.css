@@ -13,24 +13,24 @@
 
 .main-content div {}
 
-.main-content .zone-coffe {
+.main-content .home-menu {
     background-image: linear-gradient(to right, #1f1c45 67%, #db341e 33%);
 }
 
-.main-content .zone-coffe .menu {
+.main-content .home-menu .menu {
     display: flex;
     flex-direction: row;
     padding-bottom: 20px;
 }
 
-.main-content .zone-coffe .menu .zone-menu {
+.main-content .home-menu .menu .zone-menu {
     width: 67%;
     display: flex;
     flex-direction: row;    
     padding-left: 30px;
 }
 
-.main-content .zone-coffe .menu .zone-menu .log {
+.main-content .home-menu .menu .zone-menu .log {
     font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
@@ -38,7 +38,7 @@
     padding-right: 50px;
 }
 
-.main-content .zone-coffe .menu .zone-menu .home {
+.main-content .home-menu .menu .zone-menu .home {
     padding-top: 36px;
     background-color: #db341e;
     padding: 50px 18px 10px 18px;
@@ -47,7 +47,7 @@
     text-transform: uppercase;
 }
 
-.main-content .zone-coffe .menu .zone-menu .about {
+.main-content .home-menu .menu .zone-menu .about {
     padding-top: 36px;
     padding: 50px 18px 10px 18px;
     font-size: 14px;
@@ -55,7 +55,7 @@
     text-transform: uppercase;
 }
 
-.main-content .zone-coffe .menu .zone-menu .menu-item {
+.main-content .home-menu .menu .zone-menu .menu-item {
     padding-top: 36px;
     padding: 50px 18px 10px 18px;
     font-size: 14px;
@@ -63,22 +63,30 @@
     text-transform: uppercase;
 }
 
-.main-content .zone-coffe .menu .zone-menu .menu-item:hover {
+.main-content .home-menu .menu .zone-menu .menu-item:hover {
     background-color: #db341e;
 }
 
-.main-content .zone-coffe .menu .number-menu {
+.main-content .home-menu .menu .number-menu {
     width: 33%;
     display: flex;
     flex-direction: row;
+    gap: 30px;
+    padding-top: 50px;
+    padding-left: 30px;
 }
 
-.main-content .zone-coffe .zone-coffe-detail .box-detail-image {
+.main-content .home-menu .menu .number-menu .email {
+    cursor: pointer;
+}
+
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image {
     display: flex;
     flex-direction: row;
 }
 
-.main-content .zone-coffe .zone-coffe-detail .box-detail-image .detail {
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +95,7 @@
 
 }
 
-.main-content .zone-coffe .zone-coffe-detail .box-detail-image .detail .title {
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .title {
 
     font-size: 121px;
     font-weight: bold;
@@ -95,7 +103,7 @@
     padding-bottom: 50px;
 }
 
-.main-content .zone-coffe .zone-coffe-detail .box-detail-image .detail .description {
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .description {
     font-size: 18px;
     line-height: 25px;
     color: #fff;
@@ -103,9 +111,9 @@
     padding-bottom: 50px;
 }
 
-.main-content .zone-coffe .zone-coffe-detail .box-detail-image .detail .buttons {}
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .buttons {}
 
-.main-content .zone-coffe .zone-coffe-detail .box-detail-image .detail .buttons .button {
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .buttons .button {
     width: 200px;
     height: 60px;
     background-color: #db341e;
