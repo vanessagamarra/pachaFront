@@ -62,6 +62,10 @@
     text-transform: uppercase;
 }
 
+.main-content .zone-coffe .menu .zone-menu .menu-item:hover {
+    background-color: #db341e;
+}
+
 .main-content .zone-coffe .menu .number-menu {
     width: 33%;
     display: flex;
