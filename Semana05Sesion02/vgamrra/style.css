@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.contenedora {
+    background-color: #7249ab;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hoja {
+    background-color: white;
+    width: 300px;
+    
+}
+.titulo{
+    text-align: center;
+    
+}
