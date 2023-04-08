@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: poppins;
+}
+
+.main-content div {
+    border: 1px dotted red;
+}
+
+.main-content .zone-coffe{
+    background-image: linear-gradient(to right, #1f1c45 67%, #db341e 33%);
+}
+
+.main-content .zone-coffe .menu {
+    display: flex;
+    flex-direction: row;    
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.main-content .zone-coffe .menu .zone-menu{
+    width: 67%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.main-content .zone-coffe .menu .number-menu{
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content .zone-coffe .zone-coffe-detail .box-detail-image {
+    display: flex;
+    flex-direction: row;
+}
