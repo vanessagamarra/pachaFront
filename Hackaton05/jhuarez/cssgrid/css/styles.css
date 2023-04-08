@@ -2,6 +2,7 @@
 body{
     display: grid;
     place-items: center;
+    font-family: 'Ubuntu', sans-serif;
  }
 
 nav {
@@ -9,12 +10,12 @@ nav {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, fit-content);
     grid-auto-rows: auto;
     grid-gap: 1em;
    
     background: white;
-    width: 50%;
+    width: 40%;
   }
 
 
@@ -63,7 +64,7 @@ nav {
 
   .logo .navlogo1 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.4em;
+    font-size: 1.8em;
     font-weight: bold;
     color: dodgerblue;
     text-decoration: none;
@@ -83,7 +84,7 @@ nav {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(7, fit-content);
     grid-auto-rows: auto;
     grid-gap: 1em;
    
@@ -93,6 +94,10 @@ nav {
 
   .bienvenida {
     grid-row: 1;
+    position: relative;
+    width: 80%;
+    clip-path: inset(0 0 20% 0);;
+    
   }
 
   .about {
@@ -115,3 +120,55 @@ nav {
     grid-row: 6;
   }
 
+
+  .text-block {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  .enlaces {
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, fit-content);
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+    width: 50%;
+    background: white;
+  }
+
+  .better{
+    font-size: 3.5em;
+  }
+
+  .definition{
+    font-size: x-large;
+    color: darkgrey;
+  }
+
+  .learn {
+    grid-column: 1
+  }
+
+  .telephone {
+    grid-column: 2;
+  }
+
+  .enlaces .learn {
+    color: dodgerblue;
+  }
+
+  .enlaces {
+    font-size: x-large;
+    color: darkgray;
+
+  }
