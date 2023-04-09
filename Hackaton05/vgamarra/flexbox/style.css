@@ -71,18 +71,76 @@ body {}
     padding-left: 30px;
 
 }
+
 .main-content .home-menu .menu .number-menu .email {
     cursor: pointer;
 }
-.main-content .home-menu .zone-coffe-detail .image{
-    
-}
-.main-content .home-menu .zone-coffe-detail .box-detail-image{
-     
+
+.main-content .home-menu .zone-coffe-detail .image {}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image {
+
     display: flex;
     flex-direction: row;
+
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail {
+    padding-left: 60px;
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .title {
+
+    font-size: 121px;
+    font-weight: bold;
+    padding-bottom: 48px;
+
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .description {
+
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 50px;
+    line-height: 25px;
+
+
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .buttons {
+
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    
+    
+
+
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .buttons .boton-read {
+    border: 1px dotted red;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #db341e;
+    width: 140px;
+    height: 60px;
+    margin-right: 10px;
+
     
 }
-.main-contet .home-menu .zone-coffe-detail .box-detail-image .detail .title{
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .buttons .boton-get {
     border: 1px dotted red;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #db341e;
+    width: 140px;
+    height: 60px;
+
 }
