@@ -21,3 +21,8 @@ a {
 button {
     border: none;
 }
+
+input,
+textarea {
+    border: none;
+}
