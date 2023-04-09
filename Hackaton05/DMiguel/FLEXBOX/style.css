@@ -87,7 +87,6 @@ header{
 main{
     border-top: inherit;
     border-right: inherit;
-    padding-bottom: 140px;
 }
 
 .home{
@@ -95,8 +94,8 @@ main{
     padding-top: 10%;
     border-inline-start: 1.4em solid #fff;
     border-block-end: 1.4em solid #fff;
-    padding-inline: 2em;   
-    padding-block: 2em;
+    /* padding-inline: 2em;   
+    padding-block: 2em; */
 }
 
 .home-info{
@@ -147,6 +146,26 @@ button{
 .carrusel_btn{
     display: flex;
     flex-direction: column;
+}
+
+.carr_btn_1{
+    margin-inline-start: 1em;
+    margin-block-end: 2em;
+}
+
+.carr_btn_esp div{
+    position: relative;
+}
+
+.carr_btn_esp button{
+    background-color: #1f1c45;
+    position: relative;
+    top: 4em;
+    right: 3em;
+}
+
+.carr_btn_esp button i{
+    color: #fff !important;
 }
 
 .carrusel_btn button i{
@@ -306,11 +325,26 @@ button{
 
 .testimonial{
     width: 45%;
+    
+}
+
+.testimonial-info{
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-img{
+    display: flex;
+    justify-content: flex-end
 }
 
 .testimonial h4{
     font-size: 3em;
     font-weight: bold;
+}
+
+.mensaje{
+    line-height: 36px;
 }
 
 .testimonial div .mensaje{
@@ -326,6 +360,8 @@ button{
     justify-content:flex-start;
     margin-inline-start: 3em;
     height: 0em;
+    font-style: italic;
+    line-height: 1.4em;
 }
 
 .mensaje-user div{
@@ -345,4 +381,40 @@ button{
 
 .mensaje-user img{
     box-shadow: -11px -15px 0px 0px #db3620;
+}
+
+.footer{    
+    border-inline-start: 1.4em solid #fff;
+    border-block-end: 1.4em solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1c45;
+}
+
+.footer .footer-title{
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.footer figure{
+    display: flex;
+    justify-content: center;
+}
+
+.footer form{
+    border-block-end: 0.1em solid #fff;
+}
+
+.footer form input[type="email"]{
+    background-color: transparent;
+    width: 60em;
+}
+
+.footer form button[type="submit"]{
+    background-color: transparent;
+    color: #db3620;
+    font-size: 1.5em;
+    padding: 0;
 }
