@@ -15,29 +15,29 @@
 
     <body>
 
-        <header class="headerContainer">
+        <header class="headerContainer" id="home">
             <nav class="navbar">
                 <ol class="navbar__navegation">
                     <li class="navegation__item navegation__item--logo">
                         <h2>ZON</h2>
                     </li>
                     <li class="navegation__item">
-                        <a href="" id="active">Home</a>
+                        <a href="#home" id="active">Home</a>
                     </li>
                     <li class="navegation__item">
-                        <a href="">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li class="navegation__item">
-                        <a href="">Service</a>
+                        <a href="#service">Service</a>
                     </li>
                     <li class="navegation__item">
-                        <a href="">Testimonial</a>
+                        <a href="#testimonial">Testimonial</a>
                     </li>
                     <li class="navegation__item">
-                        <a href="">Blog</a>
+                        <a href="#">Blog</a>
                     </li>
                     <li class="navegation__item">
-                        <a href="">Contactus</a>
+                        <a href="#contactus">Contactus</a>
                     </li>
                     <li class="navegation__item navegation__item--search">
                         <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
@@ -77,7 +77,7 @@
             </div>
         </header>
 
-        <main class="mainContainer">
+        <main class="mainContainer" id="about">
             <section class="about">
                 <picture class="about__image">
                     <img src="./imgs/about-image.png" alt="About Coffee" title="About Coffee">
@@ -96,7 +96,7 @@
                 </div>
             </section>
 
-            <section class="services">
+            <section class="services" id="service">
                 <h2 class="services__title">Coffee Services</h2>
                 <p class="services__description">
                     sing 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
@@ -146,10 +146,17 @@
                 <button class="services__btn">
                     Book Now Table
                 </button>
+
+                <div class="arrow-left">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="arrow-right">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
             </section>
 
             <section class="contact">
-                <section class="form">
+                <section class="form"  id="contactus">
                     <h2 class="form__title">Get in Touch</h2>
 
                     <form action="#" method="post">
@@ -165,7 +172,7 @@
                     </form>
                 </section>
 
-                <section class="testimonial">
+                <section class="testimonial" id="testimonial">
                     <h2 class="testimonial__title">
                         Testimonial
                     </h2>
@@ -183,8 +190,15 @@
                         </div>
                     </div>
 
-                    <img class="testimonial__imageFloat" src="./imgs/coffe-float.png" alt="Coffe">
+                    <div class="arrow-left">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="arrow-right">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
                 </section>
+
+                <img class="testimonial__imageFloat" src="./imgs/coffe-float.png" alt="Coffe">
             </section>
         </main>
 
@@ -200,41 +214,41 @@
                 <ul class="list-links">
                     <h5>Menu</h5>
                     <li>
-                        <a href="">Home</a>
+                        <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <a href="#">About</a>
                     </li>
                     <li>
-                        <a href="">Coffee Serviec</a>
+                        <a href="#">Coffee Serviec</a>
                     </li>
                     <li>
-                        <a href="">Testimonial</a>
+                        <a href="#">Testimonial</a>
                     </li>
                     <li>
-                        <a href="">Blog</a>
+                        <a href="#">Blog</a>
                     </li>
                     <li>
-                        <a href="">Contact us</a>
+                        <a href="#">Contact us</a>
                     </li>
                 </ul>
 
                 <ul class="list-links">
                     <h5>Coffee</h5>
                     <li>
-                        <a href="">Black Coffee</a>
+                        <a href="#">Black Coffee</a>
                     </li>
                     <li>
-                        <a href="">Read Coffee</a>
+                        <a href="#">Read Coffee</a>
                     </li>
                     <li>
-                        <a href="">Coffee Serviec</a>
+                        <a href="#">Coffee Serviec</a>
                     </li>
                     <li>
-                        <a href="">Green Tea</a>
+                        <a href="#">Green Tea</a>
                     </li>
                     <li>
-                        <a href="">Choclate Coffee</a>
+                        <a href="#">Choclate Coffee</a>
                     </li>
                 </ul>
 
