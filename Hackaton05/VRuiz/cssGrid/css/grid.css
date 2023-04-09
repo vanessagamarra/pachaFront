@@ -12,7 +12,7 @@ body{
 
 
 .bloque1{
-    display: flex;
+    display: grid;
     background-image: linear-gradient(to right, #1F1C45 67%, #D8341E 33%);
     border: #fff solid 20px;
     border-top: inherit;
