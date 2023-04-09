@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medic Care - Hackaton 05 - CSS Grid</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -141,11 +143,123 @@
             </div>
         </div>
 
-        <div class="testimonials">testimonials</div>
+        <div class="testimonials">
 
-        <div class="booking">booking</div>
+            </br> </br>
+            <div class="encabezado">Our Patients</div>
+            </br>
 
-        <div class="contact">contact</div>
+            <div class="valoracion">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+
+                <p class="principal-comentario">Great services!</p>
+                <p class="contenido-valoracion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+            
+            </br>
+
+                <p class="paciente"><span class="paciente2">Ben Walker</span> New patient</p>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="booking">
+
+            </br> </br>
+            <div class="encabezado">Book an appointment</div>
+            </br>
+
+            <form>
+
+                <div class="form-center">
+                <table>
+            
+                    <tr>
+                        <td>
+                            <label for="Name"></label><br>
+                            <input type="text" id="Name" name="Name" placeholder="Full Name" pattern="[a-zA-Z]+{30}" required class="casillas">
+                        </td>
+    
+                        <td>
+                            <label for="email"></label><br>
+                            <input type="email" id="email" name="email" placeholder="Email address" maxlength="50" class="casillas">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td> 
+                            <label for="Telefono"></label><br>
+                            <input type="tel" id="Telefono" name="Telefono" placeholder="Telefono" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required class="casillas">
+                        </td>
+    
+                        <td> 
+                            <label for="date"></label><br>
+                            <input type="date" id="date" name="date" placeholder="mm/dd/yyy" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d
+                            " required class="casillas">
+                        </td>
+                    </tr>
+                
+                </table>
+                </div>
+    
+            <br>
+    
+            <div class="form-center">
+            <label for="Descripcion"></label><br>
+            </div>
+    
+            <div class="form-center">
+            <input type="text" id="Descripcion" name="Descripcion" placeholder="Additional message" maxlength="100" class="descripcion"> 
+            </div>
+            
+            <br>
+    
+            <div class="form-center">   
+            <input type="submit" value="BOOK NOW" class="enviar">
+            </div> 
+    
+            </div>
+        
+    
+          </form> 
+        </div>
+
+
+        
+
+        <div class="contact">
+
+                <div class="op-hours">
+                    
+                    Opening Hours
+
+                    <p class="dias">Sunday: closed</p>
+                    <p class="dias">Monday-Friday <span class="horario">8:00 AM - 3:30 PM</p>
+                    <p class="dias">Saturday <span class="horario">10:30 AM - 5:30 PM</p>
+                
+                </div>
+
+                <div class="clinic">
+                    Our Clinic
+
+                    <p class="letras">hello@company.co</p>
+
+                    <p class="letras">123 Digital Art Street San Diego CA 92123</p>
+                
+                </div>
+                <div class="socials">
+                    Socials
+                    <p>facebook</p>
+                </div>
+            
+             </div>
 
 
     </section>
