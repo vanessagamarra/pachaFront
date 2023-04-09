@@ -30,7 +30,7 @@ body {
 
 .logo {
     width: 203px;
-    padding: 36px 0px 10px ;
+    padding: 36px 10px 10px ;
     font: 25px;
     align-self: flex-end;
 }
@@ -55,6 +55,7 @@ body {
 
 .primera-parte{
     display: flex;
+    position: relative;
     
 }
 
@@ -70,5 +71,38 @@ body {
 
 .headline {
     color: white;
-    padding: 25% 30% 10% 50%;
+    padding: 15% 30% 10% 50%;
+}
+
+.info {
+
+    width: 100%;
+    display: flex;
+    color: white;
+    flex-direction: row-reverse;
+
+}
+
+.info-item{
+
+    padding: 50px 23px 10px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 121px;
+}
+
+.cafecito {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
