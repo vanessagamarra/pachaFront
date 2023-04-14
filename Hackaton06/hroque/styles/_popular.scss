@@ -62,6 +62,7 @@
     &-icon{
       font-size: 1.1rem;
       color: variables.$primary;
+      cursor: pointer;
     }
     &-img{
       width: 100%;
@@ -82,5 +83,69 @@
     color: variables.$primary;
     bottom: -80px;
     right: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .popular{
+    display: grid;
+    grid-template-areas:
+      "title void void"
+      "top top top"
+      "post2 post3 post4";
+    gap: 1rem;
+
+    &__title{
+      grid-area: title;
+    }
+    &__article{
+      &--top{
+        display: grid;
+        grid-area: top;
+        grid-template-areas: 
+          "title img" "description img" "tools img";
+        gap: 14px;
+        margin-bottom: 2rem;
+      }
+      &-title{
+        font-size: 1.1rem;
+        font-family: variables.$helvetica;
+        font-weight: variables.$bold;
+        color: variables.$secondary;
+        grid-area: title;
+        &--top{
+          grid-area: title;
+        }
+      }
+      &-description{
+        color: rgba(0, 0, 0, 0.6);;
+        font-size: 1rem;
+        font-weight: variables.$normal;
+        line-height: 26px;
+        grid-area: description;
+        &--top{
+          grid-area: description;
+        }
+      }
+      &-img{
+        width: 100%;
+        height: 200px;
+        grid-area: imgpost;
+        &--top{
+          width: 450px;
+          height: 310px;
+          grid-area: img;
+        }
+      }
+      &--post2{
+        grid-area: post2;
+      }
+      &--post3{
+        grid-area: post3;
+      }
+      &--post4{
+        grid-area: post4;
+      }
+    }
   }
 }

@@ -21,6 +21,7 @@
   }
   &__link{
     font-weight: variables.$normal;
+    cursor: pointer;
     &--active{
       color: variables.$secondary;
       font-weight: variables.$bold;
