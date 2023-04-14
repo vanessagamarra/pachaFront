@@ -1,0 +1,9 @@
+@mixin presentation {
+    color: #fff;
+    width: 100%;
+    max-width: 800px; 
+    font-family: $fuente-cuerpo;
+    font-weight: 400;
+    margin: 0 auto;
+    text-align: center;
+}

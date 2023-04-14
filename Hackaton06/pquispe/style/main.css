@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 li {
   list-style: none;
 }
@@ -15,4 +19,58 @@ a {
 
 input {
   outline: none;
+}
+
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 30px;
+}
+.header__navbar__navbar__logo {
+  width: 46.35px;
+}
+.header__navbar__navbar__logo img {
+  width: 100%;
+}
+.header__navbar .navbar-list {
+  display: flex;
+  gap: 20px;
+}
+.header__navbar .navbar-list__item a {
+  font-family: Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #000;
+}
+.header__navbar .navbar-list__item--active a {
+  font-weight: 700;
+  color: #1F3F68;
+}
+.header__presentation {
+  background: url("../assets/imgs/background-header.svg") no-repeat center;
+  background-size: cover;
+  padding: 62px 20px;
+}
+.header__presentation__title {
+  color: #fff;
+  width: 100%;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 4.4rem;
+  margin-bottom: 30px;
+}
+.header__presentation__content {
+  color: #fff;
+  width: 100%;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.064rem;
 }/*# sourceMappingURL=main.css.map */

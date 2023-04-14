@@ -1,0 +1,51 @@
+.header {
+    &__navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 48px 30px;
+
+        &__navbar__logo {
+            width: 46.35px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .navbar-list {
+            display: flex;
+            gap: 20px;
+
+            &__item a {
+                font-family: $fuente-encabezados;
+                font-size: 2.0rem;
+                font-weight: 400;
+                color: #000;
+            }
+
+            &__item--active a {
+                font-weight: 700;
+                color: #1F3F68;
+            }
+        }
+    }
+
+    &__presentation {
+        background: url('../assets/imgs/background-header.svg') no-repeat center;
+        background-size: cover;
+        padding: 62px 20px;
+
+        &__title {
+            @include presentation;
+            font-size: 4.4rem;
+            margin-bottom: 30px;
+        }
+
+        &__content {
+            @include presentation;
+            font-size: 2.0rem;
+            letter-spacing: 0.064rem;
+        }
+    }
+}
