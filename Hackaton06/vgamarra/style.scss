@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+    height: 60px;
+    justify-items: center;
+    align-items: center;
+
+    .home , .entertaiment , .sports  { 
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.04em;
+        color:#1F3F68 ;
+    }
+}
+
