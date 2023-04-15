@@ -1,0 +1,27 @@
+.logo-1 {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #316099;
+  border-radius: 50%;
+  box-shadow: -11px 0px 0px 0px #316099;
+  color: #316099;
+  font-family: "Abel", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-2 {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #316099;
+  border-radius: 50%;
+  box-shadow: -11px 0px 0px 0px #98C3E8;
+  color: #316099;
+  font-family: "Abel", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=logos.css.map */

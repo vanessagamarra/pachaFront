@@ -1,0 +1,33 @@
+@import "./colors.scss";
+@import "./text-font.scss";
+
+$medida-log: 1em;
+
+.logo-1{
+    display: inline-block;
+    width: $medida-log;
+    height: $medida-log;
+    border: 1px solid $color-logo-nav;
+    border-radius: 50%;
+    box-shadow: -11px 0px 0px 0px $color-logo-nav;
+    color: $color-logo-nav;
+    font-family: $font-logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-2{
+    display: inline-block;
+    width: $medida-log;
+    height: $medida-log;
+    border: 1px solid $color-logo-nav;
+    border-radius: 50%;
+    box-shadow: -11px 0px 0px 0px $color-logo-footer;
+    color: $color-logo-nav;
+    font-family: $font-logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
