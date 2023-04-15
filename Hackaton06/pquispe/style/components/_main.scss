@@ -2,6 +2,37 @@
     width: 100%;
     background-color: $background-page;
 
+    &__search {
+        padding: 60px 20px 0;
+
+        &__background {
+            background-color: $background-search;
+            display: flex;
+            align-items: center;
+            max-width: 934px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            border-radius: 10px;
+
+            img {
+                width: 24px;
+                margin-right: 20px;
+            }
+
+            input {
+                background-color: $background-search;
+                color: $color-postEncabezados;
+                width: 100%;
+                font-weight: 400;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__popular {
+        @include containersMain;
+    }
+
     &__articles {
         @include containersMain;
 
