@@ -1,0 +1,31 @@
+$font1:'Abel', sans-serif;
+
+
+
+div {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 16.67%;
+    bottom: 16.67%; 
+    color: $color-1; 
+    
+    
+    p {
+        position: absolute;
+        left: 52.08%;
+        right: 18.75%;
+        top: 25%;
+        bottom: 16.67%; 
+        font-family: $font1;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+
+
+
+
