@@ -66,3 +66,9 @@ body {
         @include frontpage-letter($frontpage-weight, 20px, $frontpage-letter-spacing,$text-align-center);
     }
 }
+
+.populer-articles {
+    .popular{
+        border: 1px dotted red;
+    }
+}

@@ -58,4 +58,8 @@ body {
   font-size: 20px;
   letter-spacing: 0 0.4em;
   text-align: center;
+}
+
+.populer-articles .popular {
+  border: 1px dotted red;
 }/*# sourceMappingURL=style.css.map */
