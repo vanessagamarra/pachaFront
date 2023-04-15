@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef&display=swap");
 .logo-1 {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+  font-size: 1.2em;
+  width: 1.3em;
+  height: 1.3em;
   border: 0.09em solid #316099;
   border-radius: 50%;
   box-shadow: -9px 0px 0px 0px #316099;
@@ -13,9 +15,9 @@
 }
 
 .logo-2 {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 1.3em;
+  height: 1.3em;
+  font-size: 1.2em;
   border: 0.09em solid #316099;
   border-radius: 50%;
   box-shadow: -9px 0px 0px 0px #98C3E8;
