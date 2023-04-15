@@ -6,7 +6,7 @@ $fuente2: 'Arial';
     width: auto;
     padding-top: 20px;
     align-items: center;
-    border: 2px solid red;
+   
 }
 
 .subseccion1 {
@@ -15,7 +15,7 @@ $fuente2: 'Arial';
     height: 50px;
     width: 90%;
     margin: 10px 40px 40px;
-    border: 2px solid black;
+   
 }
 
 .menu {
@@ -34,7 +34,7 @@ $fuente2: 'Arial';
 }
 
 .info-blog {
-    border: 2px solid black;
+  
     text-align: center;
     height: 150px;
     width: 700px;
@@ -59,28 +59,29 @@ $fuente2: 'Arial';
     color: rgba(255, 255, 255, 0.78);
 }
 
-.search{
+.search {
     width: 940px;
     height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-     
+
 }
+
 .popular {
     margin-top: 30px;
     display: flex;
     align-items: center;
-   
+
 }
 
 .popular-contenido {
     width: 70%;
     display: flex;
     flex-direction: column;
-        align-items: center;
+    align-items: center;
     justify-content: center;
-    
+
 }
 
 .popular-contenido-subtitulo {
@@ -94,5 +95,5 @@ $fuente2: 'Arial';
     opacity: 0.8;
     display: flex;
     align-self: flex-start;
-    
+
 }
