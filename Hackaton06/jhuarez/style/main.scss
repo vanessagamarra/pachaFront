@@ -1,7 +1,10 @@
 $color-logo: #316099;
-$color-section-caption: #356EAD;
-$color-article-caption: #1F3F68;
-$color-autor-article: #00000066; /*40% read, 60% article inside*/
+$color-titulo-1: #356EAD;
+$color-titulo-2: #1F3F68;
+$color-cuerpo: rgba(0, 0, 0, 0.6);
+$color-autor: rgba(0, 0, 0, 0.4);
+
+
 
 $font-1: Arial;
 $font-2: Helvetica;
@@ -14,6 +17,28 @@ html {
   *::after {
     box-sizing: inherit;
   }
+
+.titulote {
+    color: $color-titulo-1;
+}
+
+.titulo {
+    color: $color-titulo-2;
+    font-weight: bold;
+}
+
+.titulo.autor {
+    color: $color-titulo-2;
+    font-weight: normal;
+}
+
+.cuerpo {
+    color: $color-cuerpo;
+}
+
+.fechas {
+    color: $color-autor;
+}
 
 nav {
     
@@ -45,18 +70,9 @@ nav > .logo {
 }
 
 .navigator > .home {
-    color: $color-article-caption;
+    color: $color-titulo-2;
     font-weight: bold;
 }
-
-.article-box {
-
-}
-
-.article-art {
-
-}
-
 
 
 .header--background {
@@ -130,27 +146,128 @@ nav > .logo {
     }
 
 
-    /*POPULAR*/
+/*POPULAR*/
 
-.popular {
-    display: grid;
-    grid-template-columns: repeat(3, 6fr 1fr 1fr);
-    grid-template-rows: repeat(9,auto);
+/*MIXIN POSICION*/
+
+@mixin position-grid($position-x, $span-x, $position-y, $span-y ) {
+    grid-column: $position-x / span $span-x;
+    grid-row: $position-y / span $span-y;
 }
 
+/*MIXIN ALINEAMIENTO GRID*/
+@mixin align-grid($align-x:center, $align-y:center){
+
+    align-self: $align-x;
+    justify-self: $align-y;
+}
+
+
+/*MIXIN ESTILO*/
+
+
+
+
+/*classes*/
+.popular-1-1 {
+    padding-left: 20vh;
+    padding-right: 20vh;
+    padding-bottom: 20vh;
+    font-family: $font-2;
+}
+
+.popular-1 {
+    display: grid;
+    grid-template-columns: 7fr 5vh 5vh 9fr;
+    grid-template-rows: auto;
+    grid-gap: 0 20px;  
+
+}
+
+.popular-grid{
+    display: grid;
+    grid-template-columns: 6fr 4vh 4vh;
+    grid-template-rows:auto;
+    grid-gap: 1rem 20px;
+
+}
+.popular1-main-title{
+
+    @include position-grid(1, 4, 1, 1);
+
+ 
+}
 .popular1-img {
-    background: url('../img/img-post-1.png');
-    background-size: cover;
+    
+    @include position-grid(4, 1, 2, 4);
+    @include align-grid;
+}
+
+.popular1-title {
+    @include position-grid(1, 3, 2, 1);
+
+
+}
+
+.popular1-content {
+    @include position-grid(1, 3, 3, 1);
+
+}
+
+.popular1-author {
+    @include position-grid(1, 1, 4, 1);
+}
+
+.popular1-date{
+    @include position-grid(1, 1, 5, 1);
 }
 
 .save-icon {
-    background: url('../img/icon-save.png');
-    background-size: cover;
+    @include position-grid(2,1,4,2);
+    @include align-grid;
 }
 
 .share-icon {
-    background: url('../img/icon-share.png');
-    background-size: cover;
+    @include position-grid(3,1,4,2);
+    @include align-grid;
 }
 
+.pop-flexbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    
+    
+    
+}
+
+
+
+.pop1 {
+    @include position-grid(1, 3, 1, 1);
+}
+
+.pop2 {
+    @include position-grid(1, 3, 2, 1);
+}
+
+.pop3 {
+    @include position-grid(1, 3, 3, 1);
+}
+
+.pop4 {
+    @include position-grid(1, 1, 4, 1);
+}
+
+.pop5 {
+    @include position-grid(1, 1, 5, 1);
+}
+
+.pop6 {
+    @include position-grid(2, 1, 4, 1);
+}
+
+.pop7 {
+    @include position-grid(3, 1, 4, 1);
+}
 
