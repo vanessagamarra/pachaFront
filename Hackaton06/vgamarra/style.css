@@ -130,10 +130,30 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.populer-articles .popular .list-of-populars .popular-new {
-  border: 1px dotted red;
-}
 .populer-articles .popular .list-of-populars .popular-new .popular-new-image > img {
   width: 100%;
   height: 200px;
+}
+.populer-articles .popular .list-of-populars .popular-new .portal-new-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+  margin-top: 10px;
+}
+.populer-articles .popular .list-of-populars .popular-new .portalnew-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.6);
+}
+.populer-articles .popular .list-of-populars .popular-new .portal-new-author-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 25px;
+}
+.populer-articles .popular .list-of-populars .popular-new .portal-new-author-actions .portal-new-author-name .author-name {
+  border: 1px dotted red;
 }/*# sourceMappingURL=style.css.map */
