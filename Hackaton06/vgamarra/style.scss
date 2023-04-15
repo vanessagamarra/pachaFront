@@ -13,6 +13,9 @@ body {
     justify-items: center;
     align-items: center;
 
+    $menu-weight: 700;
+    $menu-size: 20px;
+    $menu-letter-spacing: 0.0.4em;
     @mixin menu-letter($weight, $size, $letter-spacing, $color ) {
         font-weight: $weight;
         font-size: $size;
@@ -23,29 +26,42 @@ body {
     .logo {
         border: 2px solid #316099;
         border-radius: 50%;
-        @include menu-letter(700, 20px, 0.04em, #1F3F68);
+        @include menu-letter($menu-weight, $menu-size, $menu-letter-spacing, #1F3F68);
         padding: 10px 10px 10px 10px;
         align-self: flex-start;
     }
 
     .home {
-        @include menu-letter(700, 20px, 0.04em, #1F3F68)
+        @include menu-letter($menu-weight, $menu-size, $menu-letter-spacing, #1F3F68)
     }
 
     .entertaiment,
     .sports {
-        @include menu-letter(700, 20px, 0.04em, black)
+        @include menu-letter($menu-weight, $menu-size, $menu-letter-spacing, black)
     }
 }
 
 .frontpage {
     background: linear-gradient(253.6deg, #98D0FC 2.46%, #3481D7 93.24%);
     color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
-    .blog-title {
+    $text-align-center: center;
+    $frontpage-weight: 400;
+    $frontpage-letter-spacing: 0.0.4em;
+    @mixin frontpage-letter($weight, $size, $letter-spacing, $text-align){
         font-style: normal;
-        font-weight: 400;
-        font-size: 44px; 
-        text-align: center;   
+        font-weight: $weight;
+        font-size: $size; 
+        letter-spacing: $letter-spacing;
+        text-align: $text-align; 
+    }
+    .blog-title {        
+        @include frontpage-letter($frontpage-weight, 44px, $frontpage-letter-spacing,$text-align-center);
+        margin-bottom: 20px;
+    }
+    .blog-detail {
+        @include frontpage-letter($frontpage-weight, 20px, $frontpage-letter-spacing,$text-align-center);
     }
 }
