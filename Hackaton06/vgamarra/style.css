@@ -13,9 +13,26 @@ body {
   justify-items: center;
   align-items: center;
 }
-.menu .home, .menu .entertaiment, .menu .sports {
+.menu .logo {
+  border: 2px solid #316099;
+  border-radius: 50%;
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.04em;
   color: #1F3F68;
+  padding: 10px 10px 10px 10px;
+  align-self: flex-start;
+}
+.menu .home {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+}
+.menu .entertaiment,
+.menu .sports {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: black;
 }/*# sourceMappingURL=style.css.map */

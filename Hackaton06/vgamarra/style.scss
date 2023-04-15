@@ -13,11 +13,27 @@ body {
     justify-items: center;
     align-items: center;
 
-    .home , .entertaiment , .sports  { 
-        font-weight: 700;
-        font-size: 20px;
-        letter-spacing: 0.04em;
-        color:#1F3F68 ;
+    @mixin menu-letter($weight, $size, $letter-spacing, $color ) {
+        font-weight: $weight;
+        font-size: $size;
+        letter-spacing: $letter-spacing;
+        color: $color ;
+    }
+
+    .logo {
+        border: 2px solid #316099;
+        border-radius: 50%;
+        @include menu-letter(700, 20px, 0.04em, #1F3F68);
+        padding: 10px 10px 10px 10px;
+        align-self: flex-start;
+    }
+
+    .home {
+        @include menu-letter(700, 20px, 0.04em, #1F3F68)
+    }
+
+    .entertaiment,
+    .sports {
+        @include menu-letter(700, 20px, 0.04em, black)
     }
 }
-
