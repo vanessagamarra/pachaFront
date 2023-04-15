@@ -35,8 +35,29 @@
 }
 
 
+// Minxis Main
+@mixin containersMain {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 60px 20px 80px;
+
+    grid-template-columns: minmax(560px, 934px);
+    grid-template-rows: repeat(7, auto);
+    gap: 30px;
+}
+
+@mixin main-nameSection($size) {
+    font-family: $fuente-primary;
+    color: $color-nameSection;
+    letter-spacing: 0.064rem;
+    font-weight: 600;
+    font-size: 1.6rem + $size;
+}
+
+
 // Minxis Footer
-@mixin containers($element) {
+@mixin containersFooter($element) {
     background-color: $background-footer;
     width: 100%;
     display: grid;

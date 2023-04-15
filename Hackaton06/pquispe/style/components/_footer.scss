@@ -2,7 +2,7 @@
     width: 100%;
 
     &__contact {
-        @include containers(about);
+        @include containersFooter(about);
 
         &__question {
             line-height: 4.6rem;
@@ -29,7 +29,7 @@
     }
 
     &__about {
-        @include containers(links);
+        @include containersFooter(links);
 
         .about__list {
             display: flex;
@@ -43,7 +43,7 @@
                 column-gap: 20px;
 
                 span {
-                    @include footer-text(0, 300, $fuente-secondary, normal);
+                    @include footer-text(0, 300, $fuente-primary, normal);
                 }
     
                 a {
