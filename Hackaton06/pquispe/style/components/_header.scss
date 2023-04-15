@@ -3,9 +3,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1319px;
         padding: 48px 30px;
+        margin: 0 auto;
+        gap: 20px;
 
-        &__navbar__logo {
+        &__logo {
             width: 46.35px;
 
             img {
@@ -15,18 +20,15 @@
 
         .navbar-list {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
 
             &__item a {
-                font-family: $fuente-encabezados;
-                font-size: 2.0rem;
-                font-weight: 400;
-                color: #000;
+                @include header-navbar(disabled);
             }
 
             &__item--active a {
-                font-weight: 700;
-                color: #1F3F68;
+                @include header-navbar(active);
             }
         }
     }
@@ -37,15 +39,11 @@
         padding: 62px 20px;
 
         &__title {
-            @include presentation;
-            font-size: 4.4rem;
-            margin-bottom: 30px;
+            @include header-presentation(title);
         }
 
         &__content {
-            @include presentation;
-            font-size: 2.0rem;
-            letter-spacing: 0.064rem;
+            @include header-presentation(content);
         }
     }
 }

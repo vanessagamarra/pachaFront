@@ -1,7 +1,19 @@
-$fuente-encabezados: Helvetica, sans-serif;
-$fuente-cuerpo: Arial, sans-serif;
-$fuente-alternativa: 'Gilroy', sans-serif;
+
+// Fuentes Variables
+$fuente-primary: Helvetica, sans-serif;
+$fuente-secondary: Arial, sans-serif;
+$fuente-alternative: 'Gilroy', sans-serif;
 
 
+// Colores Variables
 $background-page: #e5e5e5;
 $background-footer: #316099;
+$background-search: #f4f4f4;
+
+$color-navDisabled: #000;
+$color-navActive: #1F3F68;
+
+$header-content: #fff;
+$footer-content: #fff;
+$header-opacity: rgba(255, 255, 255, 0.78);
+$footer-opacity: rgba(255, 255, 255, 0.6);
