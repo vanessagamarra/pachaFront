@@ -61,6 +61,34 @@ body {
 }
 
 .populer-articles {
-  border: 1px dotted red;
   padding: 50px 80px 50px 150px;
+}
+.populer-articles .popular .main .main-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: #356EAD;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+.populer-articles .popular .main .main-new {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+.populer-articles .popular .main .main-new .new .title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+}
+.populer-articles .popular .main .main-new .new .detail {
+  border: 1px dotted red;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #000000;
+  opacity: 0.6;
 }/*# sourceMappingURL=style.css.map */

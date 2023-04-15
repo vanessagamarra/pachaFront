@@ -16,6 +16,7 @@ body {
     $menu-weight: 700;
     $menu-size: 20px;
     $menu-letter-spacing: 0.0.4em;
+
     @mixin menu-letter($weight, $size, $letter-spacing, $color ) {
         font-weight: $weight;
         font-size: $size;
@@ -51,27 +52,64 @@ body {
     $text-align-center: center;
     $frontpage-weight: 400;
     $frontpage-letter-spacing: 0.0.4em;
-    @mixin frontpage-letter($weight, $size, $letter-spacing, $text-align){
+
+    @mixin frontpage-letter($weight, $size, $letter-spacing, $text-align) {
         font-style: normal;
         font-weight: $weight;
-        font-size: $size; 
+        font-size: $size;
         letter-spacing: $letter-spacing;
-        text-align: $text-align; 
+        text-align: $text-align;
     }
-    .blog-title {        
-        @include frontpage-letter($frontpage-weight, 44px, $frontpage-letter-spacing,$text-align-center);
+
+    .blog-title {
+        @include frontpage-letter($frontpage-weight, 44px, $frontpage-letter-spacing, $text-align-center);
         margin-bottom: 20px;
     }
+
     .blog-detail {
-        @include frontpage-letter($frontpage-weight, 20px, $frontpage-letter-spacing,$text-align-center);
+        @include frontpage-letter($frontpage-weight, 20px, $frontpage-letter-spacing, $text-align-center);
     }
 }
 
 .populer-articles {
-    border: 1px dotted red;
-    padding: 50px 80px 50px 150px;    
-    .popular{
-        
 
+    padding: 50px 80px 50px 150px;
+    $weight: 700;
+    $letter-spacing: 0.04em;
+
+    @mixin frontpage-letter($weight, $size, $letter-spacing, $color) {
+        font-style: normal;
+        font-weight: $weight;
+        font-size: $size;
+        letter-spacing: $letter-spacing;
+        color: $color
+    }
+
+    .popular {
+        .main {
+            .main-title {
+                @include frontpage-letter($weight, 20px, $letter-spacing, #356EAD);
+                opacity: 0.8;
+                text-transform: uppercase;
+            }
+
+            .main-new {
+                display: grid;
+                grid-template-columns: 2fr 3fr;
+
+                .new {
+                    .title {
+
+                        @include frontpage-letter($weight, 36px, $letter-spacing, #1F3F68);
+                    }
+
+                    .detail {
+                        border: 1px dotted red;
+                        @include frontpage-letter(400, 16px, $letter-spacing, #000000);
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
     }
 }
