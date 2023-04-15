@@ -1,0 +1,156 @@
+$color-logo: #316099;
+$color-section-caption: #356EAD;
+$color-article-caption: #1F3F68;
+$color-autor-article: #00000066; /*40% read, 60% article inside*/
+
+$font-1: Arial;
+$font-2: Helvetica;
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+nav {
+    
+    font-family: $font-2;
+    display: flex;
+    background: transparent;
+    position: relative;
+    justify-content: space-between;
+    flex: 1;
+    padding: 1%;
+    width: 100%;
+    height: auto;
+
+}
+
+nav > .navigator {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+
+    
+}
+
+nav > .logo {
+    width: 33%;
+    height: auto;
+}
+
+.navigator > .home {
+    color: $color-article-caption;
+    font-weight: bold;
+}
+
+.article-box {
+
+}
+
+.article-art {
+
+}
+
+
+
+.header--background {
+    
+    background-image: url('../img/banner-2.png'), url('../img/banner.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header--structure{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+}
+
+
+.header--title, .header--content {
+    font-family: $font-1;
+    color: white;
+    text-align: center;
+    width: 50%;
+    letter-spacing: 0.04em;
+}
+
+.header--title {
+
+    font-size: 2.5rem;
+
+}
+
+.header--content {
+
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+.search-box {
+    display: flex;
+    background: #fff;
+    border-radius: 18px;
+    justify-content: center;
+    padding: 20px;
+    }
+
+.search-box .btn {
+    background: #fff;
+    border:1px solid #000;
+    height: 36px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+
+    }
+    
+.search-box .form-control{
+
+    width:50%;
+    border: 0;
+    height: 36px;
+    padding:0 10px;
+    outline: 0;
+    
+    }
+
+
+    /*POPULAR*/
+
+.popular {
+    display: grid;
+    grid-template-columns: repeat(3, 6fr 1fr 1fr);
+    grid-template-rows: repeat(9,auto);
+}
+
+.popular1-img {
+    background: url('../img/img-post-1.png');
+    background-size: cover;
+}
+
+.save-icon {
+    background: url('../img/icon-save.png');
+    background-size: cover;
+}
+
+.share-icon {
+    background: url('../img/icon-share.png');
+    background-size: cover;
+}
+
+
