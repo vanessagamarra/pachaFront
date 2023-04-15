@@ -1,6 +1,10 @@
 @import "./components/variables";
 
-@import "./components/mixins";
+@import "./components/mixins-Header";
+
+@import "./components/mixins-Main";
+
+@import "./components/mixins-Footer";
 
 @import "./components/reset";
 

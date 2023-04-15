@@ -118,7 +118,7 @@ input {
   grid-template-columns: repeat(3, minmax(100px, 300px));
   grid-template-rows: repeat(4, auto);
   gap: 30px;
-  padding-top: 60px;
+  padding: 60px 20px 0;
 }
 .main__popular__title {
   grid-column: 1/4;
@@ -140,7 +140,7 @@ input {
   width: 100%;
 }
 .main__popular .popular__image--large {
-  min-width: 540px;
+  min-width: 55%;
 }
 .main__popular .popular__image--large img {
   width: 100%;
