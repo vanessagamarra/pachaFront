@@ -21,7 +21,8 @@ body {
   letter-spacing: 0 0.4em;
   color: #1F3F68;
   padding: 10px 10px 10px 10px;
-  align-self: flex-start;
+  justify-self: start;
+  margin-left: 20px;
 }
 .menu .home {
   font-weight: 700;

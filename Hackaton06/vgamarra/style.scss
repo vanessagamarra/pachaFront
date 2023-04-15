@@ -28,7 +28,8 @@ body {
         border-radius: 50%;
         @include menu-letter($menu-weight, $menu-size, $menu-letter-spacing, #1F3F68);
         padding: 10px 10px 10px 10px;
-        align-self: flex-start;
+        justify-self: start;
+        margin-left: 20px;
     }
 
     .home {
