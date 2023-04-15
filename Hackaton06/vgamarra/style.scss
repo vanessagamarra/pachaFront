@@ -134,9 +134,23 @@ body {
                     }
                 }
                 .new-image {
-                    &>img{
+                    >img{
                         width: 100%;
                         height: 100%;
+                    }
+                }
+            }
+        }
+        .list-of-populars {
+            margin-top: 30px;            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            .popular-new {
+                border: 1px dotted red;
+                .popular-new-image{
+                    >img{
+                        width: 100%;
+                        height: 200px;
                     }
                 }
             }
