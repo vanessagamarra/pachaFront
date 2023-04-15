@@ -75,7 +75,10 @@ body {
 
     padding: 50px 80px 50px 150px;
     $weight: 700;
+    $weight-medium: 400;
     $letter-spacing: 0.04em;
+    $margin-top: 30px;
+    $size-short: 14px;
 
     @mixin frontpage-letter($weight, $size, $letter-spacing, $color) {
         font-style: normal;
@@ -96,17 +99,31 @@ body {
             .main-new {
                 display: grid;
                 grid-template-columns: 2fr 3fr;
+                margin-top: $margin-top;
 
                 .new {
                     .title {
-
                         @include frontpage-letter($weight, 36px, $letter-spacing, #1F3F68);
                     }
-
-                    .detail {
-                        border: 1px dotted red;
-                        @include frontpage-letter(400, 16px, $letter-spacing, #000000);
+                    .detail {                        
+                        @include frontpage-letter($weight-medium, 16px, $letter-spacing, #000000);
                         opacity: 0.6;
+                        margin-top: 10px;
+                    }
+                    .information-actions {
+                        display: grid;
+                        grid-template-columns: 2fr 1fr;
+                        margin-top: $margin-top;
+                        .author {
+                            .author-name {                                
+                                @include frontpage-letter($weight, $size-short, $letter-spacing, #1F3F68);
+                            }
+                            .read-date {
+                                border: 1px dotted red;
+                                @include frontpage-letter($weight-medium, $size-short, $letter-spacing, #1F3F68);
+                                opacity: 0.6;
+                            }
+                        }
                     }
                 }
             }
