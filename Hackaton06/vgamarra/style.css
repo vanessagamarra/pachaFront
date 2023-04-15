@@ -60,6 +60,7 @@ body {
   text-align: center;
 }
 
-.populer-articles .popular {
+.populer-articles {
   border: 1px dotted red;
+  padding: 50px 80px 50px 150px;
 }/*# sourceMappingURL=style.css.map */
