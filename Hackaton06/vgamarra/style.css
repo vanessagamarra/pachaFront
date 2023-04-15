@@ -129,6 +129,7 @@ body {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 .populer-articles .popular .list-of-populars .popular-new .popular-new-image > img {
   width: 100%;
