@@ -37,3 +37,15 @@ body {
         @include menu-letter(700, 20px, 0.04em, black)
     }
 }
+
+.frontpage {
+    background: linear-gradient(253.6deg, #98D0FC 2.46%, #3481D7 93.24%);
+    color: white;
+
+    .blog-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 44px; 
+        text-align: center;   
+    }
+}
