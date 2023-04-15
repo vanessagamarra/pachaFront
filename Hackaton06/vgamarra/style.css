@@ -155,5 +155,25 @@ body {
   margin-top: 25px;
 }
 .populer-articles .popular .list-of-populars .popular-new .portal-new-author-actions .portal-new-author-name .author-name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+  text-transform: capitalize;
+}
+.populer-articles .popular .list-of-populars .popular-new .portal-new-author-actions .portal-new-author-name .author-read {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.4);
+}
+.populer-articles .popular .list-of-populars .popular-new .portal-new-author-actions .portal-new-author-actions-list {
   border: 1px dotted red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  color: #356EAD;
 }/*# sourceMappingURL=style.css.map */
