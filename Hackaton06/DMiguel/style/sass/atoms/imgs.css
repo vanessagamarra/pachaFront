@@ -1,0 +1,12 @@
+.img-principal, .img-secundary {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-principal {
+  width: 25em;
+}
+
+.img-secundary {
+  width: 15em;
+}/*# sourceMappingURL=imgs.css.map */
