@@ -13,6 +13,7 @@
     }
 }
 
+
 @mixin header-presentation($element) {
     width: 100%;
     max-width: 800px;
@@ -20,6 +21,7 @@
     font-weight: 400;
     margin: 0 auto;
     text-align: center;
+    letter-spacing: 0.064rem;
 
     @if $element == title {
         color: $header-content;
@@ -29,6 +31,6 @@
     @else if $element == content {
         color: $header-opacity;
         font-size: 2.0rem;
-        letter-spacing: 0.064rem;
+        line-height: 3.0rem;
     }
 }

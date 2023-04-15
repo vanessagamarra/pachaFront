@@ -21,6 +21,9 @@ input {
   outline: none;
 }
 
+.header {
+  width: 100%;
+}
 .header__navbar {
   background-color: #fff;
   display: flex;
@@ -59,7 +62,7 @@ input {
 .header__presentation {
   background: url("../assets/imgs/background-header.svg") no-repeat center;
   background-size: cover;
-  padding: 62px 20px;
+  padding: 55px 20px;
 }
 .header__presentation__title {
   width: 100%;
@@ -68,6 +71,7 @@ input {
   font-weight: 400;
   margin: 0 auto;
   text-align: center;
+  letter-spacing: 0.064rem;
   color: #fff;
   font-size: 4.4rem;
   margin-bottom: 30px;
@@ -79,9 +83,10 @@ input {
   font-weight: 400;
   margin: 0 auto;
   text-align: center;
+  letter-spacing: 0.064rem;
   color: rgba(255, 255, 255, 0.78);
   font-size: 2rem;
-  letter-spacing: 0.064rem;
+  line-height: 3rem;
 }
 
 .main {
@@ -115,7 +120,7 @@ input {
   width: 100%;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(3, minmax(100px, 300px));
+  grid-template-columns: repeat(3, minmax(100px, 291px));
   grid-template-rows: repeat(4, auto);
   gap: 30px;
   padding: 60px 20px 0;
@@ -331,19 +336,19 @@ input {
 }
 .footer__contact__question {
   line-height: 4.6rem;
-  letter-spacing: 0.08rem;
   margin-bottom: 32px;
   font-size: 3.6rem;
   font-weight: 400;
   font-family: Helvetica, sans-serif;
+  letter-spacing: 0.08rem;
   color: #fff;
 }
 .footer__contact__content {
   line-height: 2.6rem;
-  letter-spacing: 0.08rem;
   font-size: 1.6rem;
   font-weight: 400;
   font-family: Arial, sans-serif;
+  letter-spacing: 0.08rem;
   color: rgba(255, 255, 255, 0.6);
 }
 .footer__contact__btn {
@@ -356,6 +361,7 @@ input {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: Arial, sans-serif;
+  letter-spacing: 0.064rem;
   color: #fff;
 }
 .footer__about {
@@ -383,13 +389,18 @@ input {
   font-size: 1.6rem;
   font-weight: 700;
   font-family: Helvetica, sans-serif;
+  letter-spacing: 0.08rem;
   color: #fff;
 }
 .footer__about .about__list__item a {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: Arial, sans-serif;
+  letter-spacing: 0.08rem;
   color: #fff;
+}
+.footer__about .about__list__item--spacing {
+  line-height: 2.6rem;
 }
 .footer__about .about__list__item--title {
   display: flex;
@@ -407,12 +418,14 @@ input {
   font-size: 2.8rem;
   font-weight: 500;
   font-family: "Gilroy", sans-serif;
+  letter-spacing: 0.032rem;
   color: #fff;
 }
 .footer__about .about__list__item--title h5 {
   font-size: 2rem;
   font-weight: 700;
   font-family: Helvetica, sans-serif;
+  letter-spacing: 0.08rem;
   color: #fff;
 }
 .footer__about .about__list:first-child {
@@ -424,5 +437,6 @@ input {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: Arial, sans-serif;
+  letter-spacing: 0.08rem;
   color: rgba(255, 255, 255, 0.6);
 }/*# sourceMappingURL=main.css.map */

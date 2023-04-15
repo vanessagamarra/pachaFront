@@ -17,10 +17,12 @@
     } 
 }
 
-@mixin footer-text($size, $weight, $font, $color) {
+
+@mixin footer-text($size, $weight, $spacing, $font, $color) {
     font-size: 1.6rem + $size;
     font-weight: 400 + $weight;
     font-family: $font;
+    letter-spacing: 0.032rem + $spacing;
 
     @if $color == normal {
         color: $footer-content;

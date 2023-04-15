@@ -29,6 +29,7 @@
         }
     }
 
+
     &__popular {
         @include containersMain(popular);
 
@@ -117,6 +118,7 @@
         }
     }
 
+    
     &__articles {
         @include containersMain(posts);
 
