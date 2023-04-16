@@ -191,7 +191,6 @@ body {
   opacity: 0.8;
 }
 .populer-articles .all-article-container .all-article-title {
-  border: 1px dotted red;
   margin-top: 30px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -201,4 +200,13 @@ body {
   letter-spacing: 0.04em;
   color: #356EAD;
   opacity: 0.8;
+}
+.populer-articles .all-article-container .article-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.populer-articles .all-article-container .article-item .article-imagen img {
+  border: 1px dotted red;
+  width: 328.64px;
+  height: 200px;
 }/*# sourceMappingURL=style.css.map */
