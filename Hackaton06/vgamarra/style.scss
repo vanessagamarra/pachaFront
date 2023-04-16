@@ -289,6 +289,51 @@ body {
                     @include article-informacion-font(400, 14px,rgba(0, 0, 0, 0.6) )
                     
                 }
+                .article-information-author-actions {
+
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    margin-top: 25px;
+
+                    .article-information-author-name {
+                        $letter-spacing-short: 0.04em;
+                        $color-blue: #1F3F68;
+                        $weight-medium: 700;
+                        $weight-short: 400;
+                        $size-short: 14px;
+        
+                        @mixin article-information-font2($weight, $size, $letter-spacing, $color ) {
+        
+                            font-style: normal;
+                            font-weight: $weight;
+                            font-size: $size;
+                            letter-spacing: $letter-spacing;
+                            color: $color;
+                        }
+
+                        .author-name {
+
+                            @include article-information-font2($weight-medium, $size-short, $letter-spacing-short, $color-blue );
+                            text-transform: capitalize;
+                        }
+
+                        .author-read {
+
+                            @include article-information-font2($weight-short, $size-short , $letter-spacing-short, rgba(0, 0, 0, 0.4))
+                        }
+
+
+                    }
+
+                    .article-information-author-actions-list {
+                        border: 1px dotted red;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        justify-items: center;
+                        align-items: center;
+                        color: #356EAD;
+                    }
+                }
             }
 
         }

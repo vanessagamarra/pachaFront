@@ -223,4 +223,32 @@ body {
   font-size: 14px;
   letter-spacing: 0.04em;
   color: rgba(0, 0, 0, 0.6);
+}
+.populer-articles .all-article-container .article-item .article-informacion .article-information-author-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 25px;
+}
+.populer-articles .all-article-container .article-item .article-informacion .article-information-author-actions .article-information-author-name .author-name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+  text-transform: capitalize;
+}
+.populer-articles .all-article-container .article-item .article-informacion .article-information-author-actions .article-information-author-name .author-read {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.4);
+}
+.populer-articles .all-article-container .article-item .article-informacion .article-information-author-actions .article-information-author-actions-list {
+  border: 1px dotted red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  color: #356EAD;
 }/*# sourceMappingURL=style.css.map */
