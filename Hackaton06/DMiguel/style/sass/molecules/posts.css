@@ -1,21 +1,41 @@
 .all_posts {
   width: 45%;
-  margin: 0 auto;
+  margin: 2em auto;
   display: grid;
   grid-gap: 1em;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "h2 h2 h2" "post1 post1 post1" "post2 post3 post4";
 }
+.all_posts .title-h2 {
+  -webkit-margin-before: 3em;
+          margin-block-start: 3em;
+}
+.all_posts p {
+  opacity: 0.6;
+}
 .all_posts section span {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+}
+.all_posts section span p {
+  opacity: 1;
+}
+.all_posts section span h3, .all_posts section span p {
+  font-size: 0.8em;
 }
 .all_posts section span .icons {
   display: flex;
 }
 .all_posts section span .icons i {
   margin-inline: 0.3em;
+}
+.all_posts section span .post-fecha {
+  -webkit-margin-before: 0.5em;
+          margin-block-start: 0.5em;
 }
 
 .title-h2 {
