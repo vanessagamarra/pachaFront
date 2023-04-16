@@ -215,7 +215,7 @@ body {
                     }
 
                     .portal-new-author-actions-list {
-                        border: 1px dotted red;
+                        
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         justify-items: center;
@@ -265,7 +265,7 @@ body {
 
             .article-imagen {
                 img {
-                    border: 1px dotted red;
+                    
                     width: 328.64px;
                     height: 200px;
 
@@ -286,8 +286,8 @@ body {
                 }
 
                 .aticle-information-desciption {
-                    @include article-informacion-font(400, 14px,rgba(0, 0, 0, 0.6) )
-                    
+                    @include article-informacion-font(400, 14px,rgba(0, 0, 0, 0.6) );
+                    margin-top: 10px
                 }
                 .article-information-author-actions {
 
@@ -326,7 +326,7 @@ body {
                     }
 
                     .article-information-author-actions-list {
-                        border: 1px dotted red;
+                        
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         justify-items: center;

@@ -171,7 +171,6 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 .populer-articles .popular .list-of-populars .popular-new .portal-new-author-actions .portal-new-author-actions-list {
-  border: 1px dotted red;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -206,7 +205,6 @@ body {
   grid-template-columns: 1fr 2fr;
 }
 .populer-articles .all-article-container .article-item .article-imagen img {
-  border: 1px dotted red;
   width: 328.64px;
   height: 200px;
 }
@@ -223,6 +221,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.04em;
   color: rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
 }
 .populer-articles .all-article-container .article-item .article-informacion .article-information-author-actions {
   display: grid;
@@ -245,7 +244,6 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 .populer-articles .all-article-container .article-item .article-informacion .article-information-author-actions .article-information-author-actions-list {
-  border: 1px dotted red;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
