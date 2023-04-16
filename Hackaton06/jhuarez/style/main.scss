@@ -328,10 +328,7 @@ nav > .logo {
     background-color: $color-logo;
     padding-left: 20vh;
     padding-right: 20vh;
-    gap: 15vh;
-
-    
-
+    gap: 15vh;    
 }
 
 .info, .hablemos {
@@ -366,4 +363,51 @@ nav > .logo {
     width: 60%;
     background-color: #5A98D0;
     color: white;
+}
+
+.footer-flex-main {
+    display: flex;
+    background-color: $color-logo;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    gap: 15vh;
+}
+
+.flex-footer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2vh;
+    height: 20rem;
+}
+
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: $font-2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 2vh;
+}
+
+.logo-footer > img {
+    padding-right: 2vh;
+}
+
+.content-footer > span {
+    font-weight: bold;
+    padding-right: 1.5vh;
+}
+
+.content-footer {
+    color: white;
+    font-family: $font-1;
+}
+
+.goodbye {
+    color: $color-autor;
+    font-family: $font-2;
+
 }
