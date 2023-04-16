@@ -209,4 +209,18 @@ body {
   border: 1px dotted red;
   width: 328.64px;
   height: 200px;
+}
+.populer-articles .all-article-container .article-item .article-informacion .article-information-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+}
+.populer-articles .all-article-container .article-item .article-informacion .aticle-information-desciption {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.6);
 }/*# sourceMappingURL=style.css.map */

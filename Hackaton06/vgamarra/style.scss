@@ -264,13 +264,33 @@ body {
             grid-template-columns: 1fr 2fr;
 
             .article-imagen {
-                img{
+                img {
                     border: 1px dotted red;
                     width: 328.64px;
                     height: 200px;
 
                 }
             }
+
+            @mixin article-informacion-font ($weight , $size , $color) {
+                font-style: normal;
+                font-weight: $weight;
+                font-size: $size;
+                letter-spacing: 0.04em;
+                color: $color;
+            }
+
+            .article-informacion {
+                .article-information-title {
+                    @include article-informacion-font(700, 18px, #1F3F68)
+                }
+
+                .aticle-information-desciption {
+                    @include article-informacion-font(400, 14px,rgba(0, 0, 0, 0.6) )
+                    
+                }
+            }
+
         }
     }
 }
