@@ -1,5 +1,6 @@
 .all_posts{
-    width: 45%;
+    width:  90%;
+    max-width: 50%;
     margin: 2em auto;
     display: grid;
     grid-gap: 1em;
@@ -44,14 +45,15 @@
 }
 
 .all_posts .post__1{
+    width: 100%;
     grid-area: post1;
     display: grid;
-    grid-gap: 1em;
-    grid-template-columns: repeat(2, auto);
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "title image"
-                         "parrafo image"
-                         "info_p image"; 
+    grid-template-areas: "title image image"
+                         "parrafo image image"
+                         "info_p image image"; 
     .title-h1{
         grid-area: title;
     }
@@ -67,7 +69,7 @@
 }
 
 .post__2, .post__3, .post__4{
-    
+    width: 100%;
     display: grid;
     grid-gap: 1em;
     grid-template-rows: repeat(4, auto);

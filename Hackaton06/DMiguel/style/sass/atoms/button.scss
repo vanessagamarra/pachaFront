@@ -6,6 +6,6 @@ button{
     background: $color-button;
     color: $color-text-footer;
     font-size: 0.7em;
-    font-family: $font-normal;
+    font-family: $font-normal !important;
 }
 
