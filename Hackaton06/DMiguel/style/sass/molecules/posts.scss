@@ -1,6 +1,6 @@
 .all_posts{
     width: 45%;
-    margin: 0 auto;
+    margin: 2em auto;
     display: grid;
     grid-gap: 1em;
     grid-template-columns: repeat(3, auto);
@@ -8,15 +8,32 @@
     grid-template-areas: "h2 h2 h2"
                          "post1 post1 post1"
                          "post2 post3 post4";
+    .title-h2{
+        margin-block-start: 3em;
+    }
+    p{
+        opacity: 0.6;
+    }
     section{
         span{
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            margin-block-start: 1em;
+            p{
+                opacity: 1;
+            }
+            h3, p{
+                font-size:0.8em;
+            }
             .icons{
                 display: flex;
                 i{
                     margin-inline: 0.3em;
                 }
+            }
+            .post-fecha{
+                margin-block-start: 0.5em;
             }
         }
     }
@@ -85,3 +102,4 @@
 .all_posts .post__4{
     grid-area: post4;
 }
+
