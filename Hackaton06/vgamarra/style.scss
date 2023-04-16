@@ -215,7 +215,7 @@ body {
                     }
 
                     .portal-new-author-actions-list {
-                        
+
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         justify-items: center;
@@ -259,13 +259,13 @@ body {
         }
 
         .article-item {
-
+            margin-top: 15px;
             display: grid;
             grid-template-columns: 1fr 2fr;
 
             .article-imagen {
                 img {
-                    
+
                     width: 328.64px;
                     height: 200px;
 
@@ -286,9 +286,10 @@ body {
                 }
 
                 .aticle-information-desciption {
-                    @include article-informacion-font(400, 14px,rgba(0, 0, 0, 0.6) );
+                    @include article-informacion-font(400, 14px, rgba(0, 0, 0, 0.6));
                     margin-top: 10px
                 }
+
                 .article-information-author-actions {
 
                     display: grid;
@@ -301,9 +302,9 @@ body {
                         $weight-medium: 700;
                         $weight-short: 400;
                         $size-short: 14px;
-        
+
                         @mixin article-information-font2($weight, $size, $letter-spacing, $color ) {
-        
+
                             font-style: normal;
                             font-weight: $weight;
                             font-size: $size;
@@ -326,7 +327,7 @@ body {
                     }
 
                     .article-information-author-actions-list {
-                        
+
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         justify-items: center;
