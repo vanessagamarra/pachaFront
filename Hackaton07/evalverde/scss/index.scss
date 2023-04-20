@@ -647,3 +647,9 @@ letter-spacing: 0.05em;
 color: $color-footer;
 }
 
+
+@media only screen and (max-width :1300px) {
+    .nav-contenedor{
+        width: 940px;
+    }
+}
