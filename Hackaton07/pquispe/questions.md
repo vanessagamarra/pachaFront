@@ -7,7 +7,7 @@ Con la llegada de dispositivos móviles y tablets, las páginas tuvieron que ada
 
 ## **Preguntas y Respuestas:**
 
-### **¿Qué es RWD?**
+## **1.- ¿Qué es RWD?**
 
 El Responsive Web Design *(Diseño Web Adaptable)* es una técnica de diseño y desarrollo web que busca crear sitios web que se adapten y se vean bien en diferentes dispositivos, como `computadoras de escritorio`, `laptops`, `tabletas` y `smartphones`, con diferentes tamaños de pantalla y resoluciones.
 
@@ -20,7 +20,7 @@ En esencia, el Responsive Web Design permite a los sitios web adaptarse de maner
 | ![Responsive Web Design](https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-vector-phone-cell-icon-png-image_695357.jpg) | ![Responsive Web Design](https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-tablet-line-black-icon-png-image_691061.jpg) | ![Responsive Web Design](https://png.pngtree.com/png-vector/20220705/ourlarge/pngtree-laptop-icon-png-image_5683130.png) | ![Responsive Web Design](https://png.pngtree.com/png-vector/20210411/ourlarge/pngtree-black-and-white-desktop-computer-png-image_3210770.jpg) |
 
 
-### **¿Cuáles son los beneficios de RWD?**
+## **2.- ¿Cuáles son los beneficios de RWD?**
 
 | Mejora la experiencia del usuario | Ahorra tiempo y costos | Mejora el SEO | Mayor alcance | Mayor alcance |
 |-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
