@@ -8,7 +8,6 @@
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
-        max-width: 1319px;
         padding: 48px 30px;
         margin: 0 auto;
         gap: 20px;
@@ -40,9 +39,10 @@
     &__presentation {
         background: url('../assets/imgs/background-header.svg') no-repeat center;
         background-size: cover;
-        padding: 55px 20px;
+        padding: 55px 83px;
 
         &__title {
+            max-width: 210px;
             @include header-presentation(title);
         }
 

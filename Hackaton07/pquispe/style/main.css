@@ -31,7 +31,6 @@ input {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1319px;
   padding: 48px 30px;
   margin: 0 auto;
   gap: 20px;
@@ -49,44 +48,43 @@ input {
 }
 .header__navbar .navbar-list__item a {
   font-family: Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 400;
   color: #000;
 }
 .header__navbar .navbar-list__item--active a {
   font-family: Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #1F3F68;
 }
 .header__presentation {
   background: url("../assets/imgs/background-header.svg") no-repeat center;
   background-size: cover;
-  padding: 55px 20px;
+  padding: 55px 83px;
 }
 .header__presentation__title {
+  max-width: 210px;
   width: 100%;
-  max-width: 800px;
   font-family: Arial, sans-serif;
   font-weight: 400;
   margin: 0 auto;
   text-align: center;
   letter-spacing: 0.064rem;
   color: #fff;
-  font-size: 4.4rem;
+  font-size: 3.2rem;
   margin-bottom: 30px;
 }
 .header__presentation__content {
   width: 100%;
-  max-width: 800px;
   font-family: Arial, sans-serif;
   font-weight: 400;
   margin: 0 auto;
   text-align: center;
   letter-spacing: 0.064rem;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
 }
 
 .footer {
@@ -212,6 +210,20 @@ input {
 }
 
 @media only screen and (min-width: 830px) {
+  .header__navbar .navbar-list__item a, .header__navbar .navbar-list__item--active a {
+    font-size: 2rem;
+  }
+  .header__presentation {
+    padding: 55px 174px;
+  }
+  .header__presentation__title {
+    max-width: none;
+    font-size: 3.2rem;
+  }
+  .header__presentation__content {
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
   .footer__contact {
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, auto);
@@ -252,6 +264,12 @@ input {
   }
 }
 @media only screen and (min-width: 1320px) {
+  .header__presentation__title {
+    font-size: 4.4rem;
+  }
+  .header__presentation__content {
+    font-size: 2rem;
+  }
   .footer__contact {
     padding: 91px 193px;
   }

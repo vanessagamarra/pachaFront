@@ -1,7 +1,7 @@
 
 @mixin header-navbar($element) {
     font-family: $fuente-primary;
-    font-size: 2.0rem;
+    font-size: 1.4rem;
 
     @if $element == disabled {
         font-weight: 400;
@@ -16,7 +16,6 @@
 
 @mixin header-presentation($element) {
     width: 100%;
-    max-width: 800px;
     font-family: $fuente-secondary;
     font-weight: 400;
     margin: 0 auto;
@@ -25,12 +24,12 @@
 
     @if $element == title {
         color: $header-content;
-        font-size: 4.4rem;
+        font-size: 3.2rem;
         margin-bottom: 30px;
     }
     @else if $element == content {
         color: $header-opacity;
-        font-size: 2.0rem;
-        line-height: 3.0rem;
+        font-size: 1.3rem;
+        line-height: 2.3rem;
     }
 }
