@@ -32,7 +32,7 @@
                 }
             }
 
-            .popular__details {
+            &__details {
                 margin-bottom: 0;
             }
         }
@@ -45,6 +45,7 @@
             grid-column: 1 / 4;
             grid-row: 2 / 3;
             flex-direction: row-reverse;
+            align-items: center;
         }
 
         &__more {

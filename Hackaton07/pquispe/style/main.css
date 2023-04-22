@@ -107,6 +107,7 @@ input {
 .main__search__background img {
   width: 24px;
   margin-right: 20px;
+  cursor: pointer;
 }
 .main__search__background input {
   background-color: #f4f4f4;
@@ -179,13 +180,13 @@ input {
 .main__popular .popular__content__description span {
   display: none;
 }
-.main__popular .popular .popular__details {
+.main__popular .popular__details {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
 }
-.main__popular .popular .popular__details__info p {
+.main__popular .popular__details__info p {
   color: #1f3f68;
   font-family: Helvetica, sans-serif;
   font-weight: 700;
@@ -193,7 +194,7 @@ input {
   letter-spacing: 0.064rem;
   margin-bottom: 5px;
 }
-.main__popular .popular .popular__details__info span {
+.main__popular .popular__details__info span {
   color: rgba(0, 0, 0, 0.4);
   font-family: Arial, sans-serif;
   font-weight: 400;
@@ -202,18 +203,18 @@ input {
   line-height: 2.4rem;
   margin-bottom: 0;
 }
-.main__popular .popular .popular__details__options {
+.main__popular .popular__details__options {
   display: flex;
   gap: 20px;
 }
-.main__popular .popular .popular__details__options img {
+.main__popular .popular__details__options img {
   width: 26.29px;
   cursor: pointer;
 }
-.main__popular .popular--none {
+.main__popular--none {
   display: none;
 }
-.main__popular .popular--large {
+.main__popular--large {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -495,7 +496,7 @@ input {
   .main__popular .popular__content__description--large {
     margin-bottom: 110px;
   }
-  .main__popular .popular .popular__details {
+  .main__popular .popular__details {
     margin-bottom: 0;
   }
   .main__popular .popular--none {
@@ -505,6 +506,7 @@ input {
     grid-column: 1/4;
     grid-row: 2/3;
     flex-direction: row-reverse;
+    align-items: center;
   }
   .main__popular__more {
     grid-column: 1/4;
