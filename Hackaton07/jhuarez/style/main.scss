@@ -1,3 +1,9 @@
+* {
+    /*elimina cualquier margen y relleno predeterminado*/
+        margin: 0;
+        padding: 0;
+    }
+
 $color-logo: #316099;
 $color-titulo-1: #356EAD;
 $color-titulo-2: #1F3F68;
@@ -6,6 +12,145 @@ $color-autor: rgba(0, 0, 0, 0.4);
 
 $font-1: Arial;
 $font-2: Helvetica;
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .popular-1 {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0 20px;
+        grid-template-areas:
+            "pop1-main-title  pop1-main-title pop1-main-title"
+            "pop1-img          pop1-img           pop1-img"
+             "pop1-title      pop1-title       pop1-title"
+              "pop1-content   pop1-content     pop1-content"
+              "pop1-author      save-icon      share-icon"
+                "pop1-date     save-icon        share-icon";    
+    }
+
+    .pop-flexbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 5rem;   
+    }
+
+    .all-grid {
+        display: grid;
+        grid-template-columns: 7fr 5vh 5vh;
+        grid-template-rows: auto; 
+        grid-template-areas:
+
+        "all1      all1        all1"
+        "all2      all2       all2 "
+         "all3       all3       all3"
+         "all4      all6      all7"
+           "all5      all6        all7";
+
+           grid-gap: 10px;
+    }
+
+    .interested-flex {
+        display: flex;
+        flex-direction: column;
+        background-color: $color-logo;
+        padding: 20vh;
+        gap: 10px;    
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .popular-1 {
+        display: grid;
+        grid-template-columns: 7fr 5vh 5vh 9fr;
+        grid-template-rows: auto;
+        grid-gap: 0 20px;
+        grid-template-areas:
+            "pop1-main-title  pop1-main-title pop1-main-title pop1-main-title"
+             "pop1-title      pop1-title       pop1-title       pop1-img"
+              "pop1-content   pop1-content     pop1-content     pop1-img"
+              "pop1-author      save-icon      share-icon       pop1-img"
+                "pop1-date     save-icon        share-icon       pop1-img";
+    }
+
+    .pop-flexbox {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .all-grid {
+        display: grid;
+        grid-template-columns: 5fr 7fr 5vh 5vh;
+        grid-template-rows: auto; 
+        grid-gap: 10px;
+        grid-template-areas:
+     
+        "all1     all2      all2       all2 "
+         "all1   all3       all3       all3"
+         "all1    all4      all6      all7"
+           "all1   all5      all6        all7";
+    }
+
+    .interested-flex {
+        display: flex;
+        background-color: $color-logo;
+        padding-left: 20vh;
+        padding-right: 20vh;
+        gap: 10px;    
+    }
+    
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .popular-1 {
+        display: grid;
+        grid-template-columns: 7fr 5vh 5vh 9fr;
+        grid-template-rows: auto;
+        grid-gap: 0 20px;
+        grid-template-areas:
+            "pop1-main-title  pop1-main-title pop1-main-title pop1-main-title"
+             "pop1-title      pop1-title       pop1-title       pop1-img"
+              "pop1-content   pop1-content     pop1-content     pop1-img"
+              "pop1-author      save-icon      share-icon       pop1-img"
+                "pop1-date     save-icon        share-icon       pop1-img";    
+    }
+
+    .pop-flexbox {
+        display: flex;
+        justify-content: space-between;
+        gap: 5rem;   
+    }
+
+    .all-grid {
+        display: grid;
+        grid-template-columns: 5fr 7fr 5vh 5vh;
+        grid-template-rows: auto; 
+        grid-gap: 10px;
+        grid-template-areas:
+     
+        "all1     all2      all2       all2 "
+         "all1   all3       all3       all3"
+         "all1    all4      all6      all7"
+           "all1   all5      all6        all7";
+    }
+
+    .interested-flex {
+        display: flex;
+        background-color: $color-logo;
+        padding-left: 20vh;
+        padding-right: 20vh;
+        gap: 10px;    
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 html {
     box-sizing: border-box;
@@ -38,36 +183,39 @@ html {
     color: $color-autor;
 }
 
-nav {
-    
+nav {    
     font-family: $font-2;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo . . . home espec depor";
     background: transparent;
     position: relative;
-    justify-content: space-between;
-    flex: 1;
     padding: 1%;
     width: 100%;
     height: auto;
-
+    align-items: center;
+    text-align: center;
+    gap: 5%;
 }
 
-nav > .navigator {
-    display: flex;
-    width: 30%;
-    justify-content: space-evenly;
-    gap: 10px;
-    align-items: center;    
+
+.logo {
+    grid-area: logo;
 }
 
-nav > .logo {
-    width: 33%;
-    height: auto;
-}
-
-.navigator > .home {
+.home {
+    grid-area: home;
     color: $color-titulo-2;
     font-weight: bold;
+}
+
+.espec {
+    grid-area: espec;
+}
+
+.depor {
+    grid-area: depor;
 }
 
 .header--background {    
@@ -82,7 +230,7 @@ nav > .logo {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 40vh;
+    min-height: 40vh;
     width: 100%;
 }
 
@@ -155,23 +303,10 @@ nav > .logo {
     font-family: $font-2;
 }
 
-.popular-1 {
-    display: grid;
-    grid-template-columns: 7fr 5vh 5vh 9fr;
-    grid-template-rows: auto;
-    grid-gap: 0 20px;
-    grid-template-areas:
-        "pop1-main-title  pop1-main-title pop1-main-title pop1-main-title"
-         "pop1-title      pop1-title       pop1-title       pop1-img"
-          "pop1-content   pop1-content     pop1-content     pop1-img"
-          "pop1-author      save-icon      share-icon       pop1-img"
-            "pop1-date     save-icon        share-icon       pop1-img";
-
-}
-
 .pop1-main-title{
     grid-area: pop1-main-title;
 }
+
 .pop1-img {    
     grid-area: pop1-img;
     @include align-grid;
@@ -203,18 +338,13 @@ nav > .logo {
     @include align-grid;
 }
 
-.pop-flexbox {
-    display: flex;
-    justify-content: space-between;
-    gap: 5rem;   
-}
-
 .popular-grid{
     display: grid;
     grid-template-columns: 6fr 4vh 4vh;
     grid-template-rows:auto;
-    grid-gap: 1rem 20px;
+    grid-gap: 10px;
 }
+
 .pop1 {
     @include position-grid(1, 3, 1, 1);
 }
@@ -253,46 +383,40 @@ nav > .logo {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-      
 }
+
 
 .all-flexbox-2 {
     display: flex;
     justify-content: space-between;
 }
 
-.all-grid {
-    display: grid;
-    grid-template-columns: 5fr 7fr 5vh 5vh;
-    grid-template-rows: auto; 
-}
-
 .all1 {
-    @include position-grid(1, 1, 1, 4);
+    grid-area: all1;
 }
 
 .all2 {
-    @include position-grid(2, 3, 1, 1);
+    grid-area: all2;
 }
 
 .all3 {
-    @include position-grid(2, 3, 2, 1);
+    grid-area: all3;
 }
 
 .all4 {
-    @include position-grid(2, 1, 3, 1);
+    grid-area: all4;
 }
 
 .all5 {
-    @include position-grid(2, 1, 4, 1);
+    grid-area: all5;
 }
 
 .all6 {
-    @include position-grid(3, 1, 3, 2);
+    grid-area: all6;
 }
 
 .all7 {
-    @include position-grid(4, 1, 3, 2);
+    grid-area: all7;
 }
 
 .interested-flex {
@@ -343,7 +467,7 @@ nav > .logo {
     background-color: $color-logo;
     padding-left: 20vh;
     padding-right: 20vh;
-    gap: 15vh;
+    gap: 10px;
 }
 
 .flex-footer {
