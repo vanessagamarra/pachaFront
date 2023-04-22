@@ -24,6 +24,125 @@
         }
     }
 
+    .main {
+        &__popular {
+            grid-template-columns: repeat(3, 3fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 16px;
+
+            &__title {
+                grid-column: 1 / 4;
+                grid-row: 1 / 2;
+            }
+
+            .popular {
+                &__image--large {
+                    min-width: 57%;
+                    margin-left: 30px;
+                    margin-bottom: 0;
+                }
+
+                &__content {
+                    &__title--large {
+                        @include main-encabezados(1.8);
+                    }
+    
+                    &__description {
+                        @include main-content(0.2, 0.2, 40px, 0.6);
+                    }
+
+                    &__description--large {
+                        margin-bottom: 110px;
+                    }
+                }
+
+                .popular__details {
+                    margin-bottom: 0;
+                }
+            }
+
+            .popular--none {
+                display: flex;
+            }
+
+            .popular--large {
+                grid-column: 1 / 4;
+                grid-row: 2 / 3;
+                flex-direction: row-reverse;
+            }
+
+            &__more {
+                grid-column: 1 / 4;
+                grid-row: 4 / 5;
+            }
+        }
+
+        &__articles {
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(7, auto);
+    
+            &__title {
+                display: block;
+                @include main-nameSection(0.4);
+            }
+    
+            .article {
+                flex-direction: row;
+                gap: 20px;
+    
+                &__image {
+                    width: 100%;
+                    margin-bottom: 0;
+    
+                    img {
+                        width: 100%;
+                    }
+                }
+    
+                &__content {
+                    &__title {
+                        line-height: 3.8rem;
+                        margin-bottom: 0;
+                    }
+    
+                    &__description {
+                        line-height: 2.4rem;
+    
+                        span {
+                            display: inline;
+                        }
+                    }
+    
+                    .article__details {
+                        &__options {
+                            gap: 50px;
+                        }
+                    }
+                }
+            }
+    
+            .article--none {
+                display: flex;
+            }
+    
+            &__btn {
+                justify-content: space-between;
+    
+                .btn--none {
+                    display: flex;
+                }
+    
+                a {
+                    margin-right: 0;
+    
+                    img {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
     .footer {
         &__contact {
             grid-template-columns: repeat(2, 50%);
@@ -85,6 +204,49 @@
             &__content {
                 font-size: 2.0rem;
             }
+        }
+    }
+
+    .main {
+        &__search {
+            padding: 25px 193px 0;
+        }
+
+        &__popular {
+            padding: 35px 193px 0;
+            gap: 30px;
+
+            .popular {
+                &__image--large {
+                    margin-left: 26px;
+                }
+
+                &__content {
+                    &__title {
+                        font-size: 2.2rem;
+                        line-height: 3.2rem;
+                    }
+
+                    &__title--large {
+                        font-size: 3.6rem;
+                        line-height: 4.6rem;
+                    }
+
+                    &__description {
+                        span {
+                            display: inline-block;
+                        }
+                    }
+
+                    &__description--large {
+                        margin-bottom: 52px;
+                    }
+                }
+            }
+        }
+
+        &__articles {
+            padding: 60px 193px 80px;
         }
     }
 

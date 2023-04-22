@@ -3,14 +3,12 @@
     background-color: $background-page;
 
     &__search {
-        padding: 60px 20px 0;
+        padding: 25px 20px 0;
 
         &__background {
             background-color: $background-search;
             display: flex;
             align-items: center;
-            max-width: 934px;
-            margin: 0 auto;
             padding: 16px 20px;
             border-radius: 10px;
 
@@ -34,9 +32,8 @@
         @include containersMain(popular);
 
         &__title {
-            grid-column: 1 / 4;
-            grid-row: 1 / 2;
-            @include main-nameSection(0.4);
+            @include main-nameSection(0.6);
+            margin-bottom: 15px;
         }
 
         .popular {
@@ -45,6 +42,7 @@
 
             &__image {
                 width: 100%;
+                margin-bottom: 10px;
 
                 img {
                     width: 100%
@@ -52,7 +50,8 @@
             }
 
             &__image--large {
-                min-width: 55%;
+                width: 100%;
+                margin-bottom: 8px;
 
                 img {
                     width: 100%
@@ -60,17 +59,22 @@
             }
 
             &__content {
-
                 &__title {
-                    @include main-encabezados(0.8);
+                    line-height: 2.8rem;
+                    @include main-encabezados(0.4);
                 }
                 
                 &__title--large {
-                    @include main-encabezados(2.2);
+                    line-height: 3.8rem;
+                    @include main-encabezados(0.6);
                 }
 
                 &__description {
-                    @include main-content(0.2, 0.2, 40px);
+                    @include main-content(0, 0.2, 40px, 0.6);
+
+                    span {
+                        display: none;
+                    }
                 }
             }
 
@@ -78,13 +82,14 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                margin-bottom: 40px;
 
                 &__info p {
                     @include main-encabezados(0);
                 }
 
                 &__info span {
-                    @include main-content(0, 0, 0)
+                    @include main-content(0, 0, 0, 0.4)
                 }
 
                 &__options {
@@ -99,18 +104,17 @@
             }
         }
 
+        .popular--none {
+            display: none;
+        }
+
         .popular--large {
-            grid-column: 1 / 4;
-            grid-row: 2 / 3;
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: column;
             align-items: center;
-            gap: 20px;
         }
 
         &__more {
-            grid-column: 1 / 4;
-            grid-row: 4 / 5;
             @include main-nameSection(0);
             text-align: end;
             padding: 30px 0;
@@ -123,15 +127,17 @@
         @include containersMain(posts);
 
         &__title {
-            @include main-nameSection(0.4);
+            display: none;
         }
 
         .article {
             width: 100%;
             display: flex;
+            flex-direction: column;
 
             &__image {
-                min-width: 328px;
+                width: 100%;
+                margin-bottom: 10px;
 
                 img {
                     width: 100%;
@@ -141,14 +147,18 @@
             &__content {
                 display: flex;
                 flex-direction: column;
-                padding: 5px 0 5px 20px;
 
                 &__title {
                     @include main-encabezados(0.4);
+                    line-height: 2.8rem
                 }
 
                 &__description {
-                    @include main-content(0, 0, 40px);
+                    @include main-content(0, 0.2, 40px, 0.6);
+
+                    span {
+                        display: none;
+                    }
                 }
 
                 .article__details {
@@ -161,12 +171,12 @@
                     }
 
                     &__info span {
-                        @include main-content(0, 0, 0);
+                        @include main-content(0, 0, 0, 0.4);
                     }
 
                     &__options {
                         display: flex;
-                        gap: 50px;
+                        gap: 20px;
 
                         img {
                             width: 26.29px;
@@ -177,10 +187,18 @@
             }
         }
 
+        .article--none {
+            display: none;
+        }
+
         &__btn {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             margin-top: 20px;
+
+            .btn--none {
+                display: none;
+            }
 
             a {
                 display: flex;
@@ -190,9 +208,10 @@
                 font-family: $fuente-primary;
                 font-size: 1.6rem;
                 letter-spacing: 0.064rem;
+                margin-right: 30px;
 
                 img {
-                    width: 18px;
+                    display: none;
                 }
             }
         }
