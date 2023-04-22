@@ -136,57 +136,43 @@ nav > .logo {
   grid-template-columns: 7fr 5vh 5vh 9fr;
   grid-template-rows: auto;
   grid-gap: 0 20px;
+  grid-template-areas: "pop1-main-title  pop1-main-title pop1-main-title pop1-main-title" "pop1-title      pop1-title       pop1-title       pop1-img" "pop1-content   pop1-content     pop1-content     pop1-img" "pop1-author      save-icon      share-icon       pop1-img" "pop1-date     save-icon        share-icon       pop1-img";
 }
 
-.popular-grid {
-  display: grid;
-  grid-template-columns: 6fr 4vh 4vh;
-  grid-template-rows: auto;
-  grid-gap: 1rem 20px;
+.pop1-main-title {
+  grid-area: pop1-main-title;
 }
 
-.popular1-main-title {
-  grid-column: 1/span 4;
-  grid-row: 1/span 1;
-}
-
-.popular1-img {
-  grid-column: 4/span 1;
-  grid-row: 2/span 4;
+.pop1-img {
+  grid-area: pop1-img;
   align-self: center;
   justify-self: center;
 }
 
-.popular1-title {
-  grid-column: 1/span 3;
-  grid-row: 2/span 1;
+.pop1-title {
+  grid-area: pop1-title;
 }
 
-.popular1-content {
-  grid-column: 1/span 3;
-  grid-row: 3/span 1;
+.pop1-content {
+  grid-area: pop1-content;
 }
 
-.popular1-author {
-  grid-column: 1/span 1;
-  grid-row: 4/span 1;
+.pop1-author {
+  grid-area: pop1-author;
 }
 
-.popular1-date {
-  grid-column: 1/span 1;
-  grid-row: 5/span 1;
+.pop1-date {
+  grid-area: pop1-date;
 }
 
 .save-icon {
-  grid-column: 2/span 1;
-  grid-row: 4/span 2;
+  grid-area: save-icon;
   align-self: center;
   justify-self: center;
 }
 
 .share-icon {
-  grid-column: 3/span 1;
-  grid-row: 4/span 2;
+  grid-area: share-icon;
   align-self: center;
   justify-self: center;
 }
@@ -195,6 +181,13 @@ nav > .logo {
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: 6fr 4vh 4vh;
+  grid-template-rows: auto;
+  grid-gap: 1rem 20px;
 }
 
 .pop1 {

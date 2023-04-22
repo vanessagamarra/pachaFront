@@ -4,8 +4,6 @@ $color-titulo-2: #1F3F68;
 $color-cuerpo: rgba(0, 0, 0, 0.6);
 $color-autor: rgba(0, 0, 0, 0.4);
 
-
-
 $font-1: Arial;
 $font-2: Helvetica;
 
@@ -59,9 +57,7 @@ nav > .navigator {
     width: 30%;
     justify-content: space-evenly;
     gap: 10px;
-    align-items: center;
-
-    
+    align-items: center;    
 }
 
 nav > .logo {
@@ -74,17 +70,14 @@ nav > .logo {
     font-weight: bold;
 }
 
-
-.header--background {
-    
+.header--background {    
     background-image: url('../img/banner-2.png'), url('../img/banner.png');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.header--structure{
-    
+.header--structure {    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +85,6 @@ nav > .logo {
     height: 40vh;
     width: 100%;
 }
-
 
 .header--title, .header--content {
     font-family: $font-1;
@@ -103,17 +95,13 @@ nav > .logo {
 }
 
 .header--title {
-
     font-size: 2.5rem;
-
 }
 
 .header--content {
-
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.78);
 }
-
 
 .search-box {
     display: flex;
@@ -121,7 +109,7 @@ nav > .logo {
     border-radius: 18px;
     justify-content: center;
     padding: 20px;
-    }
+}
 
 .search-box .btn {
     background: #fff;
@@ -132,8 +120,7 @@ nav > .logo {
     border: 0;
     cursor: pointer;
     outline: 0;
-
-    }
+}
     
 .search-box .form-control{
 
@@ -144,8 +131,6 @@ nav > .logo {
     outline: 0;
     
     }
-
-
 /*POPULAR*/
 
 /*MIXIN POSICION*/
@@ -162,12 +147,7 @@ nav > .logo {
     justify-self: $align-y;
 }
 
-
 /*MIXIN ESTILO*/
-
-
-
-
 /*classes*/
 .popular-1-1 {
     padding-left: 20vh;
@@ -179,8 +159,54 @@ nav > .logo {
     display: grid;
     grid-template-columns: 7fr 5vh 5vh 9fr;
     grid-template-rows: auto;
-    grid-gap: 0 20px;  
+    grid-gap: 0 20px;
+    grid-template-areas:
+        "pop1-main-title  pop1-main-title pop1-main-title pop1-main-title"
+         "pop1-title      pop1-title       pop1-title       pop1-img"
+          "pop1-content   pop1-content     pop1-content     pop1-img"
+          "pop1-author      save-icon      share-icon       pop1-img"
+            "pop1-date     save-icon        share-icon       pop1-img";
 
+}
+
+.pop1-main-title{
+    grid-area: pop1-main-title;
+}
+.pop1-img {    
+    grid-area: pop1-img;
+    @include align-grid;
+}
+
+.pop1-title {
+    grid-area: pop1-title;
+}
+
+.pop1-content {
+    grid-area: pop1-content;
+}
+
+.pop1-author {
+    grid-area: pop1-author;
+}
+
+.pop1-date{
+    grid-area: pop1-date;
+}
+
+.save-icon {
+    grid-area: save-icon;
+    @include align-grid;
+}
+
+.share-icon {
+    grid-area: share-icon;
+    @include align-grid;
+}
+
+.pop-flexbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;   
 }
 
 .popular-grid{
@@ -188,60 +214,7 @@ nav > .logo {
     grid-template-columns: 6fr 4vh 4vh;
     grid-template-rows:auto;
     grid-gap: 1rem 20px;
-
 }
-.popular1-main-title{
-
-    @include position-grid(1, 4, 1, 1);
-
- 
-}
-.popular1-img {
-    
-    @include position-grid(4, 1, 2, 4);
-    @include align-grid;
-}
-
-.popular1-title {
-    @include position-grid(1, 3, 2, 1);
-
-
-}
-
-.popular1-content {
-    @include position-grid(1, 3, 3, 1);
-
-}
-
-.popular1-author {
-    @include position-grid(1, 1, 4, 1);
-}
-
-.popular1-date{
-    @include position-grid(1, 1, 5, 1);
-}
-
-.save-icon {
-    @include position-grid(2,1,4,2);
-    @include align-grid;
-}
-
-.share-icon {
-    @include position-grid(3,1,4,2);
-    @include align-grid;
-}
-
-.pop-flexbox {
-    display: flex;
-    justify-content: space-between;
-    gap: 5rem;
-    
-    
-    
-}
-
-
-
 .pop1 {
     @include position-grid(1, 3, 1, 1);
 }
@@ -287,7 +260,6 @@ nav > .logo {
     display: flex;
     justify-content: space-between;
 }
-
 
 .all-grid {
     display: grid;
