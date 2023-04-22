@@ -2,13 +2,16 @@ footer {
   background: #316099;
   width: 100%;
   padding-block: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
 }
 footer .footer-1 {
   justify-content: space-between;
   padding-block: 0 5em;
-  margin: 0 auto;
   width: 90%;
-  max-width: 50%;
+  max-width: 55%;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
