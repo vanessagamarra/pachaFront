@@ -6,12 +6,26 @@
 /*-- 22px--*/
 /*-- 18px--*/
 body {
+  display: flex;
   position: relative;
   width: 1319px;
   height: 3876px;
   background: #FFFFFF;
 }
 
+@media screen and (max-width: 828px) {
+  /*--------------------- media menu--------------------*/
+  div.menu {
+    margin-left: -40px;
+  }
+  .menu ul {
+    font-size: 1.375rem;
+  }
+  /*--------------------- media rectangulo1 --------------------*/
+  div.rectangulo1 div.rectangulo {
+    width: 1100;
+  }
+}
 div.logo {
   position: absolute;
   left: 5%;
@@ -113,6 +127,7 @@ section.de-imagen p {
 }
 
 div.rectangulo1 div.rectangulo {
+  display: flex;
   position: absolute;
   width: 940px;
   height: 56px;

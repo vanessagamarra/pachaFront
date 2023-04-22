@@ -24,15 +24,38 @@ $font-style: normal;
 
 
 body{
+    display: flex;
     position: relative;
     width: 1319px;
-    
+
     height: 3876px;
     background: $color-3;
 }
 
 
+@media screen and (max-width: 828px)  {
 
+    /*--------------------- media menu--------------------*/
+    div.menu{
+        margin-left: -40px;
+    }
+  
+    .menu ul{
+        font-size: $font-size6 ;        
+    }
+ /*--------------------- media rectangulo1 --------------------*/
+
+    div.rectangulo1 {
+
+        div.rectangulo{
+            width: 1100;
+        }
+        
+    }
+
+
+
+}
 
 div.logo {
     position: absolute;
@@ -150,6 +173,7 @@ section.de-imagen{
 div.rectangulo1{
 
     div.rectangulo{
+        display: flex;
         position: absolute;
         width: 940px;
         height: 56px;
