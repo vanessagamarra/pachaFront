@@ -433,7 +433,7 @@ main .header__presentation {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
 }
-@media screen and (min-width: 424px) {
+@media screen and (min-width: 300px) {
   main .header__presentation h2 {
     width: 50%;
   }
@@ -453,7 +453,7 @@ main .header__presentation {
     width: 100%;
   }
 }
-@media screen and (min-width: 424px) {
+@media screen and (min-width: 300px) {
   main .search .search__input {
     max-width: 98%;
   }
@@ -473,7 +473,7 @@ main .header__presentation {
     max-width: 50%;
   }
 }
-@media screen and (min-width: 424px) {
+@media screen and (min-width: 300px) {
   main .menu-article {
     max-width: 98%;
     justify-content: end;
@@ -502,7 +502,7 @@ main .header__presentation {
   }
 }
 
-@media screen and (min-width: 424px) {
+@media screen and (min-width: 300px) {
   .all_posts {
     max-width: 98%;
     grid-template-columns: repeat(1, auto);
@@ -556,7 +556,7 @@ main .header__presentation {
   }
 }
 
-@media screen and (min-width: 424px) {
+@media screen and (min-width: 300px) {
   .all_article {
     max-width: 98%;
   }
@@ -593,7 +593,7 @@ main .header__presentation {
   }
 }
 
-@media screen and (min-width: 424px) {
+@media screen and (min-width: 300px) {
   footer .footer-1 {
     max-width: 98%;
     grid-template-columns: repeat(1, auto);
@@ -619,7 +619,7 @@ main .header__presentation {
     max-width: 50%;
   }
 }
-@media screen and (min-width: 424px) {
+@media screen and (min-width: 300px) {
   footer .button button {
     width: 100%;
   }
@@ -629,7 +629,7 @@ main .header__presentation {
     width: auto;
   }
 }
-@media screen and (min-width: 424px) {
+@media screen and (min-width: 300px) {
   footer .footer-2 {
     max-width: 98%;
     display: flex;
