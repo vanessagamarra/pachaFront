@@ -48,6 +48,20 @@ body {
     padding-bottom: 30px;
 }
 
+.input-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 10px 60px;
+    background: #f4f1f1;
+    border-radius: 10px;
+    border: 0;
+
+}
+
+.form-control {
+    background: #f4f1f1;
+}
+
 .frontpage .blog-title {
     font-style: normal;
     font-weight: 400;
@@ -393,29 +407,32 @@ body {
     margin-top: 30px;
 }
 
+
+
 @media only screen and (max-width: 430px) {
+
     .populer-articles .popular .main .main-new {
         grid-template-rows: auto;
         grid-template-columns: 1fr;
-
+        font-size: 14px;
     }
-}
 
-@media only screen and (max-width: 430px) {
     .populer-articles .popular .list-of-populars {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-
+        font-size: 14px;
     }
 
     .populer-articles .all-article-container .article-item {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        font-size: 14px;
     }
 
     .footer-top {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        font-size: 14px;
     }
 
     .footer-top .boton {
@@ -423,15 +440,36 @@ body {
         grid-row-start: 3;
         margin: 30px;
         justify-self: center;
-        
+        font-size: 14px;
     }
 
-    .footer-end{
+    .footer-end {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        font-size: 14px;
     }
-    .populer-articles{
+
+    .populer-articles {
         padding: 15px;
         box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .ocultar-en-mobile {
+        display: none !important;
+    }
+
+    .new-image {
+        grid-row-start: 1;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .article-informacion {
+        padding: 15px;
+    }
+
+    .populer-articles {
+        padding: 15px;
     }
 }
