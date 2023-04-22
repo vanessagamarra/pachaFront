@@ -43,15 +43,13 @@ body{
     .menu ul{
         font-size: $font-size6 ;        
     }
- /*--------------------- media rectangulo1 --------------------*/
+ /*--------------------- media  --------------------*/
+ div.rectangulo {
+    
 
-    div.rectangulo1 {
+ }
 
-        div.rectangulo{
-            width: 1100;
-        }
-        
-    }
+
 
 
 
@@ -187,6 +185,7 @@ div.rectangulo1{
 
 
     div.lupa{
+        display: flex;
         position: absolute;
         left: 18%;
         right: 14.63%;
@@ -198,6 +197,7 @@ div.rectangulo1{
     }
 
     p{
+        display: flex;
         position: absolute;
         width: 99px;
         height: 18px;

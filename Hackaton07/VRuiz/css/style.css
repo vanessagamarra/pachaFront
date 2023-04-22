@@ -21,10 +21,7 @@ body {
   .menu ul {
     font-size: 1.375rem;
   }
-  /*--------------------- media rectangulo1 --------------------*/
-  div.rectangulo1 div.rectangulo {
-    width: 1100;
-  }
+  /*--------------------- media  --------------------*/
 }
 div.logo {
   position: absolute;
@@ -137,6 +134,7 @@ div.rectangulo1 div.rectangulo {
   border-radius: 10px;
 }
 div.rectangulo1 div.lupa {
+  display: flex;
   position: absolute;
   left: 18%;
   right: 14.63%;
@@ -146,6 +144,7 @@ div.rectangulo1 div.lupa {
   opacity: 0.6;
 }
 div.rectangulo1 p {
+  display: flex;
   position: absolute;
   width: 99px;
   height: 18px;
