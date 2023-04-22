@@ -371,13 +371,13 @@ main .header__presentation {
   grid-gap: 1.5em;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "title image image" "parrafo image image" "info_p image image";
+  grid-template-areas: "title image image" "texto image image" "info_p image image";
 }
 .all_posts .post__1 .title-h1 {
   grid-area: title;
 }
 .all_posts .post__1 p {
-  grid-area: parrafo;
+  grid-area: texto;
 }
 .all_posts .post__1 span {
   grid-area: info_p;
@@ -428,5 +428,54 @@ main .header__presentation {
 @media screen and (max-width: 800px) {
   .left, .main, .right {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+@media screen and (min-width: 424px) {
+  .all_posts {
+    max-width: 98%;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "h2" "post1" "post2" "post3" "post4";
+  }
+  .all_posts .post__1, .all_posts .post__2, .all_posts .post__3, .all_posts .post__4 {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "image" "title" "info_p" "texto";
+  }
+}
+@media screen and (min-width: 828px) {
+  .all_posts {
+    max-width: 98%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .all_posts {
+    max-width: 65%;
+  }
+}
+@media screen and (min-width: 1319px) {
+  .all_posts {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 424px) {
+  .all_article {
+    max-width: 98%;
+  }
+}
+@media screen and (min-width: 828px) {
+  .all_article {
+    max-width: 98%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .all_article {
+    max-width: 65%;
+  }
+}
+@media screen and (min-width: 1319px) {
+  .all_article {
+    max-width: 50%;
   }
 }/*# sourceMappingURL=pages-index.css.map */

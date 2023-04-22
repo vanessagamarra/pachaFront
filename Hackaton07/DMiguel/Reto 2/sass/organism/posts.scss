@@ -52,13 +52,13 @@
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "title image image"
-                         "parrafo image image"
+                         "texto image image"
                          "info_p image image"; 
     .title-h1{
         grid-area: title;
     }
     p{
-        grid-area: parrafo;
+        grid-area: texto;
     }
     span{
         grid-area: info_p;

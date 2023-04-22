@@ -50,13 +50,13 @@
   grid-gap: 1.5em;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "title image image" "parrafo image image" "info_p image image";
+  grid-template-areas: "title image image" "texto image image" "info_p image image";
 }
 .all_posts .post__1 .title-h1 {
   grid-area: title;
 }
 .all_posts .post__1 p {
-  grid-area: parrafo;
+  grid-area: texto;
 }
 .all_posts .post__1 span {
   grid-area: info_p;
