@@ -235,5 +235,22 @@ footer{
             }
         }
     }
+    .footer-2{
+        @include media-up(sm){
+            max-width: 98%;
+            display: flex;
+            flex-direction: column;
+        }
+        @include media-up(md){
+            max-width: 98%;
+            display: grid;
+        }
+        @include media-up(lg){
+            max-width: 65%;
+        }
+        @include media-up(xl){
+            max-width: 50%;
+        }
+    }
 }
 

@@ -628,4 +628,27 @@ main .header__presentation {
   footer .button button {
     width: auto;
   }
+}
+@media screen and (min-width: 424px) {
+  footer .footer-2 {
+    max-width: 98%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 780px) {
+  footer .footer-2 {
+    max-width: 98%;
+    display: grid;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-2 {
+    max-width: 65%;
+  }
+}
+@media screen and (min-width: 1319px) {
+  footer .footer-2 {
+    max-width: 50%;
+  }
 }/*# sourceMappingURL=pages-index.css.map */
