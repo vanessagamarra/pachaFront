@@ -1,17 +1,17 @@
-@import "./components/variables";
+@import "./components/variables/variables";
 
-@import "./components/mixins-Header";
+@import "./components/mixins/mixins-Header";
 
-@import "./components/mixins-Main";
+@import "./components/mixins/mixins-Main";
 
-@import "./components/mixins-Footer";
+@import "./components/mixins/mixins-Footer";
 
-@import "./components/reset";
+@import "./components/reset/reset";
 
-@import "./components/header";
+@import "./components/page/header";
 
-@import "./components/main";
+@import "./components/page/main";
 
-@import "./components/footer";
+@import "./components/page/footer";
 
-@import "./components/breakpoints";
+@import "./components/breakpoints/breakpoints";
