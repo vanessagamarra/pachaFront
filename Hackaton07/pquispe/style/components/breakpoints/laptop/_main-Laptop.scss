@@ -1,10 +1,10 @@
 .main {
     &__search {
-        padding: 25px 193px 0;
+        padding: 60px 193px 0;
     }
 
     &__popular {
-        padding: 35px 193px 0;
+        padding: 60px 193px 0;
         gap: 30px;
 
         .popular {
@@ -34,9 +34,19 @@
                 }
             }
         }
+
+        &__more {
+            padding: 30px 0;
+        }
     }
 
     &__articles {
-        padding: 60px 193px 80px;
+        padding: 60px 193px 100px;
+
+        .article {
+            &__image {
+                max-width: 328px;
+            }
+        }
     }
 }

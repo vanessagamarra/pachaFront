@@ -6,7 +6,7 @@
 
         &__question {
             line-height: 4.6rem;
-            @include footer-text(2.0, 0, 0.048, $fuente-primary, normal);
+            font-size: 3.6rem;
         }
 
         &__content {

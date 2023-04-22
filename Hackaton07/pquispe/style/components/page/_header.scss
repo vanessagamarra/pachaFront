@@ -47,6 +47,7 @@
         }
 
         &__content {
+            max-width: 410px;
             @include header-presentation(content);
         }
     }

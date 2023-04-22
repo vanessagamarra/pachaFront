@@ -1,8 +1,10 @@
 .main {
     width: 100%;
     background-color: $background-page;
+    margin: 0 auto;
 
     &__search {
+        width: 100%;
         padding: 25px 20px 0;
 
         &__background {
