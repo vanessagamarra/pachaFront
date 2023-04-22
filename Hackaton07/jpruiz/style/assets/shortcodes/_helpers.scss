@@ -36,24 +36,24 @@
         z-index: 2;
         display: flex;
         align-items: center;
-        @media only screen and (max-width: 989px) {
+        @media only screen and (max-width: $BreakinpointTablet) {
             flex-direction: column;
         }
         .blue-content{
             width: 39.69%;
-            @media only screen and (max-width: 989px) {
+            @media only screen and (max-width: $BreakinpointTablet) {
                width: 100%;
             }
             .blue-content-title{
                 margin-bottom: 50px;
-                @media only screen and (max-width: 989px) {
+                @media only screen and (max-width: $BreakinpointTablet) {
                     margin-bottom: 30px;
                 }
                 h2{
                     color: $white;
                     font-family: $heading-font-family;
                     line-height: 46px;
-                    @media only screen and (max-width: 989px) {
+                    @media only screen and (max-width: $BreakinpointTablet) {
                         text-align: center;
                     }
                 }
@@ -63,7 +63,7 @@
                     color: rgba($color: $white, $alpha: 0.6);
                     font-family: $body-font-family;
                     line-height: 26px;
-                    @media only screen and (max-width: 989px) {
+                    @media only screen and (max-width: $BreakinpointTablet) {
                         text-align: center;
                     }
                 }
@@ -73,7 +73,7 @@
             width: calc(100% - 39.69%);
             display: flex;
             justify-content: flex-end;
-            @media only screen and (max-width: 989px) {
+            @media only screen and (max-width: $BreakinpointTablet) {
                 width: 100%;
                 justify-content: center;
                 margin-top: 25px;

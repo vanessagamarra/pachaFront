@@ -2,9 +2,9 @@
    margin-bottom: 25px;
    h4{
         font-family: $heading-font-family;
-        @media only screen and (max-width: 989px) {
-            text-align: center;
-            font-size: 36px;
+        @media only screen and (max-width: $BreakinpointTablet){
+            font-size: 22px;
+            padding: 0 20px;
         }
    }
 }
@@ -18,7 +18,7 @@
     }
     .post-item{
         padding: 5px;
-        @media only screen and (max-width: 989px) {
+        @media only screen and (max-width: $BreakinpointTablet) {
             padding: 20px;
         }
         .post-item-inner{
@@ -94,11 +94,11 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                @media only screen and (max-width: 989px) {
+                @media only screen and (max-width: $BreakinpointTablet) {
                     flex-direction: column-reverse;
                 }
                 .post-grid-content{
-                    @media only screen and (min-width: 989px) {
+                    @media only screen and (min-width: $BreakinpointTablet) {
                         width: calc(100% - 58.12%);
                     }
                     .post-grid-title{

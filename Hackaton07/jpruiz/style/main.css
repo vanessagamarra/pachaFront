@@ -276,7 +276,7 @@ header nav .main-menu li:not(:last-child) {
 }
 @media only screen and (max-width: 480px) {
   header nav .main-menu li:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 10px;
   }
 }
 header nav .main-menu li a {
@@ -542,8 +542,8 @@ footer .container {
 }
 @media only screen and (max-width: 989px) {
   .title-post h4 {
-    text-align: center;
-    font-size: 36px;
+    font-size: 22px;
+    padding: 0 20px;
   }
 }
 

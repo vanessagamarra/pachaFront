@@ -9,21 +9,21 @@ footer{
 .footer{
     display: flex;
     padding: 0 50px;
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: $BreakinpointMobile) {
         flex-direction: column;
     }
-    @media only screen and (max-width: 989px) {
+    @media only screen and (max-width: $BreakinpointTablet) {
         padding: 0 7.5vw;
     }
     .footer-column-right{
         width: 50%;
-        @media only screen and (max-width: 767px) {
+        @media only screen and (max-width: $BreakinpointMobile) {
             width: 100%;
             margin-bottom: 35px;
         }
         .footer-logo{
             margin-bottom: 50px;
-            @media only screen and (max-width: 767px) {
+            @media only screen and (max-width: $BreakinpointMobile) {
               text-align: center;
             }
             a{
@@ -37,7 +37,7 @@ footer{
             li{
                 max-width: 285px;
                 display: flex;
-                @media only screen and (max-width: 767px) {
+                @media only screen and (max-width: $BreakinpointMobile) {
                     max-width: 100%;
                 }
                 a{
@@ -58,7 +58,7 @@ footer{
     .footer-column-left{
         display: flex;
         width: 50%;
-        @media only screen and (max-width: 767px) {
+        @media only screen and (max-width: $BreakinpointMobile) {
             width: 100%;
         }
         .menu-1,
@@ -106,7 +106,7 @@ footer{
 .socket{
     padding: 0 50px;
     margin-top: 50px;
-    @media only screen and (max-width: 989px) {
+    @media only screen and (max-width: $BreakinpointTablet) {
        padding: 0 7.5vw;
     }
     .socket-content{
@@ -115,7 +115,7 @@ footer{
             font-size: 16px;
             color: rgba($color: $white, $alpha: 0.4);
             font-family: $heading-font-family;
-            @media only screen and (max-width: 767px) {
+            @media only screen and (max-width: $BreakinpointMobile) {
                 text-align: center;
             }
         }
