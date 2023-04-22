@@ -1,4 +1,5 @@
 body {
+  width: 1669px;
   background-color: white;
 }
 
@@ -9,6 +10,7 @@ body {
 }
 
 .nav-contenedor {
+  width: 93%;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -16,7 +18,7 @@ body {
 
 .nav-menu {
   list-style: none;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Helvetica";
   margin-right: 6rem;
   letter-spacing: 0.04rem;
 }
@@ -51,6 +53,9 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  font-family: "Arial";
+  text-align: center;
+  padding-left: 3rem;
 }
 
 .contenedor2 {
@@ -102,6 +107,7 @@ body {
   top: 436px;
   background: #F4F4F4;
   border-radius: 10px;
+  font-family: "Arial";
 }
 
 .sub-titulo {
@@ -181,7 +187,10 @@ body {
 }
 
 .descrip-3 {
-  margin-top: 0;
+  width: 298px;
+  height: 64px;
+  left: 215px;
+  top: 1230px;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
@@ -239,6 +248,21 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.descrip-6-a {
+  width: 122px;
+  height: 24px;
+  left: 213px;
+  top: 1470px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .contenedor-3 {
   width: 100%;
   display: flex;
@@ -278,7 +302,7 @@ body {
 }
 
 .conter-imagen {
-  width: 328.64px;
+  width: 316.64px;
   height: 200px;
 }
 
@@ -429,6 +453,7 @@ body {
 }
 
 .botom {
+  font-family: "Arial";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -469,7 +494,7 @@ body {
   left: 249px;
   top: 3574px;
   font-family: "Arial";
-  font-style: normal;
+  font-style: "Arial";
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
@@ -551,4 +576,273 @@ body {
   letter-spacing: 0.05em;
   /* white */
   color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1500px) {
+  body {
+    width: 945px;
+    margin-left: 3rem;
+  }
+  .nav-contenedor {
+    width: 828px;
+    padding-bottom: 1rem;
+    padding-left: 10rem;
+  }
+  .encabezado1 {
+    width: 384px;
+  }
+  .sub-titulo {
+    padding-top: 1rem;
+  }
+  .descrip-1 {
+    width: 420px;
+  }
+  .img-resort {
+    width: 450px;
+    height: 364px;
+    margin-top: 3rem;
+  }
+  .imgA {
+    width: 251.49px;
+    height: 200px;
+  }
+  .imgB {
+    width: 251.49px;
+    height: 200px;
+  }
+  .conte2-img {
+    margin-left: 3rem;
+  }
+  .imgC {
+    width: 251.49px;
+    height: 200px;
+  }
+  .descrip-3 {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+  .descrip-4 {
+    width: 257px;
+  }
+  .opzionesPopulares {
+    margin-bottom: 4rem;
+  }
+  .pie-contenedor2 {
+    padding-bottom: 2rem;
+  }
+  .pie-de-pagina {
+    width: 940px;
+  }
+  .conclusion {
+    width: 1048px;
+  }
+  .contenedor-3 {
+    padding-top: 2rem;
+  }
+  .footer-part1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 17rem;
+    flex-direction: column;
+  }
+  .part2 {
+    margin-left: 2rem;
+  }
+  .cont-botton {
+    margin-left: 8rem;
+  }
+  .pie-parte2 {
+    margin-left: 9rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 7rem;
+  }
+  .cont3 {
+    padding: 0px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  body {
+    width: 424px;
+    margin-left: 3rem;
+  }
+  .nav-contenedor {
+    width: 424px;
+  }
+  .nav-rigth {
+    padding-right: 10rem;
+  }
+  .nav-menu {
+    margin-right: 1rem;
+  }
+  .titulo {
+    line-height: 20px;
+  }
+  .descrip {
+    padding-left: 1rem;
+  }
+  .busqueda {
+    width: 386px;
+  }
+  .populares {
+    width: 424px;
+    flex-direction: column-reverse;
+  }
+  .img-resort {
+    width: 385px;
+    height: 314px;
+    margin-left: 1rem;
+  }
+  .conte2-img {
+    margin-left: 3rem;
+  }
+  .conte2-img1 {
+    margin-left: 3rem;
+  }
+  .sub-conte-1 {
+    width: 364px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .encabezado1 {
+    padding-left: 1rem;
+    width: 376px;
+  }
+  .descrip-1 {
+    padding-left: 1rem;
+  }
+  .descrip-2 {
+    padding-left: 1rem;
+  }
+  .opzionesPopulares {
+    display: flex;
+    flex-direction: column;
+  }
+  .sub-titulo {
+    padding-left: 32rem;
+    margin-left: 3rem;
+  }
+  .imgA {
+    width: 385px;
+    height: 314px;
+    padding-left: 14rem;
+    width: 386px;
+  }
+  .imgB {
+    width: 385px;
+    height: 314px;
+    padding-left: 14rem;
+    width: 386px;
+  }
+  .imgC {
+    width: 385px;
+    height: 314px;
+    padding-left: 14rem;
+    width: 386px;
+  }
+  .descrip-3 {
+    margin-left: 14rem;
+    width: 376px;
+    padding-bottom: 1rem;
+  }
+  .descrip-4 {
+    padding-left: 14rem;
+    width: 376px;
+  }
+  .descrip-5 {
+    padding-left: 14rem;
+  }
+  .descrip-6 {
+    padding-left: 14rem;
+    margin-bottom: 3rem;
+  }
+  .descrip-6-a {
+    padding-left: 1rem;
+  }
+  .pie-contenedor2 {
+    width: 424px;
+  }
+  .pie-cont2 {
+    padding-left: 9rem;
+  }
+  .sub-titulo-2 {
+    padding-left: 32rem;
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+  }
+  .contenedor-3 {
+    padding-top: 0;
+  }
+  .conte3-imagenes {
+    width: 424px;
+  }
+  .contenedor-3-img {
+    display: flex;
+    flex-direction: column;
+  }
+  .conte-3-descrip {
+    width: 424px;
+  }
+  .conter-imagen {
+    width: 377px;
+    margin-bottom: 1rem;
+  }
+  .descri-7 {
+    margin-left: 0;
+    margin-top: 12px;
+    width: 400px;
+  }
+  .descri-8 {
+    width: 376px;
+    margin-left: 0;
+    margin-top: 2rem;
+    font-size: 14px;
+    margin-bottom: 2rem;
+  }
+  .descri-9 {
+    margin-left: 0;
+  }
+  .descri-10 {
+    margin-left: 0;
+  }
+  .conclusion {
+    width: 538px;
+  }
+  .pie-de-pagina {
+    width: 424px;
+  }
+  .pie-parte1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .pie-parte2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .part2 {
+    width: 377px;
+  }
+  .pie-parte1 {
+    padding-bottom: 3rem;
+  }
+  .botom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 352px;
+  }
+  .cont-botton {
+    padding-right: 8rem;
+    padding-top: 3rem;
+  }
+  .cont1 {
+    padding-left: 14rem;
+  }
+  .cont2 {
+    padding-left: 14rem;
+  }
+  .cont3 {
+    padding-left: 14rem;
+  }
 }/*# sourceMappingURL=index.css.map */
