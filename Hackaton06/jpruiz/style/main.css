@@ -389,10 +389,6 @@ header nav .main-menu li a:hover {
   color: rgba(31, 63, 104, 0.6);
   font-family: Arial, sans-serif;
 }
-.search input[type=text]:-ms-input-placeholder {
-  color: rgba(31, 63, 104, 0.6);
-  font-family: Arial, sans-serif;
-}
 .search input[type=text]::placeholder {
   color: rgba(31, 63, 104, 0.6);
   font-family: Arial, sans-serif;
@@ -479,7 +475,7 @@ footer .container {
 }
 @media only screen and (max-width: 480px) {
   .footer .footer-column-left .menu-1,
-.footer .footer-column-left .menu-2 {
+  .footer .footer-column-left .menu-2 {
     width: 60%;
   }
 }

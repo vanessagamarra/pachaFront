@@ -418,9 +418,3 @@ button{
     font-size: 1.5em;
     padding: 0;
 }
-
-.footer-menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
