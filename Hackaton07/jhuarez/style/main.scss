@@ -57,7 +57,28 @@ $font-2: Helvetica;
         flex-direction: column;
         background-color: $color-logo;
         padding: 20vh;
-        gap: 10px;    
+        gap: 50px;    
+        justify-items: center;
+        align-items: center;
+    }
+
+    .footer-flex-main {
+        display: grid;
+        grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-gap: 30px;
+            grid-template-areas:
+     
+                 "afri"
+                 "abt"
+                 "fllw";
+    
+        //align-items: center;
+        //justify-items: center;
+        text-align: left;
+        background-color:$color-logo;
+        padding-left:20vh;
+        padding-right:20vh;
     }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -99,7 +120,27 @@ $font-2: Helvetica;
         background-color: $color-logo;
         padding-left: 20vh;
         padding-right: 20vh;
-        gap: 10px;    
+        gap: 50px;    
+        justify-items: center;
+        align-items: center;
+    }
+
+    .footer-flex-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 30px;
+            grid-template-areas:
+     
+                 "afri     abt"
+                 "fllw     .";
+    
+        //align-items: center;
+        //justify-items: center;
+        text-align: left;
+        background-color:$color-logo;
+        padding-left:20vh;
+        padding-right:20vh;
     }
     
 }
@@ -143,7 +184,26 @@ $font-2: Helvetica;
         background-color: $color-logo;
         padding-left: 20vh;
         padding-right: 20vh;
-        gap: 10px;    
+        gap: 50px;  
+        justify-items: center;
+        align-items: center;  
+    }
+
+    .footer-flex-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 30px;
+            grid-template-areas:
+     
+                 "afri     abt      fllw";
+    
+        //align-items: center;
+        //justify-items: center;
+        text-align: left;
+        background-color:$color-logo;
+        padding-left:20vh;
+        padding-right:20vh;
     }
 }
 
@@ -419,14 +479,6 @@ nav {
     grid-area: all7;
 }
 
-.interested-flex {
-    display: flex;
-    background-color: $color-logo;
-    padding-left: 20vh;
-    padding-right: 20vh;
-    gap: 15vh;    
-}
-
 .info, .hablemos {
     flex-basis: 50%;
     height: 25rem;
@@ -434,7 +486,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    gap: 10px;
 }
 
 .info > h3 {
@@ -457,25 +509,29 @@ nav {
 
 .hablemos > button {
     padding: 3vh;
-    width: 60%;
+    max-width: 100%;
+    height: auto;
     background-color: #5A98D0;
     color: white;
 }
 
-.footer-flex-main {
-    display: flex;
-    background-color: $color-logo;
-    padding-left: 20vh;
-    padding-right: 20vh;
-    gap: 10px;
+.foo-afri {
+    grid-area: afri;
+}
+.foo-abt {
+    grid-area: abt;
+}
+.foo-fllw {
+    grid-area: fllw;
 }
 
 .flex-footer {
     display: flex;
     flex-direction: column;
-
-    gap: 2vh;
-    height: 20rem;
+    //justify-items: center;
+    //align-items: center;
+    text-align: left;
+    gap: 10px;
 }
 
 
