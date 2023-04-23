@@ -401,14 +401,37 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: #FFFFFF;
-    padding-left:  150px;
+    padding-left: 150px;
     padding-top: 100px;
 
     .caja2-1 {}
 
     .about {}
 
-    .follow {}
+    .follow {
+        text-transform: capitalize;
+
+        .follow-us {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.05em;
+            margin-bottom: 50px;
+            .us{ 
+                text-transform: uppercase;
+            }
+
+        }
+
+        .redes {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+        }
+
+    }
 
 
 }

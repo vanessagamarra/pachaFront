@@ -297,4 +297,24 @@ body {
   color: #FFFFFF;
   padding-left: 150px;
   padding-top: 100px;
+}
+.contac1 .follow {
+  text-transform: capitalize;
+}
+.contac1 .follow .follow-us {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  margin-bottom: 50px;
+}
+.contac1 .follow .follow-us .us {
+  text-transform: uppercase;
+}
+.contac1 .follow .redes {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  margin-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */
