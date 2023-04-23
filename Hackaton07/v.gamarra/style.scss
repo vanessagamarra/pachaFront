@@ -344,7 +344,7 @@ body {
 $maxwidth: 828px;
 
 @media (max-width: $maxwidth) {
-    .populer-articles{
+    .populer-articles {
         padding-left: 20px;
     }
 }
@@ -436,6 +436,39 @@ $maxwidth: 828px;
         margin-bottom: 15px;
     }
 
+    .caja2-1 {
+        .follow-us {
+            display: grid;
+            grid-template-columns: 1fr 7fr;
+
+
+            .logo {}
+
+            .titulo {
+                font-family: 'Gilroy';
+                font-size: 28px;
+                line-height: 46px;
+                letter-spacing: 0.02em;
+            }
+        }
+
+        .descripcion {
+            margin-top: 50px;
+        }
+
+        .telefono {
+            margin-top: 20px;
+        }
+
+        .correo {
+            margin-top: 20px;
+        }
+
+        .derechos {
+            margin-top: 50px;
+        }
+    }
+
     .about {
         text-transform: capitalize;
 
@@ -461,42 +494,9 @@ $maxwidth: 828px;
         }
 
     }
-
-    .caja2-1 {
-        .follow-us {
-            display: grid;
-            grid-template-columns: 1fr 7fr;
-
-
-            .logo {}
-
-            .titulo {
-                font-family: 'Gilroy';
-                font-size: 28px;
-                line-height: 46px;
-                letter-spacing: 0.02em;
-            }
-        }
-        .descripcion{
-            margin-top: 50px;
-        }
-        .telefono{
-            margin-top: 20px;
-            
-
-        }
-        .correo{
-            margin-top: 20px;
-        }
-        .derechos{
-            margin-top: 50px;
-        }
-    }
-
-
 }
 
-@media (max-width: $maxwidth){
+@media (max-width: $maxwidth) {
     .contac1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
