@@ -341,6 +341,14 @@ body {
     }
 }
 
+$maxwidth: 828px;
+
+@media (max-width: $maxwidth) {
+    .populer-articles{
+        padding-left: 20px;
+    }
+}
+
 .contac {
     background-color: #316099;
     padding-left: 150px;
@@ -486,4 +494,11 @@ body {
     }
 
 
+}
+
+@media (max-width: $maxwidth){
+    .contac1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

@@ -252,6 +252,11 @@ body {
   color: #356EAD;
 }
 
+@media (max-width: 828px) {
+  .populer-articles {
+    padding-left: 20px;
+  }
+}
 .contac {
   background-color: #316099;
   padding-left: 150px;
@@ -359,4 +364,11 @@ body {
 }
 .contac1 .caja2-1 .derechos {
   margin-top: 50px;
+}
+
+@media (max-width: 828px) {
+  .contac1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
