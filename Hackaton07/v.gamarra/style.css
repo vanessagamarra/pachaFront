@@ -337,4 +337,26 @@ body {
   font-size: 16px;
   letter-spacing: 0.05em;
   margin-bottom: 15px;
+}
+.contac1 .caja2-1 .follow-us {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+.contac1 .caja2-1 .follow-us .titulo {
+  font-family: "Gilroy";
+  font-size: 28px;
+  line-height: 46px;
+  letter-spacing: 0.02em;
+}
+.contac1 .caja2-1 .descripcion {
+  margin-top: 50px;
+}
+.contac1 .caja2-1 .telefono {
+  margin-top: 20px;
+}
+.contac1 .caja2-1 .correo {
+  margin-top: 20px;
+}
+.contac1 .caja2-1 .derechos {
+  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */

@@ -434,7 +434,8 @@ body {
         .follow-us {
             @include follow-us()
         }
-        .redes{
+
+        .redes {
             @include redes();
         }
     }
@@ -451,6 +452,37 @@ body {
             @include redes();
         }
 
+    }
+
+    .caja2-1 {
+        .follow-us {
+            display: grid;
+            grid-template-columns: 1fr 7fr;
+
+
+            .logo {}
+
+            .titulo {
+                font-family: 'Gilroy';
+                font-size: 28px;
+                line-height: 46px;
+                letter-spacing: 0.02em;
+            }
+        }
+        .descripcion{
+            margin-top: 50px;
+        }
+        .telefono{
+            margin-top: 20px;
+            
+
+        }
+        .correo{
+            margin-top: 20px;
+        }
+        .derechos{
+            margin-top: 50px;
+        }
     }
 
 
