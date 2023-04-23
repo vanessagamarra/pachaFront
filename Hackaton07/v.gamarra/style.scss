@@ -340,3 +340,57 @@ body {
         }
     }
 }
+
+.contac {
+    background-color: #316099;
+    padding-left: 150px;
+    padding-top: 80px;
+    color: white;
+
+    .caja1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .caja1-1 {
+            .pregunta {
+                font-family: Helvetica;
+                font-size: 36px;
+                font-weight: 400;
+                letter-spacing: 5%;
+                text-align: left;
+                ;
+            }
+
+            .descripcion {
+                font-family: Arial;
+                font-size: 16px;
+                letter-spacing: 5%;
+                font-weight: 400px;
+                color: #FFFFFF;
+                ;
+            }
+        }
+
+        .boton {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .boton-top {
+                background-color: #5A98D0;
+                width: 220px;
+                height: 56px;
+                border-color: #5A98D0;
+                color: #FFFFFF;
+
+            }
+
+        }
+
+
+    }
+
+
+
+}
