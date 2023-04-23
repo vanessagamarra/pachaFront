@@ -94,7 +94,7 @@ body{
 }
 
 
-@media screen and (max-width: 828px)  {
+@media screen and (max-width: 424px)  {
 
     /*--------------------- media menu--------------------*/
     div.logo{
@@ -528,6 +528,197 @@ div.popular{
 
     }
 }
+
+@media screen and (max-width: 424px) {
+    section.bloque1{
+        margin-top: -80px;
+        margin-left: -200px;
+
+        div.pag__1 h1{
+            margin-top: 290px;
+            font-size: 20px !important;
+            width: 380px !important;
+        }
+
+        p.t1{
+            margin-top: 205px;
+            width: 400px !important;
+            font-size: 14px !important;
+        }
+/*----------------Sam 1---------------*/
+        div.i1{
+            margin-top: 100px;
+            margin-left: 10px;
+        }
+
+        div.i2{
+            margin-top: 100px;
+            margin-left: 10px;
+        }
+
+        p.t2 {
+           margin-top: 115px;
+        }
+
+        p.t3{
+            margin-top: 115px;
+        }
+/*----------------Sam 1---------------*/
+        div.img01{
+            margin-top: -20px;
+            height: 270px !important;
+            margin-left: -400px;
+        }
+
+        div.img02 img{
+            height: 257px !important;   
+            margin-top: 90px;
+
+        }
+
+        div.img03 img{
+            margin-left: -320px;
+            height: 255px !important;
+            margin-top: 585px;
+            
+        }
+
+        div.img04 img{
+            display: none;
+            margin-left: -100px;
+            height: 165px !important;
+            margin-top: -40px;
+            
+        }
+
+        div.pag__2 h1{
+            margin-top: 160px;
+            font-size: 18px !important;
+            width: 360px !important ;
+            line-height: 25px !important;
+            
+        }
+
+        div.pag__3 h1{
+            margin-left: -320px;
+            margin-top: 655px;
+            font-size: 18px !important;
+            width: 360px !important ;
+            line-height: 25px !important;
+        }
+
+        div.pag__4 h1{
+            display: none;
+            margin-left: -100px;
+            margin-top: -50px;
+            font-size: $font-size7 !important;
+            width: 245px !important ;
+        }
+
+        p.t2-1{
+            width: 400px !important;
+            margin-top: 140px;
+
+        }
+
+        p.t3-1{
+            margin-left: -320px;
+            width: 400px !important;
+            margin-top: 635px;
+            
+        }
+
+        p.t4-1{
+            display: none;
+            margin-left: -100px;
+            width: 225px !important;
+            margin-top: -45px;
+            
+        }
+/*-------------Sam del 2 al 4-------------*/
+        p.t2-2{
+            margin-top: 105px;
+
+        }
+
+        p.t3-2{
+            margin-left: -320px;
+            margin-top: 600px;
+            
+        }
+
+        p.t4-2{
+            display: none;
+            margin-left: -100px;
+            margin-top: -45px;
+            
+        }
+
+
+/*-------------may del 2 al 4-------------*/
+        p.t2-3{
+            margin-top: 100px;
+
+        }
+
+        p.t3-3{
+            margin-left: -320px;
+            margin-top: 600px;
+            
+        }
+
+        p.t4-3{
+            display: none;
+            margin-left: -100px;
+            margin-top: -40px;
+            
+        }
+
+    
+/*-------------guardar del 2 al 4-------------*/
+        div.i2-1{
+            margin-left: 95px;
+            margin-top: 90px;
+
+        }
+
+        div.i3-1{
+            margin-left: -220px;
+            margin-top: 585px;
+
+        }
+
+        div.i4-1{
+            display: none;
+            margin-left: -155px;
+            margin-top: -55px;
+
+        }
+/*-------------compartir del 2 al 4-------------*/
+        div.i2-2{
+            margin-left: 95px;
+            margin-top: 90px;
+
+        }
+
+        div.i3-2{
+            margin-left: -220px;
+            margin-top: 585px;
+
+        }
+
+        div.i4-2{
+            display: none;
+            margin-left: -155px;
+            margin-top: -55px;
+
+        }
+
+
+    }
+}
+
+
 section.bloque1{
     position: absolute;
     display: flex;
@@ -904,6 +1095,14 @@ div.i4-2{
     }
 }
 
+@media screen and (max-width: 424px){
+    div.ultimop{
+        margin-top: 510px;
+        margin-left: -760px;
+        font-size: 16px !important;
+    }
+}
+
 div.ultimop{
     position: absolute;
     width: 277px;
@@ -931,6 +1130,14 @@ div.ultimop{
     }
 }
 
+@media screen and (max-width: 424px) {
+    hr.linea{
+        margin-left: -200px;
+        width: 380px !important;
+        margin-top: 520px;
+    }
+}
+
 hr.linea{
     position: absolute;
     width: 940px;
@@ -949,6 +1156,17 @@ hr.linea{
 
     }
 }
+
+
+@media screen and (max-width: 424px){
+    div.articulo{
+        display: none;
+        margin-left: -200px;
+        margin-top: 490px;
+
+    }
+}
+
 div.articulo{
     position: absolute;
     width: 179px;
@@ -1216,6 +1434,291 @@ div.articulo{
     div.new p{
         margin-top: -130px;
         margin-right: 160px !important;
+
+    }
+
+}
+
+@media screen and (max-width: 424px){
+    section.bloque2{
+        margin-left: -200px;
+        margin-top: 490px;
+    }
+
+    /*------------- imagenes -------------*/
+    div.img05 img{
+        width: 382px ;
+       
+    }
+
+    div.img06 img{
+        margin-top: 290px;
+        width: 382px ;
+       
+    }
+
+    div.img07 img{
+        display: none;
+        margin-top: -60px;
+        width: 295px ; 
+        
+    }
+
+    div.img08 img{
+        display: none;
+        margin-top: -90px;
+        width: 295px ; 
+        
+    }
+
+    div.img09 img{
+        display: none;
+        margin-top: -120px;
+        width: 295px ;
+       
+    }
+
+    /*------------- subt bloque2 -------------*/
+    div.pag__5 h1{
+        margin-top: 255px;
+        margin-left: -350px;
+        font-size: 18px !important;
+        width: 420px !important;
+        line-height: 25px !important;
+
+    }
+
+    div.pag__6 h1{
+        margin-left: -350px;
+        font-size: 18px !important;
+        width: 420px !important;
+        line-height: 25px !important;
+        margin-top: 550px;
+
+    }
+
+    div.pag__7 h1{
+        display: none;
+        margin-top: -45px;
+        margin-left: -35px;
+
+    }
+
+    div.pag__8 h1{
+        display: none;
+        margin-top: -70px;
+        margin-left: -35px;
+
+    }
+
+    div.pag__9 h1{
+        display: none;
+        margin-top: -100px;
+        margin-left: -35px;
+
+    }
+
+    /*------------- parrafo bloque2 -------------*/
+    p.t5-1{
+        width: 380px !important;
+        margin-left: -350px;
+        margin-top: 280px;
+
+    }
+
+    p.t6-1{
+        width: 380px !important;
+        margin-left: -350px;
+        margin-top: 575px;
+
+    }
+
+    p.t7-1{
+        display: none;
+        width: 455px !important;
+        margin-left: -35px;
+        margin-top: -45px;
+
+    }
+
+    p.t8-1{
+        display: none;
+        width: 455px !important;
+        margin-left: -35px;
+        margin-top: -70px;
+
+    }
+
+    p.t9-1{
+        display: none;
+        width: 455px !important;
+        margin-left: -35px;
+        margin-top: -100px;
+
+    }
+
+    /*------------- sam bloque2 -------------*/
+    p.t5-2{
+        margin-left: -350px;
+        margin-top: 300px;
+
+    }
+
+    p.t6-2{
+        margin-left: -350px;
+        margin-top: 595px;
+        
+    }
+
+    p.t7-2{
+        display: none;
+        margin-left: -35px;
+        margin-top: -55px;
+        
+    }
+
+    p.t8-2{
+        display: none;
+        margin-left: -35px;
+        margin-top: -80px;
+        
+    }
+
+    p.t9-2{
+        display: none;
+        margin-left: -35px;
+        margin-top: -115px;
+        
+    }
+
+    /*------------- may bloque2 -------------*/
+    p.t5-3{
+        margin-left: -350px;
+        margin-top: 300px;
+
+    }
+
+    p.t6-3{
+        margin-left: -350px;
+        margin-top: 595px;
+
+    }
+
+    p.t7-3{
+        display: none;
+        margin-left: -35px;
+        margin-top: -55px;
+
+    }
+
+    p.t8-3{
+        display: none;
+        margin-left: -35px;
+        margin-top: -80px;
+
+    }
+
+    p.t9-3{
+        display: none;
+        margin-left: -35px;
+        margin-top: -115px;
+
+    }
+
+    /*------------- guardar bloque2 -------------*/
+    div.i5-1{
+        margin-left: -565px;
+        margin-top: 285px !important;
+
+    }
+
+    div.i6-1{
+        margin-left: -565px;
+        margin-top: 580px !important;
+
+    }
+
+    div.i7-1{
+        display: none;
+        margin-left: -165px;
+        margin-top: -68px !important;
+
+    }
+
+    div.i8-1{
+        display: none;
+        margin-left: -165px;
+        margin-top: -95px !important;
+
+    }
+
+    div.i9-1{
+        display: none;
+        margin-left: -165px;
+        margin-top: -130px !important;
+
+    }
+
+
+    /*------------- compartir bloque2 -------------*/
+    div.i5-2{
+        margin-left: -565px;
+        margin-top: 285px;
+
+    }
+
+    div.i6-2{
+        margin-left: -565px;
+        margin-top: 580px;
+
+    }
+
+    div.i7-2{
+        display: none;
+        margin-left: -160px;
+        margin-top: -68px;
+
+    }
+
+    div.i8-2{
+        display: none;
+        margin-left: -160px;
+        margin-top: -95px;
+
+    }
+
+    div.i9-2{
+        display: none;
+        margin-left: -160px;
+        margin-top: -130px;
+
+    }
+
+
+    /*------------- old bloque2 -------------*/
+
+    div.old i{
+        display: none;
+       top: 1085px !important;
+
+    }
+
+    div.old p{
+        display: none;
+        margin-top: -130px;
+
+    }
+
+    div.new i{
+        display: none;
+        top: 1085px !important;
+        margin-right: 560px !important;
+
+    }
+
+    div.new p{
+        margin-top: -130px;
+        margin-right: 550px !important;
 
     }
 
@@ -1851,6 +2354,136 @@ div.new p{
     }
 
 
+
+
+}
+
+
+@media screen and (max-width: 424px){
+    footer.bloque3{
+        margin-top: 335px;
+    }
+
+    /*---------------- inter bloque3---------------*/
+    section.rectangulo2{
+        margin-left: -125px;
+        width: 944px !important;
+        height: 1320px !important;
+    }
+
+    div.inter h1{
+        width: 250px !important;
+        margin-top: -45px;
+        margin-left: -60px;
+        font-size: 28px !important;
+
+    }
+
+    div.inter p{
+        margin-left: -60px;
+        margin-top: -90px;
+        font-size: 16px !important;
+        width: 335px !important;
+
+    }
+
+    button.boton{
+        margin-top: 100px;
+        margin-left: -770px;
+        width: 350px !important;
+    }
+
+    /*---------------- linea bloque3---------------*/
+    hr.linea2{
+        margin-top: -10px;
+        width: 538px !important;
+    }
+
+
+    /*---------------- logo bloque3---------------*/
+    div.logo2{
+        margin-left: -60px;
+        margin-top: -65px;
+
+    }
+
+    div.afri h1{
+        margin-left: -55px;
+        margin-top: -40px;
+
+    }
+
+    /*---------------- letraspunto bloque3---------------*/
+    div.f1 h3{
+        margin-left: -60px;
+        margin-top: -75px;
+
+    }
+
+    div.f2 h3{
+        margin-left: -60px;
+        margin-top: -75px;
+
+    }
+
+    div.f3 h3{
+        margin-left: -60px;
+        margin-top: -75px;
+
+    }
+
+
+    /*---------------- textpunto bloque3---------------*/
+    div.f1 p{
+        margin-left: -60px;
+        margin-top: -75px;
+
+    }
+
+    div.f2 p{
+        margin-left: -60px;
+        margin-top: -75px;
+        
+    }
+
+    div.f3 p{
+        margin-left: -60px;
+        margin-top: -75px;
+        
+    }
+
+
+    /*----------------about bloque3---------------*/
+    div.about{
+        margin-left: 118px !important;
+        margin-top: 780px !important;
+    }
+
+    div.about dt{
+        margin-left: -490px;
+        margin-top: 240px;
+    }
+
+
+    /*----------------follow bloque3---------------*/
+    div.follow{
+        margin-left: 120px !important;
+        margin-top: 120px !important;
+
+    }
+
+    div.follow dt{
+        margin-top: 525px;
+        margin-left: -860px !important;
+    }
+
+
+    /*----------------copy bloque3---------------*/
+    div.copy p{
+        margin-left: -50px;
+        margin-top: 470px;
+
+    }
 
 
 }
