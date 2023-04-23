@@ -253,6 +253,11 @@ body {
   align-items: center;
   color: #356EAD;
 }
+@media (max-width: 828px) {
+  .populer-articles .all-article-container .article-item {
+    gap: 10px;
+  }
+}
 
 @media (max-width: 828px) {
   .populer-articles {
@@ -297,6 +302,11 @@ body {
   color: #FFFFFF;
 }
 
+@media (max-width: 828px) {
+  .contac {
+    padding-bottom: 50px;
+  }
+}
 .contac1 {
   background-color: #316099;
   display: grid;
@@ -369,6 +379,10 @@ body {
   .contac1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 0px;
+  }
+  .contac1 .follow {
+    padding-top: 30px;
   }
 }
 .derechos {

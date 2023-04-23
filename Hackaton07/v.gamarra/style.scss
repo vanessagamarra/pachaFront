@@ -1,3 +1,5 @@
+$maxwidth: 828px;
+
 * {
     box-sizing: border-box;
 }
@@ -340,10 +342,16 @@ body {
             }
 
         }
+
+        @media (max-width: $maxwidth) {
+            .article-item {
+                gap: 10px;
+            }
+        }
     }
 }
 
-$maxwidth: 828px;
+
 
 @media (max-width: $maxwidth) {
     .populer-articles {
@@ -404,6 +412,12 @@ $maxwidth: 828px;
 
 
 
+}
+
+@media (max-width: $maxwidth) {
+    .contac {
+        padding-bottom: 50px;
+    }
 }
 
 .contac1 {
@@ -498,6 +512,11 @@ $maxwidth: 828px;
     .contac1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        padding-top: 0px;
+
+        .follow {
+            padding-top: 30px;
+        }
     }
 }
 
