@@ -8,6 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     line-height: unset;
+    border: 1px dotted red;
 }
 
 .menu {
@@ -20,6 +21,10 @@ body {
     $menu-weight: 700;
     $menu-size: 20px;
     $menu-letter-spacing: 0.0.4em;
+
+    @media (max-width: $maxwidth){
+        $menu-size: 14px;
+    }
 
     @mixin menu-letter($weight, $size, $letter-spacing, $color ) {
         font-weight: $weight;
@@ -44,6 +49,12 @@ body {
     .entertaiment,
     .sports {
         @include menu-letter($menu-weight, $menu-size, $menu-letter-spacing, black)
+    }
+}
+
+@media (max-width: $maxwidth) {
+    .menu {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 

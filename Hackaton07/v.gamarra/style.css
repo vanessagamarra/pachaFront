@@ -6,6 +6,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
   line-height: unset;
+  border: 1px dotted red;
 }
 
 .menu {
@@ -19,7 +20,7 @@ body {
   border: 2px solid #316099;
   border-radius: 50%;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: 0 0.4em;
   color: #1F3F68;
   padding: 10px 10px 10px 10px;
@@ -28,18 +29,23 @@ body {
 }
 .menu .home {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: 0 0.4em;
   color: #1F3F68;
 }
 .menu .entertaiment,
 .menu .sports {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: 0 0.4em;
   color: black;
 }
 
+@media (max-width: 828px) {
+  .menu {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 .frontpage {
   background: linear-gradient(253.6deg, #98D0FC 2.46%, #3481D7 93.24%);
   color: white;
