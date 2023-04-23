@@ -51,6 +51,55 @@ body {
     margin-top: -75px;
   }
 }
+@media screen and (max-width: 828px) {
+  /*--------------------- media menu--------------------*/
+  div.logo {
+    margin-left: -35px;
+  }
+  div.menu {
+    margin-left: -755px;
+  }
+  .menu ul {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+  /*--------------------- media  --------------------*/
+  section.de-imagen h1 {
+    font-size: 24px !important;
+    line-height: 35px !important;
+    width: 150px !important;
+    margin-left: -390px;
+    text-align: center !important;
+  }
+  section.de-imagen p {
+    margin-top: -5px;
+    width: 250px !important;
+    font-size: 13px !important;
+    margin-left: -205px;
+    line-height: 25px !important;
+  }
+  section.de-imagen img {
+    width: 415px;
+  }
+  div.rectangulo1 div.rectangulo {
+    top: -50px;
+    position: absolute;
+    left: -202px;
+    width: 385px !important;
+  }
+  div.rectangulo1 div.lupa {
+    margin-left: -190px;
+    margin-top: -50px;
+  }
+  div.rectangulo1 p {
+    margin-left: -180px;
+    margin-top: -35px;
+  }
+  div.popular {
+    margin-left: -200px;
+    margin-top: -75px;
+  }
+}
 div.logo {
   position: absolute;
   left: 5%;
