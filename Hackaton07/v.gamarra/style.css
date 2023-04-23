@@ -298,6 +298,26 @@ body {
   padding-left: 150px;
   padding-top: 100px;
 }
+.contac1 .about {
+  text-transform: capitalize;
+}
+.contac1 .about .follow-us {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  margin-bottom: 50px;
+}
+.contac1 .about .follow-us .us {
+  text-transform: uppercase;
+}
+.contac1 .about .redes {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  margin-bottom: 15px;
+}
 .contac1 .follow {
   text-transform: capitalize;
 }

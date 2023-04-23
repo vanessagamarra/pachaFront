@@ -406,29 +406,49 @@ body {
 
     .caja2-1 {}
 
-    .about {}
+    @mixin follow-us() {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        margin-bottom: 50px;
+
+        .us {
+            text-transform: uppercase;
+        }
+
+
+    }
+
+    @mixin redes() {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        margin-bottom: 15px;
+    }
+
+    .about {
+        text-transform: capitalize;
+
+        .follow-us {
+            @include follow-us()
+        }
+        .redes{
+            @include redes();
+        }
+    }
 
     .follow {
         text-transform: capitalize;
 
         .follow-us {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            letter-spacing: 0.05em;
-            margin-bottom: 50px;
-            .us{ 
-                text-transform: uppercase;
-            }
+            @include follow-us();
 
         }
 
         .redes {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            letter-spacing: 0.05em;
-            margin-bottom: 15px;
+            @include redes();
         }
 
     }
