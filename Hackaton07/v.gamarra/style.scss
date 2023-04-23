@@ -4,6 +4,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
 }
 
 .menu {
@@ -463,10 +464,6 @@ $maxwidth: 828px;
         .correo {
             margin-top: 20px;
         }
-
-        .derechos {
-            margin-top: 50px;
-        }
     }
 
     .about {
@@ -501,4 +498,10 @@ $maxwidth: 828px;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+}
+
+.derechos {
+    padding-top: 50px;
+    padding-left: 150px;
+    background-color: #316099;
 }
