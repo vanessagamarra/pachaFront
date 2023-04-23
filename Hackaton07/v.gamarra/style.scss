@@ -345,6 +345,7 @@ body {
     background-color: #316099;
     padding-left: 150px;
     padding-top: 80px;
+    padding-bottom: 100px;
     color: white;
 
     .caja1 {
@@ -391,6 +392,23 @@ body {
 
     }
 
+
+
+}
+
+.contac1 {
+    background-color: #316099;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #FFFFFF;
+    padding-left:  150px;
+    padding-top: 100px;
+
+    .caja2-1 {}
+
+    .about {}
+
+    .follow {}
 
 
 }

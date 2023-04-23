@@ -256,6 +256,7 @@ body {
   background-color: #316099;
   padding-left: 150px;
   padding-top: 80px;
+  padding-bottom: 100px;
   color: white;
 }
 .contac .caja1 {
@@ -287,4 +288,13 @@ body {
   height: 56px;
   border-color: #5A98D0;
   color: #FFFFFF;
+}
+
+.contac1 {
+  background-color: #316099;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #FFFFFF;
+  padding-left: 150px;
+  padding-top: 100px;
 }/*# sourceMappingURL=style.css.map */
