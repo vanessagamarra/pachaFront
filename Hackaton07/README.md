@@ -24,8 +24,9 @@ Con la llegada de dispositivos móviles y tablets, las páginas tuvieron que ada
 
 ### PREGUNTAS: 
 -	¿Qué es RWD?
+RWD es la abreviatura de Diseño Web Responsivo.
 -	¿Cuáles son los beneficios de RWD?
-
+Nos ayuda a que las imágenes ocupen más espacios y que la letra sea más pequeña o más grande
 
 ## Reto 2:
 
