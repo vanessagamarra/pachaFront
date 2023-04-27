@@ -1123,7 +1123,11 @@ hr {
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
+<<<<<<< HEAD
 @media only screen and (min-width: 768px) {
+=======
+@media only screen and (max-width: 768px) {
+>>>>>>> fuentes/main
   .banner {
     width: 940px;
     height: 250px;
