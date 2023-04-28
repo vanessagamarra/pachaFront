@@ -14,5 +14,6 @@ Proceso Suma
 	c = a + b
 	
 	Escribir "El resultado de sumar " a " mas " b " es igual a : " c
+
 	
 FinProceso
