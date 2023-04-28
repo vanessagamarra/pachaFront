@@ -13,9 +13,9 @@ Proceso Ejercicio8
 		promedio = (primeraNota + segundaNota + terceraNota) / 3
 		
 		Si promedio >= 13 Entonces
-			Escribir "Su promedio final es: " promedio ". Está aprobado."
+			Escribir "Su promedio final es: " promedio ". Esta aprobado."
 		SiNo
-			Escribir "Su promedio final es: " promedio ". Está desaprobado."
+			Escribir "Su promedio final es: " promedio ". Esta desaprobado."
 		Fin Si
 	SiNo
 		Escribir "Los numeros ingresados no son validos."

@@ -6,10 +6,10 @@ Proceso Ejercicio9
 	
 	Si cantidadSueldo > 0 Entonces
 		Si cantidadSueldo <= 2000 Entonces
-			Escribir "Su aumento será del 10%."
+			Escribir "Su aumento sera del 10%."
 		Fin Si
 		Si cantidadSueldo > 2000 Entonces
-			Escribir "Su aumento será del 5%."
+			Escribir "Su aumento sera del 5%."
 		Fin Si
 	SiNo
 		Escribir "El numero ingresado no es valido"
