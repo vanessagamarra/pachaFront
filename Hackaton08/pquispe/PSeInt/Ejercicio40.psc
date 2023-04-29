@@ -17,7 +17,7 @@ Proceso Ejercicio40
 			divisor = divisor + 2
 		Fin Para
 		
-		Escribir "El valor aproximado de pi es:" aproximacion
+		Escribir "El valor aproximado de pi por la serie de Nilakantha es:" aproximacion
 	SiNo
 		Escribir "Solo ingrese numeros positivos."
 	Fin Si

@@ -16,7 +16,7 @@ Proceso Ejercicio39
 			signo = signo * (-1)
 		Fin Para
 		
-		Escribir "La aproximacion de pi es: " aproximacion
+		Escribir "La aproximacion de pi por la serie de Gregory-Leibniz es: " aproximacion
 	SiNo
 		Escribir "Solo puede ingresar numeros positvos."
 	Fin Si
