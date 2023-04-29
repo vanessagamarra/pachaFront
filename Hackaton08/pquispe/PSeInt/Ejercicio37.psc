@@ -16,5 +16,5 @@ Proceso Ejercicio37
 		segundoNumero = resto
 	Fin Mientras
 	
-	Escribir "El M.C.D es: ", primerNumero
+	Escribir "El M.C.D por medio del algoritmo de Euclides es: ", primerNumero
 FinProceso

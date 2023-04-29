@@ -7,9 +7,9 @@ Proceso Ejercicio26
     Leer divisor
     
     cociente = 0
-    resto = dividendo
+    resto = abs(dividendo)
     
-    mientras resto >= divisor hacer
+    mientras resto >= abs(divisor) hacer
         resto = resto - divisor
         cociente = cociente + 1
     fin mientras

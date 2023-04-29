@@ -1,5 +1,5 @@
 Proceso Ejercicio14
-	Definir numeroIngresado, i Como Entero
+	Definir numeroIngresado Como Entero
 	Definir numeroPrimo Como Caracter
 	
 	Escribir "Ingrese un numero entre el 1 al 10"
