@@ -86,4 +86,70 @@ function myFunction() {
   document.getElementById("midiv").innerHTML = ages.find(checkAge);
 }
 
-myFunction()
+//myFunction()
+
+class Autos{
+    constructor(Marca){
+        this.Marca = Marca;
+    }
+    getMarca(){
+        return this.Marca
+    }
+    setMarca(nuevaMarca){
+        this.Marca = nuevaMarca;
+    }
+    rodar(kph) {
+        console.log("Estoy rodando a " + kph + "kph en mi "+ this.Marca);
+    }
+}
+
+let carro = new Autos("BMW");
+console.log(carro.Marca)
+carro.rodar(50)
+let segundoCarro = new Autos("AUDI")
+segundoCarro.rodar(70)
+
+console.log(carro.getMarca());
+carro.setMarca("Mercedes");
+console.log(carro.getMarca());
+
+function prender(){
+    document.getElementById('myImage').src='pic_bulbon.gif';
+}
+function apagar(){
+    document.getElementById('myImage').src='pic_bulboff.gif'
+}
+function cambiar(){
+    document.getElementById("midiv").style.height = "350px";
+}
+
+let valor1 = 50
+let valor2  = "50"
+
+if(valor1 == valor2){
+    console.log("es igual ==")
+}
+
+if(valor1 === valor2){
+    console.log("es igual ===")
+}else{
+    console.log("no es igual ===")
+}
+
+let avion = {
+    modelo: "F-16",
+    color: "Gris",
+    techoVuelo : 16000,
+    alcance: 3000,
+    volar:function(){
+        console.log("Estoy volando a "+ this.techoVuelo);
+    },
+    aterrizar : (aeropuerto) => {
+        console.log("Estoy aterrizando en "+ aeropuerto);
+      }
+}
+
+
+
+avion.volar()
+avion.aterrizar("jorge chavez")
