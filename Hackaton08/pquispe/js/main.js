@@ -15,6 +15,7 @@ function ejercicio1() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 2 ----------------------------------------
 
 function ejercicio2() {
@@ -30,6 +31,7 @@ function ejercicio2() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 3 ----------------------------------------
 
 function ejercicio3() {
@@ -42,6 +44,7 @@ function ejercicio3() {
     alert("El ultimo digito del numero " + numeroIngresado + " no es 4.");
     };
 };
+
 
 
 
@@ -66,6 +69,7 @@ function ejercicio4() {
 
     alert("El orden de menor a mayor de los números ingresados es: " + numeros[0] + ", " + numeros[1] + ", " + numeros[2] + ".");
 };
+
 
 
 
@@ -97,6 +101,7 @@ function ejercicio5() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 6 ----------------------------------------
 
 function ejercicio6() {
@@ -122,6 +127,7 @@ function ejercicio6() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 7 ----------------------------------------
 
 function ejercicio7() {
@@ -142,6 +148,7 @@ function ejercicio7() {
         alert("Tipo de Membresia no valido.");
     };
 };
+
 
 
 
@@ -169,6 +176,7 @@ function ejercicio8() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 9 ----------------------------------------
 
 function ejercicio9() {
@@ -189,6 +197,7 @@ function ejercicio9() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 10 ----------------------------------------
 
 function ejercicio10() {
@@ -201,6 +210,7 @@ function ejercicio10() {
         alert("El numero " + numeroIngresado + " es impar.");
     };
 };
+
 
 
 
@@ -228,6 +238,7 @@ function ejercicio11() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 12 ----------------------------------------
 
 function ejercicio12() {
@@ -241,6 +252,7 @@ function ejercicio12() {
         alert("El numero mayor es: " + segundoNumero + ".");
     };
 };
+
 
 
 
@@ -263,6 +275,7 @@ function ejercicio13() {
         alert("Ingrese solo una letra o valor valido.");
     };
 };
+
 
 
 
@@ -291,6 +304,7 @@ function ejercicio14() {
         alert("Ingrese solo un numero entre el 1 al 10.");
     };
 };
+
 
 
 
@@ -326,6 +340,7 @@ function ejercicio15() {
         break;
     };
 };
+
 
 
 
@@ -369,6 +384,7 @@ function ejercicio16() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 17 ----------------------------------------
 
 function ejercicio17() {
@@ -398,6 +414,7 @@ function ejercicio17() {
         alert("Los números negativos no son válidos.");
     };
 };
+
 
 
 
@@ -435,6 +452,7 @@ function ejercicio18() {
         alert("Solo ingrese numeros positivos.");
     };
 };
+
 
 
 
@@ -481,6 +499,7 @@ function ejercicio19() {
         alert("Seleccione un numero valido.");
     };
 };
+
 
 
 
@@ -580,6 +599,7 @@ function ejercicio20() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 21 ----------------------------------------
 
 function ejercicio21() {
@@ -601,6 +621,7 @@ function ejercicio21() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 22 ----------------------------------------
 
 function ejercicio22() {
@@ -616,6 +637,7 @@ function ejercicio22() {
         alert("Solo puede ingresar numeros positivos.");
     };
 };
+
 
 
 
@@ -644,6 +666,7 @@ function ejercicio23() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 24 ----------------------------------------
 
 function ejercicio24() {
@@ -652,6 +675,7 @@ function ejercicio24() {
 
     alert("La suma de los numeros pares hasta el numero 1000 es: " + numerosPares);
 };
+
 
 
 
@@ -679,6 +703,7 @@ function ejercicio25() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 26 ----------------------------------------
 
 function ejercicio26() {
@@ -696,6 +721,7 @@ function ejercicio26() {
     alert("El cociente de la division es: " + cociente);
     alert("El resto de la division es: " + resto);
 };
+
 
 
 
@@ -730,6 +756,7 @@ function ejercicio27() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 28 ----------------------------------------
 
 function ejercicio28() {
@@ -743,6 +770,7 @@ function ejercicio28() {
 
     alert("La suma de los 100 primeros numeros con un ciclo Do-While es: " + sumaNumeros);
 };
+
 
 
 
@@ -762,6 +790,7 @@ function ejercicio29() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 30 ----------------------------------------
 
 function ejercicio30() {
@@ -773,6 +802,7 @@ function ejercicio30() {
 
     alert("La suma de los 100 primeros numeros con un ciclo For es: " + sumaNumeros);
 };
+
 
 
 
@@ -809,6 +839,7 @@ function ejercicio31() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 32 ----------------------------------------
 
 function ejercicio32() {
@@ -840,6 +871,7 @@ function ejercicio32() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 33 ----------------------------------------
 
 function ejercicio33() {
@@ -860,6 +892,7 @@ function ejercicio33() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 34 ----------------------------------------
 
 function ejercicio34() {
@@ -876,6 +909,7 @@ function ejercicio34() {
         console.log("");
     };
 };
+
 
 
 
@@ -908,6 +942,7 @@ function ejercicio35() {
     alert("El número mayor es: " + numeroMayor);
     alert("El número menor es: " + numeroMenor);
 };
+
 
 
 
@@ -952,6 +987,7 @@ function ejercicio36() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 37 ----------------------------------------
 
 function ejercicio37() {
@@ -971,6 +1007,7 @@ function ejercicio37() {
 
     alert("El M.C.D por medio del algoritmo de Euclides es: " + primerNumero);
 };
+
 
 
 
@@ -1001,6 +1038,7 @@ function ejercicio38() {
 
 
 
+
 // ---------------------------------------- EJERCICIO 39 ----------------------------------------
 
 function ejercicio39() {
@@ -1024,6 +1062,7 @@ function ejercicio39() {
         alert("Solo puede ingresar numeros positivos.");
     };
 };
+
 
 
 
