@@ -577,3 +577,476 @@ function ejercicio20() {
         alert("Solo ingrese numeros positivos.");
     };
 };
+
+
+
+// ---------------------------------------- EJERCICIO 21 ----------------------------------------
+
+function ejercicio21() {
+    let numeroIngresado = parseInt(prompt("Ingrese un numero positivo:"));
+
+    if (numeroIngresado >= 0) {
+        let factorial = 1;
+        
+        for (let i = 1; i <= numeroIngresado; i++) {
+            factorial = factorial * i;
+        };
+        
+        alert("El factorial del numero " + numeroIngresado + " es: " + factorial);
+    }
+    else {
+        alert("Solo puede ingresar numeros positivos.");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 22 ----------------------------------------
+
+function ejercicio22() {
+    let numeroIngresado = parseInt(prompt("Ingrese un numero positivo:"));
+
+    if (numeroIngresado >= 0) {
+        let sumaNumeros;
+        sumaNumeros = (numeroIngresado * (numeroIngresado + 1)) / 2;
+        
+        alert("La suma de los n primeros numeros es: " + sumaNumeros);
+    }
+    else {
+        alert("Solo puede ingresar numeros positivos.");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 23 ----------------------------------------
+
+function ejercicio23() {
+    let numeroIngresado = parseInt(prompt("Ingrese un numero positivo:"));
+
+    if (numeroIngresado >= 0) {
+        let numerosImpares;
+
+        if (numeroIngresado % 2 == 0) {
+            let convertirImpar = numeroIngresado - 1;
+            numerosImpares = Math.pow(((convertirImpar + 1) / 2), 2);
+        }
+        else {
+            numerosImpares = Math.pow(((numeroIngresado + 1) / 2), 2);
+        };
+        
+        alert("La suma de los numeros impares hasta " + numeroIngresado + " es: " + numerosImpares);
+    }
+    else {
+        alert("Solo puede ingresar numeros positivos.");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 24 ----------------------------------------
+
+function ejercicio24() {
+    let n = 1000;
+    let numerosPares = (n / 2) * ((n / 2) + 1);
+
+    alert("La suma de los numeros pares hasta el numero 1000 es: " + numerosPares);
+};
+
+
+
+// ---------------------------------------- EJERCICIO 25 ----------------------------------------
+
+function ejercicio25() {
+    let numeroIngresado = parseInt(prompt("Ingrese un número positivo:"));
+
+    if (numeroIngresado >= 0) {
+        if (numeroIngresado == 0 || numeroIngresado == 1) {
+            factorial = 1;
+            
+            alert("El factorial del número " + numeroIngresado + " es: " + factorial);
+        }
+        else {
+            factorial = Math.round((Math.sqrt(2 * Math.PI * numeroIngresado)) * Math.pow((numeroIngresado / Math.E), numeroIngresado));
+            
+            alert("El factorial del número " + numeroIngresado + " por la fórmula de Stirling es: " + factorial);
+        };
+    }
+    else {
+        alert("Solo puede ingresar números positivos.");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 26 ----------------------------------------
+
+function ejercicio26() {
+    dividendo = parseInt(prompt("Ingrese el dividendo: "));
+    divisor = parseInt(prompt("Ingrese el divisor: "));
+
+    let cociente = 0;
+    let resto = Math.abs(dividendo);
+
+    while (resto >= Math.abs(divisor)) {
+        resto = resto - divisor;
+        cociente = cociente + 1;
+    };
+
+    alert("El cociente de la division es: " + cociente);
+    alert("El resto de la division es: " + resto);
+};
+
+
+
+// ---------------------------------------- EJERCICIO 27 ----------------------------------------
+
+function ejercicio27() {
+    let numeroIngresado = parseInt(prompt("Ingrese un numero (si ingresa uno negativo se termina el programa):"));
+
+    if (numeroIngresado >= 0) {
+        sumaNumeros = numeroIngresado;
+        cantidadNumeros = 1;
+        
+        do {
+            numeroIngresado = parseInt(prompt("Ingrese un numero (si ingresa uno negativo se termina el programa):"));
+            
+            if (numeroIngresado >= 0) {
+                sumaNumeros += numeroIngresado;
+                cantidadNumeros++;
+            };
+
+        } while (numeroIngresado >= 0);
+        
+        media = sumaNumeros / cantidadNumeros;
+        
+        alert("El programa se detuvo por haber ingresado un numero negativo.");
+        alert("La media de los numeros ingresados es: " + media);
+    }
+    else {
+        alert("El programa se detuvo por haber ingresado un numero negativo y no hay media.");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 28 ----------------------------------------
+
+function ejercicio28() {
+    let sumaNumeros = 0;
+    let maximo = 1;
+
+    do {
+        sumaNumeros += maximo;
+        maximo++;
+    } while (maximo <= 100);
+
+    alert("La suma de los 100 primeros numeros con un ciclo Do-While es: " + sumaNumeros);
+};
+
+
+
+// ---------------------------------------- EJERCICIO 29 ----------------------------------------
+
+function ejercicio29() {
+    let sumaNumeros = 0;
+    let maximo = 1;
+
+    while (maximo <= 100) {
+        sumaNumeros += maximo;
+        maximo++;
+    };
+
+    alert("La suma de los 100 primeros numeros con un ciclo While es: " + sumaNumeros);
+};
+
+
+
+// ---------------------------------------- EJERCICIO 30 ----------------------------------------
+
+function ejercicio30() {
+    let sumaNumeros = 0;
+
+    for (let i = 1; i <= 100; i++) {
+        sumaNumeros += i;
+    };
+
+    alert("La suma de los 100 primeros numeros con un ciclo For es: " + sumaNumeros);
+};
+
+
+
+// ---------------------------------------- EJERCICIO 31 ----------------------------------------
+
+function ejercicio31() {
+    alert("Ingrese 10 números:");
+
+    let numeroIngresado;
+    let cantidadPares = 0;
+    let cantidadImpares = 0;
+    let sumaPares = 0;
+    let sumaImpares = 0;
+
+    for (let i = 1; i <= 10; i++) {
+        numeroIngresado = parseInt(prompt(`Número ${i}:`));
+        
+        if (numeroIngresado % 2 === 0) {
+            sumaPares += numeroIngresado;
+            cantidadPares++;
+        }
+        else {
+            sumaImpares += numeroIngresado;
+            cantidadImpares++;
+        };
+    };
+
+    let mediaPares = sumaPares / cantidadPares;
+    let mediaImpares = sumaImpares / cantidadImpares;
+
+    alert("La media de los números pares es: " + mediaPares);
+    alert("La media de los números impares es: " + mediaImpares);
+};
+
+
+
+// ---------------------------------------- EJERCICIO 32 ----------------------------------------
+
+function ejercicio32() {
+    let ciudad; 
+    let numeroCiudad; 
+    let mayorPoblacion;
+
+    for (let i = 1; i <= 3; i++) {
+        mayorPoblacion = 0;
+        alert(`Ciudades de la provincia ${i}:`);
+
+        for (let j = 1; j <= 11; j++) {
+            ciudad = parseInt(prompt(`Ingrese la cantidad de pobladores de la ciudad ${j}`));
+
+            while (ciudad < 0) {
+                alert("No puede ingresar numeros negativos:");
+                ciudad = parseInt(prompt(`Ingrese la cantidad de pobladores de la ciudad ${j}`));
+            };
+
+            if (ciudad > mayorPoblacion) {
+                mayorPoblacion = ciudad;
+                numeroCiudad = j;
+            };
+        };
+
+        alert("La ciudad con mayor poblacion de la provincia " + i + " es la ciudad " +  numeroCiudad + "." + " Poblacion: " + mayorPoblacion);
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 33 ----------------------------------------
+
+function ejercicio33() {
+    let respuesta = prompt("Desea continuar con el programa? (si / no)").toLowerCase();
+
+    if (respuesta === "si" || respuesta === "no") {
+        if (respuesta === "si") {
+            alert("El programa seguirá ejecutándose.");
+        }
+        else if (respuesta === "no") {
+            alert("El programa se ha detenido.");
+        };
+    }
+    else {
+        alert("Solo puede ingresar si o no.");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 34 ----------------------------------------
+
+function ejercicio34() {
+    let numeroTabla;
+    let numeroMultiplicar;
+
+    for (numeroTabla = 1; numeroTabla <= 9; numeroTabla++) {
+        console.log("Tabla de multiplicar del " + numeroTabla);
+
+        for (numeroMultiplicar = 1; numeroMultiplicar <= 10; numeroMultiplicar++) {
+            console.log(numeroTabla + " x " + numeroMultiplicar + " = " + (numeroTabla * numeroMultiplicar));
+        };
+
+        console.log("");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 35 ----------------------------------------
+
+function ejercicio35() {
+    let numeroIngresado;
+    let numeroMenor;
+    let numeroMayor;
+
+    alert("Ingresa 20 numeros:");
+
+    for (let i = 1; i <= 20; i++) {
+        numeroIngresado = parseInt(prompt("Ingrese un número:"));
+        
+        if (i == 1) {
+            numeroMayor = numeroIngresado;
+            numeroMenor = numeroIngresado;
+        }
+        else {
+            if (numeroIngresado > numeroMayor) {
+            numeroMayor = numeroIngresado;
+            }
+            else if (numeroIngresado < numeroMenor) {
+            numeroMenor = numeroIngresado;
+            };
+        };
+    };
+
+    alert("El número mayor es: " + numeroMayor);
+    alert("El número menor es: " + numeroMenor);
+};
+
+
+
+// ---------------------------------------- EJERCICIO 36 ----------------------------------------
+
+function ejercicio36() {
+    let numeroAnterior;
+    let numeroSiguiente;
+    let numeroActual;
+
+    let numeroIngresado = parseInt(prompt("Ingrese la cantidad de numeros de Fibonacci:"));
+
+    if (numeroIngresado > 0) {
+        if (numeroIngresado === 1) {
+            console.log(0);
+        }
+        else if (numeroIngresado === 2) {
+            console.log(0);
+            console.log(1);
+        }
+        else if (numeroIngresado >= 3) {
+            numeroAnterior = 0;
+            numeroSiguiente = 1;
+            
+            console.log(numeroAnterior);
+            console.log(numeroSiguiente);
+            
+            for (let i = 1; i <= numeroIngresado - 2; i++) {
+                numeroActual = numeroAnterior + numeroSiguiente;
+                
+                console.log(numeroActual);
+                
+                numeroAnterior = numeroSiguiente;
+                numeroSiguiente = numeroActual;
+            };
+        };
+    }
+    else {
+        alert("Solo puede ingresar numeros positivos.");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 37 ----------------------------------------
+
+function ejercicio37() {
+    let primerNumero = parseInt(prompt("Ingrese el primer numero:"));
+    let segundoNumero = parseInt(prompt("Ingrese el segundo numero:"));
+
+    let resto = 1;
+
+    primerNumero = Math.abs(primerNumero);
+    segundoNumero = Math.abs(segundoNumero);
+
+    while (resto !== 0) {
+        resto = primerNumero % segundoNumero;
+        primerNumero = segundoNumero;
+        segundoNumero = resto;
+    };
+
+    alert("El M.C.D por medio del algoritmo de Euclides es: " + primerNumero);
+};
+
+
+
+// ---------------------------------------- EJERCICIO 38 ----------------------------------------
+
+function ejercicio38() {
+    let numeroIngresado = parseInt(prompt("Ingrese un numero positivo:"));
+    let sumaDivisores = 0;
+
+    if (numeroIngresado > 0) {
+        for (let i = 1; i <= numeroIngresado - 1; i++) {
+            if (numeroIngresado % i === 0) {
+                sumaDivisores += i;
+            };
+        };
+        
+        if (sumaDivisores === numeroIngresado) {
+            alert("El numero " + numeroIngresado + " es un numero perfecto.");
+        }
+        else {
+            alert("El numero " + numeroIngresado + " no es un numero perfecto.");
+        };
+    }
+    else {
+        alert("Solo puede ingresar numeros positivos.");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 39 ----------------------------------------
+
+function ejercicio39() {
+    let numeroIngresado = parseInt(prompt("Ingrese un numero positivo:"));
+    let aproximacion = 0;
+
+    if (numeroIngresado > 0) {
+        let signo = 1;
+        let divisor = 1;
+        
+        for (let i = 1; i <= numeroIngresado; i++) {
+            aproximacion = aproximacion + (signo * (4 / divisor));
+            
+            divisor = divisor + 2;
+            signo = signo * (-1);
+        };
+        
+        alert("La aproximacion de pi por la serie de Gregory-Leibniz es: " + aproximacion);
+    }
+    else {
+        alert("Solo puede ingresar numeros positivos.");
+    };
+};
+
+
+
+// ---------------------------------------- EJERCICIO 40 ----------------------------------------
+
+function ejercicio40() {
+    let numeroIngresado = parseInt(prompt("Ingrese un numero positivo:"));
+
+    if (numeroIngresado >= 0) {
+        let aproximacion = 3;
+        let signo = 1;
+        let divisor = 2;
+
+        for (let i = 1; i <= numeroIngresado; i++) {
+            aproximacion += signo * (4 / (divisor * (divisor + 1) * (divisor + 2)));
+
+            signo *= -1;
+            divisor += 2;
+        };
+
+        alert("El valor aproximado de pi por la serie de Nilakantha es: " + aproximacion);
+    }
+    else {
+        alert("Solo ingrese numeros positivos.");
+    };
+};

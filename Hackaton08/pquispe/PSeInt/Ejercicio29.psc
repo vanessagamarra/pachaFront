@@ -9,5 +9,5 @@ Proceso Ejercicio29
 		maximo = maximo + 1
 	Fin Mientras
 	
-	Escribir "La suma de los 100 primeros numeros con un ciclo repetir es: " sumaNumeros
+	Escribir "La suma de los 100 primeros numeros con un ciclo Mientras es: " sumaNumeros
 FinProceso

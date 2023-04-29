@@ -9,5 +9,5 @@ Proceso Ejercicio28
 		maximo = maximo + 1
 	Hasta Que maximo > 100
 	
-	Escribir "La suma de los 100 primeros numeros con un ciclo repetir es: " sumaNumeros
+	Escribir "La suma de los 100 primeros numeros con un ciclo Repetir es: " sumaNumeros
 FinProceso

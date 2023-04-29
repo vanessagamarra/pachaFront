@@ -7,5 +7,5 @@ Proceso Ejercicio30
 		sumaNumeros = sumaNumeros + i
 	Fin Para
 	
-	Escribir "La suma de los 100 primeros numeros con un ciclo repetir es: " sumaNumeros
+	Escribir "La suma de los 100 primeros numeros con un ciclo Para es: " sumaNumeros
 FinProceso
