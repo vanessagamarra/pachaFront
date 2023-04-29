@@ -12,7 +12,7 @@ Proceso Ejercicio14
 			Fin Si
 		Fin Para
 		
-		Si numeroPrimo == "no" Entonces
+		Si numeroPrimo == "no" O numeroIngresado == 1 Entonces
 			Escribir "El numero " numeroIngresado " no es primo."
 		SiNo
 			Escribir "El numero " numeroIngresado " es primo."
