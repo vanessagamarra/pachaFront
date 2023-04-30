@@ -635,41 +635,212 @@ function ejercicio30(){
 }
 
 function ejercicio31(){
-    
+    let num=0;
+    let conta=0
+	let conta1=0
+	let conta2=0
+	let suma1=0
+	let suma2=0
+	let media1=0
+	let media2=0
+	
+	do {
+		num=parseInt(prompt("Ingresar un numero"));
+		if (num%2==0) {
+			suma1 = suma1+num;
+			conta1 = conta1+1;
+        }
+		else {
+			suma2 = suma2+num;
+			conta2 = conta2+1;
+        }
+		conta = conta+1;
+    }	while (conta<=10)
+	
+	if (conta1!=0){
+		media1 = suma1/conta1;
+    }
+	
+	if (conta2!=0){
+		media2 = suma2/conta2;
+    }	
+	
+	alert('La media de los números pares es: '+media1);
+	alert('La media de los números impares es: '+media2);    
 }
 
 function ejercicio32(){
+    let conta1=1;
+    let conta2=1;
+    let ciudad=0;
+    let _mayor=0;
+
+    while (conta1 <= 3) {
+		_mayor = 0;
+		conta2 = 1;
+		while (conta2 <= 11) {
+        ciudad=parseInt(prompt("Ingresar poblacion de 11 ciudades de provincia "+conta1));
+			if (ciudad > _mayor) {
+				_mayor = ciudad;
+            }
+			conta2 = conta2 + 1;
+		}
+		alert("La población mayor de la provincia "+conta1+" es: "+_mayor);
+		conta1 = conta1 + 1;
+    }
     
 }
 
 function ejercicio33(){
+    let rpta='s';
+
+    while(rpta=='s'| rpta=='S'){
+        rpta=prompt("Desea continuar en el bucle? S/N");
+    }
     
 }
 
 function ejercicio34(){
-    
+    let producto;
+    let i;
+    let j;
+    let string='';
+
+    for (i=1; i<=9;i++){
+   
+        for(j=1; j<=12; j++){
+            producto=i*j;
+            //Escribir i," por ",j," = ",producto;
+            string+= producto + '\n';
+        }
+        alert("Tabla del "+i+'\n'+string);
+        string="";
+    }
 }
 
 function ejercicio35(){
+    let num = new Array();
+    let i=0;
+    let k=0;
+    let menor;
+    let aux=0;
+  
     
+    for (i=0; i<=19; i++) {
+        num[i]=parseInt(prompt("Ingrese 20 numeros"));
+    }
+
+
+    for(i=0; i<=18; i++){
+        for(k=i+1; k<=19; k++){
+            if (num[i]>num[k]){
+                aux=num[i];
+                num[i]=num[k];
+                num[k]=aux;                  
+            }
+        }
+    }
+    alert("El numero menor es "+ num[0]);
+    alert("El numero mayor es " + num[19] );
 }
 
 function ejercicio36(){
+    let num=0;
+    let num1=0;
+    let num2=1;
+    let fibo=0;
+    let string=num1+'\n'+num2+'\n';
+
+    num=parseInt(prompt("Ingresar un numero"));
+   
     
+    for(i=1;i<=(num-2);i++){
+        fibo=num1+num2;
+        num1=num2
+        num2=fibo
+        string+= fibo + '\n';
+    }
+
+    alert("Serie Fibonacci "+'\n'+string);
 }
 
 function ejercicio37(){
-    
+    let num1=0;
+    let num2=0;
+    resto=0;
+
+    num1=parseInt(prompt("Ingresar un numero 1"));
+    num2=parseInt(prompt("Ingresar un numero 2"));
+
+    while(num2!=0){
+        resto=num2;
+        num2=num1%num2;
+        num1=resto;
+    }
+
+    alert("El MCD es: "+num1);
 }
 
 function ejercicio38(){
+    let num=0;
+    let i=2;
+    let suma=0;
+
+    num=parseInt(prompt("Ingresar un numero"));
+
+    while(i<=num){
+        if(num%i==0){
+            suma=suma+(num/i);
+        }
+        i=i+1;
+    }
+
+    if (suma==num){
+        alert("El numero es perfecto")
+    }
+    else{
+        alert("El numero no es perfecto")
+    }
     
 }
 
+
 function ejercicio39(){
-    
+
+    let _pi=0;
+	let conta=0;
+    let num=0;
+	
+    num=parseInt(prompt("Ingresar un numero para calcular la sucesion de pi"));
+	
+	for (i =1; i<=num; i+=2){
+		
+		if (conta%2 == 0){
+			_pi = _pi + (4 / i);
+        }
+		else {
+			_pi = _pi - (4/ i);
+        }
+		conta = conta + 1;		
+    }	
+	alert("Pi se aproxima a: "+ _pi)    
 }
 
 function ejercicio40(){
-    
+    let _pi = 0;
+	let conta = 0;
+    let num=0;
+
+	num=parseInt(prompt("Ingresar un numero para calcular la sucesion de pi"));
+
+	for (i=2; i<=num; i+=2){
+		if (conta%2==0){
+			_pi = _pi+(4/(i*(i+1)*(i+2)));
+        }
+        else{
+			_pi = _pi-(4/(i*(i+1)*(i+2)));
+        }
+		conta = conta+1;
+    }
+	alert('Pi se aproxima a: '+(_pi+3));
 }
