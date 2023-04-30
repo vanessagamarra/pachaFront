@@ -494,3 +494,182 @@ function ejercicio20(){
     }
 
 }
+
+function ejercicio21(){
+    let num=0;
+    let fact=1;
+
+    num=parseInt(prompt("Ingresar un numero entero"));
+
+    for(i=1;i<=num;i++){
+        fact=fact*i;
+    }
+
+    alert("El factorial de "+num+" es "+fact);
+}
+
+function ejercicio22(){
+    let num=0;
+    let suma=0;
+
+    num=parseInt(prompt("Ingresar la cantidad de numeros que quieres sumar"));
+
+    for(i=0; i<=num; i++){
+        suma=suma+i;
+    }
+    alert("La suma de todos los numeros es de "+suma);
+}
+
+function ejercicio23(){
+    let num=0;
+    let suma=0;
+
+    num=parseInt(prompt("Ingresar la cantidad de numeros que quieres sumar"));
+
+    for(i=1; i<=num; i+=2){
+        suma=suma+i;
+    }
+    alert("La suma de todos los numeros impares es "+suma);
+}
+
+function ejercicio24(){
+    let num=0;
+    let suma=0;
+
+    num=parseInt(prompt("Ingresar la cantidad de numeros que quieres sumar"));
+
+    for(i=0; i<=num; i+=2){
+        suma=suma+i;
+    }
+    alert("La suma de todos los numeros pares es "+suma);
+    
+}
+
+function ejercicio25(){
+    let num=0;
+    let fact=1;
+    let conta=1;
+
+    num=parseInt(prompt("Ingresar un numero entero"));
+
+    while(conta<=num){
+        fact=fact*conta;
+        conta=conta+1
+    }
+
+    alert("El factorial de "+num+" es "+fact)
+}
+
+function ejercicio26(){
+    let n=0;
+    let d=0;
+    resto=0;
+    conta=0;
+
+    n=parseInt(prompt("Ingresar numerador"));
+    d=parseInt(prompt("Ingresar denominador"));
+
+    while(n>=d){
+        n=n-d;
+        resto=n;
+        conta=conta+1;
+    }
+
+    alert("El resto es: "+resto);
+    alert("El cociente es: "+conta);
+    
+}
+
+function ejercicio27(){
+    let num=0;
+    let media=0;
+    let conta=0;
+    let suma=0;
+
+    num=parseInt(prompt("Ingresar un numero"));
+
+    while(num>=0){
+        suma=suma+num;
+        conta=conta+1;
+        num=parseInt(prompt("Ingresar un numero"));
+    }
+    
+    media = suma/conta;
+    alert("La media es: "+media)
+}
+
+function ejercicio28(){
+    let suma=0;
+    let i=0;
+
+    do {
+        suma=suma+i;
+        i=i+1
+    } while(i<=100);
+    
+    alert("La suma de los 100 primeros numeros enteros positivos es de "+suma);
+}
+
+function ejercicio29(){
+    let suma=0;
+    let i=0;
+
+    while(i<=100){
+        suma=suma+i;
+        i+=1;
+    }
+    
+    alert("La suma de los 100 primeros numeros enteros positivos es de "+suma);
+}
+
+function ejercicio30(){
+    let suma=0;
+    let i=0;
+
+    for(i=0; i<=100; i++){
+        suma=suma+i;
+    }
+    
+    alert("La suma de los 100 primeros numeros enteros positivos es de "+suma);
+    
+}
+
+function ejercicio31(){
+    
+}
+
+function ejercicio32(){
+    
+}
+
+function ejercicio33(){
+    
+}
+
+function ejercicio34(){
+    
+}
+
+function ejercicio35(){
+    
+}
+
+function ejercicio36(){
+    
+}
+
+function ejercicio37(){
+    
+}
+
+function ejercicio38(){
+    
+}
+
+function ejercicio39(){
+    
+}
+
+function ejercicio40(){
+    
+}
