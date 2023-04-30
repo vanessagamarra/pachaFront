@@ -60,7 +60,7 @@
 
     Mantenimiento (48$/día).
 
-    El dueño de la tienda desea tener un programa donde sólo ingrese dos números enteros que representen al número identificador del empleado y la cantidad de días que trabajó en la semana (6 días máximos). Y el programa le mostrará por pantalla la cantidad de dinero que el dueño le debe pagar al empleado que ingresó
+    El dueño de la tienda desea tener un programa donde sólo ingrese dos números enteros que representen al número identificador del empleado y la cantidad de días que trabajó en la semana (6 días máximos). Y el programa le mostrará por pantalla la cantidad de dinero que el dueño le debe pagar al emplesado que ingresó
 
 20. Hacer un algoritmo en Pseint y JavaScript que que lea 4 números enteros positivos y verifique y realice las siguientes operaciones:
 
