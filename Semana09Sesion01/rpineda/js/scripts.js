@@ -162,6 +162,31 @@ function ej17(){
     
 }
 
+function ej39(){
+    //Hacer un algoritmo en Pseint y JavaScript que lea un número y determinar si termina en 4.
+   
+    res = document.getElementById("res17");
+
+    try {
+        let Pi = 0
+        n = 150;
+        numero = -1
+        signo = -1;
+        for (let index = 1; index <= n; index++) {
+            numero += 2;
+            console.log(numero)
+            signo  = signo* -1;
+            console.log(signo)
+            Pi += ((4/numero)*signo)
+            console.log(Pi)
+        }
+        console.log(Pi);
+    } catch (error) {
+        throw error
+    }
+    
+}
+
 
 button01 = document.getElementById("ej01");
 button01.addEventListener("click", ej01);
@@ -175,4 +200,7 @@ button05 = document.getElementById("ej05");
 button05.addEventListener("click", ej05);
 button17 = document.getElementById("ej17");
 button17.addEventListener("click", ej17);
+
+button39 = document.getElementById("ej39");
+button39.addEventListener("click", ej39);
 
