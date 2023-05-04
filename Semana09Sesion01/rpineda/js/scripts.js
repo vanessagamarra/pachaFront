@@ -104,6 +104,65 @@ function ej04(){
     }
     
 }
+function ej05(){
+    //Hacer un algoritmo en Pseint y JavaScript que lea un número y determinar si termina en 4.
+    data = document.getElementById("imp05");
+   
+    res = document.getElementById("res05");
+
+    try {
+        let valorZapatos = 80.00
+        let respuesta = 0.00
+
+        numero = parseInt(data.value);
+        switch (true) {
+            case numero < 10:
+                respuesta = numero * valorZapatos;
+                break;
+            case (numero >= 10 && numero < 20):
+                descuento = (numero* valorZapatos)*0.10
+                respuesta = (numero* valorZapatos) - descuento;
+                break;
+            case (numero >= 20 && numero < 30):
+                descuento = (numero* valorZapatos)*0.20
+                respuesta = (numero* valorZapatos) - descuento;
+                break;
+            case numero >= 30:
+                descuento = (numero* valorZapatos)*0.40
+                respuesta = (numero* valorZapatos) - descuento;
+            default:
+                respuesta = (numero* valorZapatos);
+                break;
+        }
+
+        res.innerHTML = respuesta;
+    } catch (error) {
+        throw error
+    }
+    
+}
+
+function ej17(){
+    //Hacer un algoritmo en Pseint y JavaScript que lea un número y determinar si termina en 4.
+    data = document.getElementById("imp17");
+   
+    res = document.getElementById("res17");
+
+    try {
+        console.log(data.value)
+        var momentDate = moment("2023-04-30 "+data.value);
+        //moment().add(7, 'days');
+       let fecha =  momentDate.add(2,'s')
+        debugger
+        console.log(fecha.format("dddd, MMMM Do YYYY, h:mm:ss a"))
+        res.innerHTML = fecha.format("dddd, MMMM Do YYYY, h:mm:ss a");
+    } catch (error) {
+        throw error
+    }
+    
+}
+
+
 button01 = document.getElementById("ej01");
 button01.addEventListener("click", ej01);
 button02 = document.getElementById("ej02");
@@ -112,3 +171,8 @@ button03 = document.getElementById("ej03");
 button03.addEventListener("click", ej03);
 button04 = document.getElementById("ej04");
 button04.addEventListener("click", ej04);
+button05 = document.getElementById("ej05");
+button05.addEventListener("click", ej05);
+button17 = document.getElementById("ej17");
+button17.addEventListener("click", ej17);
+
