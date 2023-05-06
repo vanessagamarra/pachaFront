@@ -88,7 +88,7 @@ var miServidor = http.createServer((peticion, respuesta) => {
 
 // inicializar el servidor
 miServidor.listen(1111, "127.0.0.1");
-
+console.log("servidor iniciado")
 function ejercicio01(numero1, numero2){
     let respuesta = numero1 + numero2
     return respuesta;
