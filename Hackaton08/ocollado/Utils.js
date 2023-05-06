@@ -26,8 +26,8 @@ var Utils = {
     esPrimo: (numero) => {
         if (numero <= 1) return false;
         if (numero === 2) return true;
-        var sqrt = Math.sqrt(numero);
-        for (var i = 2; i <= sqrt; i++)
+        let sqrt = Math.sqrt(numero);
+        for (let i = 2; i <= sqrt; i++)
             if (numero % i === 0) return false;
         return true;
     },
