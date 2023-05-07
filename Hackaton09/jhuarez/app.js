@@ -48,8 +48,10 @@ app.get("/ejercicio/1", function (req, res) {
 
 //pagina ejercicio 2, formulario
 app.get("/ejercicio/2", function (req, res) {
-    marcador=1;
+    marcador=2;
     res.sendFile(__dirname +"/formu/formu2.html");
+
+    console.log(marcador)
 
     titulo = "Ejercicio 02"
     parrafo = "2.	Un estudiante realiza 4 exámenes, calcular el promedio de estos"
@@ -243,11 +245,13 @@ app.get("/ejercicio/15", function (req, res) {
 });
 
 
-//PAGINAS MOSTRAR RESPUESTAS EJERCICIOS (IF-ELSE)
-app.post("/ejercicio/1/rpta", (req, res) => {
 
+//PAGINAS MOSTRAR RESPUESTAS EJERCICIOS (IF-ELSE)
+app.post("/ejercicio/respuesta", (req, res) => {
+
+    console.log(marcador)
     //mostrar respuesta ejercicio1
-    if (marcador=1){
+    if (marcador===1){
     
     let numero1 = req.body.num1;
     let numero2 = req.body.num2;
@@ -255,8 +259,6 @@ app.post("/ejercicio/1/rpta", (req, res) => {
     numero2=parseInt(numero2);
     answ=ejercicio01(numero1,numero2);
    
-    console.log(typeof numero1)
-
     res.sendFile(__dirname +"/templates/ejercicio.html");
 
     titulo = "Ejercicio 01"
@@ -270,12 +272,19 @@ app.post("/ejercicio/1/rpta", (req, res) => {
     }
 
     //mostrar respuesta ejercicio2
-    else if (marcador==2){
-        let numero1 = req.body.num1;
-        let numero2 = req.body.num2;
-        numero1=parseInt(numero1);
-        numero2=parseInt(numero2);
-        answ=ejercicio01(numero1,numero2);
+    else if (marcador===2){
+        
+        let nota1 = req.body.nota1;
+        let nota2 = req.body.nota2;
+        let nota3 = req.body.nota3;
+        let nota4 = req.body.nota4;
+
+        nota1=parseInt(nota1);
+        nota2=parseInt(nota2);
+        nota3=parseInt(nota3);
+        nota4=parseInt(nota4);
+
+        answ=ejercicio02(nota1,nota2,nota3,nota4);
         
 
         res.sendFile(__dirname +"/templates/ejercicio.html");
@@ -286,7 +295,7 @@ app.post("/ejercicio/1/rpta", (req, res) => {
                         .toString()
                         .replace("%titulo%", titulo)
                         .replace("%parrafo%", parrafo)                
-                        .replace("%respuesta%", "La suma es: "+answ);
+                        .replace("%respuesta%", answ);
         res.end(html)
 
     }
@@ -307,5 +316,19 @@ function ejercicio01(num1, num2){
 }
 
 //funcion ejercicio2
+function ejercicio02(nota1, nota2, nota3, nota4){
+    let respuesta;
+
+    if((nota1|nota2|nota3|nota4)>20){
+        respuesta="Alguno de los valores no es valido"
+    }
+
+    else{
+
+    respuesta = "El promedio de notas es " + (nota1+nota2+nota3+nota4)/4;
+    }
+
+    return respuesta;
+}
 
 
