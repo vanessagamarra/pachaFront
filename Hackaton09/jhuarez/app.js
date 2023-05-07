@@ -300,6 +300,71 @@ app.post("/ejercicio/respuesta", (req, res) => {
 
     }
 
+    else if (marcador===3){
+        
+        let largo = req.body.largorect;
+        let ancho = req.body.anchorect;
+
+        largo=parseInt(largo);
+        ancho=parseInt(ancho);
+        
+        answ=ejercicio03(largo,ancho);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 03"
+        parrafo = "3. Calcular el área de un rectángulo"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+
+    }
+
+    else if (marcador===4){
+        let base = req.body.basetri;
+        let altura = req.body.alttri;
+
+        base=parseInt(base);
+        altura=parseInt(altura);
+        
+        answ=ejercicio04(base, altura);
+
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 04"
+        parrafo = "4. Calcular el área de un triángulo"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+
+    }
+
+    else if (marcador===5){
+        let radio = req.body.radiocirc;
+       
+        radio=parseInt(radio);               
+        answ=ejercicio05(radio);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 04"
+        parrafo = "5. Calcular el área de una circunferencia"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+
+    }
+
 });
 
 // inicializar el servidor
@@ -324,10 +389,32 @@ function ejercicio02(nota1, nota2, nota3, nota4){
     }
 
     else{
-
     respuesta = "El promedio de notas es " + (nota1+nota2+nota3+nota4)/4;
     }
 
+    return respuesta;
+}
+
+function ejercicio03(num1, num2){
+
+    let respuesta = num1*num2;
+    respuesta = "El area de este rectangulo es de "+respuesta+" cm cuadrados"
+
+    return respuesta;
+}
+
+function ejercicio04(num1, num2){
+    let respuesta;
+    respuesta = (num1*num2)/2
+
+    respuesta = "El area de este triangulo es de "+respuesta+ " cm cuadrados";
+    return respuesta;
+}
+
+function ejercicio05(num1){
+    let respuesta;
+    respuesta = Math.PI*(num1**2);
+    respuesta = "El area de esta circunferencia es de "+respuesta+" cm cuadrados";
     return respuesta;
 }
 
