@@ -354,7 +354,7 @@ app.post("/ejercicio/respuesta", (req, res) => {
 
         res.sendFile(__dirname +"/templates/ejercicio.html");
 
-        titulo = "Ejercicio 04"
+        titulo = "Ejercicio 05"
         parrafo = "5. Calcular el área de una circunferencia"
         html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
                         .toString()
@@ -363,6 +363,108 @@ app.post("/ejercicio/respuesta", (req, res) => {
                         .replace("%respuesta%", answ);
         res.end(html)
 
+    }
+
+    else if (marcador===6){
+        let horas = req.body.horas;
+        let tarifa = req.body.sueldohora;
+       
+        horas=parseInt(horas);   
+        tarifa=parseInt(tarifa);            
+        answ=ejercicio06(horas,tarifa);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 06"
+        parrafo = "6. Determinar el sueldo semanal de un trabajador basándose en sus horas trabajadas y su salario de hora hombre"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+    }
+
+    else if (marcador===7){
+        let medida = req.body.medida;      
+        medida=parseInt(medida);   
+           
+        answ=ejercicio07(medida);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 07"
+        parrafo = "7. Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero. Para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, pero ella generalmente las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuantas pulgadas debe pedir con base en los metros que requiere. Represéntelo mediante el diagrama de flujo y el pseudocódigo (1 pulgada = 0.0254 m)."
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+    }
+
+    else if (marcador===8){
+        let moneda = req.body.moneda;      
+        moneda=parseInt(moneda);   
+           
+        answ=ejercicio08(moneda);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 08"
+        parrafo = "8. Una empresa importadora desea determinar cuántos dólares puede adquirir con equis cantidad de dinero peruano"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+    }
+
+    else if (marcador===9){
+        let fecha = req.body.fecha;      
+        fecha=parseInt(fecha);   
+           
+        answ=ejercicio09(fecha);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 09"
+        parrafo = "9. Una empresa que contrata personal requiere determinar la edad de las personas que solicitan trabajo, pero cuando se les realiza la entrevista sólo se les pregunta el año en que nacieron"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+    }
+
+    else if (marcador===10){
+        let name1 = req.body.name1;
+        let name2 = req.body.name2;
+        let name3 = req.body.name3;
+        
+        let edad1 = req.body.edad1;
+        let edad2 = req.body.edad2;
+        let edad3 = req.body.edad3;
+
+        edad1=parseInt(edad1);
+        edad2=parseInt(edad2);
+        edad3=parseInt(edad3);
+          
+           
+        answ=ejercicio10(name1, name2, name3, edad1, edad2, edad3);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 10"
+        parrafo = "10. Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
     }
 
 });
@@ -381,15 +483,15 @@ function ejercicio01(num1, num2){
 }
 
 //funcion ejercicio2
-function ejercicio02(nota1, nota2, nota3, nota4){
+function ejercicio02(num1, num2, num3, num4){
     let respuesta;
 
-    if((nota1|nota2|nota3|nota4)>20){
+    if((num1||num2||num3||num4)>20){
         respuesta="Alguno de los valores no es valido"
     }
 
     else{
-    respuesta = "El promedio de notas es " + (nota1+nota2+nota3+nota4)/4;
+    respuesta = "El promedio de notas es " + (num1+num2+num3+num4)/4;
     }
 
     return respuesta;
@@ -417,5 +519,74 @@ function ejercicio05(num1){
     respuesta = "El area de esta circunferencia es de "+respuesta+" cm cuadrados";
     return respuesta;
 }
+
+function ejercicio06(num1,num2){
+    let respuesta;
+    respuesta = num1*num2;
+    respuesta = "El sueldo que le corresponde por el tiempo trabajado es de "+respuesta+" soles";
+    return respuesta;
+}
+
+function ejercicio07(num1){
+    let respuesta;
+    respuesta = num1*39.37;
+    respuesta = "El equivalente de "+num1+" metros, es de "+respuesta+" pulgadas";
+    return respuesta;
+}
+
+function ejercicio08(num1){
+    let respuesta;
+    const tipocambio=0.27;
+    respuesta = num1*tipocambio;
+    respuesta = "El equivalente de "+num1+" soles, es de aproximadamente "+respuesta+" dolares actualmente";
+    return respuesta;
+}
+
+function ejercicio09(num1){
+    let respuesta;    
+    let year = new Date().getFullYear();
+    console.log(year)
+    year=parseInt(year);
+    respuesta=year-num1;
+    respuesta="Su edad es de "+respuesta+" años";
+    return respuesta;
+}
+
+function ejercicio10(txt1, txt2, txt3, num1, num2, num3){
+    let respuesta;
+
+    if((num1<num2)&(num1<num3)){
+        respuesta=txt1+" es el menor, con "+num1+" años";
+        return respuesta;
+    }
+    else if((num2<num1)&(num2<num3)){
+        respuesta=txt2+" es el menor, con "+num2+" años";
+        return respuesta;
+    }
+    else if((num3<num1)&(num3<num2)){
+        respuesta=txt3+" es el menor, con "+num3+" años";
+        return respuesta;
+    }
+    else{
+        respuesta="Hay personas con la misma edad";
+        return respuesta;
+    }
+}
+
+function ejercicio11(){
+}
+
+function ejercicio12(){
+}
+
+function ejercicio13(){
+}
+
+function ejercicio14(){
+}
+
+function ejercicio15(){
+}
+
 
 
