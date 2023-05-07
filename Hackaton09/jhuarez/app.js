@@ -523,6 +523,27 @@ app.post("/ejercicio/respuesta", (req, res) => {
         res.end(html)
     }
 
+    else if (marcador===14){
+
+        const myObject = JSON.parse(req.body['my-array']);
+        const myArray = Object.values(myObject)
+        console.log(myArray)
+        console.log(myArray.length)
+
+        answ=ejercicio14(myArray);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 14"
+        parrafo = "14. Una compañía, fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, de un lote de N focos, el número de focos de cada color que hay en existencia"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+    }
+
 
     else if (marcador===15){
         let edad1 = req.body.edad1;
@@ -721,7 +742,32 @@ function ejercicio13(arreglo){
     return respuesta;
 }
 
-function ejercicio14(){
+function ejercicio14(arreglo){
+    const n=arreglo.length;
+    let aux=0;
+    let verdes=0;
+    let blancos=0;
+    let rojos=0;
+    let respuesta;
+
+    for(let i=0; i<n; i++){
+
+        aux=parseInt(arreglo[i]);
+
+        if(aux===1){
+            verdes++;
+        }
+        else if(aux===2){
+            blancos++
+        }
+        else if(aux===3){
+            rojos++
+        }
+
+    }
+
+    respuesta="Se han ingresado "+n+" focos. Hay "+verdes+" verdes, "+blancos+" blancos y "+rojos+" rojos.";
+    return respuesta;
 }
 
 function ejercicio15(num1){
