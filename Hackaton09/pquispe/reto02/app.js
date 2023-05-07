@@ -18,7 +18,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
     switch (url.pathname) {
         case "/":
             titulo = "Hackaton 09";
-            descripcion = "LOGRO: Aprender a definir un algoritmo y aplicarlo en una solución a través de JavaScript, escribir código siguiendo una guía de estilo JS.";
+            descripcion = "Aprender a definir un algoritmo y aplicarlo en una solución a través de JavaScript, escribir código siguiendo una guía de estilo JS.";
 
             html = fs
                 .readFileSync(__dirname + "/templates/inicio.html")
@@ -62,5 +62,5 @@ miServidor.listen(1111, "127.0.0.1");
 // Algoritmos de los ejercicios:
 function ejercicio01(numero1, numero2) {
     let suma = numero1 + numero2;
-    return suma;
+    return `La suma de los dos números es ${suma}`;
 }
