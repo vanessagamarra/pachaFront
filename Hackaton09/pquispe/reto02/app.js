@@ -110,6 +110,134 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             break;
 
 
+        case "/ejercicio/6":
+            titulo = "Ejercicio 6";
+            descripcion = "Determinar el sueldo semanal de un trabajador basándose en sus horas trabajadas y su salario de hora hombre:";
+            answer = ejercicio06(parseFloat(url.searchParams.get('valor1Ejer6')), parseFloat(url.searchParams.get('valor2Ejer6')));
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%answer%", answer);
+    
+            respuesta.end(html);
+            break;
+
+
+        case "/ejercicio/7":
+            titulo = "Ejercicio 7";
+            descripcion = "Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero. Para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, pero ella generalmente las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuantas pulgadas debe pedir con base en los metros que requiere. Represéntelo mediante el diagrama de flujo y el pseudocódigo (1 pulgada = 0.0254 m):";
+            answer = ejercicio07(parseFloat(url.searchParams.get('valor1Ejer7')));
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%answer%", answer);
+    
+            respuesta.end(html);
+            break;
+
+
+        case "/ejercicio/8":
+            titulo = "Ejercicio 8";
+            descripcion = "Una empresa importadora desea determinar cuántos dólares puede adquirir con equis cantidad de dinero peruano:";
+            answer = ejercicio08(parseFloat(url.searchParams.get('valor1Ejer8')), parseFloat(url.searchParams.get('valor2Ejer8')));
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%answer%", answer);
+    
+            respuesta.end(html);
+            break;
+
+
+        case "/ejercicio/9":
+            titulo = "Ejercicio 9";
+            descripcion = "Una empresa que contrata personal requiere determinar la edad de las personas que solicitan trabajo, pero cuando se les realiza la entrevista sólo se les pregunta el año en que nacieron:";
+            answer = ejercicio09(parseFloat(url.searchParams.get('valor1Ejer9')));
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%answer%", answer);
+    
+            respuesta.end(html);
+            break;
+
+
+        case "/ejercicio/10":
+            titulo = "Ejercicio 10";
+            descripcion = "Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad:";
+            answer = ejercicio10(url.searchParams.get('valor1Ejer10'), parseFloat(url.searchParams.get('valor2Ejer10')), url.searchParams.get('valor3Ejer10'), parseFloat(url.searchParams.get('valor4Ejer10')), url.searchParams.get('valor5Ejer10'), parseFloat(url.searchParams.get('valor6Ejer10')));
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%answer%", answer);
+    
+            respuesta.end(html);
+            break;
+
+
+        case "/ejercicio/11":
+            titulo = "Ejercicio 11";
+            descripcion = "Se les dará un bono por antigüedad a los empleados de una tienda. Si tienen un año, se les dará $100; si tienen 2 años, $200, y así sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será de $1000. Realice un algoritmo y represéntelo ,que permita determinar el bono que recibirá un trabajador:";
+            answer = ejercicio11(parseFloat(url.searchParams.get('valor1Ejer11')));
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%answer%", answer);
+    
+            respuesta.end(html);
+            break;
+
+
+        case "/ejercicio/12":
+            titulo = "Ejercicio 12";
+            descripcion = "Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10% anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? Realice el algoritmo y representan la solución, utilizando el ciclo apropiado:";
+            answer = ejercicio12();
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%answer%", answer);
+    
+            respuesta.end(html);
+            break;
+
+
+        case "/ejercicio/15":
+            titulo = "Ejercicio 15";
+            descripcion = "Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones:";
+            answer = ejercicio15(parseFloat(url.searchParams.get('valor1Ejer15')));
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%answer%", answer);
+    
+            respuesta.end(html);
+            break;
+
+
         default:
             respuesta.writeHead(404, {"Content-Type": "text/html"});
             respuesta.end("404 not found");
@@ -129,22 +257,139 @@ function ejercicio01(numero1, numero2) {
     return `La suma de los dos números es ${suma}`;
 };
 
+
 function ejercicio02(nota1, nota2, nota3, nota4) {
     let promedio = (nota1 + nota2 + nota3 + nota4) / 4;
     return `El promedio de las cuatro notas es ${promedio}`;
 };
+
 
 function ejercicio03(valor1, valor2) {
     let area = valor1 * valor2;
     return `El área del rectángulo es ${area}`;
 };
 
+
 function ejercicio04(valor1, valor2) {
     let area = (valor1 * valor2) / 2;
     return `El área del triángulo es ${area}`;
 };
 
+
 function ejercicio05(radio) {
     let area = Math.PI * (radio ** 2);
     return `El área de la circunferencia es ${area}`;
+};
+
+
+function ejercicio06(horasTrabajadas, salarioHoras) {
+    let salarioSemanal = (horasTrabajadas * salarioHoras) * 7;
+    return `El salario semanal es ${salarioSemanal}`;
+};
+
+
+function ejercicio07(metros) {
+    let pulgadas = metros / 0.0254;
+    return `La cantidad en pulgadas sería ${pulgadas}`;
+};
+
+
+function ejercicio08(valorSoles, tasaCambio) {
+    let valorDolares = valorSoles / tasaCambio;
+    return `El valor en dólares seria ${valorDolares}`
+};
+
+
+function ejercicio09(anioNacimiento) {
+    let fechaActual = new Date();
+    let anioActual = fechaActual.getFullYear();
+
+    let edad = anioActual - anioNacimiento;
+    return `La edad de la persona es ${edad}`;
+};
+
+
+function ejercicio10(nomb1, edad1, nomb2, edad2, nomb3, edad3) {
+    if (edad1 < edad2 && edad1 < edad3) {
+        return `La persona de menor edad es ${nomb1} con ${edad1} años`;
+    }
+    else if (edad2 < edad1 && edad2 < edad3) {
+        return `La persona de menor edad es ${nomb2} con ${edad2} años`;
+    }
+    else if (edad3 < edad1 && edad3 < edad2) {
+        return `La persona de menor edad es ${nomb3} con ${edad3} años`;
+    }
+    else {
+        return `No hay una sola persona que sea menor que las tres`
+    };
+};
+
+
+function ejercicio11(anioAntiguedad) {
+    let bono;
+
+    if (anioAntiguedad == 1) {
+        bono = 100
+    }
+    else if (anioAntiguedad == 2) {
+        bono = 200
+    }
+    else if (anioAntiguedad == 3) {
+        bono = 300
+    }
+    else if (anioAntiguedad == 4) {
+        bono = 400
+    }
+    else if (anioAntiguedad == 5) {
+        bono = 500
+    }
+    else if (anioAntiguedad > 5) {
+        bono = 1000
+    }
+    else {
+        return `Solo puede ingresar numeros enteros positivos`;
+    };
+
+    return `Su bono por antigüedad será de $${bono}`;
+};
+
+
+function ejercicio12() {
+    let salario = 1500;
+    let incremento = 0.1;
+    let salariosPorAnio = [];
+    let resultado = '';
+
+    for (let i = 1; i <= 6; i++) {
+        salariosPorAnio.push(salario);
+        salario = salario * (1 + incremento);
+    };
+
+    resultado += `Salario después de 6 años: $${salario.toFixed(2)}\n`;
+
+    for (let i = 0; i < salariosPorAnio.length; i++) {
+        resultado += `Salario año ${i + 1}: $${salariosPorAnio[i].toFixed(2)}\n`;
+    };
+
+    return resultado;
+};
+
+
+function ejercicio13() {
+
+};
+
+
+function ejercicio14() {
+    
+};
+
+
+function ejercicio15(edad) {
+    if (edad >= 18) {
+        return "Usted puede votar en las próximas elecciones.";
+    }
+    else {
+        return "Usted no puede votar en las próximas elecciones.";
+    };
 };

@@ -121,11 +121,11 @@
                                     <form action="/ejercicio/3" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="valor1Ejer3">Ingrese la medida de la base del rectángulo:</label>
-                                            <input type="text" class="form-control" id="valor1Ejer3" name="valor1Ejer3" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                            <input type="text" class="form-control" id="valor1Ejer3" name="valor1Ejer3" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
                                         </div>
                                         <div class="form-group">
                                             <label for="valor2Ejer3">Ingrese la medida de la altura del rectángulo:</label>
-                                            <input type="text" class="form-control" id="valor2Ejer3" name="valor2Ejer3" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                            <input type="text" class="form-control" id="valor2Ejer3" name="valor2Ejer3" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -152,11 +152,11 @@
                                     <form action="/ejercicio/4" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="valor1Ejer4">Ingrese la medida de la base del triángulo:</label>
-                                            <input type="text" class="form-control" id="valor1Ejer4" name="valor1Ejer4" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                            <input type="text" class="form-control" id="valor1Ejer4" name="valor1Ejer4" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
                                         </div>
                                         <div class="form-group">
                                             <label for="valor2Ejer4">Ingrese la medida de la altura del triángulo:</label>
-                                            <input type="text" class="form-control" id="valor2Ejer4" name="valor2Ejer4" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                            <input type="text" class="form-control" id="valor2Ejer4" name="valor2Ejer4" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -183,7 +183,7 @@
                                     <form action="/ejercicio/5" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="radioEjer5">Ingrese el radio de la circunferencia:</label>
-                                            <input type="text" class="form-control" id="radioEjer5" name="radioEjer5" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                            <input type="text" class="form-control" id="radioEjer5" name="radioEjer5" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -206,6 +206,20 @@
                                     <h4>
                                         Determinar el sueldo semanal de un trabajador basándose en sus horas trabajadas y su salario de hora hombre:
                                     </h4>
+
+                                    <form action="/ejercicio/6" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="valor1Ejer6">Ingrese las horas trabajadas:</label>
+                                            <input type="text" class="form-control" id="valor1Ejer6" name="valor1Ejer6" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="valor2Ejer6">Ingrese el salario:</label>
+                                            <input type="text" class="form-control" id="valor2Ejer6" name="valor2Ejer6" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -223,6 +237,16 @@
                                     <h4>
                                         Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero. Para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, pero ella generalmente las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuantas pulgadas debe pedir con base en los metros que requiere. Represéntelo mediante el diagrama de flujo y el pseudocódigo (1 pulgada = 0.0254 m):
                                     </h4>
+
+                                    <form action="/ejercicio/7" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="valor1Ejer7">Ingrese la medida en metros:</label>
+                                            <input type="text" class="form-control" id="valor1Ejer7" name="valor1Ejer7" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -240,6 +264,20 @@
                                     <h4>
                                         Una empresa importadora desea determinar cuántos dólares puede adquirir con equis cantidad de dinero peruano:
                                     </h4>
+
+                                    <form action="/ejercicio/8" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="valor1Ejer8">Ingrese la cantidad en soles:</label>
+                                            <input type="text" class="form-control" id="valor1Ejer8" name="valor1Ejer8" required pattern="[0-9]+([.,][0-9]{1,2})?" title="Ingrese un número entero o decimal con máximo dos decimales">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="valor2Ejer8">Ingrese la tasa de cambio:</label>
+                                            <input type="text" class="form-control" id="valor2Ejer8" name="valor2Ejer8" required pattern="[0-9]+([.,][0-9]{1,2})?" title="Ingrese un número entero o decimal con máximo dos decimales">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -257,6 +295,16 @@
                                     <h4>
                                         Una empresa que contrata personal requiere determinar la edad de las personas que solicitan trabajo, pero cuando se les realiza la entrevista sólo se les pregunta el año en que nacieron:
                                     </h4>
+
+                                    <form action="/ejercicio/9" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="valor1Ejer9">Ingrese su año de nacimiento:</label>
+                                            <input type="text" class="form-control" id="valor1Ejer9" name="valor1Ejer9" required pattern="\d{4}" required title="Ingrese un número entero de cuatro dígitos">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -274,6 +322,36 @@
                                     <h4>
                                         Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad:
                                     </h4>
+
+                                    <form action="/ejercicio/10" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="valor1Ejer10">Ingrese el nombre de la primera persona:</label>
+                                            <input type="text" class="form-control" id="valor1Ejer10" name="valor1Ejer10" required pattern="[A-Za-z]+" required title="Ingrese solo letras, tanto mayúsculas como minúsculas">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="valor2Ejer10">Ingrese la edad de la primera persona:</label>
+                                            <input type="text" class="form-control" id="valor2Ejer10" name="valor2Ejer10" required pattern="\d+" required title="Ingrese solo números enteros">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="valor3Ejer10">Ingrese el nombre de la segunda persona:</label>
+                                            <input type="text" class="form-control" id="valor3Ejer10" name="valor3Ejer10" required pattern="[A-Za-z]+" required title="Ingrese solo letras, tanto mayúsculas como minúsculas">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="valor4Ejer10">Ingrese la edad de la segunda persona:</label>
+                                            <input type="text" class="form-control" id="valor4Ejer10" name="valor4Ejer10" required pattern="\d+" required title="Ingrese solo números enteros">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="valor5Ejer10">Ingrese el nombre de la tercera persona:</label>
+                                            <input type="text" class="form-control" id="valor5Ejer10" name="valor5Ejer10" required pattern="[A-Za-z]+" required title="Ingrese solo letras, tanto mayúsculas como minúsculas">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="valor6Ejer10">Ingrese la edad de la tercera persona:</label>
+                                            <input type="text" class="form-control" id="valor6Ejer10" name="valor6Ejer10" required pattern="\d+" required title="Ingrese solo números enteros">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -291,6 +369,16 @@
                                     <h4>
                                         Se les dará un bono por antigüedad a los empleados de una tienda. Si tienen un año, se les dará $100; si tienen 2 años, $200, y así sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será de $1000. Realice un algoritmo y represéntelo ,que permita determinar el bono que recibirá un trabajador:
                                     </h4>
+
+                                    <form action="/ejercicio/11" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="valor1Ejer11">Ingrese el año de antigüedad:</label>
+                                            <input type="text" class="form-control" id="valor1Ejer11" name="valor1Ejer11" required pattern="\d+" required title="Ingrese solo números enteros">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -308,6 +396,12 @@
                                     <h4>
                                         Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10% anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? Realice el algoritmo y representan la solución, utilizando el ciclo apropiado:
                                     </h4>
+
+                                    <form action="/ejercicio/12" method="get" class="py-3">
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -359,6 +453,16 @@
                                     <h4>
                                         Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones:
                                     </h4>
+
+                                    <form action="/ejercicio/15" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="valor1Ejer15">Ingrese su edad:</label>
+                                            <input type="text" class="form-control" id="valor1Ejer15" name="valor1Ejer15" required pattern="\d+" required title="Ingrese solo números enteros">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
