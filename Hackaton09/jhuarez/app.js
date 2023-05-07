@@ -89,22 +89,6 @@ app.post("/ejercicio/1/rpta", (req, res) => {
 
 });
 
-/*app.get("/ejercicio/1/rpta", function (req, res) {
-    res.sendFile(__dirname +"/templates/ejercicio.html");
-
-    titulo = "Ejercicio 01"
-    parrafo = "1.	Implementar un algoritmo que reciba 2 argumentos y los sume, el resultado se deberá imprimir en pantalla"
-    html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
-                    .toString()
-                    .replace("%titulo%", titulo)
-                    .replace("%parrafo%", parrafo)
-                    .replace("%respuesta%", answ);
-    res.end(html)
-});*/
-
-
-
-
 // inicializar el servidor
 app.listen(5555, "127.0.0.1");
 console.log('Servidor web iniciado');
