@@ -6,6 +6,8 @@ var url = require('url');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+app.use(express.json());
+
 
 //inicializando variables
 let html="";
@@ -14,7 +16,7 @@ var parrafo = "Respuestas de la hackaton 09";
 let answ = 0;
 let marcador = 0;
 
-app.use(express.json());       
+   
 app.use(express.urlencoded({extended: true})); 
 
 //pagina inicio
@@ -245,7 +247,7 @@ app.get("/ejercicio/15", function (req, res) {
 });
 
 
-
+app.use(express.json());    
 //PAGINAS MOSTRAR RESPUESTAS EJERCICIOS (IF-ELSE)
 app.post("/ejercicio/respuesta", (req, res) => {
 
@@ -500,6 +502,28 @@ app.post("/ejercicio/respuesta", (req, res) => {
         res.end(html)
     }
 
+    else if (marcador===13){
+
+        const myObject = JSON.parse(req.body['my-array']);
+        const myArray = Object.values(myObject)
+        console.log(myArray)
+        console.log(myArray.length)
+
+        answ=ejercicio13(myArray);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 13"
+        parrafo = "13. Realice un algoritmo para leer las calificaciones de N alumnos y determine el número de aprobados y reprobados"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+    }
+
+
     else if (marcador===15){
         let edad1 = req.body.edad1;
         edad1=parseInt(edad1);
@@ -673,7 +697,28 @@ function ejercicio12(){
     return respuesta;
 }
 
-function ejercicio13(){
+function ejercicio13(arreglo){
+    const n=arreglo.length;
+    let aux=0;
+    let aprobados=0;
+    let desaprobados=0;
+    let respuesta;
+
+    for(let i=0; i<n; i++){
+
+        aux=parseInt(arreglo[i]);
+
+        if(aux>=11){
+            aprobados++;
+        }
+        else{
+            desaprobados++
+        }
+
+    }
+
+    respuesta="Se han ingresado "+n+" notas. Han aprobado "+aprobados+" y han desaprobado "+desaprobados;
+    return respuesta;
 }
 
 function ejercicio14(){
