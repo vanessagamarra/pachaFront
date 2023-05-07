@@ -18,7 +18,7 @@ var miServidor = http.createServer((peticion, respuesta) => {
             titulo = "Ejercicio 01"
             parrafo = "1. Implementar un algoritmo que reciba 2 argumentos y los sume, el resultado se deberá imprimir en pantalla"
             rpta = ejercicio01(20,144)
-            new_inputs = '<label for="dato">Datos</label><input id="dato" type="text" class="form-control">'
+            new_inputs = '<label for="dato_i">Datos _i</label><input id="dato_i" type="text" class="form-control">'
             generarEjercicio(respuesta,titulo,parrafo,new_inputs,2,rpta)
             break;
         case "/ejercicio/2":
@@ -140,7 +140,11 @@ function ejercicio02(examen1,examen2, examen3,examen4,){
 }
 
 function repeatText(text, count) {
-    return text.repeat(count);
+    let resultado = "";
+    for (let i = 1; i <= count; i++) {
+        resultado += text.replace(/_i/g, `${i}`);
+    }
+    return resultado;
 }
 
 function generarEjercicio(respuesta,titulo, parrafo, new_inputs, cant_inp, rpta) {
