@@ -51,11 +51,11 @@
                                     <form action="/ejercicio/1" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="num1Ejer1">Ingrese el primer número:</label>
-                                            <input type="number" class="form-control" id="num1Ejer1" name="num1Ejer1" required>
+                                            <input type="text" class="form-control" id="num1Ejer1" name="num1Ejer1" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
                                         </div>
                                         <div class="form-group">
                                             <label for="num2Ejer1">Ingrese el segundo número:</label>
-                                            <input type="number" class="form-control" id="num2Ejer1" name="num2Ejer1" required>
+                                            <input type="text" class="form-control" id="num2Ejer1" name="num2Ejer1" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -78,6 +78,28 @@
                                     <h4>
                                         Un estudiante realiza 4 exámenes, calcular el promedio de estos:
                                     </h4>
+
+                                    <form action="/ejercicio/2" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="nota1Ejer2">Ingrese la primera nota:</label>
+                                            <input type="text" class="form-control" id="nota1Ejer2" name="nota1Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nota2Ejer2">Ingrese la segunda nota:</label>
+                                            <input type="text" class="form-control" id="nota2Ejer2" name="nota2Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nota3Ejer2">Ingrese la tercera nota:</label>
+                                            <input type="text" class="form-control" id="nota3Ejer2" name="nota3Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nota4Ejer2">Ingrese la cuarta nota:</label>
+                                            <input type="text" class="form-control" id="nota4Ejer2" name="nota4Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -95,6 +117,20 @@
                                     <h4>
                                         Calcular el área de un rectángulo:
                                     </h4>
+
+                                    <form action="/ejercicio/3" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="valor1Ejer3">Ingrese la medida de la base del rectángulo:</label>
+                                            <input type="text" class="form-control" id="valor1Ejer3" name="valor1Ejer3" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="valor2Ejer3">Ingrese la medida de la altura del rectángulo:</label>
+                                            <input type="text" class="form-control" id="valor2Ejer3" name="valor2Ejer3" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -112,6 +148,20 @@
                                     <h4>
                                         Calcular el área de un triángulo:
                                     </h4>
+
+                                    <form action="/ejercicio/4" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="valor1Ejer4">Ingrese la medida de la base del triángulo:</label>
+                                            <input type="text" class="form-control" id="valor1Ejer4" name="valor1Ejer4" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="valor2Ejer4">Ingrese la medida de la altura del triángulo:</label>
+                                            <input type="text" class="form-control" id="valor2Ejer4" name="valor2Ejer4" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -129,6 +179,16 @@
                                     <h4>
                                         Calcular el área de una circunferencia:
                                     </h4>
+
+                                    <form action="/ejercicio/5" method="get" class="py-3">
+                                        <div class="form-group">
+                                            <label for="radioEjer5">Ingrese el radio de la circunferencia:</label>
+                                            <input type="text" class="form-control" id="radioEjer5" name="radioEjer5" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar valoreros">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            Calcular
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
