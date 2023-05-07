@@ -24,22 +24,22 @@
             </div>
         </div>
       
-        <form action="/ejercicio/1/rpta" method="post">
+
+        <form action="/ejercicio/respuesta" method="post">
             <div class="form-group">
-            <label for="num1">Primer numero</label>
-            <input type="number" class="form-control" name="num1" placeholder="Por favor ingresar primer numero">         
+            <label for="notas">Añadir notas</label>
+            <input type="text" class="form-control" id="inputtext" name="notas" placeholder="Ingresar una nota">         
             </div>
-            <div class="form-group">
-            <label for="num2">Segundo numero</label>
-            <input type="number" class="form-control" name="num2" placeholder="Por favor ingresar segundo numero">
-            </div>
+            <br>
+            <button type="button" id="add">Add </button>  
+            <button type="button" id="display">Display</button>      
             <br>
             <button type="submit" class="btn btn-primary">Resolver</button>
         </form>
     
     </div>
 
-
+    <script src="../javascript/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

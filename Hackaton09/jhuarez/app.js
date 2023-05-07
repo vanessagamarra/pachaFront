@@ -467,6 +467,56 @@ app.post("/ejercicio/respuesta", (req, res) => {
         res.end(html)
     }
 
+    else if (marcador===11){
+        let tiempo1 = req.body.tiempo1;          
+        tiempo1=parseInt(tiempo1);
+
+        answ=ejercicio11(tiempo1);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 11"
+        parrafo = "11. Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+    }
+
+    else if (marcador===12){
+        answ=ejercicio12();
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 12"
+        parrafo = "12. Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10 % anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? Realice el algoritmo y representan la solución, utilizando el ciclo apropiado"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+    }
+
+    else if (marcador===15){
+        let edad1 = req.body.edad1;
+        edad1=parseInt(edad1);
+        answ=ejercicio15(edad1);
+
+        res.sendFile(__dirname +"/templates/ejercicio.html");
+
+        titulo = "Ejercicio 15"
+        parrafo = "15. Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones"
+        html=fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                        .toString()
+                        .replace("%titulo%", titulo)
+                        .replace("%parrafo%", parrafo)                
+                        .replace("%respuesta%", answ);
+        res.end(html)
+    }
+
 });
 
 // inicializar el servidor
@@ -573,10 +623,54 @@ function ejercicio10(txt1, txt2, txt3, num1, num2, num3){
     }
 }
 
-function ejercicio11(){
+function ejercicio11(num1){
+    let respuesta;
+
+    if(num1<1){
+        respuesta="Usted no califica para el bono";
+        return respuesta;
+    }
+    else if((num1>=1)&&(num1<2)){
+        respuesta="Usted califica para un bono de $100";
+        return respuesta;
+    }
+    else if((num1>=2)&&(num1<3)){
+        respuesta="Usted califica para un bono de $200";
+        return respuesta;
+    }
+    else if((num1>=3)&&(num1<4)){
+        respuesta="Usted califica para un bono de $300";
+        return respuesta;
+    }
+    else if((num1>=4)&&(num1<5)){
+        respuesta="Usted califica para un bono de $400";
+        return respuesta;
+    }
+    else{
+        respuesta="Usted califica para un bono de $1000";
+        return respuesta;
+    }
 }
 
 function ejercicio12(){
+    let respuesta;
+    let sueldo = 1500;
+    const sueldoAnual=[];
+    
+    for (let i=0; i<6; i++){
+        sueldo=sueldo*1.1;
+        sueldoAnual[i]=sueldo
+    }
+
+    respuesta = "El sueldo inicial es de $1500"+
+                "<br /> El sueldo el primer año es de $"+sueldoAnual[0]+
+                "<br /> El sueldo el segundo año es de $"+sueldoAnual[1]+
+                "<br /> El sueldo el tercer año es de $"+sueldoAnual[2]+
+                "<br /> El sueldo el cuarto año es de $"+sueldoAnual[3]+
+                "<br /> El sueldo el quinto año es de $"+sueldoAnual[4]+
+                "<br /> El sueldo el sexto y ultimo año es de $"+sueldoAnual[5]
+
+    return respuesta;
 }
 
 function ejercicio13(){
@@ -585,7 +679,20 @@ function ejercicio13(){
 function ejercicio14(){
 }
 
-function ejercicio15(){
+function ejercicio15(num1){
+    let respuesta;
+    const proximasElecciones=2024;
+
+    if(num1<17){
+        respuesta = "No podras votar en las proximas elecciones ya que no tendras 18 antes del 2024"
+
+        return respuesta;
+    }
+    else {
+        respuesta = "Puedes votar en las proximas elecciones presidenciales de 2024"
+
+        return respuesta; 
+    }
 }
 
 
