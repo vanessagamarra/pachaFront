@@ -564,7 +564,7 @@ app.post("/ejercicio/respuesta", (req, res) => {
 
 });
 
-// inicializar el servidor
+// inicializar el servidor puerto 5555
 app.listen(5555, "127.0.0.1");
 console.log('Servidor web iniciado');
 
