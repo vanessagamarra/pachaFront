@@ -103,22 +103,48 @@ var miServidor = http.createServer((request, response) => {
                 : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_10.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_10;
+
+            let arrayPersonas = queryParams.n1;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio10(arrayPersonas)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_11.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_11;
+
+            let anioAntiguedad = queryParams.n1;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio11(anioAntiguedad)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_12.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_12;
+            respuestaEjercicio = Ejercicios.ejercicio12();
             break;
         case Constants.ROOT.EJERCICIO_13.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_13;
+
+            let arrayNotaAlumnos = queryParams.n1;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio13(arrayNotaAlumnos)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_14.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_14;
+
+            let arrayColoresFocos = queryParams.n1;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio14(arrayColoresFocos)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_15.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_15;
+
+            let edadPersona = queryParams.n1;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio15(edadPersona)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         default:
             response.writeHead(404, { "Content-Type": "text/html" });

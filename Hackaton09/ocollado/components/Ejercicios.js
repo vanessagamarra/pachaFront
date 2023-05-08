@@ -4,7 +4,8 @@ const Utils = require("./Utils");
 
 const DIAS_EN_UNA_SEMANA = 7;
 const VALOR_UNA_PULGADA_EN_METROS = 0.0254;
-const VALOR_DOLAR_A_SOL_PERUANO = 3.71; 
+const VALOR_DOLAR_A_SOL_PERUANO = 3.71;
+const MAYORIA_EDAD_VOTACION = 18;
 
 var Ejercicios = {
     ejercicio01: (primerArgumento, segundoArgumento) => primerArgumento + segundoArgumento,
@@ -43,34 +44,40 @@ var Ejercicios = {
         let salarioInicialProfesor = 1500;
         const anioTope = 6;
         const porcentajeIncremento = 10;
-        let detalleGananciaPorAnio = "";
+        let detalleGananciaPorAnio = "la ganancia por año fue: ";
 
         for (let i = 1; i <= anioTope; i++) {
-            if (i == 1) {
-                detalleGananciaPorAnio = "la ganancia por anio fue: ";
-            }
-
             salarioInicialProfesor = salarioInicialProfesor + ((porcentajeIncremento * salarioInicialProfesor) / 100);
-            detalleGananciaPorAnio = detalleGananciaPorAnio + `En el ${i} año su salario fue: ${salarioInicialProfesor}`;
+            detalleGananciaPorAnio = detalleGananciaPorAnio + `En el ${i} año su salario fue: ${Utils.redondearADosDecimales(salarioInicialProfesor)}`;
 
             if (i < anioTope) {
-                detalleGananciaPorAnio = detalleGananciaPorAnio + ",";
+                detalleGananciaPorAnio = detalleGananciaPorAnio + ", ";
             }
         }
 
-        return `El salario de los ultimos ${anioTope} años fue: ${salarioInicialProfesor}. Por otro lado, ${detalleGananciaPorAnio}`;
+        return `El salario de los ultimos ${anioTope} años fue: ${Utils.redondearADosDecimales(salarioInicialProfesor)}. Por otro lado, ${detalleGananciaPorAnio}`;
     },
     ejercicio13: (arrayNotaAlumnos) => {
         const notaMinimaAprobatoria = 11;
-        let aprobados = arrayAlumnos.filter((notaAlumno) => notaAlumno >= notaMinimaAprobatoria).length;
-        let desaprobados = arrayAlumnos.filter((notaAlumno) => notaAlumno < notaMinimaAprobatoria).length;
+        let aprobados = arrayNotaAlumnos.filter((notaAlumno) => notaAlumno >= notaMinimaAprobatoria).length;
+        let desaprobados = arrayNotaAlumnos.filter((notaAlumno) => notaAlumno < notaMinimaAprobatoria).length;
 
         return `La cantidad de aprobados fue: ${aprobados}. Y La cantidad de desaprobados: ${desaprobados}`;
     },
-    ejercicio14: (arrayFocos) => {
-        
+    ejercicio14: (arrayColoresFocos) => {
+        let cantidadVerde = arrayColoresFocos.filter((colorFoco) => colorFoco === 'verde').length;
+        let cantidadBlanco = arrayColoresFocos.filter((colorFoco) => colorFoco === 'blanco').length;
+        let cantidadRojo = arrayColoresFocos.filter((colorFoco) => colorFoco === 'rojo').length;
+
+        return `Se contabilizó los siguientes focos con los colores: verde = ${cantidadVerde}, blanco = ${cantidadBlanco} y rojo = ${cantidadRojo}`;
     },
-    ejercicio15: (edadPersona) => "",
+    ejercicio15: (edadPersona) => {
+        if (edadPersona >= MAYORIA_EDAD_VOTACION) {
+            return `El ciudadano puede votar en estas elecciones`;
+        } else {
+            return `El ciudadano no puede votar en estas elecciones`;
+        }
+    },
 }
 
 module.exports = Ejercicios;
