@@ -42,7 +42,9 @@ let miServidor = http.createServer((solicitud, respuesta) => {
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
 
             respuesta.end(html);
             break;
@@ -58,7 +60,9 @@ let miServidor = http.createServer((solicitud, respuesta) => {
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
 
             respuesta.end(html);
             break;
@@ -74,7 +78,9 @@ let miServidor = http.createServer((solicitud, respuesta) => {
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -90,7 +96,9 @@ let miServidor = http.createServer((solicitud, respuesta) => {
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -106,7 +114,9 @@ let miServidor = http.createServer((solicitud, respuesta) => {
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -122,7 +132,9 @@ let miServidor = http.createServer((solicitud, respuesta) => {
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -138,7 +150,9 @@ let miServidor = http.createServer((solicitud, respuesta) => {
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -154,7 +168,9 @@ let miServidor = http.createServer((solicitud, respuesta) => {
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -163,14 +179,16 @@ let miServidor = http.createServer((solicitud, respuesta) => {
         case "/ejercicio/9":
             titulo = "Ejercicio 9";
             descripcion = "Una empresa que contrata personal requiere determinar la edad de las personas que solicitan trabajo, pero cuando se les realiza la entrevista sólo se les pregunta el año en que nacieron:";
-            answer = ejercicio09(parseFloat(url.searchParams.get('valor1Ejer9')));
+            answer = ejercicio09(parseInt(url.searchParams.get('valor1Ejer9')));
     
             html = fs
                 .readFileSync(__dirname + "/templates/ejercicio.html")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -179,14 +197,16 @@ let miServidor = http.createServer((solicitud, respuesta) => {
         case "/ejercicio/10":
             titulo = "Ejercicio 10";
             descripcion = "Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad:";
-            answer = ejercicio10(url.searchParams.get('valor1Ejer10'), parseFloat(url.searchParams.get('valor2Ejer10')), url.searchParams.get('valor3Ejer10'), parseFloat(url.searchParams.get('valor4Ejer10')), url.searchParams.get('valor5Ejer10'), parseFloat(url.searchParams.get('valor6Ejer10')));
+            answer = ejercicio10(url.searchParams.get('valor1Ejer10'), parseInt(url.searchParams.get('valor2Ejer10')), url.searchParams.get('valor3Ejer10'), parseInt(url.searchParams.get('valor4Ejer10')), url.searchParams.get('valor5Ejer10'), parseInt(url.searchParams.get('valor6Ejer10')));
     
             html = fs
                 .readFileSync(__dirname + "/templates/ejercicio.html")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -195,14 +215,16 @@ let miServidor = http.createServer((solicitud, respuesta) => {
         case "/ejercicio/11":
             titulo = "Ejercicio 11";
             descripcion = "Se les dará un bono por antigüedad a los empleados de una tienda. Si tienen un año, se les dará $100; si tienen 2 años, $200, y así sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será de $1000. Realice un algoritmo y represéntelo ,que permita determinar el bono que recibirá un trabajador:";
-            answer = ejercicio11(parseFloat(url.searchParams.get('valor1Ejer11')));
+            answer = ejercicio11(parseInt(url.searchParams.get('valor1Ejer11')));
     
             html = fs
                 .readFileSync(__dirname + "/templates/ejercicio.html")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -218,7 +240,9 @@ let miServidor = http.createServer((solicitud, respuesta) => {
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -227,8 +251,8 @@ let miServidor = http.createServer((solicitud, respuesta) => {
         case "/ejercicio/13":
             titulo = "Ejercicio 13";
             descripcion = "Realice un algoritmo para leer las calificaciones de N alumnos y determine el número de aprobados y reprobados:";
-            inputs = ejercicio13_1(parseFloat(url.searchParams.get('valor1Ejer13')));
-            script = ejercicio13_2(parseFloat(url.searchParams.get('valor1Ejer13')));
+            inputs = ejercicio13_1(parseInt(url.searchParams.get('valor1Ejer13')));
+            script = ejercicio13_2(parseInt(url.searchParams.get('valor1Ejer13')));
     
             html = fs
                 .readFileSync(__dirname + "/templates/ejercicio.html")
@@ -246,8 +270,8 @@ let miServidor = http.createServer((solicitud, respuesta) => {
         case "/ejercicio/14":
             titulo = "Ejercicio 14";
             descripcion = "Una compañía, fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, de un lote de N focos, el número de focos de cada color que hay en existencia:";
-            inputs = ejercicio14_1(parseFloat(url.searchParams.get('valor1Ejer14')));
-            script = ejercicio14_2(parseFloat(url.searchParams.get('valor1Ejer14')));
+            inputs = ejercicio14_1(parseInt(url.searchParams.get('valor1Ejer14')));
+            script = ejercicio14_2(parseInt(url.searchParams.get('valor1Ejer14')));
     
             html = fs
                 .readFileSync(__dirname + "/templates/ejercicio.html")
@@ -265,14 +289,16 @@ let miServidor = http.createServer((solicitud, respuesta) => {
         case "/ejercicio/15":
             titulo = "Ejercicio 15";
             descripcion = "Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones:";
-            answer = ejercicio15(parseFloat(url.searchParams.get('valor1Ejer15')));
+            answer = ejercicio15(parseInt(url.searchParams.get('valor1Ejer15')));
     
             html = fs
                 .readFileSync(__dirname + "/templates/ejercicio.html")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
-                .replace("%answer%", answer);
+                .replace("%answer%", answer)
+                .replace("%inputs%", "")
+                .replace("%script%", "");
     
             respuesta.end(html);
             break;
@@ -292,54 +318,64 @@ miServidor.listen(1111, "127.0.0.1");
 
 
 // Algoritmos de los ejercicios:
+
+// Ejercicio 1
 function ejercicio01(numero1, numero2) {
     let suma = numero1 + numero2;
     return `La suma de los dos números es ${suma}`;
 };
 
 
+// Ejercicio 2
 function ejercicio02(nota1, nota2, nota3, nota4) {
     let promedio = (nota1 + nota2 + nota3 + nota4) / 4;
     return `El promedio de las cuatro notas es ${promedio}`;
 };
 
 
+// Ejercicio 3
 function ejercicio03(valor1, valor2) {
     let area = valor1 * valor2;
     return `El área del rectángulo es ${area}`;
 };
 
 
+// Ejercicio 4
 function ejercicio04(valor1, valor2) {
     let area = (valor1 * valor2) / 2;
     return `El área del triángulo es ${area}`;
 };
 
 
+// Ejercicio 5
 function ejercicio05(radio) {
     let area = Math.PI * (radio ** 2);
     return `El área de la circunferencia es ${area}`;
 };
 
 
+// Ejercicio 6
 function ejercicio06(horasTrabajadas, salarioHoras) {
     let salarioSemanal = (horasTrabajadas * salarioHoras) * 7;
     return `El salario semanal es ${salarioSemanal}`;
 };
 
 
+// Ejercicio 7
 function ejercicio07(metros) {
     let pulgadas = metros / 0.0254;
     return `La cantidad en pulgadas sería ${pulgadas}`;
 };
 
 
+// Ejercicio 8
 function ejercicio08(valorSoles, tasaCambio) {
     let valorDolares = valorSoles / tasaCambio;
     return `El valor en dólares seria ${valorDolares}`
 };
 
 
+// Ejercicio 9
 function ejercicio09(anioNacimiento) {
     let fechaActual = new Date();
     let anioActual = fechaActual.getFullYear();
@@ -349,6 +385,7 @@ function ejercicio09(anioNacimiento) {
 };
 
 
+// Ejercicio 10
 function ejercicio10(nomb1, edad1, nomb2, edad2, nomb3, edad3) {
     if (edad1 < edad2 && edad1 < edad3) {
         return `La persona de menor edad es ${nomb1} con ${edad1} años`;
@@ -365,6 +402,7 @@ function ejercicio10(nomb1, edad1, nomb2, edad2, nomb3, edad3) {
 };
 
 
+// Ejercicio 11
 function ejercicio11(anioAntiguedad) {
     let bono;
 
@@ -394,6 +432,7 @@ function ejercicio11(anioAntiguedad) {
 };
 
 
+// Ejercicio 12
 function ejercicio12() {
     let salario = 1500;
     let incremento = 0.1;
@@ -405,16 +444,17 @@ function ejercicio12() {
         salario = salario * (1 + incremento);
     };
 
-    resultado += `Salario después de 6 años: $${salario.toFixed(2)}\n`;
+    resultado += `<br>Salario después de 6 años: $${salario.toFixed(2)}\n`;
 
     for (let i = 0; i < salariosPorAnio.length; i++) {
-        resultado += `Salario año ${i + 1}: $${salariosPorAnio[i].toFixed(2)}\n`;
+        resultado += `<br>Salario año ${i + 1}: $${salariosPorAnio[i].toFixed(2)}\n`;
     };
 
     return resultado;
 };
 
 
+// Ejercicio 13-1
 function ejercicio13_1(cantidadAlumnos) {
     let inputs = 
         `   
@@ -446,6 +486,8 @@ function ejercicio13_1(cantidadAlumnos) {
     return inputs;
 };
 
+
+// Ejercicio 13-2
 function ejercicio13_2(cantidadAlumnos) {
     let script = 
         `
@@ -474,6 +516,7 @@ function ejercicio13_2(cantidadAlumnos) {
 };
 
 
+// Ejercicio 14-1
 function ejercicio14_1(cantidadFocos) {
     let inputs = 
         `   
@@ -519,6 +562,8 @@ function ejercicio14_1(cantidadFocos) {
     return inputs;
 };
 
+
+// Ejercicio 14-2
 function ejercicio14_2(cantidadFocos) {
     let script = 
         `
@@ -551,6 +596,7 @@ function ejercicio14_2(cantidadFocos) {
 };
 
 
+// Ejercicio 15
 function ejercicio15(edad) {
     if (edad >= 18) {
         return "Usted puede votar en las próximas elecciones.";

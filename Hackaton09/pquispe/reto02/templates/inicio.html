@@ -51,11 +51,11 @@
                                     <form action="/ejercicio/1" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="num1Ejer1">Ingrese el primer número:</label>
-                                            <input type="text" class="form-control" id="num1Ejer1" name="num1Ejer1" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                            <input type="text" class="form-control" id="num1Ejer1" name="num1Ejer1" required pattern="^-?\d*\.?\d+$" title="Solo puedes ingresar numeros">
                                         </div>
                                         <div class="form-group">
                                             <label for="num2Ejer1">Ingrese el segundo número:</label>
-                                            <input type="text" class="form-control" id="num2Ejer1" name="num2Ejer1" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                            <input type="text" class="form-control" id="num2Ejer1" name="num2Ejer1" required pattern="^-?\d*\.?\d+$" title="Solo puedes ingresar numeros">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -82,19 +82,19 @@
                                     <form action="/ejercicio/2" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="nota1Ejer2">Ingrese la primera nota:</label>
-                                            <input type="text" class="form-control" id="nota1Ejer2" name="nota1Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                            <input type="text" class="form-control" id="nota1Ejer2" name="nota1Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros positivos o cero">
                                         </div>
                                         <div class="form-group">
                                             <label for="nota2Ejer2">Ingrese la segunda nota:</label>
-                                            <input type="text" class="form-control" id="nota2Ejer2" name="nota2Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                            <input type="text" class="form-control" id="nota2Ejer2" name="nota2Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros positivos o cero">
                                         </div>
                                         <div class="form-group">
                                             <label for="nota3Ejer2">Ingrese la tercera nota:</label>
-                                            <input type="text" class="form-control" id="nota3Ejer2" name="nota3Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                            <input type="text" class="form-control" id="nota3Ejer2" name="nota3Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros positivos o cero">
                                         </div>
                                         <div class="form-group">
                                             <label for="nota4Ejer2">Ingrese la cuarta nota:</label>
-                                            <input type="text" class="form-control" id="nota4Ejer2" name="nota4Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                            <input type="text" class="form-control" id="nota4Ejer2" name="nota4Ejer2" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros positivos o cero">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -210,7 +210,7 @@
                                     <form action="/ejercicio/6" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="valor1Ejer6">Ingrese las horas trabajadas:</label>
-                                            <input type="text" class="form-control" id="valor1Ejer6" name="valor1Ejer6" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                                            <input type="text" class="form-control" id="valor1Ejer6" name="valor1Ejer6" required pattern="^[0-9]*$" title="Solo puedes ingresar numeros">
                                         </div>
                                         <div class="form-group">
                                             <label for="valor2Ejer6">Ingrese el salario:</label>
@@ -299,7 +299,7 @@
                                     <form action="/ejercicio/9" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="valor1Ejer9">Ingrese su año de nacimiento:</label>
-                                            <input type="text" class="form-control" id="valor1Ejer9" name="valor1Ejer9" required pattern="\d{4}" required title="Ingrese un número entero de cuatro dígitos">
+                                            <input type="text" class="form-control" id="valor1Ejer9" name="valor1Ejer9" required pattern="[0-9]{4}" required title="Ingrese un número entero de cuatro dígitos">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -330,7 +330,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="valor2Ejer10">Ingrese la edad de la primera persona:</label>
-                                            <input type="text" class="form-control" id="valor2Ejer10" name="valor2Ejer10" required pattern="\d+" required title="Ingrese solo números enteros">
+                                            <input type="text" class="form-control" id="valor2Ejer10" name="valor2Ejer10" required pattern="^[0-9]*$" required title="Ingrese solo números enteros positivos o cero">
                                         </div>
                                         <div class="form-group">
                                             <label for="valor3Ejer10">Ingrese el nombre de la segunda persona:</label>
@@ -338,7 +338,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="valor4Ejer10">Ingrese la edad de la segunda persona:</label>
-                                            <input type="text" class="form-control" id="valor4Ejer10" name="valor4Ejer10" required pattern="\d+" required title="Ingrese solo números enteros">
+                                            <input type="text" class="form-control" id="valor4Ejer10" name="valor4Ejer10" required pattern="^[0-9]*$" required title="Ingrese solo números enteros positivos o cero">
                                         </div>
                                         <div class="form-group">
                                             <label for="valor5Ejer10">Ingrese el nombre de la tercera persona:</label>
@@ -346,7 +346,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="valor6Ejer10">Ingrese la edad de la tercera persona:</label>
-                                            <input type="text" class="form-control" id="valor6Ejer10" name="valor6Ejer10" required pattern="\d+" required title="Ingrese solo números enteros">
+                                            <input type="text" class="form-control" id="valor6Ejer10" name="valor6Ejer10" required pattern="^[0-9]*$" required title="Ingrese solo números enteros positivos o cero">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -373,7 +373,7 @@
                                     <form action="/ejercicio/11" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="valor1Ejer11">Ingrese el año de antigüedad:</label>
-                                            <input type="text" class="form-control" id="valor1Ejer11" name="valor1Ejer11" required pattern="\d+" required title="Ingrese solo números enteros">
+                                            <input type="text" class="form-control" id="valor1Ejer11" name="valor1Ejer11" required pattern="^[0-9]*$" required title="Ingrese solo números enteros positivos o cero">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -423,7 +423,7 @@
                                     <form action="/ejercicio/13" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="valor1Ejer13">Ingrese la cantidad de alumnos:</label>
-                                            <input type="text" class="form-control" id="valor1Ejer13" name="valor1Ejer13" required pattern="\d+" required title="Ingrese solo números enteros">
+                                            <input type="text" class="form-control" id="valor1Ejer13" name="valor1Ejer13" required pattern="[0-9]+" required title="Ingrese solo números enteros">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -450,7 +450,7 @@
                                     <form action="/ejercicio/14" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="valor1Ejer14">Ingrese la cantidad de focos:</label>
-                                            <input type="text" class="form-control" id="valor1Ejer14" name="valor1Ejer14" required pattern="\d+" required title="Ingrese solo números enteros">
+                                            <input type="text" class="form-control" id="valor1Ejer14" name="valor1Ejer14" required pattern="[0-9]+" required title="Ingrese solo números enteros">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
@@ -477,7 +477,7 @@
                                     <form action="/ejercicio/15" method="get" class="py-3">
                                         <div class="form-group">
                                             <label for="valor1Ejer15">Ingrese su edad:</label>
-                                            <input type="text" class="form-control" id="valor1Ejer15" name="valor1Ejer15" required pattern="\d+" required title="Ingrese solo números enteros">
+                                            <input type="text" class="form-control" id="valor1Ejer15" name="valor1Ejer15" required pattern="^[0-9]*$" required title="Ingrese solo números enteros">
                                         </div>
                                         <button type="submit" class="btn btn-primary">
                                             Calcular
