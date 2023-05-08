@@ -11,6 +11,8 @@ let miServidor = http.createServer((solicitud, respuesta) => {
     let titulo;
     let descripcion;
     let answer;
+    let inputs;
+    let script;
     let html;
 
     const url = new URL(solicitud.url, `http://${solicitud.client.localAddress}:${solicitud.client.localPort}`);
@@ -222,6 +224,44 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             break;
 
 
+        case "/ejercicio/13":
+            titulo = "Ejercicio 13";
+            descripcion = "Realice un algoritmo para leer las calificaciones de N alumnos y determine el número de aprobados y reprobados:";
+            inputs = ejercicio13_1(parseFloat(url.searchParams.get('valor1Ejer13')));
+            script = ejercicio13_2(parseFloat(url.searchParams.get('valor1Ejer13')));
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%inputs%", inputs)
+                .replace("%script%", script)
+                .replace("%answer%", "");
+    
+            respuesta.end(html);
+            break;
+
+
+        case "/ejercicio/14":
+            titulo = "Ejercicio 14";
+            descripcion = "Una compañía, fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, de un lote de N focos, el número de focos de cada color que hay en existencia:";
+            inputs = ejercicio14_1(parseFloat(url.searchParams.get('valor1Ejer14')));
+            script = ejercicio14_2(parseFloat(url.searchParams.get('valor1Ejer14')));
+    
+            html = fs
+                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo)
+                .replace("%descripcion%", descripcion)
+                .replace("%inputs%", inputs)
+                .replace("%script%", script)
+                .replace("%answer%", "");
+    
+            respuesta.end(html);
+            break;
+
+
         case "/ejercicio/15":
             titulo = "Ejercicio 15";
             descripcion = "Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones:";
@@ -375,13 +415,139 @@ function ejercicio12() {
 };
 
 
-function ejercicio13() {
+function ejercicio13_1(cantidadAlumnos) {
+    let inputs = 
+        `   
+            <div class="col-md-12 mb-4">
+                <div class="form-group">
+                    <label for="valor1Ejer13">Ingrese la nota del alumno 1:</label>
+                    <input type="text" class="form-control" id="valor1Ejer13" name="valor1Ejer13" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                </div>
+        `;
 
+    for (let i = 1; i < cantidadAlumnos; i++) {
+        inputs += 
+            `
+                <div class="form-group">
+                    <label for="valor1Ejer13">Ingrese la nota del alumno ${i + 1}:</label>
+                    <input type="text" class="form-control" id="valor${i + 1}Ejer13" name="valor${i + 1}Ejer13" required pattern="[0-9]+([,\.][0-9]+)?" title="Solo puedes ingresar numeros">
+                </div>
+            `;
+    };
+
+    inputs += 
+        `
+                <button class="btn btn-primary" onclick="calcular()">
+                    Calcular
+                </button>
+            </div>
+        `
+
+    return inputs;
+};
+
+function ejercicio13_2(cantidadAlumnos) {
+    let script = 
+        `
+        <script>
+            function calcular() {
+                let aprobados = 0;
+                let desaprobados = 0;
+
+                for (let i = 1; i <= ${cantidadAlumnos}; i++) {
+
+                    if ($("#valor"+i+"Ejer13").val() >= 13) {
+                        aprobados++
+                    }
+                    else {
+                        desaprobados++
+                    };
+
+                };
+
+                $("#respuesta").html("Alumnos aprobados: " + aprobados + ", Alumnos desaprobados: " + desaprobados);
+            };
+        </script>
+        `;
+
+    return script;
 };
 
 
-function ejercicio14() {
-    
+function ejercicio14_1(cantidadFocos) {
+    let inputs = 
+        `   
+            <div class="col-md-12 mb-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="valor1Ejer14">Color del Foco 1:</label>
+                    </div>
+                    <select class="custom-select" id="valor1Ejer14" name="valor1Ejer14">
+                        <option selected>Seleccionar...</option>
+                        <option value="1">Verde</option>
+                        <option value="2">Blanco</option>
+                        <option value="3">Rojo</option>
+                    </select>
+                </div>
+        `;
+
+    for (let i = 1; i < cantidadFocos; i++) {
+        inputs += 
+            `
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="valor${i + 1}Ejer14">Color del Foco ${i + 1}</label>
+                    </div>
+                    <select class="custom-select" id="valor${i + 1}Ejer14" name="valor${i + 1}Ejer14">
+                        <option selected>Seleccionar...</option>
+                        <option value="1">Verde</option>
+                        <option value="2">Blanco</option>
+                        <option value="3">Rojo</option>
+                    </select>
+                </div>
+            `;
+    };
+
+    inputs += 
+        `
+                <button class="btn btn-primary" onclick="calcular()">
+                    Calcular
+                </button>
+            </div>
+        `
+
+    return inputs;
+};
+
+function ejercicio14_2(cantidadFocos) {
+    let script = 
+        `
+        <script>
+            function calcular() {
+                let verdes = 0;
+                let blancos = 0;
+                let rojos = 0;
+
+                for (let i = 1; i <= ${cantidadFocos}; i++) {
+
+                    if ($("#valor"+i+"Ejer14").val() == 1) {
+                        verdes++
+                    }
+                    else if ($("#valor"+i+"Ejer14").val() == 2) {
+                        blancos++
+                    }
+                    else if ($("#valor"+i+"Ejer14").val() == 3) {
+                        rojos++;
+                    };
+
+                };
+
+                $("#respuesta").html("Focos verdes: " + verdes + ", Focos blancos: " + blancos + ", Focos rojos: " + rojos);
+            };
+        </script>
+        `;
+
+    return script;
 };
 
 
