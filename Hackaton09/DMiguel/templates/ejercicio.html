@@ -61,6 +61,18 @@
         event.preventDefault();
     }
 
+    function getPlaceholderInfo(texto = "medida", cant = 2, id ="id"){
+        for (let i = 1; i < cant+1; i++) {
+            document.getElementById(id + i.toString()).placeholder = texto + " " + i.toString();
+        }
+    }
+
+    function getPlaceholderArray(texto = [], cant = 2, id ="id"){
+        for (let i = 1; i < cant+1; i++) {
+            document.getElementById(id + i.toString()).placeholder = texto[i-1];
+        }
+    }
+
     function ejercicio_1(event = noRefresh()) {
         // Obtener los valores de los campos de entrada
         let numero1 = parseInt(document.getElementById('dato1').value);
@@ -76,9 +88,14 @@
         let nota2 = parseInt(document.getElementById('dato2').value);
         let nota3 = parseInt(document.getElementById('dato3').value);
         let nota4 = parseInt(document.getElementById('dato4').value);
-        let promedio = (nota1 + nota2 + nota3 + nota4)/4;
-        // Mostrar el resultado en el contenedor
-        resultado.innerText = `El promedio de las 4 notas es ${promedio}.`;
+
+        if (nota1 <=20 & nota2 <=20 & nota3 <=20 & nota4<=20) {
+            let promedio = (nota1 + nota2 + nota3 + nota4)/4;
+            // Mostrar el resultado en el contenedor
+            resultado.innerText = `El promedio de las 4 notas es ${promedio}.`;
+        } else {
+            resultado.innerText = `Error ingreso una nota mayor a 20`;
+        }
     }
 
     function ejercicio_3(event = noRefresh()) {
@@ -89,7 +106,20 @@
         resultado.innerText = `El area del reactangulo es ${rpta}.`;
     }
 
+    function ejercicio_4(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let dato2 = parseInt(document.getElementById('dato2').value);
+        let area = dato1*dato2/2;
+        resultado.innerText = `El area del triangulo es ${area}.`;
+    }
 
+    function ejercicio_5(event = noRefresh()) {
+        const pi = 3.1416
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let area = pi*(dato1**2);
+        resultado.innerText = `El area del circulo es ${area}.`;
+    }
+    
     // Declaramos un flujo de control segun el ejercicio que tengamos en pantalla   
     let ejercicio_cont = type_ejercicio.textContent;
 
@@ -98,16 +128,20 @@
             ejecutar.addEventListener('click', ejercicio_1);
             break;
         case "Ejercicio 02":
+            getPlaceholderInfo("nota",4,"dato");
             ejecutar.addEventListener('click', ejercicio_2);
             break;
         case "Ejercicio 03":
+            getPlaceholderInfo("lado",2,"dato");
             ejecutar.addEventListener('click', ejercicio_3);
             break;
         case "Ejercicio 04":
-            
+            getPlaceholderArray(["altura","base"],2,"dato");
+            ejecutar.addEventListener('click', ejercicio_4);
             break;
         case "Ejercicio 05":
-            
+        getPlaceholderArray(["radio del circulo"],1,"dato");
+            ejecutar.addEventListener('click', ejercicio_5);
             break;
         case "Ejercicio 06":
             
