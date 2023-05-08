@@ -9,12 +9,12 @@ const MAYORIA_EDAD_VOTACION = 18;
 
 var Ejercicios = {
     ejercicio01: (primerArgumento, segundoArgumento) => primerArgumento + segundoArgumento,
-    ejercicio02: (primeraNota, segundaNota, terceraNota, cuartaNota) =>  (primeraNota + segundaNota + terceraNota + cuartaNota) / 4,
+    ejercicio02: (primeraNota, segundaNota, terceraNota, cuartaNota) => (primeraNota + segundaNota + terceraNota + cuartaNota) / 4,
     ejercicio03: (base, altura) => base * altura,
     ejercicio04: (base, altura) => (base * altura) / 2,
     ejercicio05: (radio) => Constants.VALOR_PI * radio,
     ejercicio06: (horasTrabajadas, salarioPorHora) => (horasTrabajadas * salarioPorHora) * DIAS_EN_UNA_SEMANA,
-    ejercicio07: (metros) =>  {
+    ejercicio07: (metros) => {
         let valorDeUnMetroEnPulgadas = 1 / VALOR_UNA_PULGADA_EN_METROS;
         return metros * valorDeUnMetroEnPulgadas;
     },
@@ -22,7 +22,7 @@ var Ejercicios = {
         const valorDeUnSolADolar = 1 / VALOR_DOLAR_A_SOL_PERUANO;
         return Utils.redondearADosDecimales(cantidadSolesPeruanos * valorDeUnSolADolar);
     },
-    ejercicio09: (anioNacimiento) =>  Utils.obtenerAnioActual() - anioNacimiento,
+    ejercicio09: (anioNacimiento) => Utils.obtenerAnioActual() - anioNacimiento,
     ejercicio10: (arrayPersonas) => {
         let arraySorted = arrayPersonas.sort((r1, r2) => (r1.edad > r2.edad) ? 1 : (r1.edad < r2.edad) ? -1 : 0);
         let personaConMenorEdad = arraySorted[0]
@@ -72,12 +72,9 @@ var Ejercicios = {
         return `Se contabilizó los siguientes focos con los colores: verde = ${cantidadVerde}, blanco = ${cantidadBlanco} y rojo = ${cantidadRojo}`;
     },
     ejercicio15: (edadPersona) => {
-        if (edadPersona >= MAYORIA_EDAD_VOTACION) {
-            return `El ciudadano puede votar en estas elecciones`;
-        } else {
-            return `El ciudadano no puede votar en estas elecciones`;
-        }
-    },
+        let siOno = edadPersona >= MAYORIA_EDAD_VOTACION ? 'sí' : 'no';
+        return `El ciudadano ${siOno} puede votar en estas elecciones`;
+    }
 }
 
 module.exports = Ejercicios;
