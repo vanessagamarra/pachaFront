@@ -62,37 +62,44 @@ const Constants = {
         EJERCICIO_09: {
             PATH: '/ejercicio/09',
             TITULO: 'Ejercicio 09',
-            PARRAFO: '9.	Una empresa que contrata personal requiere determinar la edad de las personas que solicitan trabajo, pero cuando se les realiza la entrevista sólo se les pregunta el año en que nacieron'
+            PARRAFO: '9.	Una empresa que contrata personal requiere determinar la edad de las personas que solicitan trabajo, pero cuando se les realiza la entrevista sólo se les pregunta el año en que nacieron',
+            CANTIDAD_PARAMETROS: 1
         },
         EJERCICIO_10: {
             PATH: '/ejercicio/10',
             TITULO: 'Ejercicio 10',
-            PARRAFO: '10.	Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad'
+            PARRAFO: '10.	Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad',
+            CANTIDAD_PARAMETROS: 1
         },
         EJERCICIO_11: {
             PATH: '/ejercicio/11',
             TITULO: 'Ejercicio 11',
-            PARRAFO: '11.	Se les dará un bono por antigüedad a los empleados de una tienda. Si tienen un año, se les dará $100; si tienen 2 años, $200, y así sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será de $1000. Realice un algoritmo y represéntelo ,que permita determinar el bono que recibirá un trabajador'
+            PARRAFO: '11.	Se les dará un bono por antigüedad a los empleados de una tienda. Si tienen un año, se les dará $100; si tienen 2 años, $200, y así sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será de $1000. Realice un algoritmo y represéntelo ,que permita determinar el bono que recibirá un trabajador',
+            CANTIDAD_PARAMETROS: 1
         },
         EJERCICIO_12: {
             PATH: '/ejercicio/12',
             TITULO: 'Ejercicio 12',
-            PARRAFO: '12.	Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10 % anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? Realice el algoritmo y representan la solución, utilizando el ciclo apropiado'
+            PARRAFO: '12.	Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10 % anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? Realice el algoritmo y representan la solución, utilizando el ciclo apropiado',
+            CANTIDAD_PARAMETROS: 1
         },
         EJERCICIO_13: {
             PATH: '/ejercicio/13',
             TITULO: 'Ejercicio 13',
-            PARRAFO: '13.	Realice un algoritmo para leer las calificaciones de N alumnos y determine el número de aprobados y reprobados'
+            PARRAFO: '13.	Realice un algoritmo para leer las calificaciones de N alumnos y determine el número de aprobados y reprobados',
+            CANTIDAD_PARAMETROS: 1
         },
         EJERCICIO_14: {
             PATH: '/ejercicio/14',
             TITULO: 'Ejercicio 14',
-            PARRAFO: '14.	Una compañía, fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, de un lote de N focos, el número de focos de cada color que hay en existencia'
+            PARRAFO: '14.	Una compañía, fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, de un lote de N focos, el número de focos de cada color que hay en existencia',
+            CANTIDAD_PARAMETROS: 1
         },
         EJERCICIO_15: {
             PATH: '/ejercicio/15',
             TITULO: 'Ejercicio 15',
-            PARRAFO: '15.	Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones'
+            PARRAFO: '15.	Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones',
+            CANTIDAD_PARAMETROS: 1
         },
     },
     VALOR_PI: Math.PI,

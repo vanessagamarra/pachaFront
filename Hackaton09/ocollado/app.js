@@ -46,29 +46,61 @@ var miServidor = http.createServer((request, response) => {
         case Constants.ROOT.EJERCICIO_03.PATH:
             ejercicioObject = Constants.ROOT.EJERCICIO_03;
 
-            let base = queryParams.n1;
-            let altura = queryParams.n2;
+            let baseEjercicio03 = queryParams.n1;
+            let alturaEjercicio03 = queryParams.n2;
             respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
-                ? Ejercicios.ejercicio03(base, altura)
+                ? Ejercicios.ejercicio03(baseEjercicio03, alturaEjercicio03)
                 : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_04.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_04;
+
+            let baseEjercicio04 = queryParams.n1;
+            let alturaEjercicio04 = queryParams.n2;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio04(baseEjercicio04, alturaEjercicio04)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_05.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_05;
+
+            let radio = queryParams.n1;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio05(radio)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_06.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_06;
+
+            let horasTrabajadas = queryParams.n1;
+            let salarioPorHora = queryParams.n2;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio06(horasTrabajadas, salarioPorHora)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_07.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_07;
+
+            let metros = queryParams.n1;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio07(metros)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_08.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_08;
+
+            let cantidadSolesPeruanos = queryParams.n1;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio08(cantidadSolesPeruanos)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_09.PATH:
-            response.end("Inicio")
+            ejercicioObject = Constants.ROOT.EJERCICIO_09;
+
+            let anioNacimiento = queryParams.n1;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio09(anioNacimiento)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
         case Constants.ROOT.EJERCICIO_10.PATH:
             response.end("Inicio")

@@ -24,7 +24,12 @@ var Utils = {
         respuesta.end(html);
     },
     getUrlRedirection: (dirname, templatePath) => `${dirname}${templatePath}`,
-    isCorrectLenghtParameters: (queryParamsObject, correctLenght) => Object.keys(queryParamsObject).length === correctLenght
+    isCorrectLenghtParameters: (queryParamsObject, correctLenght) => Object.keys(queryParamsObject).length === correctLenght,
+    redondearADosDecimales: (decimal) =>  Math.round((decimal + Number.EPSILON) * 100) / 100,
+    obtenerAnioActual: () => {
+        var today = new Date();
+        return today.getFullYear();
+    }
 }
 
 module.exports = Utils;
