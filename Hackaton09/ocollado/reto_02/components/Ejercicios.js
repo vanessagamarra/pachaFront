@@ -72,7 +72,8 @@ var Ejercicios = {
         return `Se contabilizó los siguientes focos con los colores: verde = ${cantidadVerde}, blanco = ${cantidadBlanco} y rojo = ${cantidadRojo}`;
     },
     ejercicio15: (edadPersona) => {
-        let siOno = edadPersona >= MAYORIA_EDAD_VOTACION ? 'sí' : 'no';
+        let puedeVotar = edadPersona >= MAYORIA_EDAD_VOTACION;
+        let siOno = puedeVotar ? 'sí' : 'no';
         return `El ciudadano ${siOno} puede votar en estas elecciones`;
     }
 }
