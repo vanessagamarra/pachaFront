@@ -23,7 +23,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             descripcion = "Aprender a definir un algoritmo y aplicarlo en una solución a través de JavaScript, escribir código siguiendo una guía de estilo JS.";
 
             html = fs
-                .readFileSync(__dirname + "/templates/inicio.html")
+                .readFileSync(__dirname + "/templates/inicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion);
@@ -38,7 +38,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio01(parseFloat(url.searchParams.get('num1Ejer1')), parseFloat(url.searchParams.get('num2Ejer1')));
 
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -56,7 +56,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio02(parseFloat(url.searchParams.get('nota1Ejer2')), parseFloat(url.searchParams.get('nota2Ejer2')), parseFloat(url.searchParams.get('nota3Ejer2')), parseFloat(url.searchParams.get('nota4Ejer2')));
 
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -74,7 +74,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio03(parseFloat(url.searchParams.get('valor1Ejer3')), parseFloat(url.searchParams.get('valor2Ejer3')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -92,7 +92,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio04(parseFloat(url.searchParams.get('valor1Ejer4')), parseFloat(url.searchParams.get('valor2Ejer4')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -110,7 +110,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio05(parseFloat(url.searchParams.get('radioEjer5')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -128,7 +128,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio06(parseFloat(url.searchParams.get('valor1Ejer6')), parseFloat(url.searchParams.get('valor2Ejer6')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -146,7 +146,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio07(parseFloat(url.searchParams.get('valor1Ejer7')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -164,7 +164,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio08(parseFloat(url.searchParams.get('valor1Ejer8')), parseFloat(url.searchParams.get('valor2Ejer8')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -182,7 +182,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio09(parseInt(url.searchParams.get('valor1Ejer9')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -200,7 +200,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio10(url.searchParams.get('valor1Ejer10'), parseInt(url.searchParams.get('valor2Ejer10')), url.searchParams.get('valor3Ejer10'), parseInt(url.searchParams.get('valor4Ejer10')), url.searchParams.get('valor5Ejer10'), parseInt(url.searchParams.get('valor6Ejer10')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -218,7 +218,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio11(parseInt(url.searchParams.get('valor1Ejer11')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -236,7 +236,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio12();
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -255,7 +255,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             script = ejercicio13_2(parseInt(url.searchParams.get('valor1Ejer13')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -274,7 +274,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             script = ejercicio14_2(parseInt(url.searchParams.get('valor1Ejer14')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
@@ -292,7 +292,7 @@ let miServidor = http.createServer((solicitud, respuesta) => {
             answer = ejercicio15(parseInt(url.searchParams.get('valor1Ejer15')));
     
             html = fs
-                .readFileSync(__dirname + "/templates/ejercicio.html")
+                .readFileSync(__dirname + "/templates/ejercicio.tpl")
                 .toString()
                 .replace("%titulo%", titulo)
                 .replace("%descripcion%", descripcion)
