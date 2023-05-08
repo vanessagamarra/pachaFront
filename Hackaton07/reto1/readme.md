@@ -13,3 +13,4 @@
 ### Reto 2
 ### Definir breakpoints
 - un breakpoint (puntos de quiebre) es un punto de interrupción que se puede establecer en el código fuente de un programa y permite al usuario examinar el estado del programa en ese momento, inspeccionar variables y realizar otras acciones de depuración.
+    
