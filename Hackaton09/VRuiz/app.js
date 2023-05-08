@@ -211,19 +211,7 @@ function ejercicio09( añonac, añoact){
     return respuesta;
 }
 
-function ejercicio10( nom1, edad1, nom2, edad2, nom3, edad3){
-    let respuesta = ""
-    if (parseFloat(edad1) < parseFloat(edad2)< parseFloat(edad3)){
-        nom3 + "tiene mayor edad" + edad3
-    }
-    if (parseFloat(edad1) > parseFloat(edad2) > parseFloat(edad3)) {
-        nom1 + "tiene la mayor edad" + edad1
-    }
-    if (parseFloat(edad2) > parseFloat(edad1) > parseFloat(edad3)) {
-        nom2 + "tiene la mayor edad" + edad2
-    }
-    return respuesta;
-}
+
 
 
 
