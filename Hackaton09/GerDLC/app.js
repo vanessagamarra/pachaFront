@@ -262,5 +262,5 @@ function ejercicio11(añosEnTienda,) {
 
 }
 
-    function ejercicio12()
+    function ejercicio12(){ 
     }
