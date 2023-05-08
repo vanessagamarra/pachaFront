@@ -152,6 +152,18 @@ var miServidor = http.createServer((peticion, respuesta) => {
             respuesta.end(html)
             break;
 
+        case "/ejercicio/12":
+            titulo_inner = "Ejercicio 12"
+            parrafo_inner = "Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10 % anual durante 6 años. ¿Cuál es su salario al cabo de 6 años ? ¿Qué salario ha recibido en cada uno de los 6 años ? Realice el algoritmo y representan la solución, utilizando el ciclo apropiado"
+            answ = ejercicio11(1500, 0.10, 6)
+            var html = fs.readFileSync(__dirname + "/templates/ejercicio.html")
+                .toString()
+                .replace("%titulo%", titulo_inner)
+                .replace("%parrafo%", parrafo_inner)
+                .replace("%respuesta%", answ);
+            respuesta.end(html)
+            break;
+
     }
 });
 
@@ -204,7 +216,7 @@ function ejercicio08(dolares,) {
 function ejercicio09(nacimiento,) {
 
     let fecha_actual = new Date();
-    let anio_actual = fecha_actual.getFullYear();
+    let año_actual = fecha_actual.getFullYear();
     let respuesta = (año_actual - nacimiento + " años");
     return respuesta;
 }
@@ -247,4 +259,8 @@ function ejercicio11(añosEnTienda,) {
     }
     let respuesta = bonoAsignado;
     return respuesta;
+
 }
+
+    function ejercicio12()
+    }
