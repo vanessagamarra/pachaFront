@@ -31,7 +31,7 @@
 13. Hacer un algoritmo en Pseint y JavaScript que lea una letra y diga si es una vocal.
 
 14. Hacer un algoritmo en Pseint y JavaScript que lea un entero positivo del 1 al diez y al 9 y determine si es un número primo.
-
+--
 15. Hacer un algoritmo en Pseint y JavaScript que convierta centímetros a pulgadas y libras a kilogramos.
 
 16. Hacer un algoritmo en Pseint y JavaScript que lea un número y según ese número, indique el día que corresponde.
