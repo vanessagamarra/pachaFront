@@ -1,100 +1,111 @@
+"use strict";
+
 var fs = require("fs");
-// llamamos a la librería http
 var http = require("http");
 var url = require('url');
 
+var Utils = require("./components/Utils");
+const Constants = require("./components/Constants");
+var Ejercicios = require("./components/Ejercicios");
 
-var titulo = "Hackaton 09";
-var parrafo = "Respuestas de la hackaton 09";
-let answ = "";
-var miServidor = http.createServer((peticion, respuesta) => {
-    respuesta.writeHead(200, { "Content-Type": "text/html" });
-    switch (peticion.url) {
-        case "/":
-            var html = fs
-                .readFileSync(__dirname + "/templates/inicio.html")
-                .toString()
-                .replace("%titulo%", titulo)
-                .replace("%parrafo%", parrafo);
-            respuesta.end(html);
+var miServidor = http.createServer((request, response) => {
+    response.writeHead(200, { "Content-Type": "text/html" });
+
+    let queryParams = url.parse(request.url, true).query;
+    let urlParsed = new URL(`http://${request.headers.host}${request.url}`);
+
+    let templateUrl = Constants.ROOT.TEMPLATES.EJERCICIO;
+    let respuestaEjercicio;
+    let ejercicioObject;
+
+    switch (urlParsed.pathname) {
+        case Constants.ROOT.INIT.PATH:
+            templateUrl = Constants.ROOT.TEMPLATES.INICIO;
+            ejercicioObject = Constants.ROOT.INIT;
             break;
-        case "/ejercicio/1":
-            titulo = "Ejercicio 01"
-            parrafo = "1.	Implementar un algoritmo que reciba 2 argumentos y los sume, el resultado se deberá imprimir en pantalla"
-            answ = ejercicio01(20,144)
-            var html = fs.readFileSync(__dirname + "/templates/ejercicio.html")
-                .toString()
-                .replace("%titulo%", titulo)
-                .replace("%parrafo%", parrafo)
-                .replace("%respuesta%", answ);
-            respuesta.end(html)
+        case Constants.ROOT.EJERCICIO_01.PATH:
+            ejercicioObject = Constants.ROOT.EJERCICIO_01;
+
+            let primerArgumento = queryParams.n1;
+            let segundoArgumento = queryParams.n2;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio01(primerArgumento, segundoArgumento)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
-        case "/ejercicio/2":
-            titulo = "Ejercicio 01"
-            parrafo = "Un estudiante realiza 4 exámenes, calcular el promedio de estos"
-            answ = ejercicio02(20,14,12,15)
-            var html = fs.readFileSync(__dirname + "/templates/ejercicio.html")
-                .toString()
-                .replace("%titulo%", titulo)
-                .replace("%parrafo%", parrafo)
-                .replace("%respuesta%", answ);
-            respuesta.end(html)
+        case Constants.ROOT.EJERCICIO_02.PATH:
+            ejercicioObject = Constants.ROOT.EJERCICIO_02;
+
+            let primeraNota = queryParams.n1;
+            let segundaNota = queryParams.n2;
+            let terceraNota = queryParams.n3;
+            let cuartaNota = queryParams.n4;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio02(primeraNota, segundaNota, terceraNota, cuartaNota)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
-        case "/ejercicio/3":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_03.PATH:
+            ejercicioObject = Constants.ROOT.EJERCICIO_03;
+
+            let base = queryParams.n1;
+            let altura = queryParams.n2;
+            respuestaEjercicio = Utils.isCorrectLenghtParameters(queryParams, ejercicioObject.CANTIDAD_PARAMETROS)
+                ? Ejercicios.ejercicio03(base, altura)
+                : Constants.MENSAJES.PARAMETROS_VACIOS;
             break;
-        case "/ejercicio/4":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_04.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/5":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_05.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/6":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_06.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/7":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_07.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/8":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_08.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/9":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_09.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/10":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_10.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/11":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_11.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/12":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_12.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/13":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_13.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/14":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_14.PATH:
+            response.end("Inicio")
             break;
-        case "/ejercicio/15":
-            respuesta.end("Inicio")
+        case Constants.ROOT.EJERCICIO_15.PATH:
+            response.end("Inicio")
             break;
         default:
-            respuesta.writeHead(404, { "Content-Type": "text/html" });
-            respuesta.end("404 not found")
+            response.writeHead(404, { "Content-Type": "text/html" });
+            response.end("404 not found")
             break;
     }
+
+    Utils.redireccionarRespuesta(
+        fs,
+        response,
+        Utils.getUrlRedirection(__dirname, templateUrl),
+        ejercicioObject.TITULO,
+        ejercicioObject.PARRAFO,
+        ejercicioObject.CANTIDAD_PARAMETROS,
+        respuestaEjercicio
+    );
+
+
 });
 
 // inicializar el servidor
 miServidor.listen(1111, "127.0.0.1");
-
-function ejercicio01(numero1, numero2){
-    let respuesta = numero1 + numero2
-    return respuesta;
-}
-
-function ejercicio02(examen1,examen2, examen3,examen4,){
-    let respuesta = (examen1+examen2+examen3+examen4)/4
-    return respuesta;
-}
