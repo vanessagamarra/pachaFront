@@ -1,6 +1,7 @@
 function ejercicio1(){
 
     let num=0;
+    let resuesta=0;
 
     num = parseInt(prompt("Escriba un numero"));
 
