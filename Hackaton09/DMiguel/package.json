@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/pana-miguel/pachaFront#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12"
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2"
   }
 }
