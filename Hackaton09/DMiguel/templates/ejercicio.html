@@ -67,8 +67,8 @@
         }
     }
 
-    function getPlaceholderArray(texto = [], cant = 2, id ="id"){
-        for (let i = 1; i < cant+1; i++) {
+    function getPlaceholderArray(texto = [], id ="id"){
+        for (let i = 1; i < texto.length+1; i++) {
             document.getElementById(id + i.toString()).placeholder = texto[i-1];
         }
     }
@@ -119,7 +119,74 @@
         let area = pi*(dato1**2);
         resultado.innerText = `El area del circulo es ${area}.`;
     }
+
+    function ejercicio_5(event = noRefresh()) {
+        const pi = 3.1416
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let area = pi*(dato1**2);
+        resultado.innerText = `El area del circulo es ${area}.`;
+    }
+
+    function ejercicio_6(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let dato2 = parseInt(document.getElementById('dato2').value);
+        let sueldoSem = dato1*dato2;
+        resultado.innerText = `El area del circulo es ${sueldoSem}.`;
+    }
     
+    function ejercicio_6(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let sueldoSem = dato1*dato2;
+        resultado.innerText = `El area del circulo es ${sueldoSem}.`;
+    }
+
+    function ejercicio_7(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let sueldoSem = dato1*39.3701;
+        resultado.innerText = `Los ${dato1} metros son en pulgadas ${sueldoSem}.`;
+    }
+
+    function ejercicio_8(event = noRefresh()) {
+        let dato1 = parseFloat(document.getElementById('dato1').value);
+        let enDolar = dato1*0.27;
+        resultado.innerText = `Los Soles ${dato1} son en Dolar ${enDolar}.`;
+    }
+
+    function ejercicio_9(event = noRefresh()) {
+        let dato1 = parseFloat(document.getElementById('dato1').value);
+        let añoAct = new Date().getFullYear();
+        let edad = añoAct - dato1;
+        resultado.innerText = `La edad del empleado es ${edad}.`;
+    }
+
+    function ejercicio_10(event = noRefresh()) {
+        let dato1 = document.getElementById('dato1').value;
+        let dato2 = parseFloat(document.getElementById('dato2').value);
+        let dato3 = document.getElementById('dato3').value;
+        let dato4 = parseFloat(document.getElementById('dato4').value);
+        let dato5 = document.getElementById('dato5').value;
+        let dato6 = parseFloat(document.getElementById('dato6').value);
+        
+        menor = Math.min(dato2,dato4,dato6);
+        switch (menor) {
+            case dato2:
+                resultado.innerText = `${dato1} es la persona con menor edad ${menor}`;                break;
+            case dato4:
+                resultado.innerText = `${dato3} es la persona con menor edad ${menor}`;
+                break;
+            case dato6:
+                resultado.innerText = `${dato5} es la persona con menor edad ${menor}`;
+                break;
+        }
+    }
+
+    function ejercicio_11(event = noRefresh()) {
+        let dato1 = parseFloat(document.getElementById('dato1').value);
+        let añoAct = new Date().getFullYear();
+        let edad = añoAct - dato1;
+        resultado.innerText = `La edad del empleado es ${edad}.`;
+    }
+
     // Declaramos un flujo de control segun el ejercicio que tengamos en pantalla   
     let ejercicio_cont = type_ejercicio.textContent;
 
@@ -136,24 +203,33 @@
             ejecutar.addEventListener('click', ejercicio_3);
             break;
         case "Ejercicio 04":
-            getPlaceholderArray(["altura","base"],2,"dato");
+            getPlaceholderArray(["altura","base"],"dato");
             ejecutar.addEventListener('click', ejercicio_4);
             break;
         case "Ejercicio 05":
-        getPlaceholderArray(["radio del circulo"],1,"dato");
+            
             ejecutar.addEventListener('click', ejercicio_5);
             break;
         case "Ejercicio 06":
-            
+            getPlaceholderArray(["horas trabajadas","pago por hora"],"dato");
+            ejecutar.addEventListener('click', ejercicio_6);
             break;
         case "Ejercicio 07":
-            
+            getPlaceholderInfo("metros",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_7);
             break;
         case "Ejercicio 08":
-            
+            getPlaceholderInfo("cantidad en Soles",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_8);
             break;
         case "Ejercicio 09":
-            
+            getPlaceholderInfo("Años de Nacimiento",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_9);
+            break;
+        case "Ejercicio 10":
+            aux_ejer = Array(3).fill(["Nombre de Persona","Edad de Persona"]).flat();
+            getPlaceholderArray(aux_ejer,"dato");
+            ejecutar.addEventListener('click', ejercicio_10);
             break;
         case "Ejercicio 11":
             
