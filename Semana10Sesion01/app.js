@@ -1,13 +1,11 @@
 var fs = require('fs');
-
-var url = require('url');
-
+var express = require("express");
+var bodyParser = require("body-parser")
 var titulo = 'Hackaton 09';
 var parrafo = 'Respuestas de la hackaton 09';
 let answ = '';
 
-var express = require("express");
-var bodyParser = require("body-parser")
+
 // generar nuestra app
 var app = express();
 var puerto = process.env.PUERTO || 3000;
@@ -23,12 +21,6 @@ app.get("/", function (peticion, respuesta) {
 			respuesta.end(html);
   respuesta.send(html);
 });
-
-app.post("/matriculaPost", urlencodedParser, function (peticion, respuesta) {
-	respuesta.send("Recibido!");
-	console.log(peticion.body.nombre);
-	console.log(peticion.body.matricula);
-  });
 
 app.get("/ejercicio/1/",urlencodedParser, function (peticion, respuesta) {
 	titulo = 'Ejercicio 01';
