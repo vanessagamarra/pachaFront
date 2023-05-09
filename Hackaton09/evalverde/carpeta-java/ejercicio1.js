@@ -1,6 +1,6 @@
 console.log("sincronzado")
 function ej01(evento){ // capuramos el evento que estamos ejecutando con el click
-  evento.preventDefault()// 
+  console.log("sincronzado")// 
   let num1=document.getElementById("primero");
   let num2=document.getElementById("segundo")
   let res = document.getElementById("res01")
