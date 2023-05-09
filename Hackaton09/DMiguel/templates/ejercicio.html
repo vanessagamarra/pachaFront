@@ -167,7 +167,7 @@
     }
 
     function ejercicio_9(event = noRefresh()) {
-        let dato1 = parseFloat(document.getElementById('dato1').value);
+        let dato1 = parseInt(document.getElementById('dato1').value);
         let añoAct = new Date().getFullYear();
         let edad = añoAct - dato1;
         resultado.innerText = `La edad del empleado es ${edad}.`;
@@ -230,14 +230,40 @@
 
     function ejercicio_13(event = noRefresh()) {
         i = 1;
-        let suma = 0;
+        let aprovados = 0;
+        let desaprovados = 0;
         while (document.getElementById("dato"+i)) {
-            suma += parseInt(document.getElementById("dato"+i).value);
-            i += 1;
+            nota = parseInt(document.getElementById("dato"+i).value);
+            if(nota >= 11) aprovados++;
+            else desaprovados++;
+            i++;
         }
-        prom = suma / (i-1);
-        resultado.innerText = `El promedio de las notas es ${prom}`
+        resultado.innerText = `La Cantidad de Aprobados son ${aprovados} y la cantidad de desaprovados son ${desaprovados}`
     }
+
+    function ejercicio_14(event = noRefresh()) {
+        let allFocos = parseInt(document.getElementById('dato1').value);
+        let allFocosV = parseInt(document.getElementById('dato2').value);
+        let allFocosB = parseInt(document.getElementById('dato3').value);
+        let allFocosR = parseInt(document.getElementById('dato4').value);
+
+        if (allFocos == allFocosV + allFocosB + allFocosR) {
+            resultado.innerText = `La cantidad de focos verde son ${allFocosV}, La cantidad de focos blancos son ${allFocosB}, La cantidad de focos rojo son ${allFocosR}`;
+        } else {
+            resultado.innerText = `Error , la suma de los focos excede el total del lote de focos`;
+        }
+    }
+
+    function ejercicio_15(event = noRefresh()) {
+        edad = parseInt(document.getElementById("dato1").value);
+        if (edad >= 18) {
+            resultado.innerText = `Usted esta apto para votar en estas elecciones`;
+        }else{
+            resultado.innerText = `Usted aun es menor de edad, no puede participar en las elecciones`;
+        }
+        
+    }
+
 
     // Declaramos un flujo de control segun el ejercicio que tengamos en pantalla   
     let ejercicio_cont = type_ejercicio.textContent;
@@ -300,10 +326,12 @@
             ejecutar.addEventListener('click', ejercicio_13);
             break;
         case "Ejercicio 14":
-            
+            getPlaceholderArray(["Cantidad de Focos en Total en el Lote","Cant. de focos Verdes","Cant. de focos Blancos","Cant. de focos Rojos"],"dato");
+            ejecutar.addEventListener('click', ejercicio_14);
             break;
         case "Ejercicio 15":
-            
+            getPlaceholderInfo("Edad",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_15);
             break;
         default:
             break;

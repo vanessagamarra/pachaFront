@@ -84,12 +84,12 @@ var miServidor = http.createServer((peticion, respuesta) => {
         case "/ejercicio/14":
             titulo = "Ejercicio 14"
             parrafo = "14. Una compañía, fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, de un lote de N focos, el número de focos de cada color que hay en existencia"
-            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 2);
+            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 4);
             break;
         case "/ejercicio/15":
             titulo = "Ejercicio 15"
             parrafo = "15. Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones"
-            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 2);
+            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 1);
             break;
         default:
             respuesta.writeHead(404, { "Content-Type": "text/html" });
