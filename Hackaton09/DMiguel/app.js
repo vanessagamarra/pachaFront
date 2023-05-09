@@ -49,46 +49,46 @@ var miServidor = http.createServer((peticion, respuesta) => {
         case "/ejercicio/7":
             titulo = "Ejercicio 07"
             parrafo = "7. Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero. Para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, pero ella generalmente las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuantas pulgadas debe pedir con base en los metros que requiere. Represéntelo mediante el diagrama de flujo y el pseudocódigo (1 pulgada = 0.0254 m)."
-            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 3);
+            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 1);
             break;
         case "/ejercicio/8":
             titulo = "Ejercicio 08"
             parrafo = "8. Una empresa importadora desea determinar cuántos dólares puede adquirir con equis cantidad de dinero peruano"
-            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 4);
+            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 1);
             break;
         case "/ejercicio/9":
             titulo = "Ejercicio 09"
             parrafo = "9. Una empresa que contrata personal requiere determinar la edad de las personas que solicitan trabajo, pero cuando se les realiza la entrevista sólo se les pregunta el año en que nacieron"
-            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 3);
+            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 1);
             break;
         case "/ejercicio/10":
             titulo = "Ejercicio 10"
             parrafo = "10. Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad"
-            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 2);
+            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 6);
             break;
         case "/ejercicio/11":
             titulo = "Ejercicio 11"
-            parrafo = "11. Calcular el área de una circunferencia"
+            parrafo = "11. Se les dará un bono por antigüedad a los empleados de una tienda. Si tienen un año, se les dará $100; si tienen 2 años, $200, y así sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será de $1000. Realice un algoritmo y represéntelo ,que permita determinar el bono que recibirá un trabajador"
             generarEjercicio(respuesta, titulo, parrafo, new_inputs, 11);
             break;
         case "/ejercicio/12":
-            titulo = "Ejercicio 05"
-            parrafo = "5. Calcular el área de una circunferencia"
+            titulo = "Ejercicio 12"
+            parrafo = "12. Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10 % anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? Realice el algoritmo y representan la solución, utilizando el ciclo apropiado"
             generarEjercicio(respuesta, titulo, parrafo, new_inputs, 2);
             break;
         case "/ejercicio/13":
-            titulo = "Ejercicio 05"
-            parrafo = "5. Calcular el área de una circunferencia"
+            titulo = "Ejercicio 13"
+            parrafo = "13. Realice un algoritmo para leer las calificaciones de N alumnos y determine el número de aprobados y reprobados"
             generarEjercicio(respuesta, titulo, parrafo, new_inputs, 2);
             break;
         case "/ejercicio/14":
-            titulo = "Ejercicio 05"
-            parrafo = "5. Calcular el área de una circunferencia"
+            titulo = "Ejercicio 14"
+            parrafo = "14. Una compañía, fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, de un lote de N focos, el número de focos de cada color que hay en existencia"
             generarEjercicio(respuesta, titulo, parrafo, new_inputs, 2);
             break;
         case "/ejercicio/15":
-            titulo = "Ejercicio 05"
-            parrafo = "5. Calcular el área de una circunferencia"
+            titulo = "Ejercicio 15"
+            parrafo = "15. Realice un algoritmo para determinar si una persona puede votar con base en su edad en las próximas elecciones"
             generarEjercicio(respuesta, titulo, parrafo, new_inputs, 2);
             break;
         default:
