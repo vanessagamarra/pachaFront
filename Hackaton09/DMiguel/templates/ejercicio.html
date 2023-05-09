@@ -36,13 +36,13 @@
             <form id="form-ejercicio">
                 <!-- <label for="dato1">Datos 1</label><input id="dato1" type="text" class="form-control"><label for="dato2">Datos 2</label><input id="dato2" type="text" class="form-control"> -->
                 %inputs%
-                <p>Respuesta : </p>
-                <p id="resultado">
-
-                </p>
-                <a id="ejecutar" class="btn btn-primary">Ejecutar</a>
+                
             </form>
-            <div id="ejercicio"></div>
+            <p>Respuesta : </p>
+            <p id="resultado">
+
+            </p>
+            <a id="ejecutar" class="btn btn-primary">Ejecutar</a>
 		</div>
 	</div>
    
@@ -71,6 +71,20 @@
         for (let i = 1; i < texto.length+1; i++) {
             document.getElementById(id + i.toString()).placeholder = texto[i-1];
         }
+    }
+
+    function createInputsN(){
+        const text = '<label for="dato_i">Datos _i</label><input id="dato_i" type="text" class="form-control">'
+        const createInputN = document.getElementById("form-ejercicio");
+        const countInput = parseInt(document.getElementById("createInput").value);
+        let resultado = "";
+        for (let i = 1; i <= countInput; i++) {
+            resultado += text.replace(/_i/g, `${i}`);
+        }
+        createInputN.innerHTML = resultado;
+
+        getPlaceholderInfo("Nota de Alumno",countInput,"dato")
+        return countInput;
     }
 
     function ejercicio_1(event = noRefresh()) {
@@ -181,10 +195,48 @@
     }
 
     function ejercicio_11(event = noRefresh()) {
-        let dato1 = parseFloat(document.getElementById('dato1').value);
-        let añoAct = new Date().getFullYear();
-        let edad = añoAct - dato1;
-        resultado.innerText = `La edad del empleado es ${edad}.`;
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let pago=0;
+        switch (dato1) {
+            case 1:
+                pago = 100;
+                break;
+            case 2:
+                pago = 200;
+                break;
+            case 3:
+                pago = 300;
+                break;
+            case 4:
+                pago = 400;
+                break;
+            case 5:
+                pago = 500
+                break;
+            default:
+                pago = 1000
+                break;
+        }
+        resultado.innerText = `El pago del emplado es ${pago} por trabajar ${dato1} meses.`;
+    }
+
+    function ejercicio_12(event = noRefresh()) {
+        let saldoInicial = 1500;
+        for (let i = 0; i < 6; i++) {
+            saldoInicial += saldoInicial*0.1;
+        }
+        resultado.innerText = `El Saldo que recibe en 6 años es de ${saldoInicial}.`;
+    }
+
+    function ejercicio_13(event = noRefresh()) {
+        i = 1;
+        let suma = 0;
+        while (document.getElementById("dato"+i)) {
+            suma += parseInt(document.getElementById("dato"+i).value);
+            i += 1;
+        }
+        prom = suma / (i-1);
+        resultado.innerText = `El promedio de las notas es ${prom}`
     }
 
     // Declaramos un flujo de control segun el ejercicio que tengamos en pantalla   
@@ -232,13 +284,20 @@
             ejecutar.addEventListener('click', ejercicio_10);
             break;
         case "Ejercicio 11":
-            
+            getPlaceholderInfo("antiguedad en la tienda [ años ]",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_11);
             break;
         case "Ejercicio 12":
-            
+            ejecutar.addEventListener('click', ejercicio_12);
             break;
         case "Ejercicio 13":
+            const createInputN = document.getElementById("form-ejercicio");
+            createInputN.innerHTML = '<label for="createInput">Cantidad de Alumnos</label><input id="createInput" type="text" class="form-control"><a id="newInputs" class="btn btn-primary">Crear</a>';
+            const newInput = document.getElementById("newInputs");
             
+
+            newInput.addEventListener('click',createInputsN);
+            ejecutar.addEventListener('click', ejercicio_13);
             break;
         case "Ejercicio 14":
             

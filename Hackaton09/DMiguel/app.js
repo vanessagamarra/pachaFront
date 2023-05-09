@@ -69,12 +69,12 @@ var miServidor = http.createServer((peticion, respuesta) => {
         case "/ejercicio/11":
             titulo = "Ejercicio 11"
             parrafo = "11. Se les dará un bono por antigüedad a los empleados de una tienda. Si tienen un año, se les dará $100; si tienen 2 años, $200, y así sucesivamente hasta los 5 años. Para los que tengan más de 5, el bono será de $1000. Realice un algoritmo y represéntelo ,que permita determinar el bono que recibirá un trabajador"
-            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 11);
+            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 1);
             break;
         case "/ejercicio/12":
             titulo = "Ejercicio 12"
             parrafo = "12. Un profesor tiene un salario inicial de $1500, y recibe un incremento de 10 % anual durante 6 años. ¿Cuál es su salario al cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? Realice el algoritmo y representan la solución, utilizando el ciclo apropiado"
-            generarEjercicio(respuesta, titulo, parrafo, new_inputs, 2);
+            generarEjercicio(respuesta, titulo, parrafo, "", 1);
             break;
         case "/ejercicio/13":
             titulo = "Ejercicio 13"
