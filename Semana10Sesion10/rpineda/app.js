@@ -236,3 +236,22 @@ for (let x of f) {
 }
 console.log(f)
 console.log(ww)
+
+//ES2017
+
+let text88 = "5";
+text = text88.padStart(4,0);
+console.log(text)
+text = text88.padEnd(8,"*");
+console.log(text)
+
+async function myDisplay() {
+  console.log("Empezo")
+  let myPromise = new Promise(function(myResolve, myReject) {
+    setTimeout(function() { myResolve("I love You !!"); }, 3000);
+  });
+  console.log( await myPromise);
+}
+
+myDisplay();
+console.log("Continuo con el ciclo")
