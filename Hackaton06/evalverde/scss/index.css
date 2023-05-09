@@ -16,7 +16,7 @@ body {
 
 .nav-menu {
   list-style: none;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Helvetica";
   margin-right: 6rem;
   letter-spacing: 0.04rem;
 }
@@ -51,6 +51,8 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  font-family: "Arial";
+  text-align: center;
 }
 
 .contenedor2 {
@@ -102,6 +104,7 @@ body {
   top: 436px;
   background: #F4F4F4;
   border-radius: 10px;
+  font-family: "Arial";
 }
 
 .sub-titulo {
@@ -181,7 +184,10 @@ body {
 }
 
 .descrip-3 {
-  margin-top: 0;
+  width: 298px;
+  height: 64px;
+  left: 215px;
+  top: 1230px;
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
@@ -278,7 +284,7 @@ body {
 }
 
 .conter-imagen {
-  width: 328.64px;
+  width: 316.64px;
   height: 200px;
 }
 
@@ -429,6 +435,7 @@ body {
 }
 
 .botom {
+  font-family: "Arial";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -469,7 +476,7 @@ body {
   left: 249px;
   top: 3574px;
   font-family: "Arial";
-  font-style: normal;
+  font-style: "Arial";
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
