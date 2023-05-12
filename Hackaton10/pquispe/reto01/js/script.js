@@ -4,7 +4,7 @@ const suma = (num1, num2) => num1 + num2;
 const resta = (num1, num2) => num1 - num2;
 const multiplicacion = (num1, num2) => num1 * num2;
 const division = (num1, num2) => num1 / num2;
-const sumOfCubes = (...nums) => nums.reduce((acumulador, num) => suma(acumulador, Math.pow(num)), 0);
+const sumOfCubes = (...nums) => nums.reduce((acumulador, num) => suma(acumulador, Math.pow(num, 3)), 0);
 const triArea = (base, altura) => division(multiplicacion(Math.abs(base), Math.abs(altura)), 2);
 const calculator = (num1, operador, num2) => {
     switch(operador) {
