@@ -40,13 +40,11 @@ function ejercicio3(){
 
 //ejercicio3  adicionales
 function ejercicio3ingresar(){
-    ej3numbers[ej3i]=parseInt(document.getElementById('ej3num1').value);
-    ej3i=ej3i+1;
+    ej3numbers.push(parseInt(document.getElementById('ej3num1').value));
     document.getElementById("ej3numeros").innerHTML = "Los numeros ingresados son: "+(ej3numbers.join(", "));
 }
 
 function ejercicio3reset(){
-    ej3i=0;
     ej3numbers=[];
     document.getElementById("ej3numeros").innerHTML = "Se han borrado todos los numeros";
     document.getElementById("ej3rpta").innerHTML = "";
