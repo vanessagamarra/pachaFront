@@ -4,7 +4,7 @@ const datosPersona = (nombre, apellido, edad) => `Hola mi nombre es ${nombre} ${
 const sumOfCubes = (...nums) => nums.reduce((acumulador, num) => acumulador + Math.pow(num, 3), 0);
 const tipoValor = (valor) => typeof valor;
 const sumaNvalores = (...nums) => nums.reduce((acumulador, num) => acumulador + num, 0);
-const filtrarStrings = (array) => array.filter((valor) => typeof valor === "string");
+const filtrarStrings = (array) => array.filter((valor) => typeof valor != "string");
 const minMax = (array) => [Math.min(...array), Math.max(...array)];
 const formatPhoneNumber = (array) => {
     let telefono = "";
@@ -48,6 +48,15 @@ const getBudgets = (array) => {
     };
     return suma;
 };
+const getStudentNames = (estudiantes) => estudiantes.map(estudiante => estudiante.name);
+const squaresSum = (n) => {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+      sum += Math.pow(i, 2);
+    }
+    return sum;
+};
+const multiplyByLength = array => array.map(numero => numero * array.length);
 
 
 
@@ -196,6 +205,7 @@ btn05.addEventListener("click", () => {
 // --- Algoritmo Ejercicio 06 ---
 btn06.addEventListener("click", () => {
     let numeros = [];
+    let datosInvalidos;
 
     let solicitarCantidad = parseInt(prompt("Cantidad de números que desee ingresar:"));
 
@@ -204,7 +214,7 @@ btn06.addEventListener("click", () => {
             for (let i = 1; i <= solicitarCantidad; i++) {
                 numeros.push(parseFloat(prompt(`Ingrese el valor ${i}`)));
 
-                let datosInvalidos = numeros.filter((valor) => isNaN(valor));
+                datosInvalidos = numeros.filter((valor) => isNaN(valor));
 
                 if (datosInvalidos.length != 0) {
                     throw new Error("Los datos ingresados no son válidos.");
@@ -234,12 +244,13 @@ btn06.addEventListener("click", () => {
 // --- Algoritmo Ejercicio 07 ---
 btn07.addEventListener("click", () => {
     let numeros = [];
+    let datosInvalidos;
 
     try {
         for (let i = 0; i < 10; i++) {
             numeros.push(Math.abs(parseInt(prompt(`Ingrese el número ${i + 1} del teléfono:`))))
 
-            let datosInvalidos = numeros.filter((valor) => isNaN(valor));
+            datosInvalidos = numeros.filter((valor) => isNaN(valor));
 
             if (datosInvalidos.length != 0) {
                 throw new Error("Los datos ingresados no son válidos.");
@@ -267,6 +278,7 @@ btn07.addEventListener("click", () => {
 btn08.addEventListener("click", () => {
     let arrays = [];
     let numeros = [];
+    let datosInvalidos;
     result08.innerHTML = 
         `
             <br><br>
@@ -284,7 +296,7 @@ btn08.addEventListener("click", () => {
                     for (let i = 1; i <= cantidadNumeros; i++) {
                         numeros.push(parseFloat(prompt(`Ingrese el valor ${i}`)));
 
-                        let datosInvalidos = numeros.filter((valor) => isNaN(valor));
+                        datosInvalidos = numeros.filter((valor) => isNaN(valor));
 
                         if(datosInvalidos.length != 0) {
                             result08.innerHTML = "";
@@ -339,16 +351,37 @@ btn09.addEventListener("click", () => {
 
 // --- Algoritmo Ejercicio 10 ---
 btn10.addEventListener("click", () => {
-    let resultado = 
-        `
-            <br><br>
-            toArray({a: 1, b: 2}) => ${objectToArray({a: 1, b: 2})}<br>
-            toArray({c: -7, d: 10}) => ${objectToArray({c: -7, d: 10})}<br>
-            toArray({e: 80, f: 5.2}) => ${objectToArray({e: 80, f: 5.2})}<br>
-            toArray({g: 2.1, h: 4}) => ${objectToArray({g: 2.1, h: 4})}
-        `;
+    let valorA = parseFloat(prompt("Ingrese el valor de 'a'"));
+    let valorB = parseFloat(prompt("Ingrese el valor de 'b'"));
 
-    result10.innerHTML = `<br><br>Resultado: ${resultado}`;
+    try {
+        if (!isNaN(valorA) && !isNaN(valorB)) {
+
+            class Objeto {
+                constructor(a, b) {
+                    this.a = a;
+                    this.b = b;
+                };
+            };
+
+            let objeto = new Objeto(valorA, valorB);
+            let resultado = objectToArray(objeto);
+
+            window.alert(resultado);
+            result10.innerHTML = 
+                `
+                    <br><br>
+                    Resultado:<br><br>
+                    toArray({a: ${valorA}, b: ${valorB}}) => [[${resultado[0]}], [${resultado[1]}]]
+                `;
+        }
+        else {
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
 });
 
 
@@ -356,7 +389,7 @@ btn10.addEventListener("click", () => {
 // --- Algoritmo Ejercicio 11 ---
 btn11.addEventListener("click", () => {
     let personas = [];
-    let nombreIgresado;
+    let nombreIngresado;
     let edadIngresada;
     let presupuestoIngresado;
     let persona;
@@ -367,7 +400,7 @@ btn11.addEventListener("click", () => {
             getBudgets([<br>
         `;
 
-    let solicitarCantidad = parseInt(prompt("Cantidad de personas que desee ingresar:"))
+    let solicitarCantidad = parseInt(prompt("Cantidad de personas que desee ingresar:"));
 
     try {
         if (!isNaN(solicitarCantidad) && solicitarCantidad > 0) {
@@ -377,11 +410,11 @@ btn11.addEventListener("click", () => {
                     this.name = name;
                     this.age = age;
                     this.budget = budget;
-                }
+                };
             };
 
             for (let i = 1; i <= solicitarCantidad; i++) {
-                nombreIgresado = prompt(`Ingresa el nombre de la persona ${i}`);
+                nombreIngresado = prompt(`Ingresa el nombre de la persona ${i}`);
                 edadIngresada = parseInt(prompt(`Ingresa la edad de la persona ${i}`));
                 presupuestoIngresado = parseFloat(prompt(`Ingrese el presupuesto de la persona ${i}`));
 
@@ -390,10 +423,10 @@ btn11.addEventListener("click", () => {
                     throw new Error("Los datos ingresados no son válidos.");
                 };
 
-                persona = new Persona(nombreIgresado, edadIngresada, presupuestoIngresado);
+                persona = new Persona(nombreIngresado, edadIngresada, presupuestoIngresado);
                 personas.push(persona);
 
-                result11.innerHTML += `{name: ${persona.name}, age: ${persona.age}, budget: ${persona.budget}}<br>`;
+                result11.innerHTML += `{name: ${persona.name}, age: ${persona.age}, budget: ${persona.budget}},<br>`;
             };
 
             let resultado = getBudgets(personas);
@@ -402,6 +435,163 @@ btn11.addEventListener("click", () => {
         }
         else {
             result11.innerHTML = "";
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 12 ---
+btn12.addEventListener("click", () => {
+    let estudiantes = [];
+    let nombreIngresado;
+    let estudiante;
+    result12.innerHTML = 
+        `
+            <br><br>
+            Resultado:<br><br>
+            getStudentNames([<br>
+        `;
+
+    let solicitarCantidad = parseInt(prompt("Cantidad de estudiantes que desee registrar:"));
+
+    try {
+        if (!isNaN(solicitarCantidad) && solicitarCantidad > 0) {
+
+            class Estudiante {
+                constructor(name) {
+                    this.name = name;
+                };
+            };
+
+            for (let i = 1; i <= solicitarCantidad; i++) {
+                nombreIngresado = prompt(`Ingrese el nombre del estudiante ${i}`);
+
+                estudiante = new Estudiante(nombreIngresado);
+                estudiantes.push(estudiante);
+
+                result12.innerHTML += `{name: ${estudiante.name}},<br>`
+            };
+
+            let resultado = getStudentNames(estudiantes);
+            window.alert(resultado);
+            result12.innerHTML += `]) => ${resultado}`;
+        }
+        else {
+            result12.innerHTML = "";
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 13 ---
+btn13.addEventListener("click", () => {
+    let likesIngresados = Math.abs(parseInt(prompt("Ingrese la cantidad de likes:")));
+    let dislikesIngresados = Math.abs(parseInt(prompt("Ingrese la cantidad de dislikes:")));
+    let followersIngresados = Math.abs(parseInt(prompt("Ingrese la cantidad de followers:")));
+
+    try {
+        if (!isNaN(likesIngresados) && !isNaN(dislikesIngresados) && !isNaN(followersIngresados)) {
+
+            class Publicacion {
+                constructor(likes, dislikes, followers) {
+                    this.likes = likes;
+                    this.dislikes = dislikes;
+                    this.followers = followers;
+                };
+            };
+
+            let publicacion = new Publicacion(likesIngresados, dislikesIngresados, followersIngresados);
+            let resultado = objectToArray(publicacion);
+
+            window.alert(resultado);
+            result13.innerHTML = 
+                `
+                    <br><br>
+                    Resultado:<br><br>
+                    objectToArray({<br>
+                    likes: ${likesIngresados},<br>
+                    dislikes: ${dislikesIngresados},<br>
+                    followers: ${followersIngresados},<br>
+                    }) => [[${resultado[0]}], [${resultado[1]}], [${resultado[2]}]]
+                `;
+        }
+        else {
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 14 --- 
+btn14.addEventListener("click", () => {
+    let numeroIngresado = parseInt(prompt("Ingrese un número entero positivo:"));
+
+    try {
+        if(!isNaN(numeroIngresado) && numeroIngresado >= 0) {
+            let resultado = squaresSum(numeroIngresado);
+
+            window.alert(resultado);
+            result14.innerHTML = 
+                `
+                    <br><br>
+                    Resultado:<br><br>
+                    squaresSum(${numeroIngresado}) => ${resultado}
+                `;
+        }
+        else {
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 15 --- 
+btn15.addEventListener("click", () => {
+    let numeros = [];
+    let datosInvalidos;
+
+    let solicitarCantidad = parseInt(prompt("Cantidad de numeros que desee ingresar:"));
+
+    try {
+        if (!isNaN(solicitarCantidad) && solicitarCantidad >= 0) {
+            for (let i = 1; i <= solicitarCantidad; i++) {
+                numeros.push(parseFloat(prompt(`Ingrese el valor ${i}`)));
+
+                datosInvalidos = numeros.filter((valor) => isNaN(valor));
+
+                if(datosInvalidos.length != 0) {
+                    throw new Error("Los datos ingresados no son válidos.");
+                };
+            };
+
+            let resultado = multiplyByLength(numeros);
+            window.alert(resultado);
+            result15.innerHTML = 
+                `
+                    <br><br>
+                    Resultado:<br><br>
+                    multiplyByLength([${numeros}]) => ${resultado}
+                `;
+        }
+        else {
             throw new Error("Los datos ingresados no son válidos.");
         };
     }
