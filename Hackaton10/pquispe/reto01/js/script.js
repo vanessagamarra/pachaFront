@@ -1,11 +1,17 @@
 
 // --- Funciones Arrow ---
 const suma = (num1, num2) => num1 + num2;
+
 const resta = (num1, num2) => num1 - num2;
+
 const multiplicacion = (num1, num2) => num1 * num2;
+
 const division = (num1, num2) => num1 / num2;
+
 const sumOfCubes = (...nums) => nums.reduce((acumulador, num) => suma(acumulador, Math.pow(num, 3)), 0);
+
 const triArea = (base, altura) => division(multiplicacion(Math.abs(base), Math.abs(altura)), 2);
+
 const calculator = (num1, operador, num2) => {
     switch(operador) {
         case '+':
@@ -91,9 +97,9 @@ btn03.addEventListener("click", () => {
     let resultado = 
         `   
             <br><br>
-            sumOfCubes(1, 5, 9) => ${sumOfCubes(1, 5, 9)}<br>
-            sumOfCubes(8, 6, -2, 10) => ${sumOfCubes(8, 6, -2, 10)}<br>
-            sumOfCubes(20, 5.5) => ${sumOfCubes(20, 5.5)}<br>
+            sumOfCubes(1, 5, 9) => ${sumOfCubes(1, 5, 9)}<br><br>
+            sumOfCubes(8, 6, -2, 10) => ${sumOfCubes(8, 6, -2, 10)}<br><br>
+            sumOfCubes(20, 5.5) => ${sumOfCubes(20, 5.5)}<br><br>
             sumOfCubes(9, 6, -5 ) => ${sumOfCubes(9, 6, -5)}
         `;
 

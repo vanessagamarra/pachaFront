@@ -1,11 +1,17 @@
 
 // --- Funciones Arrow ---
 const datosPersona = (nombre, apellido, edad) => `Hola mi nombre es ${nombre} ${apellido} y mi edad ${edad}.`;
+
 const sumOfCubes = (...nums) => nums.reduce((acumulador, num) => acumulador + Math.pow(num, 3), 0);
+
 const tipoValor = (valor) => typeof valor;
+
 const sumaNvalores = (...nums) => nums.reduce((acumulador, num) => acumulador + num, 0);
+
 const filtrarStrings = (array) => array.filter((valor) => typeof valor != "string");
+
 const minMax = (array) => [Math.min(...array), Math.max(...array)];
+
 const formatPhoneNumber = (array) => {
     let telefono = "";
     for (let i = 0; i < array.length; i++) {
@@ -20,6 +26,7 @@ const formatPhoneNumber = (array) => {
     };
     return telefono;
 };
+
 const findLargestNums = (array) => {
     let largestNums = [];
     for (let i = 0; i < array.length; i++) {
@@ -27,6 +34,7 @@ const findLargestNums = (array) => {
     };
     return largestNums;
 };
+
 const charIndex = (palabra, caracter) => {
     const indices = [];
     for (let i = 0; i < palabra.length; i++) {
@@ -35,12 +43,14 @@ const charIndex = (palabra, caracter) => {
         };
     };
     if (indices.length === 0) {
-        return "El carácter no se encuentra en la palabra";
+        return "El caracter no se encuentra en la palabra";
     } else {
         return [indices[0], indices[indices.length - 1]];
     };
 };
+
 const objectToArray = (objeto) => Object.entries(objeto);
+
 const getBudgets = (array) => {
     let suma = 0;
     for (let i = 0; i < array.length; i++) {
@@ -48,15 +58,19 @@ const getBudgets = (array) => {
     };
     return suma;
 };
+
 const getStudentNames = (estudiantes) => estudiantes.map(estudiante => estudiante.name);
+
 const squaresSum = (n) => {
-    let sum = 0;
+    let suma = 0;
     for (let i = 1; i <= n; i++) {
-      sum += Math.pow(i, 2);
+      suma += Math.pow(i, 2);
     };
-    return sum;
+    return suma;
 };
+
 const multiplyByLength = array => array.map(numero => numero * array.length);
+
 const countdown = (numero) => {
     let numeros = [];
     for (let i = numero; i >= 0; i--) {
@@ -64,17 +78,23 @@ const countdown = (numero) => {
     };
     return numeros;
 };
+
 const diffMaxMin = array => Math.max(...array) - Math.min(...array);
+
 const filterList = array => array.filter(numero => Number.isInteger(numero));
+
 const repeat = (elemento, tiempos) => Array(tiempos).fill(elemento);
+
 String.prototype.vreplace = function(vocal) {
     return this.replace(/[aeiou]/gi, vocal);
 };
+
 const findNemo = (cadena) => {
     let palabras = cadena.split(" ");
     let nemoIndex = palabras.findIndex(palabra => palabra === "Nemo");
     return nemoIndex >= 0 ? `I found Nemo at ${nemoIndex + 1}!` : "I can't find Nemo";
 };
+
 const capLast = (cadena) => {
     return cadena.replace(/\b(\w+)\b/g, (coincidencia, palabra) => {
         let ultimaLetra = palabra.slice(-1).toUpperCase();
@@ -170,9 +190,9 @@ btn02.addEventListener("click", () => {
     let resultado = 
         `   
             <br><br>
-            sumOfCubes(1, 5, 9) => ${sumOfCubes(1, 5, 9)}<br>
-            sumOfCubes(8, 6, -2, 10) => ${sumOfCubes(8, 6, -2, 10)}<br>
-            sumOfCubes(20, 5.5) => ${sumOfCubes(20, 5.5)}<br>
+            sumOfCubes(1, 5, 9) => ${sumOfCubes(1, 5, 9)}<br><br>
+            sumOfCubes(8, 6, -2, 10) => ${sumOfCubes(8, 6, -2, 10)}<br><br>
+            sumOfCubes(20, 5.5) => ${sumOfCubes(20, 5.5)}<br><br>
             sumOfCubes(9, 6, -5 ) => ${sumOfCubes(9, 6, -5)}
         `;
 
@@ -200,10 +220,10 @@ btn04.addEventListener("click", () => {
     let resultado = 
         `   
             <br><br>
-            sumaNvalores(...nums)<br>
-            sumaNvalores(8, 6, 50) = ${sumaNvalores(8, 6, 50)}<br>
-            sumaNvalores(30, 8, 15, 2, 18) = ${sumaNvalores(30, 8, 15, 2, 18)}<br>
-            sumaNvalores(20, 2.3, -8) = ${sumaNvalores(20, 2.3, -8)}<br>
+            sumaNvalores(...nums)<br><br>
+            sumaNvalores(8, 6, 50) = ${sumaNvalores(8, 6, 50)}<br><br>
+            sumaNvalores(30, 8, 15, 2, 18) = ${sumaNvalores(30, 8, 15, 2, 18)}<br><br>
+            sumaNvalores(20, 2.3, -8) = ${sumaNvalores(20, 2.3, -8)}<br><br>
             sumaNvalores() = ${sumaNvalores()}
         `;
 
@@ -217,9 +237,10 @@ btn05.addEventListener("click", () => {
     let resultado = 
         `   
             <br><br>
-            filtrarStrings([1, "lunes", true, "martes", 5.4, "miércoles"]) => ${filtrarStrings([1, "lunes", true, "martes", 5.4, "miercoles"])}<br>
-            filtrarStrings([function(){}, 99, 1.2, "Hola", false, "mundo"]) => ${filtrarStrings([function(){}, 99, 1.2, "Hola", false, "mundo"])}<br>
-            filtrarStrings([4, "cuatro", 5, "cinco"]) => ${filtrarStrings([4, "cuatro", 5, "cinco"])}
+            filtrarStrings([1, "lunes", true, "martes", 5.4, "miércoles"]) => ${filtrarStrings([1, "lunes", true, "martes", 5.4, "miercoles"])}<br><br>
+            filtrarStrings([function(){}, 99, 1.2, "Hola", false, "mundo"]) => ${filtrarStrings([function(){}, 99, 1.2, "Hola", false, "mundo"])}<br><br>
+            filtrarStrings([4, "cuatro", 5, "cinco"]) => ${filtrarStrings([4, "cuatro", 5, "cinco"])}<br><br>
+            filtrarStrings(["manezana", 5, "pera", -8.6, {}]) => ${filtrarStrings(["manezana", 5, "pera", -8.6, {}])}
         `;
     
     result05.innerHTML = `<br><br>Resultado: ${resultado}`;
@@ -699,9 +720,9 @@ btn18.addEventListener("click", () => {
         `   
             <br><br>
             filterList([1, 2, 3, "x", "y", 10]) => ${filterList([1, 2, 3, "x", "y", 10])}<br><br>
-            filterList([1, 2, 3, "x", "y", 10]) => ${filterList([1, 2, 3, "x", "y", 10])}<br><br>
-            filterList([1, 2, 3, "x", "y", 10]) => ${filterList([1, 2, 3, "x", "y", 10])}<br><br>
-            filterList([1, 2, 3, "x", "y", 10]) => ${filterList([1, 2, 3, "x", "y", 10])}
+            filterList([5, 6.5, 8, 99.5]) => ${filterList([5, 6.5, 8, 99.5])}<br><br>
+            filterList([{}, 99, 0, -8, 1.1, "string"]) => ${filterList([{}, 99, 0, -8, 1.1, "string"])}<br><br>
+            filterList([5, 50, "a", "b", "c", 1, 2, 3]) => ${filterList([5, 50, "a", "b", "c", 1, 2, 3])}
         `;
     
     result18.innerHTML = `<br><br>Resultado: ${resultado}`;
