@@ -3,6 +3,54 @@
 const datosPersona = (nombre, apellido, edad) => `Hola mi nombre es ${nombre} ${apellido} y mi edad ${edad}.`;
 const sumOfCubes = (...nums) => nums.reduce((acumulador, num) => acumulador + Math.pow(num, 3), 0);
 const tipoValor = (valor) => typeof valor;
+const sumaNvalores = (...nums) => nums.reduce((acumulador, num) => acumulador + num, 0);
+const filtrarStrings = (array) => array.filter((valor) => typeof valor === "string");
+const minMax = (array) => [Math.min(...array), Math.max(...array)];
+const formatPhoneNumber = (array) => {
+    let telefono = "";
+    for (let i = 0; i < array.length; i++) {
+        if (i === 0) {
+            telefono += "(";
+        } else if (i === 3) {
+            telefono += ") ";
+        } else if (i === 6) {
+            telefono += "-";
+        };
+        telefono += array[i];
+    }
+    return telefono;
+};
+const findLargestNums = (array) => {
+    let largestNums = [];
+    for (let i = 0; i < array.length; i++) {
+      largestNums.push(Math.max(...array[i]));
+    };
+    return largestNums;
+};
+const charIndex = (palabra, caracter) => {
+    const indices = [];
+    for (let i = 0; i < palabra.length; i++) {
+        if (palabra[i] === caracter) {
+            indices.push(i);
+        };
+    };
+    if (indices.length === 0) {
+        return "El carácter no se encuentra en la palabra";
+    } else {
+        return [indices[0], indices[indices.length - 1]];
+    };
+};
+const toArray = (objeto) => {
+    const array = [];
+    for (const key in objeto) {
+        if (objeto.hasOwnProperty(key)) {
+            array.push([key, objeto[key]]);
+        };
+    };
+    return array;
+}
+
+
 
 
 // --- Selección de elementos del DOM ---
@@ -53,6 +101,8 @@ const result21 = document.querySelector('#resultado21');
 const result22 = document.querySelector('#resultado22');
 
 
+
+
 // --- Algoritmo Ejercicio 01 ---
 btn01.addEventListener("click", () => {
     let nombreIngresado = prompt("Ingrese su nombre:");
@@ -64,7 +114,12 @@ btn01.addEventListener("click", () => {
             let resultado = datosPersona(nombreIngresado, apellidoIngresado, edadIngresada);
 
             window.alert(resultado);
-            result01.innerHTML = `Resultado: ${resultado}`;
+            result01.innerHTML = 
+                `
+                <br><br>
+                Resultado:<br><br>
+                datosPersona(${nombreIngresado}, ${apellidoIngresado}, ${edadIngresada}) => ${resultado}
+                `;
         }
         else {
             throw new Error("Los datos ingresados no son válidos.");
@@ -74,38 +129,222 @@ btn01.addEventListener("click", () => {
         console.error(error);
     };
 });
+
 
 
 // --- Algoritmo Ejercicio 02 ---
 btn02.addEventListener("click", () => {
-    let primerNumero = parseFloat(prompt("Ingrese el primer número:"));
-    let segundoNumero = parseFloat(prompt("Ingrese el segundo número:"));
-    let tercerNumero = parseFloat(prompt("Ingrese el tercer número:"));
+    let resultado = 
+        `   
+            <br><br>
+            sumOfCubes(1, 5, 9) => ${sumOfCubes(1, 5, 9)}<br>
+            sumOfCubes(8, 6, -2, 10) => ${sumOfCubes(8, 6, -2, 10)}<br>
+            sumOfCubes(20, 5.5) => ${sumOfCubes(20, 5.5)}<br>
+            sumOfCubes(9, 6, -5 ) => ${sumOfCubes(9, 6, -5)}
+        `;
 
-    try {
-        if (!isNaN(primerNumero) && !isNaN(segundoNumero) && !isNaN(tercerNumero)) {
-            let resultado = sumOfCubes(primerNumero, segundoNumero, tercerNumero);
-
-            window.alert(resultado);
-            result02.innerHTML = `Resultado: ${resultado}`;
-        }
-        else {
-            throw new Error("Los datos ingresados no son válidos.");
-        };
-    }
-    catch (error) {
-        console.error(error);
-    };
+    result02.innerHTML = `<br><br>Resultado: ${resultado}`;
 });
+
 
 
 // --- Algoritmo Ejercicio 03 ---
 btn03.addEventListener("click", () => {
     let tiposDeValores = ["Hola", 123, true, undefined, null, {}, [], function(){}, new Date(), /regex/];
+    let resultado = `<br><br>`;
 
     tiposDeValores.forEach(valor => {
-        console.log(tipoValor(valor));
+        resultado += `${tipoValor(valor)}<br>`;
     });
 
-    result03.innerHTML = "Mostrando los diferentes tipos de datos en la consola"
+    result03.innerHTML = `<br><br>Resultado: ${resultado}`;
+});
+
+
+
+// --- Algoritmo Ejercicio 04 ---
+btn04.addEventListener("click", () => {
+    let resultado = 
+        `   
+            <br><br>
+            sumaNvalores(...nums)<br>
+            sumaNvalores(8, 6, 50) = ${sumaNvalores(8, 6, 50)}<br>
+            sumaNvalores(30, 8, 15, 2, 18) = ${sumaNvalores(30, 8, 15, 2, 18)}<br>
+            sumaNvalores(20, 2.3, -8) = ${sumaNvalores(20, 2.3, -8)}<br>
+            sumaNvalores() = ${sumaNvalores()}
+        `;
+
+    result04.innerHTML = `<br><br>Resultado: ${resultado}`;
+});
+
+
+
+// --- Algoritmo Ejercicio 05 ---
+btn05.addEventListener("click", () => {
+    let resultado = 
+        `   
+            <br><br>
+            filtrarStrings([1, "lunes", true, "martes", 5.4, "miércoles"]) => ${filtrarStrings([1, "lunes", true, "martes", 5.4, "miercoles"])}<br>
+            filtrarStrings([function(){}, 99, 1.2, "Hola", false, "mundo"]) => ${filtrarStrings([function(){}, 99, 1.2, "Hola", false, "mundo"])}<br>
+            filtrarStrings([4, "cuatro", 5, "cinco"]) => ${filtrarStrings([4, "cuatro", 5, "cinco"])}
+        `;
+    
+    result05.innerHTML = `<br><br>Resultado: ${resultado}`;
+});
+
+
+
+// --- Algoritmo Ejercicio 06 ---
+btn06.addEventListener("click", () => {
+    let numeros = [];
+
+    let solicitarCantidad = parseInt(prompt("Cantidad de números que desee ingresar:"));
+
+    try {
+        if (!isNaN(solicitarCantidad) && solicitarCantidad > 0) {
+            for (let i = 1; i <= solicitarCantidad; i++) {
+                numeros.push(parseFloat(prompt(`Ingrese el valor ${i}`)));
+
+                let datosInvalidos = numeros.filter((valor) => isNaN(valor));
+
+                if (datosInvalidos.length != 0) {
+                    throw new Error("Los datos ingresados no son válidos.");
+                };
+            };
+
+            let resultado = minMax(numeros);
+            window.alert(resultado);
+            result06.innerHTML = 
+            `   
+                <br><br>
+                Resultado:<br><br>
+                minMax([${numeros}]) => ${resultado}
+            `;
+        }
+        else {
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 07 ---
+btn07.addEventListener("click", () => {
+    let numeros = [];
+
+    try {
+        for (let i = 0; i < 10; i++) {
+            numeros.push(Math.abs(parseInt(prompt(`Ingrese el número ${i + 1} del teléfono:`))))
+
+            let datosInvalidos = numeros.filter((valor) => isNaN(valor));
+
+            if (datosInvalidos.length != 0) {
+                throw new Error("Los datos ingresados no son válidos.");
+            };
+        };
+
+        let resultado = formatPhoneNumber(numeros);
+
+        window.alert(resultado);
+        result07.innerHTML = 
+            `   
+                <br><br>
+                Resultado:<br><br>
+                formatPhoneNumber([${numeros}]) => ${resultado}
+            `;
+    }
+    catch (error) {
+        console.error(error);
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 08 ---
+btn08.addEventListener("click", () => {
+    let arrays = [];
+    let numeros = [];
+    result08.innerHTML = 
+        `
+            <br><br>
+            Resultado:<br><br>
+            findLargestNums([`;
+
+    let solicitarCantidad = parseInt(prompt("Cantidad de matrices que desee ingresar"));
+
+    try {
+        if (!isNaN(solicitarCantidad)) {
+            for (let i = 1; i <= solicitarCantidad; i++) {
+                let cantidadNumeros = parseInt(prompt(`Ingrese la cantidad de números para la matriz ${i}`));
+
+                if (!isNaN(cantidadNumeros)) {
+                    for (let i = 1; i <= cantidadNumeros; i++) {
+                        numeros.push(parseFloat(prompt(`Ingrese el valor ${i}`)));
+
+                        let datosInvalidos = numeros.filter((valor) => isNaN(valor));
+
+                        if(datosInvalidos.length != 0) {
+                            throw new Error("Los datos ingresados no son válidos.");
+                        };
+                    };
+                }
+                else {
+                    throw new Error("Los datos ingresados no son válidos.");
+                };
+
+                arrays.push(numeros);
+                result08.innerHTML += `[${numeros}]`;
+                numeros = [];
+            };
+
+            let resultado = findLargestNums(arrays);
+
+            window.alert(resultado);
+            result08.innerHTML += `]) => ${resultado}`;
+        }
+        else {
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 09 ---
+btn09.addEventListener("click", () => {
+    let palabraIngresada = prompt("Ingrese una palabra:");
+    let buscarCaracter = prompt("Ingrese el caracter para buscar en la palabra:");
+
+    let resultado = charIndex(palabraIngresada, buscarCaracter);
+
+    window.alert(resultado);
+    result09.innerHTML = 
+        `
+            <br><br>
+            Resultado:<br><br>
+            charIndex(${palabraIngresada}, ${buscarCaracter}) => ${resultado}
+        `;
+});
+
+
+
+// --- Algoritmo Ejercicio 10 ---
+btn10.addEventListener("click", () => {
+    let resultado = 
+        `
+            <br><br>
+            toArray({a: 1, b: 2}) => ${toArray({a: 1, b: 2})}<br>
+            toArray({c: -7, d: 10}) => ${toArray({c: -7, d: 10})}<br>
+            toArray({e: 80, f: 5.2}) => ${toArray({e: 80, f: 5.2})}<br>
+            toArray({g: 2.1, h: 4}) => ${toArray({g: 2.1, h: 4})}
+        `;
+
+    result10.innerHTML = `<br><br>Resultado: ${resultado}`;
 });

@@ -22,6 +22,7 @@ const calculator = (num1, operador, num2) => {
 };
 
 
+
 // --- Selección de elementos del DOM ---
 const btn01 = document.querySelector('#btn01');
 const btn02 = document.querySelector('#btn02');
@@ -34,6 +35,7 @@ const result02 = document.querySelector('#resultado02');
 const result03 = document.querySelector('#resultado03');
 const result04 = document.querySelector('#resultado04');
 const result05 = document.querySelector('#resultado05');
+
 
 
 // --- Algoritmo Ejercicio 01 ---
@@ -58,6 +60,8 @@ btn01.addEventListener("click", () => {
 });
 
 
+
+
 // --- Algoritmo Ejercicio 02 ---
 btn02.addEventListener("click", () => {
     let numeroIngresado = parseFloat(prompt("Ingrese el número a potenciar:"));
@@ -80,27 +84,23 @@ btn02.addEventListener("click", () => {
 });
 
 
+
+
 // --- Algoritmo Ejercicio 03 ---
 btn03.addEventListener("click", () => {
-    let primerNumero = parseFloat(prompt("Ingrese el primer número:"));
-    let segundoNumero = parseFloat(prompt("Ingrese el segundo número:"));
-    let tercerNumero = parseFloat(prompt("Ingrese el tercer número:"));
+    let resultado = 
+        `   
+            <br><br>
+            sumOfCubes(1, 5, 9) => ${sumOfCubes(1, 5, 9)}<br>
+            sumOfCubes(8, 6, -2, 10) => ${sumOfCubes(8, 6, -2, 10)}<br>
+            sumOfCubes(20, 5.5) => ${sumOfCubes(20, 5.5)}<br>
+            sumOfCubes(9, 6, -5 ) => ${sumOfCubes(9, 6, -5)}
+        `;
 
-    try {
-        if (!isNaN(primerNumero) && !isNaN(segundoNumero) && !isNaN(tercerNumero)) {
-            let resultado = sumOfCubes(primerNumero, segundoNumero, tercerNumero);
-
-            window.alert(resultado);
-            result03.innerHTML = `Resultado: ${resultado}`;
-        }
-        else {
-            throw new Error("Los datos ingresados no son válidos.");
-        };
-    }
-    catch (error) {
-        console.error(error);
-    };
+    result03.innerHTML = `<br><br>Resultado: ${resultado}`;
 });
+
+
 
 
 // --- Algoritmo Ejercicio 04 ---
@@ -123,6 +123,8 @@ btn04.addEventListener("click", () => {
         console.error(error);
     };
 });
+
+
 
 
 // --- Algoritmo Ejercicio 05 ---
