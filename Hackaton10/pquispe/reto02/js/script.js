@@ -40,15 +40,14 @@ const charIndex = (palabra, caracter) => {
         return [indices[0], indices[indices.length - 1]];
     };
 };
-const toArray = (objeto) => {
-    const array = [];
-    for (const key in objeto) {
-        if (objeto.hasOwnProperty(key)) {
-            array.push([key, objeto[key]]);
-        };
+const objectToArray = (objeto) => Object.entries(objeto);
+const getBudgets = (array) => {
+    let suma = 0;
+    for (let i = 0; i < array.length; i++) {
+        suma += array[i].budget;
     };
-    return array;
-}
+    return suma;
+};
 
 
 
@@ -288,11 +287,13 @@ btn08.addEventListener("click", () => {
                         let datosInvalidos = numeros.filter((valor) => isNaN(valor));
 
                         if(datosInvalidos.length != 0) {
+                            result08.innerHTML = "";
                             throw new Error("Los datos ingresados no son válidos.");
                         };
                     };
                 }
                 else {
+                    result08.innerHTML = "";
                     throw new Error("Los datos ingresados no son válidos.");
                 };
 
@@ -307,6 +308,7 @@ btn08.addEventListener("click", () => {
             result08.innerHTML += `]) => ${resultado}`;
         }
         else {
+            result08.innerHTML = "";
             throw new Error("Los datos ingresados no son válidos.");
         };
     }
@@ -340,11 +342,70 @@ btn10.addEventListener("click", () => {
     let resultado = 
         `
             <br><br>
-            toArray({a: 1, b: 2}) => ${toArray({a: 1, b: 2})}<br>
-            toArray({c: -7, d: 10}) => ${toArray({c: -7, d: 10})}<br>
-            toArray({e: 80, f: 5.2}) => ${toArray({e: 80, f: 5.2})}<br>
-            toArray({g: 2.1, h: 4}) => ${toArray({g: 2.1, h: 4})}
+            toArray({a: 1, b: 2}) => ${objectToArray({a: 1, b: 2})}<br>
+            toArray({c: -7, d: 10}) => ${objectToArray({c: -7, d: 10})}<br>
+            toArray({e: 80, f: 5.2}) => ${objectToArray({e: 80, f: 5.2})}<br>
+            toArray({g: 2.1, h: 4}) => ${objectToArray({g: 2.1, h: 4})}
         `;
 
     result10.innerHTML = `<br><br>Resultado: ${resultado}`;
+});
+
+
+
+// --- Algoritmo Ejercicio 11 ---
+btn11.addEventListener("click", () => {
+    let personas = [];
+    let nombreIgresado;
+    let edadIngresada;
+    let presupuestoIngresado;
+    let persona;
+    result11.innerHTML = 
+        `
+            <br><br>
+            Resultado:<br><br>
+            getBudgets([<br>
+        `;
+
+    let solicitarCantidad = parseInt(prompt("Cantidad de personas que desee ingresar:"))
+
+    try {
+        if (!isNaN(solicitarCantidad) && solicitarCantidad > 0) {
+
+            class Persona {
+                constructor(name, age, budget) {
+                    this.name = name;
+                    this.age = age;
+                    this.budget = budget;
+                }
+            };
+
+            for (let i = 1; i <= solicitarCantidad; i++) {
+                nombreIgresado = prompt(`Ingresa el nombre de la persona ${i}`);
+                edadIngresada = parseInt(prompt(`Ingresa la edad de la persona ${i}`));
+                presupuestoIngresado = parseFloat(prompt(`Ingrese el presupuesto de la persona ${i}`));
+
+                if (isNaN(edadIngresada) || isNaN(presupuestoIngresado) || edadIngresada < 0 || presupuestoIngresado < 0) {
+                    result11.innerHTML = "";
+                    throw new Error("Los datos ingresados no son válidos.");
+                };
+
+                persona = new Persona(nombreIgresado, edadIngresada, presupuestoIngresado);
+                personas.push(persona);
+
+                result11.innerHTML += `{name: ${persona.name}, age: ${persona.age}, budget: ${persona.budget}}<br>`;
+            };
+
+            let resultado = getBudgets(personas);
+            window.alert(resultado);
+            result11.innerHTML += `]) => ${resultado}`;
+        }
+        else {
+            result11.innerHTML = "";
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
 });
