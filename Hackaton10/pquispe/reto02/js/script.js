@@ -17,7 +17,7 @@ const formatPhoneNumber = (array) => {
             telefono += "-";
         };
         telefono += array[i];
-    }
+    };
     return telefono;
 };
 const findLargestNums = (array) => {
@@ -53,10 +53,35 @@ const squaresSum = (n) => {
     let sum = 0;
     for (let i = 1; i <= n; i++) {
       sum += Math.pow(i, 2);
-    }
+    };
     return sum;
 };
 const multiplyByLength = array => array.map(numero => numero * array.length);
+const countdown = (numero) => {
+    let numeros = [];
+    for (let i = numero; i >= 0; i--) {
+      numeros.push(i);
+    };
+    return numeros;
+};
+const diffMaxMin = array => Math.max(...array) - Math.min(...array);
+const filterList = array => array.filter(numero => Number.isInteger(numero));
+const repeat = (elemento, tiempos) => Array(tiempos).fill(elemento);
+String.prototype.vreplace = function(vocal) {
+    return this.replace(/[aeiou]/gi, vocal);
+};
+const findNemo = (cadena) => {
+    let palabras = cadena.split(" ");
+    let nemoIndex = palabras.findIndex(palabra => palabra === "Nemo");
+    return nemoIndex >= 0 ? `I found Nemo at ${nemoIndex + 1}!` : "I can't find Nemo";
+};
+const capLast = (cadena) => {
+    return cadena.replace(/\b(\w+)\b/g, (coincidencia, palabra) => {
+        let ultimaLetra = palabra.slice(-1).toUpperCase();
+        let restoLetras = palabra.slice(0, -1);
+        return restoLetras + ultimaLetra;
+    });
+};
 
 
 
@@ -598,4 +623,174 @@ btn15.addEventListener("click", () => {
     catch (error) {
         console.error(error);
     };
+});
+
+
+
+// --- Algoritmo Ejercicio 16 --- 
+btn16.addEventListener("click", () => {
+    let numeroIngresado = parseInt(prompt("Ingrese un numero positivo o neutro:"));
+
+    try {
+        if (!isNaN(numeroIngresado) && numeroIngresado >= 0) {
+            let resultado = countdown(numeroIngresado);
+
+            window.alert(resultado);
+            result16.innerHTML = 
+                `
+                    <br><br>
+                    Resultado:<br><br>
+                    countdown(${numeroIngresado}) => [${resultado}]
+                `;
+        }
+        else {
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 17 --- 
+btn17.addEventListener("click", () => {
+    let numeros = [];
+    let datosInvalidos;
+
+    let solicitarCantidad = parseInt(prompt("Cantidad de números que desee ingresar:"));
+
+    try {
+        if (!isNaN(solicitarCantidad) && solicitarCantidad > 0) {
+            for (let i = 1; i <= solicitarCantidad; i++) {
+                numeros.push(parseFloat(prompt(`Ingrese el valor ${i}`)));
+
+                datosInvalidos = numeros.filter((valor) => isNaN(valor));
+
+                if(datosInvalidos.length != 0) {
+                    throw new Error("Los datos ingresados no son válidos.");
+                };
+            };
+
+            let resultado = diffMaxMin(numeros);
+            window.alert(resultado);
+            result17.innerHTML = 
+                `
+                    <br><br>
+                    Resultado:<br><br>
+                    diffMaxMin([${numeros}]) => ${resultado}
+                `;
+        }
+        else {
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error)
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 18 --- 
+btn18.addEventListener("click", () => {
+    let resultado = 
+        `   
+            <br><br>
+            filterList([1, 2, 3, "x", "y", 10]) => ${filterList([1, 2, 3, "x", "y", 10])}<br><br>
+            filterList([1, 2, 3, "x", "y", 10]) => ${filterList([1, 2, 3, "x", "y", 10])}<br><br>
+            filterList([1, 2, 3, "x", "y", 10]) => ${filterList([1, 2, 3, "x", "y", 10])}<br><br>
+            filterList([1, 2, 3, "x", "y", 10]) => ${filterList([1, 2, 3, "x", "y", 10])}
+        `;
+    
+    result18.innerHTML = `<br><br>Resultado: ${resultado}`;
+});
+
+
+
+// --- Algoritmo Ejercicio 19 --- 
+btn19.addEventListener("click", () => {
+    let elementoIngresado = parseFloat(prompt("Ingrese un numero para repetirse:"));
+    let tiemposIngresados = parseInt(prompt("Ingrese la cantidad de veces que será repetido:"));
+
+    try {
+        if (!isNaN(elementoIngresado) && !isNaN(tiemposIngresados)) {
+            let resultado = repeat(elementoIngresado, tiemposIngresados);
+
+            window.alert(resultado);
+            result19.innerHTML = 
+                `
+                    <br><br>
+                    Resultado:<br><br>
+                    repeat(${elementoIngresado}, ${tiemposIngresados}) => ${resultado}
+                `;
+        }
+        else {
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error)
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 20 ---
+btn20.addEventListener("click", () => {
+    let cadenaIngresada = prompt("Ingrese una frase:")
+    let cambiarVocal = prompt("Ingrese una vocal para reemplazar las demás:")
+
+    try {
+        if (cambiarVocal == "a" ||  cambiarVocal == "e" ||  cambiarVocal == "i" ||  cambiarVocal == "o" || cambiarVocal == "u") {
+            let resultado = cadenaIngresada.vreplace(cambiarVocal);
+
+            window.alert(resultado);
+            result20.innerHTML = 
+                `
+                    <br><br>
+                    Resultado:<br><br>
+                    "${cadenaIngresada}".vreplace("${cambiarVocal}") => ${resultado}
+                `;
+        }
+        else {
+            throw new Error("Los datos ingresados no son válidos.");
+        };
+    }
+    catch (error) {
+        console.error(error);
+    };
+});
+
+
+
+// --- Algoritmo Ejercicio 21 ---
+btn21.addEventListener("click", () => {
+    let cadenaIngresada = prompt("Ingrese una frase:");
+
+    let resultado = findNemo(cadenaIngresada);
+    window.alert(resultado);
+    result21.innerHTML = 
+        `
+            <br><br>
+            Resultado:<br><br>
+            findNemo("${cadenaIngresada}") => ${resultado}
+        `;
+});
+
+
+
+// --- Algoritmo Ejercicio 22 ---
+btn22.addEventListener("click", () => {
+    let cadenaIngresada = prompt("Ingrese una palabra o una frase");
+
+    let resultado = capLast(cadenaIngresada);
+    window.alert(resultado);
+    result22.innerHTML = 
+        `
+            <br><br>
+            Resultado:<br><br>
+            capLast("${cadenaIngresada}") => ${resultado}
+        `;
 });
