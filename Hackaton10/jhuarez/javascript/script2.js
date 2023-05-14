@@ -465,3 +465,31 @@ function diffMaxMin(arr){
     const resultado = max-min
     return resultado;
 }
+
+//EJERCICIO 18
+let ej18arr  = [];
+function ejercicio18() {
+    const ej18rpta=filterList(ej18arr);
+    document.getElementById("ej18rpta").innerHTML = "Arreglo filtrado solo numeros "+ej18rpta;
+}
+
+function ejercicio18ingresar(){
+      const ej18var1 = document.getElementById("ej18var1").value;
+      let aux18= isNaN(ej18var1) ? ej18var1 : parseInt(ej18var1,10);
+      ej18arr.push(aux18);
+      document.getElementById("ej18var1").value = "";
+      document.getElementById("ej18arr").innerHTML = "Arreglo ingresado "+ej18arr
+}
+
+function ejercicio18reset(){
+    ej18arr=[];
+    document.getElementById("ej18rpta").innerHTML = "";
+    document.getElementById("ej18arr").innerHTML = "";
+}
+
+function filterList(arr) {
+    return arr.filter(item => {
+      const num = parseInt(item);
+      return Number.isInteger(num);
+    });
+  }
