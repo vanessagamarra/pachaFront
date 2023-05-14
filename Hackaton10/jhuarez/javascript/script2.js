@@ -513,3 +513,23 @@ function repeat(num,repeat){
     }
     return arr;
 }
+
+//EJERCICIO 20
+function ejercicio20() {
+
+    const ej20var1 = document.getElementById("ej20var1").value;
+    const ej20var2 = document.getElementById("ej20var2").value;
+
+    if(ej20var2==='a'||ej20var2==="e"||ej20var2==="i"||ej20var2==="o"||ej20var2==="u"){
+            ej20rpta=ej20var1.vreplace(ej20var2);
+    }
+    else {
+        ej20rpta= "Valor incorrecto, ingrese una vocal"
+    }
+    
+    document.getElementById("ej20rpta").innerHTML = ej20rpta;
+}
+
+String.prototype.vreplace = function(vocal) {
+    return this.replace(/[aeiou]/gi, vocal);
+  };
