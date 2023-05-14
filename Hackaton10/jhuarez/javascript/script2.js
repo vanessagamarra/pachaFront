@@ -234,3 +234,55 @@ function ejercicio8reset(){
     document.getElementById("ej8rpta").innerHTML = "";
     document.getElementById("ej8arr").innerHTML = "";
 }
+
+//EJERCICIO 9
+
+function ejercicio9() {
+
+    let inputString = document.getElementById("ej9var1").value.trim();
+	let inputChar = document.getElementById("ej9var2").value.trim();
+
+	// Validar la entrada del usuario
+	if (!inputString.match(/^[a-zA-Z]+$/) || inputChar.length !== 1) {
+		document.getElementById("ej9rpta").innerHTML = "Ingrese datos validos"
+		return;
+	}
+
+	// Calcular los índices del carácter en la palabra
+	let result = firstLastIndex(inputString, inputChar);
+
+	document.getElementById("ej9rpta").innerHTML = "La letra '"+inputChar+"' se ubica primero en el index "+result[0]+" y ultimo en el index "+result[1];
+}
+
+function firstLastIndex(str, char) {
+    var firstIndex = str.indexOf(char);
+    var lastIndex = str.lastIndexOf(char);
+    
+    if (firstIndex === -1 || lastIndex === -1) {
+      // El carácter no se encuentra en la cadena
+      return null;
+    } else {
+      // El carácter se encuentra en la cadena
+      return [firstIndex, lastIndex];
+    }
+  }
+
+function ejercicio10(){
+      const key = document.getElementById("key").value;
+      const value = document.getElementById("value").value;
+      obj[key] = value;
+      document.getElementById("key").value = "";
+      document.getElementById("value").value = "";
+      const item = document.createElement("li");
+      item.textContent = `${key}: ${value}`;
+      document.getElementById("list").appendChild(item);
+}
+
+function convertir() {
+    const arr = toArray(obj);
+    console.log(arr);
+  }
+
+  function toArray(obj) {
+    return Object.entries(obj);
+  }
