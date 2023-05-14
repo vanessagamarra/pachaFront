@@ -532,4 +532,45 @@ function ejercicio20() {
 
 String.prototype.vreplace = function(vocal) {
     return this.replace(/[aeiou]/gi, vocal);
-  };
+  }
+
+//EJERCICIO21
+function ejercicio21() {
+
+    const ej21var1 = document.getElementById("ej21var1").value;
+
+    const ej21rpta=findNemo(ej21var1);
+    
+    document.getElementById("ej21rpta").innerHTML = ej21rpta;
+}
+
+function findNemo(str) {
+    const words = str.split(" ");
+    for (let i = 0; i < words.length; i++) {
+      if (words[i].toLowerCase() === "nemo") {
+        return `Encontre a Nemo en ${i + 1}!`;
+      }
+    }
+    return "No encontre a Nemo";
+  }
+
+
+//EJERCICIO22
+function ejercicio22() {
+
+    const ej22var1 = document.getElementById("ej22var1").value;
+
+    const ej22rpta=capLast(ej22var1);
+    
+    document.getElementById("ej22rpta").innerHTML = ej22rpta;
+}
+
+function capLast(str) {
+    const words = str.split(" ");
+    const palabrasMayus = words.map(word => {
+      const ultimaLetra = word.slice(-1).toUpperCase();
+      const restoPalabra = word.slice(0, -1);
+      return restoPalabra + ultimaLetra;
+    });
+    return palabrasMayus.join(" ");
+  }
