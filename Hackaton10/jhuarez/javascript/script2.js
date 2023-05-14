@@ -161,10 +161,7 @@ function ejercicio7(...args){
 
 }
 //ejercicio7  adicionales
-function ejercicio7ingresar(){
-
-
-    
+function ejercicio7ingresar(){    
         let ej7var1 = document.getElementById('ej7var1').value;
 
         if (isNaN(ej7var1)) {
@@ -183,11 +180,57 @@ function ejercicio7ingresar(){
             }
         }
     
-        document.getElementById('ej7var1').value='';
-    
+        document.getElementById('ej7var1').value='';    
 
         if ((Object.keys(ej7numeros).length)==10){ 
             ejercicio7();
             ej7numeros=[];
         }        
+}
+
+//EJERCICIO 8
+
+let ej8arrayofarrays=[];
+let ej8array=[];
+
+function ejercicio8(...args){
+    args=ej8arrayofarrays;
+    let maxValues = args.map(function(item) {
+        return Math.max.apply(null, item);
+      });
+
+    document.getElementById("ej8rpta").innerHTML = "Los numeros mayores "+maxValues
+    ej8array=[];
+    ej8arrayofarrays=[];
+    document.getElementById('ej8var1').value="";
+}
+
+//ejercicio8  adicionales
+function ejercicio8ingresar(){
+
+    let ej8var1 = document.getElementById('ej8var1').value;
+
+    if (isNaN(ej8var1)) {
+        document.getElementById("ej8rpta").innerHTML = "No es un numero. Ingrese numeros";
+      } 
+    
+     else {
+        ej8array.push(parseInt(ej8var1));
+      }
+
+    document.getElementById('ej8var1').value='';
+}
+
+function ejercicio8newarray(){
+    document.getElementById("ej8arr").innerHTML = document.getElementById("ej8arr").value + "<br>"+ej8array 
+    ej8arrayofarrays.push(ej8array);
+    ej8array=[];
+    document.getElementById("ej8arr").innerHTML = ej8arrayofarrays.join("<br>") 
+}
+
+function ejercicio8reset(){
+    ej8arrayofarrays=[];
+    ej8array=[]
+    document.getElementById("ej8rpta").innerHTML = "";
+    document.getElementById("ej8arr").innerHTML = "";
 }
