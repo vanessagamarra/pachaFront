@@ -399,3 +399,23 @@ function sumofsquares(n){
     const resultado = n*(n+1)*(2*n+1)/6;
     return resultado;
 }
+
+//EJERCICIO15
+let ej15arr  = [];
+function ejercicio15() {
+    const newej15arr = ej15arr.flatMap((x) => x * ej15arr.length);
+    document.getElementById("ej15rpta").innerHTML = newej15arr
+}
+
+function ejercicio15ingresar(){
+      const ej15var1 = parseInt(document.getElementById("ej15var1").value)
+      ej15arr.push(ej15var1);
+      document.getElementById("ej15var1").value = "";
+      document.getElementById("ej15arr").innerHTML = ej15arr
+}
+
+function ejercicio15reset(){
+    ej15arr=[];
+    document.getElementById("ej15rpta").innerHTML = "";
+    document.getElementById("ej15arr").innerHTML = "";
+}
