@@ -422,9 +422,9 @@ function ejercicio15reset(){
 
 //EJERCICIO 16
 function ejercicio16(){
-    
+    let ej16rpta=[];
     const ej16var=parseInt(document.getElementById("ej16var1").value);
-    const ej16rpta=countdown(ej16var);
+    ej16rpta=countdown(ej16var);
 
     document.getElementById("ej16rpta").innerHTML = ej16rpta;
 }
@@ -442,13 +442,13 @@ function countdown(n){
 //EJERCICIO 17
 let ej17arr  = [];
 function ejercicio17() {
-
-    document.getElementById("ej17rpta").innerHTML = 
+    const ej17rpta=diffMaxMin(ej17arr);
+    document.getElementById("ej17rpta").innerHTML = "La diferencia entre el maximo y el minimo es "+ej17rpta;
 }
 
 function ejercicio17ingresar(){
       const ej17var1 = parseInt(document.getElementById("ej17var1").value)
-      ej15arr.push(ej17var1);
+      ej17arr.push(ej17var1);
       document.getElementById("ej17var1").value = "";
       document.getElementById("ej17arr").innerHTML = ej17arr
 }
@@ -457,4 +457,11 @@ function ejercicio17reset(){
     ej17arr=[];
     document.getElementById("ej17rpta").innerHTML = "";
     document.getElementById("ej17arr").innerHTML = "";
+}
+
+function diffMaxMin(arr){
+    const max = Math.max(...arr);
+    const min = Math.min(...arr);
+    const resultado = max-min
+    return resultado;
 }
