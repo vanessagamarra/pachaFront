@@ -102,7 +102,6 @@ function ejercicio5ingresar(){
      else {
         numeros.push(ej5var1);
       }
-
       document.getElementById('ej5var1').value='';
 }
 
@@ -111,4 +110,84 @@ function ejercicio5reset(){
     numeros=[];
     document.getElementById("ej5rpta").innerHTML = "";
 }
+
+
+//EJERCICIO O6
+let ej6numeros=[];
+
+function ejercicio6(...args){
+    args=ej6numeros;
+    console.log(args);
+    let ej6min=Math.min(...args);
+    let ej6max=Math.max(...args);
+    console.log(ej6min)
+
+    document.getElementById("ej6rpta").innerHTML = "el numero menor del arreglo es "+ej6min+" y el numero mayor del arreglo es "+ej6max
+    ej6numeros=[];
+    document.getElementById('ej6var1').value="";
+}
+
+//ejercicio6  adicionales
+function ejercicio6ingresar(){
+
+    let ej6var1 = document.getElementById('ej6var1').value;
+
+    if (isNaN(ej6var1)) {
+        document.getElementById("ej6rpta").innerHTML = "No es un numero. Ingrese numeros";
+      } 
     
+     else {
+        ej6numeros.push(parseInt(ej6var1));
+      }
+
+    document.getElementById('ej6var1').value='';
+}
+
+function ejercicio6reset(){
+    ej6numeros=[];
+    document.getElementById("ej6rpta").innerHTML = "";
+}
+
+
+//EJERCICIO O7
+let ej7numeros=[];
+
+function ejercicio7(...args){
+    args=ej7numeros;
+    console.log(args);
+
+    document.getElementById("ej7rpta").innerHTML = `(${ej7numeros.slice(0, 3).join("")}) ${ej7numeros.slice(3, 6).join("")}-${ej7numeros.slice(6).join("")}`;
+
+
+}
+//ejercicio7  adicionales
+function ejercicio7ingresar(){
+
+
+    
+        let ej7var1 = document.getElementById('ej7var1').value;
+
+        if (isNaN(ej7var1)) {
+            document.getElementById("ej7rpta").innerHTML = "No es un numero. Ingrese numeros";
+        } 
+        
+        else {
+            ej7var1=parseInt(ej7var1)
+
+            if (ej7var1<0 || ej7var1>9) 
+            {
+                document.getElementById("ej7rpta").innerHTML = "El numero no esta en el rango";
+            }  
+            else {
+                ej7numeros.push(ej7var1);
+            }
+        }
+    
+        document.getElementById('ej7var1').value='';
+    
+
+        if ((Object.keys(ej7numeros).length)==10){ 
+            ejercicio7();
+            ej7numeros=[];
+        }        
+}
