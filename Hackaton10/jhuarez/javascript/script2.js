@@ -493,3 +493,23 @@ function filterList(arr) {
       return Number.isInteger(num);
     });
   }
+
+//EJERCICIO19
+
+function ejercicio19() {
+
+    let ej19arr  = [];
+    const ej19var1 = parseInt(document.getElementById("ej19var1").value);
+    const ej19var2 = parseInt(document.getElementById("ej19var2").value);
+    const ej19rpta=repeat(ej19var1, ej19var2);
+    document.getElementById("ej19rpta").innerHTML = ej19rpta;
+}
+
+function repeat(num,repeat){
+    let arr=[];
+    while(repeat>0){
+        arr.push(num);
+        repeat=repeat-1;
+    }
+    return arr;
+}
