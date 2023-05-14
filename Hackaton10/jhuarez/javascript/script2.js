@@ -328,6 +328,60 @@ function ejercicio11reset(){
     document.getElementById("ej11arr").innerHTML = "";
 }
 
-function toArray(obj) {
-    return Object.entries(obj);
+//EJERCICIO12
+let  ej12obj = {};
+let ej12arr  = [];
+function ejercicio12() {
+
+    const studentNames = getStudentNames(ej12arr);
+
+    document.getElementById("ej12rpta").innerHTML = studentNames;
 }
+
+function ejercicio12ingresar(){
+      ej12obj = {name: document.getElementById("ej12var1").value}
+      ej12arr.push(ej12obj);
+      document.getElementById("ej12var1").value = "";
+      document.getElementById("ej12arr").innerHTML = JSON.stringify(ej12arr)
+}
+
+function ejercicio11reset(){
+    ej12obj={};
+    ej12arr=[];
+    document.getElementById("ej12rpta").innerHTML = "";
+    document.getElementById("ej12arr").innerHTML = "";
+}
+
+function getStudentNames(students) {
+    return students.map(student => student.name);
+  }
+
+
+//EJERCICIO 13
+let  ej13obj = {};
+let ej13arr  = [];
+function ejercicio13() {
+
+    ej13obj = {name: document.getElementById("ej13var1").value,
+    age: parseInt(document.getElementById("ej13var2").value),
+    budget: parseInt(document.getElementById("ej13var3").value)}
+    
+    document.getElementById("ej13var1").value = "";
+    document.getElementById("ej13var2").value = "";
+    document.getElementById("ej13var3").value = "";
+    document.getElementById("ej13arr").innerHTML = JSON.stringify(ej13obj)
+
+    const ej13arr = objectToArray(ej13obj);
+    document.getElementById("ej13rpta").innerHTML = ej13arr.join("<br>");
+}
+
+function ejercicio13reset(){
+    ej13obj={};
+    ej13arr=[];
+    document.getElementById("ej13rpta").innerHTML = "";
+    document.getElementById("ej13arr").innerHTML = "";
+}
+
+function objectToArray(obj) {
+    return Object.entries(obj);
+  }
