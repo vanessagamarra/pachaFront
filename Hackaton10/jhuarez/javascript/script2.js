@@ -296,3 +296,38 @@ function ejercicio10reset(){
 function toArray(obj) {
     return Object.entries(obj);
 }
+
+//EJERCICIO 11
+let  ej11obj = {};
+let ej11arr  = [];
+function ejercicio11() {
+    let totalBudgets = 0;
+    for (let i = 0; i < ej11arr.length; i++) {
+      totalBudgets += ej11arr[i].budget;
+    }
+    document.getElementById("ej11rpta").innerHTML = "Total budget: " +totalBudgets;
+}
+
+function ejercicio11ingresar(){
+      ej11obj = {name: document.getElementById("ej11var1").value,
+                age: parseInt(document.getElementById("ej11var2").value),
+                budget: parseInt(document.getElementById("ej11var3").value)}
+      ej11arr.push(ej11obj);
+      document.getElementById("ej11var1").value = "";
+      document.getElementById("ej11var2").value = "";
+      document.getElementById("ej11var3").value = "";
+      document.getElementById("ej11arr").innerHTML = JSON.stringify(ej11arr)
+      
+
+}
+
+function ejercicio11reset(){
+    ej11obj={};
+    ej11arr=[];
+    document.getElementById("ej11rpta").innerHTML = "";
+    document.getElementById("ej11arr").innerHTML = "";
+}
+
+function toArray(obj) {
+    return Object.entries(obj);
+}
