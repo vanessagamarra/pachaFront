@@ -415,7 +415,46 @@ function ejercicio15ingresar(){
 }
 
 function ejercicio15reset(){
-    ej15arr=[];
+    ej15arr = [];
     document.getElementById("ej15rpta").innerHTML = "";
     document.getElementById("ej15arr").innerHTML = "";
+}
+
+//EJERCICIO 16
+function ejercicio16(){
+    
+    const ej16var=parseInt(document.getElementById("ej16var1").value);
+    const ej16rpta=countdown(ej16var);
+
+    document.getElementById("ej16rpta").innerHTML = ej16rpta;
+}
+
+function countdown(n){
+    let resultado=[];
+    while(n>=0){
+        resultado.push(n);
+        n=n-1;
+    }
+    
+    return resultado;
+}
+
+//EJERCICIO 17
+let ej17arr  = [];
+function ejercicio17() {
+
+    document.getElementById("ej17rpta").innerHTML = 
+}
+
+function ejercicio17ingresar(){
+      const ej17var1 = parseInt(document.getElementById("ej17var1").value)
+      ej15arr.push(ej17var1);
+      document.getElementById("ej17var1").value = "";
+      document.getElementById("ej17arr").innerHTML = ej17arr
+}
+
+function ejercicio17reset(){
+    ej17arr=[];
+    document.getElementById("ej17rpta").innerHTML = "";
+    document.getElementById("ej17arr").innerHTML = "";
 }
