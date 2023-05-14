@@ -267,22 +267,32 @@ function firstLastIndex(str, char) {
     }
   }
 
-function ejercicio10(){
-      const key = document.getElementById("key").value;
-      const value = document.getElementById("value").value;
+  //EJERCICIO 10
+let  obj = {};
+function ejercicio10() {
+    const arr = toArray(obj);
+    console.log(arr);
+    document.getElementById("ej10rpta").innerHTML = arr;
+}
+
+function ejercicio10ingresar(){
+      const key = document.getElementById("ej10var1").value;
+      const value = document.getElementById("ej10var2").value;
       obj[key] = value;
-      document.getElementById("key").value = "";
-      document.getElementById("value").value = "";
+      document.getElementById("ej10var1").value = "";
+      document.getElementById("ej10var2").value = "";
       const item = document.createElement("li");
       item.textContent = `${key}: ${value}`;
       document.getElementById("list").appendChild(item);
 }
 
-function convertir() {
-    const arr = toArray(obj);
-    console.log(arr);
-  }
+function ejercicio10reset(){
+    obj={};
+    arr=[];
+    document.getElementById("ej10rpta").innerHTML = "";
+    document.getElementById("list").innerHTML = "";
+}
 
-  function toArray(obj) {
+function toArray(obj) {
     return Object.entries(obj);
-  }
+}
