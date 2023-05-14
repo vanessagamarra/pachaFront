@@ -385,3 +385,17 @@ function ejercicio13reset(){
 function objectToArray(obj) {
     return Object.entries(obj);
   }
+
+//EJERCICIO 14
+function ejercicio14(){
+
+    const ej14var=parseInt(document.getElementById("ej14var1").value);
+    const ej14rpta=sumofsquares(ej14var);
+
+    document.getElementById("ej14rpta").innerHTML = "La suma de los primeros "+ej14var+" cuadrados es "+ej14rpta;
+}
+
+function sumofsquares(n){
+    const resultado = n*(n+1)*(2*n+1)/6;
+    return resultado;
+}
