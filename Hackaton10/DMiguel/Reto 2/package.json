@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/pana-miguel/pachaFront/issues"
   },
-  "homepage": "https://github.com/pana-miguel/pachaFront#readme"
+  "homepage": "https://github.com/pana-miguel/pachaFront#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
