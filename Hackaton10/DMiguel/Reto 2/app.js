@@ -2,6 +2,7 @@ var fs = require("fs");
 // llamamos a la librería http
 var http = require("http");
 var url = require('url'); 
+const querystring = require('querystring');
 
 
 var titulo = "Hackaton 10";
@@ -17,9 +18,21 @@ var miServidor = http.createServer((peticion, respuesta) => {
             respuesta.end(html);
             break;
         case "/ejercicio/1":
-            titulo = "Ejercicio 01"
-            parrafo = "1. Implementar un algoritmo que reciba 2 argumentos y los sume, el resultado se deberá imprimir en pantalla"
+            titulo = "Ejercicio 01";
+            parrafo = "1. Implementar un algoritmo que reciba 2 argumentos y los sume, el resultado se deberá imprimir en pantalla";
             generarEjercicio(respuesta, titulo, parrafo, new_inputs, 2);
+            resultado = leerFormulario(peticion, (formulario) => {
+                // Aquí ya tienes los datos del formulario en un objeto
+                const num1 = parseInt(formulario.num1);
+                const num2 = parseInt(formulario.num2);
+                
+                // Suma los números
+                const resultado = num1 + num2;
+                return resultado
+                
+            });
+            // respuesta.write(`<p>El resultado de la suma es: ${resultado}</p>`);
+            respuesta.end();
             break;
         case "/ejercicio/2":
             titulo = "Ejercicio 02"
@@ -68,3 +81,20 @@ function generarEjercicio(respuesta, titulo, parrafo, new_inputs, cant_inp) {
         .replace("%inputs%", new_inputs)
     respuesta.end(html)
 }
+
+function leerFormulario(peticion, callback) {
+    if (peticion.method === 'POST') {
+      let datosFormulario = '';
+      peticion.on('data', (chunk) => {
+        datosFormulario += chunk;
+      });
+      peticion.on('end', () => {
+        const formulario = querystring.parse(datosFormulario);
+        callback(formulario);
+      });
+    } else {
+      // Si la solicitud no es POST, devuelves un error 405 (Método no permitido)
+      console.log("Error 405");
+      console.log('Método no permitido');
+    }
+  }
