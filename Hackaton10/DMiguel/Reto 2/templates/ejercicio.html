@@ -34,15 +34,16 @@
 	<div class="row">
 		<div class="col-md-6">
             <!-- <label for="dato1">Datos 1</label><input id="dato1" type="text" class="form-control"><label for="dato2">Datos 2</label><input id="dato2" type="text" class="form-control"> -->
-            %inputs%
-            <button type="submit" class="btn btn-primary">Ejecutar</button>
+            <form action="" method="get">
+                %inputs%
+                <br>
+                <button type="submit" class="btn btn-primary">Ejecutar</button>
+            </form>
 		</div>
         <div class="col-md-6">
-            <p>Respuesta : </p>
-            <div id="rpta">
-                %respuesta%
-            </div>
-        </div>
+            <p>La respuesta</p>
+			%respuesta%
+		</div>
 	</div>
    
 </div>
