@@ -70,14 +70,23 @@
         return countInput;
     }
 
+    const createInputN = document.getElementById("form-ejercicio");
+    const newInput = document.getElementById("newInputs");
+
     switch (ejercicio_cont) {
         case "Ejercicio 02":
-        const createInputN = document.getElementById("form-ejercicio");
-        createInputN.innerHTML = '<label for="createInput">Cantidad de Alumnos</label><input id="createInput" type="text" class="form-control"><a id="newInputs" class="btn btn-primary">Crear</a>';
-        const newInput = document.getElementById("newInputs");
-        
-        newInput.addEventListener('click',createInputsN);
-        break;
+            console.log("ejercicio 2")
+            createInputN.innerHTML = '<label for="createInput">Cantidad de Alumnos</label><input id="createInput" type="text" class="form-control"><a id="newInputs" class="btn btn-primary">Crear</a>';
+            newInput.addEventListener('click',createInputsN);
+            break;
+        case "Ejercicio 04":
+            console.log("ejercicio 3")
+            createInputN.innerHTML = '<label for="createInput">Cantidad de Alumnos</label><input id="createInput" type="text" class="form-control"><a id="newInputs" class="btn btn-primary">Crear</a>';
+            newInput.addEventListener('click',createInputsN);
+            break;
+        default:
+            console.log("No se Encontro el Ejercicio")
+            break;
     }
 </script>
 
