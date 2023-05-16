@@ -36,12 +36,13 @@ app.get("/ejercicio/1/", urlencodedParser, function (peticion, respuesta) {
 app.get("/ejercicio/2/", urlencodedParser, function (peticion, respuesta) {
     titulo = 'Ejercicio 02';
     parrafo = 'Cree una función que tome números y devuelva la suma de sus cubos.sumOfCubes(1, 5, 9) ➞ 855// Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855';
-    console.log(peticion.query.dato1);
-    console.log(peticion.query.dato2);
-    let param1 = parseInt(peticion.query.dato1);
-    let param2 = parseInt(peticion.query.dato2);
-
-    answ = ejercicio01(param1, param2);
+    let answ = 0;
+    let datos = peticion.query;
+    console.log(datos)
+    for (let clave in datos){
+        answ += datos[clave]**3;
+    }
+    console.log(answ);
     generarEjercicio(respuesta, titulo, parrafo, new_inputs, answ, 5)
 });
 
