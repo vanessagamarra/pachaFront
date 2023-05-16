@@ -1,6 +1,7 @@
 var fs = require("fs");
 const express = require("express");
 const bodyParser = require("body-parser");
+const { parseArgs } = require("util");
 
 var new_inputs = '<label for="dato_i">Datos _i</label><input id="dato_i" name="dato_i" type="text" class="form-control">';
 
@@ -46,7 +47,40 @@ app.get("/ejercicio/2/", urlencodedParser, function (peticion, respuesta) {
     generarEjercicio(respuesta, titulo, parrafo, new_inputs, answ, 5)
 });
 
+app.get("/ejercicio/3/", urlencodedParser, function (peticion, respuesta) {
+    titulo = 'Ejercicio 03';
+    parrafo = 'Crear una funcion que me retorne el tipo de valor entregado, invocar la función para los distintos tipos de js';
+    let dato = peticion.query.dato1;
+    let answ ="";
+    if (parseInt(dato)){
+        answ = "el dato "+dato+" es de tipo Numerico Entero";
+    }else if (parseFloat(dato)) {
+        answ = "el dato "+dato+" es de tipo Numerico Flotante";
+    }else if(dato == "True" || dato == "False"){
+        answ = "el dato "+dato+" es de tipo Boleano";
+    }else{
+        answ = "el dato "+dato+" es de tipo Sting";
+    }
+    
+    generarEjercicio(respuesta, titulo, parrafo, new_inputs, answ, 1)
+});
+
+app.get("/ejercicio/4/", urlencodedParser, function (peticion, respuesta) {
+    titulo = 'Ejercicio 04';
+    parrafo = 'Crear una función que reciba n cantidad de argumentos y los sume ( utilizar parametros rest)';
+    let answ = 0;
+    let datos = peticion.query;
+    console.log(datos)
+    for (let clave in datos){
+        answ += datos[clave]**3;
+    }
+    console.log(answ);
+    generarEjercicio(respuesta, titulo, parrafo, new_inputs, answ, 5)
+});
+
 app.listen(puerto);
+
+
 
 function repeatText(text, count) {
     let resultado = "";
