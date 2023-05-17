@@ -69,23 +69,24 @@
         getPlaceholderInfo("Nota de Alumno",countInput,"dato")
         return countInput;
     }
-
-    const createInputN = document.getElementById("form-ejercicio");
-    const newInput = document.getElementById("newInputs");
-
+    function createInputonSet(labelName="") {
+        const createInputN_ejer02 = document.getElementById("form-ejercicio");
+        createInputN_ejer02.innerHTML = '<label for="createInput">'+labelName+'</label><input id="createInput" type="text" class="form-control"><a id="newInputs" class="btn btn-primary">Crear</a>';
+        const newInput_ejer02 = document.getElementById("newInputs");
+        newInput_ejer02.addEventListener('click',createInputsN);
+    }
     switch (ejercicio_cont) {
         case "Ejercicio 02":
-            console.log("ejercicio 2")
-            createInputN.innerHTML = '<label for="createInput">Cantidad de Alumnos</label><input id="createInput" type="text" class="form-control"><a id="newInputs" class="btn btn-primary">Crear</a>';
-            newInput.addEventListener('click',createInputsN);
+            createInputonSet("Cantidad de Numeros : ");
             break;
         case "Ejercicio 04":
-            console.log("ejercicio 3")
-            createInputN.innerHTML = '<label for="createInput">Cantidad de Alumnos</label><input id="createInput" type="text" class="form-control"><a id="newInputs" class="btn btn-primary">Crear</a>';
-            newInput.addEventListener('click',createInputsN);
+            createInputonSet("Cantidad de Numeros : ");
             break;
-        default:
-            console.log("No se Encontro el Ejercicio")
+        case "Ejercicio 05":
+            createInputonSet("Dimencion del Array : ");
+            break;
+        case "Ejercicio 06":
+            createInputonSet("Dimencion del Arreglo : ");
             break;
     }
 </script>
