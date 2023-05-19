@@ -5,7 +5,7 @@ function calculadora() {
     let operacion = "";
     let respuesta = 0;
 
-    primerNumero = parseInt(prompt("Escriba el primer numero"));
+    primerNumero = parseInt(prompt("Escriba el primer numero")); //prompt mostrar en pantalla una ventana que pide un dato como string, parseint es para pasarlo a integer
     segundoNumero = parseInt(prompt("Escribir el segundo numero"));
 
     operacion = prompt("La operacion (suma, resta, multiplicacion, division)");
@@ -36,8 +36,7 @@ function calculadora() {
         case 'division':
             respuesta = primerNumero * segundoNumero;
             break;
-        default:
-            alert("Escoja una operacion");
+        
     }
 
 
