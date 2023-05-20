@@ -1,0 +1,23 @@
+.body{
+    background-color: #2A3B47;
+}
+
+.contenido{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+}
+
+.contenido .butonesNumeros .btn-outline-primary{
+    width: 4.3em;
+    height: 4.3em;
+    margin: 3px;
+    border-width: 0.1em;
+    font-weight: 700;
+    font-size : 1em;
+}
+
+.contenido .butonesNumeros{
+    
+}
