@@ -82,6 +82,8 @@ body {
   cursor: pointer;
 }
 .container .btnOperador--disabled {
+  background-color: #464646;
+  pointer-events: none;
   cursor: default;
 }
 .container .btnNumber--active {
@@ -89,5 +91,7 @@ body {
   cursor: pointer;
 }
 .container .btnNumber--disabled {
+  background-color: #cecece;
+  pointer-events: none;
   cursor: default;
 }/*# sourceMappingURL=style.css.map */

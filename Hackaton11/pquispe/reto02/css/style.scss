@@ -95,6 +95,8 @@ body {
     }
 
     .btnOperador--disabled {
+        background-color: #464646;
+        pointer-events: none;
         cursor: default;
     }
 
@@ -104,6 +106,8 @@ body {
     }
 
     .btnNumber--disabled {
+        background-color: #cecece;
+        pointer-events: none;
         cursor: default;
     }
 }

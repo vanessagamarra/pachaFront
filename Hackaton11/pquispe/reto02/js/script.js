@@ -1,4 +1,6 @@
 
+// -------------------- Seleccion elementos del DOM --------------------
+
 const numero0 = document.getElementById('numero0');
 const numero1 = document.getElementById('numero1');
 const numero2 = document.getElementById('numero2');
@@ -18,15 +20,17 @@ const multiplicacion = document.getElementById('multiplicacion');
 const division = document.getElementById('division');
 const potencia = document.getElementById('potencia');
 const resto = document.getElementById('resto');
-
 const igual = document.getElementById('igual');
 
 const parentAbierto = document.getElementById('parentAbierto');
 const parentCerrado = document.getElementById('parentCerrado');
 
+const resetear = document.getElementById('resetear');
 const resultado = document.getElementById('resultado');
 
 
+
+// -------------------- Eventos click para los botones --------------------
 
 numero0.addEventListener("click", () => {
     resultado.value += 0;
@@ -68,9 +72,11 @@ numero9.addEventListener("click", () => {
     resultado.value += 9;
 });
 
+
 decimal.addEventListener("click", () => {
     resultado.value += ".";
 });
+
 
 suma.addEventListener("click", () => {
     resultado.value += "+";
@@ -89,12 +95,13 @@ division.addEventListener("click", () => {
 });
 
 potencia.addEventListener("click", () => {
-    resultado.value += "**";
+    resultado.value += "^";
 });
 
 resto.addEventListener("click", () => {
     resultado.value += "%";
 });
+
 
 parentAbierto.addEventListener("click", () => {
     resultado.value += "(";
@@ -104,36 +111,63 @@ parentCerrado.addEventListener("click", () => {
     resultado.value += ")";
 });
 
-igual.addEventListener("click", () => {
-    try {
-        resultado.value = Function(`"use strict"; return (${resultado.value});`)();
-    }
-    catch {
-        resultado.value = "Error";
-    };
+
+
+// -------------------- Denegar la opcion de pegar texto en el input --------------------
+
+resultado.addEventListener("paste", (event) => {
+    event.preventDefault();
 });
 
+
+
+// -------------------- Calcular operaciones --------------------
+
+function calcular() {
+    if (resultado.value != "") {
+        try {
+            let operacion = resultado.value.replace(/\^/g, "**");
+            resultado.value = Function(`"use strict"; return (${operacion});`)();
+            console.log(resultado.value);
+        }
+        catch {
+            resultado.value = "Error";
+            $('.btnOperador').removeClass('btnOperador--active');
+            $('.btnOperador').addClass('btnOperador--disabled');
+            $('.btnNumber').removeClass('btnNumber--active');
+            $('.btnNumber').addClass('btnNumber--disabled');
+            resetear.classList.remove('btnOperador--disabled');
+            resetear.classList.add('btnOperador--active');
+        };
+    };
+};
+
+
+igual.addEventListener("click", () => {
+    calcular();
+});
+
+
 resultado.addEventListener("keydown", (event) => {
-    const caracterIngresado = event.key;
-    if (caracterIngresado === "Backspace" || caracterIngresado === "Delete" || caracterIngresado === "Shift" || caracterIngresado === "ArrowLeft" || caracterIngresado === "ArrowRight" || caracterIngresado === "Tab") {
+    const teclaPresionada = event.key;
+    if (teclaPresionada === "Backspace" || teclaPresionada === "Delete" || teclaPresionada === "Shift" || teclaPresionada === "ArrowLeft" || teclaPresionada === "ArrowRight" || teclaPresionada === "Tab") {
         return;
     };
 
     const caracteresPermitidos = /[0-9+\-*\/%().]/;
-    if (!caracteresPermitidos.test(caracterIngresado)) {
+    if (!caracteresPermitidos.test(teclaPresionada)) {
         event.preventDefault();
     };
 
-    if (caracterIngresado === "Enter") {
-        try {
-            resultado.value = Function(`"use strict"; return (${resultado.value});`)();
-        }
-        catch {
-            resultado.value = "Error";
-        };
+    if (teclaPresionada === "Enter") {
+        calcular()
     };
 });
 
-resultado.addEventListener("paste", (event) => {
-    event.preventDefault();
+
+resetear.addEventListener("click", () => {
+    $('.btnOperador').removeClass('btnOperador--disabled');
+    $('.btnOperador').addClass('btnOperador--active');
+    $('.btnNumber').removeClass('btnNumber--disabled');
+    $('.btnNumber').addClass('btnNumber--active');
 });
