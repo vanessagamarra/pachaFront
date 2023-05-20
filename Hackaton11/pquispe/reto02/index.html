@@ -5,37 +5,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculadora | Hackaton 11</title>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <form>
-            <input type="text" id="resultado" style="text-align: right;" autocomplete="off">
-            <br>
-            <button type="button" id="parentAbierto">(</button>
-            <button type="button" id="parentCerrado">)</button>
-            <br>
-            <button type="button" id="resto">%</button>
-            <button type="button" id="potencia">^</button>
-            <button type="button" id="division">/</button>
-            <button type="button" id="multiplicacion">*</button>
-            <br>
-            <button type="button" id="numero7">7</button>
-            <button type="button" id="numero8">8</button>
-            <button type="button" id="numero9">9</button>
-            <button type="button" id="resta">-</button>
-            <br>
-            <button type="button" id="numero4">4</button>
-            <button type="button" id="numero5">5</button>
-            <button type="button" id="numero6">6</button>
-            <button type="button" id="suma">+</button>
-            <br>
-            <button type="button" id="numero1">1</button>
-            <button type="button" id="numero2">2</button>
-            <button type="button" id="numero3">3</button>
-            <button type="button" id="igual">=</button>
-            <br>
-            <button type="reset" id="resetear">C</button>
-            <button type="button" id="numero0">0</button>
-            <button type="button" id="decimal">.</button>
+        <form class="container">
+            <input type="text" id="resultado" class="resultado" autocomplete="off" placeholder="0">
+            
+            <button type="button" id="parentAbierto" class="btnParentAbierto btnOperador btnOperador--active">(</button>
+            <button type="button" id="parentCerrado" class="btnParentCerrado btnOperador btnOperador--active">)</button>
+            
+            <button type="button" id="resto" class="btnOperador btnOperador--active">%</button>
+            <button type="button" id="potencia" class="btnOperador btnOperador--active">x<sup>y</sup></button>
+            <button type="button" id="division" class="btnOperador btnOperador--active">/</button>
+            <button type="button" id="multiplicacion" class="btnOperador btnOperador--active">x</button>
+            
+            <button type="button" id="numero7" class="btnNumber btnNumber--active">7</button>
+            <button type="button" id="numero8" class="btnNumber btnNumber--active">8</button>
+            <button type="button" id="numero9" class="btnNumber btnNumber--active">9</button>
+            <button type="button" id="resta" class="btnOperador btnOperador--active">-</button>
+            
+            <button type="button" id="numero4" class="btnNumber btnNumber--active">4</button>
+            <button type="button" id="numero5" class="btnNumber btnNumber--active">5</button>
+            <button type="button" id="numero6" class="btnNumber btnNumber--active">6</button>
+            <button type="button" id="suma" class="btnOperador btnOperador--active">+</button>
+            
+            <button type="button" id="numero1" class="btnNumber btnNumber--active">1</button>
+            <button type="button" id="numero2" class="btnNumber btnNumber--active">2</button>
+            <button type="button" id="numero3" class="btnNumber btnNumber--active">3</button>
+            <button type="button" id="igual" class="btnIgual btnOperador btnOperador--active">=</button>
+            
+            <button type="reset" id="resetear" class="btnOperador btnOperador--active">C</button>
+            <button type="button" id="numero0" class="btnNumber btnNumber--active">0</button>
+            <button type="button" id="decimal" class="btnOperador btnOperador--active">.</button>
         </form>
 
         <script src="./js/script.js"></script>
