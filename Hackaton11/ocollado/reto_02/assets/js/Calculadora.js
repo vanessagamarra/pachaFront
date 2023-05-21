@@ -5,8 +5,7 @@ document.querySelectorAll('input')
 
         switch (elementValueSeleccionado) {
             case '=':
-                const resultado = realizarCalculo(inputResultado.value);
-                console.log(resultado);
+                const resultado = realizarCalculo(agregarEspacioSiNoEsNumero(inputResultado.value));
 
                 if (isNaN(resultado)) {
                     break;
@@ -17,35 +16,49 @@ document.querySelectorAll('input')
                 inputResultado.value = '0';
                 break;
             default:
-                if (inputResultado.value === '0') {
-                    inputResultado.value = elementValueSeleccionado;
-                } else {
-                    inputResultado.value = `${inputResultado.value} ${elementValueSeleccionado}`;
-                }
+                inputResultado.value = (inputResultado.value === '0')
+                    ? elementValueSeleccionado
+                    : `${inputResultado.value}${elementValueSeleccionado}`;
         }
     }));
 
 function realizarCalculo(cadena) {
-  const operadores = {
-    '+': (a, b) => a + b,
-    '-': (a, b) => a - b,
-    '*': (a, b) => a * b,
-    '/': (a, b) => a / b
-  };
+    const operadoresYCalculos = {
+        '+': (a, b) => a + b,
+        '-': (a, b) => a - b,
+        '*': (a, b) => a * b,
+        '/': (a, b) => a / b
+    };
 
-  const expresiones = cadena.split(' ');
-  const pila = [];
+    const expresiones = cadena.split(' ');
+    const numeros = [];
+    const operadores = [];
 
-  expresiones.forEach(expresion => {
-    if (operadores.hasOwnProperty(expresion)) {
-      const b = pila.pop();
-      const a = pila.pop();
-      const resultado = operadores[expresion](a, b);
-      pila.push(resultado);
-    } else {
-      pila.push(parseFloat(expresion));
+    expresiones.forEach(expresion => {
+        if (operadoresYCalculos.hasOwnProperty(expresion)) {
+            operadores.push(expresion);
+        } else {
+            numeros.push(parseFloat(expresion));
+        }
+    });
+
+    operadores.forEach(operador => {
+        const a = numeros.shift();
+        const b = numeros.shift();
+        const resultado = operadoresYCalculos[operador](a, b);
+        numeros.unshift(resultado);
+    });
+
+    return numeros.pop();
+}
+
+function agregarEspacioSiNoEsNumero(cadena) {
+    let resultado = '';
+
+    for (let i = 1; i <= cadena.length; i++) {
+        const caracter = cadena[i - 1];
+        resultado += i == cadena.length ? `${caracter}` : `${caracter} `;
     }
-  });
 
-  return pila.pop();
+    return resultado;
 }
