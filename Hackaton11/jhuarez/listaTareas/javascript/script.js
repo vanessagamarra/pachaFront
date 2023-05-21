@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
       let checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
 
+      // Crear un botón para borrar la tarea
+      var deleteButton = document.createElement('button');
+      deleteButton.className = 'delete-button';
+      deleteButton.innerHTML = '&#10060;'; // Usamos un símbolo de "X" para el botón
+
       // Crear un elemento de párrafo para el texto de la lista
       let listItemText = document.createElement('p');
       listItemText.className = 'task-text';
@@ -30,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
       // Agregar el checkbox y el elemento de texto al elemento de lista
       listItem.appendChild(checkbox);
       listItem.appendChild(listItemText);
+      listItem.appendChild(deleteButton);
+
      
 
       // Agregar el nuevo elemento de lista a la lista existente
@@ -66,6 +73,11 @@ document.addEventListener("DOMContentLoaded", function() {
             listItem.removeChild(completedText);
           }
         }
+      });
+    // Agregar evento de escucha al botón de borrado para eliminar la tarea
+
+        deleteButton.addEventListener('click', function() {
+        listItem.remove();
       });
     });
   });
