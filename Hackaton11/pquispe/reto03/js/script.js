@@ -2,7 +2,7 @@
 class Tareas {
     constructor() {
         this.tareas = [];
-        this.filter = 'all'
+        this.filter = 'all';
     };
 
     agregarTarea(tituloIngresado, descripcionIngresada, fechaIngresada) {
@@ -31,7 +31,7 @@ class Tareas {
         this.renderTareas();
     };
 
-    seleccionarFiler(filter) {
+    seleccionarFilter(filter) {
         this.filter = filter;
         this.renderTareas();
     };
@@ -49,6 +49,7 @@ class Tareas {
                 break;
             case 'incomplete':
                 tareasFiltradas = this.tareas.filter(tarea => !tarea.completado);
+                break
             default:
                 tareasFiltradas = this.tareas;
         };
@@ -59,29 +60,41 @@ class Tareas {
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.checked = tarea.completado;
+            checkbox.classList.add('checkboxInput');
             checkbox.addEventListener("click", () => {
                 this.estadoDeLaTarea(tarea.id);
             });
 
             const h3Titulo = document.createElement('h3');
             h3Titulo.textContent = tarea.titulo;
+            h3Titulo.classList.add('informationContainer__title')
 
             const pDesctipcion = document.createElement('p');
             pDesctipcion.textContent = tarea.descripcion;
+            pDesctipcion.classList.add('informationContainer__description');
 
             const spanFecha = document.createElement('span');
             spanFecha.textContent = tarea.completado ? `Completada el: ${tarea.completadoFecha.toLocaleDateString()}` : `Fecha de vencimiento: ${tarea.fecha}`;
+            spanFecha.classList.add('informationContainer__date');
 
             const buttonEliminar = document.createElement('button');
             buttonEliminar.textContent = "X";
+            buttonEliminar.classList.add('btnEliminar');
             buttonEliminar.addEventListener("click", () => {
                 this.eliminarTarea(tarea.id);
             });
 
 
             const divInformacion = document.createElement('div');
+            divInformacion.classList.add('informationContainer');
 
             const articleContainer = document.createElement('article');
+            articleContainer.classList.add('itemContainer');
+
+            if (tarea.completado) {
+                articleContainer.classList.add('itemContainer--completed')
+            };
+
 
             divInformacion.appendChild(h3Titulo);
             divInformacion.appendChild(pDesctipcion);
@@ -124,12 +137,11 @@ formTarea.addEventListener("submit", (event) => {
 
 
 
-const filterButtons = document.querySelectorAll('.filterButtons');
+const filterButtons = document.querySelectorAll('.filter-button');
 
 filterButtons.forEach(button => {
     button.addEventListener("click", () => {
         const filter = button.dataset.filter;
-
-        tareaNueva.seleccionarFiler(filter);
+        tareaNueva.seleccionarFilter(filter);
     });
 });
