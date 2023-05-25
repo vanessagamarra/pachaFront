@@ -6,14 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hackaton12 - HRT</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .contenido {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+  </style>
 </head>
 <body class="bg-neutral-900 text-white">
-  <main class="grid grid-cols-4 justify-items-center items-center content-center h-screen">
-    <section id="reto01">
-      <h2 class="text-xl uppercase font-semibold text-center">Reto 01</h2>
+  <main class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-items-center items-center content-center h-screen">
+    <section id="reto01" class="h-full">
+      <h2 class="text-xl uppercase font-semibold text-center mb-5">Reto 01</h2>
       <button
         onclick="reto01.toggle()"
-        class="bg-[#727b83] py-1 px-3 rounded mt-5"
+        class="bg-[#727b83] py-1 px-3 rounded"
       >
         Dropdown
         <svg
@@ -40,7 +47,37 @@
         </ul>
       </div>
     </section>
+    <section id="reto02" class="lg:col-span-2 w-full h-full p-6 md:p-0">
+      <h2 class="text-xl uppercase font-semibold text-center mb-5">Reto 02</h2>
+      <div class="rounded overflow-clip">
+        <div id="groupItem">
+          <div onclick="reto02.toggle(1)" class="bg-[#f7f7f7] border border-cyan-300 text-sky-400 font-semibold cursor-pointer px-4 py-3">
+            <h3>Group #1</h3>
+          </div>
+          <div id="content1" class="bg-white px-5 border border-cyan-300 text-black contenido">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio dolores, perferendis sunt quos impedit sapiente quidem vel veniam debitis repellat soluta, asperiores delectus minus omnis quae obcaecati quas non.
+          </div>
+        </div>
+        <div id="groupItem">
+          <div onclick="reto02.toggle(2)" class="bg-[#f7f7f7] border border-cyan-300 text-sky-400 font-semibold cursor-pointer px-4 py-3">
+            <h3>Group #2</h3>
+          </div>
+          <div id="content2" class="bg-white px-5 border border-cyan-300 text-black contenido">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio dolores, perferendis sunt quos impedit sapiente quidem vel veniam debitis repellat soluta, asperiores delectus minus omnis quae obcaecati quas non.
+          </div>
+        </div>
+        <div id="groupItem">
+          <div onclick="reto02.toggle(3)" class="bg-[#f7f7f7] border border-cyan-300 text-sky-400 font-semibold cursor-pointer px-4 py-3">
+            <h3>Group #3</h3>
+          </div>
+          <div id="content3" class="bg-white px-5 border border-cyan-300 text-black contenido">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio dolores, perferendis sunt quos impedit sapiente quidem vel veniam debitis repellat soluta, asperiores delectus minus omnis quae obcaecati quas non.
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 <script src="./reto01.js"></script>
+<script src="./reto02.js"></script>
 </html>
