@@ -1,6 +1,6 @@
 
 class Accordions {
-  constructor() {
+  constructor () {
     this.titulos = []
     this.contenidos = []
   }
@@ -32,9 +32,11 @@ Accordions.prototype.toggleAccordion = function () {
         const contenidoId = document.getElementById(contenido)
 
         if (indexTitulo !== indexContenido) {
-          contenidoId.style.display = 'none'
+          $('#' + contenidoId.id).slideUp()
+        } else if (contenidoId.style.display !== 'none') {
+          $('#' + contenidoId.id).slideUp()
         } else {
-          contenidoId.style.display = 'block'
+          $('#' + contenidoId.id).slideDown()
         }
       })
     })
