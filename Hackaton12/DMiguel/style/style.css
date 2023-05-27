@@ -1,0 +1,6 @@
+.contenido{
+    width: 90%;
+    max-width: max-content;
+    display: grid;
+    margin : 20px auto;
+}
