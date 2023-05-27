@@ -12,6 +12,18 @@
       overflow: hidden;
       transition: max-height 0.3s ease-out;
     }
+    .modal {
+      visibility: hidden;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      opacity: 0;
+      transition: opacity 0.4s ease, visibility 0.4s ease-out;
+    }
   </style>
 </head>
 <body class="bg-neutral-900 text-white">
@@ -55,7 +67,9 @@
             <h3>Group #1</h3>
           </div>
           <div id="content1" class="bg-white px-5 border border-cyan-300 text-black contenido">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio dolores, perferendis sunt quos impedit sapiente quidem vel veniam debitis repellat soluta, asperiores delectus minus omnis quae obcaecati quas non.
+            <p class="py-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio dolores, perferendis sunt quos impedit sapiente quidem vel veniam debitis repellat soluta, asperiores delectus minus omnis quae obcaecati quas non.
+            </p>
           </div>
         </div>
         <div id="groupItem">
@@ -63,7 +77,9 @@
             <h3>Group #2</h3>
           </div>
           <div id="content2" class="bg-white px-5 border border-cyan-300 text-black contenido">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio dolores, perferendis sunt quos impedit sapiente quidem vel veniam debitis repellat soluta, asperiores delectus minus omnis quae obcaecati quas non.
+            <p class="py-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio dolores, perferendis sunt quos impedit sapiente quidem vel veniam debitis repellat soluta, asperiores delectus minus omnis quae obcaecati quas non.
+            </p>
           </div>
         </div>
         <div id="groupItem">
@@ -71,13 +87,40 @@
             <h3>Group #3</h3>
           </div>
           <div id="content3" class="bg-white px-5 border border-cyan-300 text-black contenido">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio dolores, perferendis sunt quos impedit sapiente quidem vel veniam debitis repellat soluta, asperiores delectus minus omnis quae obcaecati quas non.
+            <p class="py-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio dolores, perferendis sunt quos impedit sapiente quidem vel veniam debitis repellat soluta, asperiores delectus minus omnis quae obcaecati quas non.
+            </p>
           </div>
         </div>
       </div>
     </section>
+    <section id="reto03" class="h-full">
+      <h2 class="text-xl uppercase font-semibold text-center mb-5">Reto 03</h2>
+      <button onclick="reto03.open()" class="bg-green-500 py-1 px-3 rounded">Modal</button>
+    </section>
   </main>
 </body>
+<div id="modal" class="modal">
+  <div class="h-full w-full top-0 left-0 absolute bg-black/70"></div>
+  <div class="h-full flex justify-center items-center relative">
+    <div class="rounded flex w-2/4 flex-col justify-center items-center bg-white text-black border-2 border-gray-400 h-auto z-50">
+      <div class="flex flex-row w-full justify-between items-center border-b border-gray-300 p-6">
+        <h3 class="font-bold text-lg">Modal title</h3>
+        <div onclick="reto03.close()">
+          <svg class="fill-gray-500 cursor-pointer" width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#808080"><path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" stroke="#808080" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+      </div>
+      <div class="text-base border-b border-gray-300 p-6 w-full">
+        <p>Modal body text goes here</p>
+      </div>
+      <div class="flex flex-row justify-end gap-8 p-3 w-full text-white">
+        <button onclick="reto03.cancel()" class="bg-gray-500 py-2 px-4 rounded">Cancel</button>
+        <button onclick="reto03.accept()" class="bg-blue-500 py-2 px-4 rounded">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="./reto01.js"></script>
 <script src="./reto02.js"></script>
+<script src="./reto03.js"></script>
 </html>
