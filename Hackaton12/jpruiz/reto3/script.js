@@ -1,4 +1,3 @@
-
 function Modal(callbackClose, callbackCancel) {
     var modal = document.getElementById('modal');
     var openModalBtn = document.getElementById('openModalBtn');
@@ -8,6 +7,7 @@ function Modal(callbackClose, callbackCancel) {
 
     openModalBtn.addEventListener('click', function () {
         modal.style.display = 'block';
+        console.log('Modal abierto');
     });
 
     closeModalBtn.addEventListener('click', function () {
