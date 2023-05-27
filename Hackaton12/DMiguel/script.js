@@ -11,3 +11,4 @@ function toggleCollapGroup(identificador = "") {
     var collapGroup = document.querySelector(identificar);
     collapGroup.classList.toggle('show');
 }
+
