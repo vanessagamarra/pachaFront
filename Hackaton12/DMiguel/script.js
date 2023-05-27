@@ -5,7 +5,6 @@ function toggleDropdown() {
     dropdownContent.classList.toggle("show");
 }
 
-
 // Reto 2
 function toggleCollapGroup(identificador = "") {
     const identificar = "."+identificador;
