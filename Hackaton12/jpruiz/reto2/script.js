@@ -8,10 +8,12 @@ modulos.forEach(function (modulo) {
 
     title.addEventListener('click', function () {
         if (content.style.display === 'none') {
+            console.log('Mostrando contenido');
             content.style.display = 'block';
             toggle.textContent = 'x';
             closeButton.style.display = 'block';
         } else {
+            console.log('Ocultando contenido');
             content.style.display = 'none';
             toggle.textContent = '+';
             closeButton.style.display = 'none';
@@ -19,6 +21,7 @@ modulos.forEach(function (modulo) {
     });
 
     closeButton.addEventListener('click', function () {
+        console.log('Cerrando contenido');
         content.style.display = 'none';
         toggle.textContent = '+';
         closeButton.style.display = 'none';
