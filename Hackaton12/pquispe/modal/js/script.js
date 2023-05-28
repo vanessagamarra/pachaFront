@@ -1,6 +1,6 @@
 
 class Modals {
-  constructor() {
+  constructor () {
     this.boton = null
     this.modalTitulo = null
     this.modalContenido = null
@@ -43,43 +43,51 @@ Modals.prototype.mostrarMensaje = function (palabra) {
 }
 
 Modals.prototype.mostrarModal = function () {
-  const container = document.getElementById('container')
+  const body = document.getElementById('body')
+  body.style.overflow = 'hidden'
+
   const section = document.createElement('section')
   const article = document.createElement('article')
   const titleContainer = document.createElement('div')
   const contentContainer = document.createElement('div')
   const btnContainer = document.createElement('div')
-  const h2 = document.createElement('h2')
+  const h3 = document.createElement('h3')
   const btnCerrar = document.createElement('button')
   const p = document.createElement('p')
   const btnCancelar = document.createElement('button')
   const btnAceptar = document.createElement('button')
 
   section.setAttribute('id', 'modal')
-
-  h2.textContent = this.modalTitulo
-
+  section.classList.add('modalContainer')
+  article.classList.add('modal')
+  titleContainer.classList.add('modal__title')
+  contentContainer.classList.add('modal__content')
+  btnContainer.classList.add('modal__btnContainer')
+  h3.textContent = this.modalTitulo
   p.textContent = this.modalContenido
 
   btnCerrar.textContent = 'X'
+  btnCerrar.classList.add('btnCerrar')
   btnCerrar.addEventListener('click', () => {
     this.callbackModal(this.ocultarModal)
     this.mostrarMensaje('cerrado')
   })
 
   btnCancelar.textContent = 'Cancelar'
+  btnCancelar.classList.add('btnCancelar')
   btnCancelar.addEventListener('click', () => {
     this.callbackModal(this.ocultarModal)
     this.mostrarMensaje('cancelado')
   })
 
   btnAceptar.textContent = 'Aceptar'
+  btnAceptar.classList.add('btnAceptar')
   btnAceptar.addEventListener('click', () => {
     this.callbackModal(this.ocultarModal)
     this.mostrarMensaje('aceptado')
   })
 
-  titleContainer.appendChild(h2)
+  titleContainer.appendChild(h3)
   titleContainer.appendChild(btnCerrar)
   contentContainer.appendChild(p)
   btnContainer.appendChild(btnCancelar)
@@ -88,19 +96,20 @@ Modals.prototype.mostrarModal = function () {
   article.appendChild(contentContainer)
   article.appendChild(btnContainer)
   section.appendChild(article)
-  container.appendChild(section)
+  body.appendChild(section)
   return this
 }
 
 Modals.prototype.ocultarModal = function () {
-  const container = document.getElementById('container')
+  const body = document.getElementById('body')
   const modal = document.getElementById('modal')
-  container.removeChild(modal);
+  body.removeChild(modal)
+  body.style.overflow = 'auto'
   return this
 }
 
 Modals.prototype.callbackModal = function (callback) {
-  callback.call(this);
+  callback.call(this)
 }
 
 Modals.prototype.activarModal = function () {
