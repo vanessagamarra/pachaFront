@@ -1,11 +1,10 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #23242a;
+    background: #e1e2e7;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     }
     
@@ -60,7 +59,7 @@ body {
         border: 1px #363a43 solid;
         box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
         border-radius: 0.5em;
-        color: #9fa5b5;
+        color: #b1b5c2;
         position: absolute;
         top: 3em;
         left: 50%;

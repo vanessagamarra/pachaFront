@@ -8,7 +8,7 @@
 
 
 body{
-    background: #ffffff;
+    background: #e1e2e7;
 }
 
 
@@ -16,14 +16,14 @@ body{
 
 .boton-modal{
     padding: 60px;
-    background-color: #fff;
+    background-color: #e1e2e7;
     
 }
 
 
 .boton-modal label{
     padding: 10px 15px;
-    background-color: #185E83;
+    background-color: #2a2f3b;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
@@ -32,7 +32,7 @@ body{
 
 
 .boton-modal label:hover{
-    background-color: #48a0cf;
+    background-color: #4b5464;
 }
 
 /*------------------------Fin Boton-Modal-------------------------*/
@@ -108,7 +108,7 @@ body{
 
 
 .content-modal .btn-cerrar label:hover{
-    background-color:#48a0cf;
+    background-color:#323741;
 }
 
 
@@ -150,7 +150,7 @@ body{
 
 
 .content-modal .btn-save label:hover{
-    background-color:#48a0cf;
+    background-color:#323741;
 }
 
 
