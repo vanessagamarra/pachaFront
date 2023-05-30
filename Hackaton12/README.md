@@ -52,5 +52,4 @@ El gran reto está formado por 3 retos.
 - El tiempo de cada presentación lo definirá el docente a cargo
 
 ### VII.	Feedback
-
 - El docente dará feedback a los estudiantes sobre los ejercicios realizados
