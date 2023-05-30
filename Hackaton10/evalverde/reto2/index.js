@@ -12,12 +12,30 @@ datos("sebastian","yabiku" ,33)
 const sumOfCubes=(num1,num2,num3)=> Math.pow(num1,3)+Math.pow(num2,3)+Math.pow(num3,3)
 console.log(sumOfCubes(1, 5, 9))
 
-//Crear una funcion que me retorne el tipo de valor entregado, invocar la función para los distintos tipos de js
+//Crear una funcion que me retorne el tipo de valor entregado, 
+//invocar la función para los distintos tipos de js
+function getType(value) {
+  return typeof value;
+}
+console.log(getType(5));
+console.log(getType("Hola"));
 
+//Crear una función que reciba n cantidad de argumentos y los sume 
+//( utilizar parametros rest)
+function sumarNumeros(...args) {
+  return args.reduce((sum, num) => sum + num, 0);
+}
+console.log(sumarNumeros(1, 2, 3));
 
-//Crear una función que reciba n cantidad de argumentos y los sume ( utilizar parametros rest)
+//Crear una función que reciba un array de valores y filtre los 
+//valores que no son string
+function NoString(arr) {
+  return arr.filter(value => typeof value === 'string');
+}
+const values = [1, 'Hello', true, 'world', 5, 'JavaScript'];
+const respuesta = NoString(values);
+console.log(respuesta);
 
-//Crear una función que reciba un array de valores y filtre los valores que no son string
 
 //Cree una función que tome una matriz de números y devuelva los números mínimos y máximos, en ese orden.
 //minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
@@ -111,11 +129,107 @@ console.log(Object.entries(objectToArray))
 // 1² + 2² + 3² =
 // 1 + 4 + 9 =
 // 14
-const numero=(valor){
- 
+let sumaPoten=0
+const numero=(valor)=>{for (let i = 1; i <= valor; i++) {
+    sumaPoten += i ** 2;
+     console.log(sumaPoten)
 }
-console.log(numero(3))
+}
+ console.log(numero(8))
+
+// Cree una función para multiplicar todos los valores en una matriz 
+//por la cantidad de valores en la matriz dada
+//multiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0]
+function multiplyByLength(arr){
+  const length=arr.length;
+  const multiplicaArr =arr.map (e=>e * length)
+  return(multiplicaArr)
+
+}
+
+console.log (multiplyByLength([2,3,1,0]))
 
 
+//Cree una función que tome un número como argumento y devuelva una 
+//matriz de números contando desde este número a cero.
+//countdown(5) ➞ [5, 4, 3, 2, 1, 0]
+function countdown(numero){
+  const counter=[]
+  for (let i=numero ; i>=0; i--)
+  counter.push(i)
+  return counter
+}
 
+console.log(countdown(4))
+//Cree una función que tome una matriz y devuelva la diferencia entre 
+//los números más grandes y más pequeños.
+//diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21]) ➞ 82
+// Smallest number is -50, biggest is 32.
+function diffMaxMin(arr){
+  const grande = Math.max(...arr);
+  const peque = Math.min(...arr);
+  const diferencia =grande - peque
+  return diferencia
+}
+console.log(diffMaxMin([1,2,3,4,5,6]))
 
+//Cree una función que filtre las cadenas de una matriz y devuelva
+// una nueva matriz que solo contenga enteros.
+//filterList([1, 2, 3, "x", "y", 10]) ➞ [1, 2, 3, 10]
+function filterList(arr){
+  const filtrar = arr.filter(item => typeof item === `number`);
+  return filtrar
+}
+console.log(filterList([1, 2, 3, "x", "y", 10]))
+
+//Cree una función que tome dos argumentos (elemento, tiempos). 
+//El primer argumento (elemento) es el elemento que necesita 
+//repetirse, mientras que el segundo argumento (veces) es la cantidad
+// de veces que se debe repetir el elemento. Devuelve el resultado en
+// una matriz.
+//repeat(13, 5) ➞ [13, 13, 13, 13, 13]
+
+function repeat(element,veces){
+  const result=[]
+  for (let i =0; i<veces;i++){
+    result.push(element)
+  }
+  return result;
+}
+console.log(repeat(13,5))
+//Escriba una función, .vreplace () que extienda el prototipo de 
+//cadena reemplazando todas las vocales en una cadena con una vocal 
+//especificada. "apples and bananas".vreplace("u") ➞ "upplus und bununus"
+String.prototype.vreplace = function(frase) {
+  return this.replace(/[aeiou]/gi, frase);
+};
+const result = "apples and bananas".vreplace("u");
+console.log(result);
+//Te dan una cadena de palabras. Debe encontrar la palabra "Nemo" y 
+//devolver una cadena como esta: "¡Encontré a Nemo en [el orden de la
+// palabra que encuentra nemo]!".
+//findNemo("I am finding Nemo !") ➞ "I found Nemo at 4!"
+function findNemo(frase){
+  const buscar = frase.split("").indexOf("Nemo");
+  if (buscar !== -1) {
+    const position = buscar + 1;
+    return `I found Nemo at ${position}!`;
+  } else {
+    return "Nemo not found :(";
+  }
+}
+
+ 
+
+console.log(findNemo(`I am finding Nemo !`))
+
+//Cree una función que capitalice la última letra de cada palabra.
+
+//capLast("hello") ➞ "hellO"
+String.prototype.vreplace=function(palabra){
+const dato=this.split("");
+dato[dato.length - 1] = palabra;
+return dato.join(" ")
+}
+const resp = `hello`.vreplace(`I`)
+console.log(resp)
