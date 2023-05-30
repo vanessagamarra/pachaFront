@@ -5,7 +5,14 @@ const Atencion = function () {
     let key = "ec8a9f98a9e74f82bd613118233005"
 
     let eventos = function () {
-
+        $("#btn-follow").on("click", function(e) {
+            e.preventDefault();
+            console.log("Siguendo")
+        });
+        $("#btn-viewProfile").on("click", function(e) {
+            e.preventDefault();
+            console.log("Ver Profile")
+        });
     }
     let cargarInformacionInicial = function () {
         cargarUsuario();
